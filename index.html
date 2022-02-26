@@ -55,11 +55,28 @@
     }
   }
 }
+    
+    var $_GET = (function(){
+    var url = window.document.location.href.toString();
+    var u = url.split("?");
+    if(typeof(u[1]) == "string"){
+        u = u[1].split("&");
+        var get = {};
+        for(var i in u){
+            var j = u[i].split("=");
+            get[j[0]] = j[1];
+        }
+        return get;
+    } else {
+        return {};
+    }
+})();
   </script>
   <title>博客导航</title>
 </head>
 <body>
-<input type="text" id="myInput" onkeyup="myFunction()" value="按博客名称搜索.." />
+  <p>您可以在下面的输入框里输入博客名称来搜索博客</p>
+<input type="text" id="myInput" onkeyup="myFunction()" value="<script type="text/javascript">document.write($_GET['name']);</script>" />
 <table id="myTable">
 <tr class="header">
     <th style="width:30%;">博客名称</th>
@@ -175,6 +192,11 @@
     <td>响石潭</td>
     <td><a href="https://www.xiangshitan.com/" hreflang="zh" target="_blank">https://www.xiangshitan.com/</a></td>
     <td>22</td>
+  </tr>
+  <tr>
+    <td>猫鱼的小窝</td>
+    <td><a href="https://2cat.net/" hreflang="zh" target="_blank">https://2cat.net/</a></td>
+    <td>23</td>
   </tr>
 </table>
 </body>

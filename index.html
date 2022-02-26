@@ -2,6 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh">
 <head>
   <meta charset="utf-8" />
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-table/1.19.1/bootstrap-table.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-table/1.19.1/locale/bootstrap-table-zh-CN.min.js"></script>
+  <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-table/1.19.1/bootstrap-table.min.css" rel="stylesheet">
   <style type="text/css">
  a{text-decoration:none;}
 #myInput {
@@ -13,24 +17,6 @@
   padding: 12px 20px 12px 40px; /* 设置内边距 */
   border: 1px solid #ddd; /* 添加灰色边框 */
   margin-bottom: 12px; /* 添加顶部的外边距 */
-}
-#myTable {
-  border-collapse: collapse; /* 折叠边框 */
-  width: 100%; /* 全屏幕显示 */
-  border: 1px solid #ddd; /* 设置灰色边框 */
-  font-size: 18px; /* 字体大小 */
-}
-#myTable th, #myTable td {
-  text-align: left; /* 文本靠左对齐 */
-  padding: 12px; /* 设置内边距 */
-}
-#myTable tr {
-  /* 每一行设置底部边框*/
-  border-bottom: 1px solid #ddd;
-}
-#myTable tr.header, #myTable tr:hover {
-  /* 表格头部设置背景 */
-  background-color: #f1f1f1;
 }
   </style>
   <script>
@@ -55,17 +41,28 @@
     }
   }
 }
+    $("#myTable").bootstrapTable({
+     columns:[{
+                field: 'name',
+                title: '网站名称'
+            }, {
+                field: 'url',
+                title: '网站地址'
+            }, {
+                field: 'id',
+                title: '博客编号'
+            }];
   </script>
   <title>博客导航</title>
 </head>
 <body>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="按博客名称搜索.." />
-<table id="myTable">
-  <tr class="header">
+<table id="myTable" data-pagination="true" data-side-pagination="client" ata-page-size="10">
+<!--  <tr class="header">
     <th style="width:30%;">博客名称</th>
     <th style="width:60%;">博客地址</th>
     <th style="width:10%;">博客序号</th>
-  </tr>
+  </tr>-->
   <tr>
     <td>卷土</td>
     <td><a href="https://juantu.cn/" hreflang="zh" target="_blank">https://juantu.cn/</a></td>
@@ -145,6 +142,36 @@
     <td>贰言</td>
     <td><a href="https://www.lshongg.cn/" hreflang="zh" target="_blank">https://www.lshongg.cn/</a></td>
     <td>16</td>
+  </tr>
+  <tr>
+    <td>两对半</td>
+    <td><a href="https://www.liangduiban.com/" hreflang="zh" target="_blank">https://www.liangduiban.com/</a></td>
+    <td>17</td>
+  </tr>
+  <tr>
+    <td>林三随笔</td>
+    <td><a href="https://linsanhu.com/" hreflang="zh" target="_blank">https://linsanhu.com/</a></td>
+    <td>18</td>
+  </tr>
+  <tr>
+    <td>后院笔记</td>
+    <td><a href="https://lsbackyard.cn/" hreflang="zh" target="_blank">https://lsbackyard.cn/</a></td>
+    <td>19</td>
+  </tr>
+  <tr>
+    <td>雅余</td>
+    <td><a href="https://www.yayu.net/" hreflang="zh" target="_blank">https://www.yayu.net/</a></td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>Fong Blog</td>
+    <td><a href="https://fongsoul.com/" hreflang="zh" target="_blank">https://fongsoul.com/</a></td>
+    <td>21</td>
+  </tr>
+  <tr>
+    <td>响石潭</td>
+    <td><a href="https://www.xiangshitan.com/" hreflang="zh" target="_blank">https://www.xiangshitan.com/</a></td>
+    <td>22</td>
   </tr>
 </table>
 </body>

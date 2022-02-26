@@ -2,60 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <style type="text/css">
- a{text-decoration:none;}
-#myInput {
-  background-image: url('/searchicon.png'); /* 添加搜索按钮 */
-  background-position: 10px 12px; /* 定位搜索按钮 */
-  background-repeat: no-repeat; /* 图片不重复 */
-  width: 100%; /* 全屏幕显示 */
-  font-size: 16px; /* 字体大小 */
-  padding: 12px 20px 12px 40px; /* 设置内边距 */
-  border: 1px solid #ddd; /* 添加灰色边框 */
-  margin-bottom: 12px; /* 添加顶部的外边距 */
-}
-    #myTable {
-  border-collapse: collapse; /* 折叠边框 */
-  width: 100%; /* 全屏幕显示 */
-  border: 1px solid #ddd; /* 设置灰色边框 */
-  font-size: 18px; /* 字体大小 */
-}
-#myTable th, #myTable td {
-  text-align: left; /* 文本靠左对齐 */
-  padding: 12px; /* 设置内边距 */
-}
-#myTable tr {
-  /* 每一行设置底部边框*/
-  border-bottom: 1px solid #ddd;
-}
-#myTable tr.header, #myTable tr:hover {
-  /* 表格头部设置背景 */
-  background-color: #f1f1f1;
-}
-  </style>
-  <script type="text/javascript">
-  function myFunction() {
-  // 声明变量
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
- 
-  // 循环遍历所有列表项，并隐藏那些与搜索查询不匹配的项
-  for (i=0; i<tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-  </script>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+  <script type="text/javascript" src="/main.js"></script>
+  <link href="/main.css" rel="stylesheet" type="text/css" />
   <title>博客导航</title>
 </head>
 <body>

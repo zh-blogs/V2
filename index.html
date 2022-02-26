@@ -34,6 +34,22 @@
 }
   </style>
   <script type="text/javascript">
+        var $_GET = (function(){
+    var url = window.document.location.href.toString();
+    var u = url.split("?");
+    if(typeof(u[1]) == "string"){
+        u = u[1].split("&");
+        var get = {};
+        for(var i in u){
+            var j = u[i].split("=");
+            get[j[0]] = j[1];
+        }
+        return get;
+    } else {
+        return {};
+    }
+})();
+    myInput.myInput.value = $_GET['name'];
   function myFunction() {
   // 声明变量
   var input, filter, table, tr, td, i, txtValue;
@@ -55,28 +71,12 @@
     }
   }
 }
-    
-    var $_GET = (function(){
-    var url = window.document.location.href.toString();
-    var u = url.split("?");
-    if(typeof(u[1]) == "string"){
-        u = u[1].split("&");
-        var get = {};
-        for(var i in u){
-            var j = u[i].split("=");
-            get[j[0]] = j[1];
-        }
-        return get;
-    } else {
-        return {};
-    }
-})();
   </script>
   <title>博客导航</title>
 </head>
 <body>
   <p>您可以在下面的输入框里输入博客名称来搜索博客</p>
-<input type="text" id="myInput" onkeyup="myFunction()" value="<script type='text/javascript'>document.write($_GET['name']);</script>" />
+<input type="text" id="myInput" onkeyup="myFunction()" value="" />
 <table id="myTable">
 <tr class="header">
     <th style="width:30%;">博客名称</th>

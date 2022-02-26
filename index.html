@@ -43,7 +43,7 @@
   tr = table.getElementsByTagName("tr");
  
   // 循环遍历所有列表项，并隐藏那些与搜索查询不匹配的项
-  for (i = 0; i < tr.length; i++) {
+  for (i=0; i<tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[0];
     if (td) {
       txtValue = td.textContent || td.innerText;

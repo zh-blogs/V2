@@ -1,7 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh">
 <head>
-  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <style type="text/css">
  a{text-decoration:none;}
 #myInput {
@@ -14,8 +14,26 @@
   border: 1px solid #ddd; /* 添加灰色边框 */
   margin-bottom: 12px; /* 添加顶部的外边距 */
 }
+    #myTable {
+  border-collapse: collapse; /* 折叠边框 */
+  width: 100%; /* 全屏幕显示 */
+  border: 1px solid #ddd; /* 设置灰色边框 */
+  font-size: 18px; /* 字体大小 */
+}
+#myTable th, #myTable td {
+  text-align: left; /* 文本靠左对齐 */
+  padding: 12px; /* 设置内边距 */
+}
+#myTable tr {
+  /* 每一行设置底部边框*/
+  border-bottom: 1px solid #ddd;
+}
+#myTable tr.header, #myTable tr:hover {
+  /* 表格头部设置背景 */
+  background-color: #f1f1f1;
+}
   </style>
-  <script>
+  <script type="text/javascript">
   function myFunction() {
   // 声明变量
   var input, filter, table, tr, td, i, txtValue;
@@ -41,8 +59,8 @@
   <title>博客导航</title>
 </head>
 <body>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="按博客名称搜索.." />
-<table id="myTable" data-pagination="true" data-side-pagination="client" ata-page-size="10">
+<input type="text" id="myInput" onkeyup="myFunction()" value="按博客名称搜索.." />
+<table id="myTable">
 <tr class="header">
     <th style="width:30%;">博客名称</th>
     <th style="width:60%;">博客地址</th>

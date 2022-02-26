@@ -2,10 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh">
 <head>
   <meta charset="utf-8" />
-  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-table/1.19.1/bootstrap-table.min.js"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-table/1.19.1/locale/bootstrap-table-zh-CN.min.js"></script>
-  <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-table/1.19.1/bootstrap-table.min.css" rel="stylesheet">
   <style type="text/css">
  a{text-decoration:none;}
 #myInput {
@@ -41,28 +37,17 @@
     }
   }
 }
-    $("#myTable").bootstrapTable({
-     columns:[{
-                field: 'name',
-                title: '网站名称'
-            }, {
-                field: 'url',
-                title: '网站地址'
-            }, {
-                field: 'id',
-                title: '博客编号'
-            }];
   </script>
   <title>博客导航</title>
 </head>
 <body>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="按博客名称搜索.." />
 <table id="myTable" data-pagination="true" data-side-pagination="client" ata-page-size="10">
-<!--  <tr class="header">
+<tr class="header">
     <th style="width:30%;">博客名称</th>
     <th style="width:60%;">博客地址</th>
     <th style="width:10%;">博客序号</th>
-  </tr>-->
+  </tr>
   <tr>
     <td>卷土</td>
     <td><a href="https://juantu.cn/" hreflang="zh" target="_blank">https://juantu.cn/</a></td>

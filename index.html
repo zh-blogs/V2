@@ -8,13 +8,14 @@
   <script type="text/javascript" src="/boot.js"></script>
   <script type="text/javascript" src="/main.js"></script>
   <link href="/boot.css" rel="stylesheet" type="text/css" />
-  <link href="/main.css" rel="stylesheet" type="text/css" />
   <title>博客导航</title>
 </head>
 <body>
   <p>您可以在下面的输入框里输入博客名称来搜索博客。</p>
-<input type="text" id="myInput" onkeyup="myFunction()" />
-<table id="myTable" class="table table-hover table-responsive">
+<input type="text" id="myInput" onkeyup="myFunction()" class="form-control" />
+<div class="spinner-border">
+<div class="table-responsive">
+<table id="myTable" class="table table-hover">
   <thead>
     <th style="width:30%;">博客名称</th>
     <th style="width:60%;">博客地址</th>
@@ -61,5 +62,7 @@
   <tr><td>蚊子前端博客</td><td><a href="https://www.xiabingbao.com/" hreflang="zh" target="_blank">https://www.xiabingbao.com/</a></td><td>37</td></tr>
   </tbody>
 </table>
+</div>
+</div>
 </body>
 </html>

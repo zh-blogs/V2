@@ -19,10 +19,11 @@ function myFunction() {
     }
   }
 }
-
+/***
 $("#myTable").bootstrapTable({
 pagination: true,
 pageSize: 10,
 paginationLoop: false,
 pageList: [5,15,20]
 });
+***/

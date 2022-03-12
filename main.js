@@ -24,7 +24,7 @@ function BlogList(app, data) {
   this.app = app;
   this.data = data;
   this.page = 0;
-  const PageSize = 5;
+  const PageSize = 10;
   const PageAround = 3;
 
   function setOnClick(el, callback) {
@@ -115,9 +115,9 @@ function BlogList(app, data) {
     <input type="text" id="myInput" onkeyup="myFunction()" value="" />
     <table id="myTable">
     <tr class="header">
-        <th style="width:30%;">博客名称</th>
-        <th style="width:60%;">博客地址</th>
-        <th style="width:10%;">博客序号</th>
+        <th>博客名称</th>
+        <th>博客地址</th>
+        <th>博客序号</th>
     </tr>
     ${content}
   </table>

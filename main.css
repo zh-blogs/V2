@@ -1,4 +1,6 @@
- a{text-decoration:none;}
+a {
+  text-decoration: none;
+}
 #myInput {
   background-image: url('/searchicon.png'); /* 添加搜索按钮 */
   background-position: 10px 12px; /* 定位搜索按钮 */
@@ -8,4 +10,38 @@
   padding: 12px 20px 12px 40px; /* 设置内边距 */
   border: 1px solid #ddd; /* 添加灰色边框 */
   margin-bottom: 12px; /* 添加顶部的外边距 */
+}
+
+/* 宽屏 1000px 以上 */
+@media screen and (min-width: 1000px) {
+  #app {
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+  }
+}
+
+/* 窄屏 1000px 以下 */
+@media screen and (max-width: 1000px) {
+  #app {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+  }
+}
+
+#app {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#app .page {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
 }

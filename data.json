@@ -1,69 +1,21 @@
 [
   { "name": "卷土", "url": "https://juantu.cn/" },
-  {
-    "name": "Alen's Lofter",
-    "url": "http://www.fanyanan.cn/"
-  },
-  {
-    "name": "sgfox",
-    "url": "https://www.sgfox.cc/"
-  },
-  {
-    "name": "纬八路生活随笔集",
-    "url": "http://www.weibalu.com/"
-  },
-  {
-    "name": "雨落凋殇",
-    "url": "https://rainss.cn/"
-  },
-  {
-    "name": "图南山",
-    "url": "https://tunanshan.com/"
-  },
-  {
-    "name": "远昔博客",
-    "url": "http://blog.qqiyu.cn/"
-  },
-  {
-    "name": "字节星球",
-    "url": "https://www.bytecho.net/"
-  },
-  {
-    "name": "Ryan Wang",
-    "url": "https://ryanc.cc/"
-  },
-  {
-    "name": "孙老四",
-    "url": "http://lao.si/"
-  },
-  {
-    "name": "缃念梦幻",
-    "url": "https://xiannian.top/"
-  },
-  {
-    "name": "我道1900的博客",
-    "url": "http://1900.live/"
-  },
-  {
-    "name": "Fatesinger",
-    "url": "https://fatesinger.com/"
-  },
-  {
-    "name": "Mlldxe's Blog - 犬の窝",
-    "url": "https://mlldxe.cn/"
-  },
-  {
-    "name": "贰言",
-    "url": "https://www.lshongg.cn/"
-  },
-  {
-    "name": "两对半",
-    "url": "https://www.liangduiban.com/"
-  },
-  {
-    "name": "林三随笔",
-    "url": "https://linsanhu.com/"
-  },
+  { "name": "Alen's Lofter", "url": "http://www.fanyanan.cn/" },
+  { "name": "sgfox", "url": "https://www.sgfox.cc/" },
+  { "name": "纬八路生活随笔集", "url": "http://www.weibalu.com/" },
+  { "name": "雨落凋殇", "url": "https://rainss.cn/" },
+  { "name": "图南山", "url": "https://tunanshan.com/" },
+  { "name": "远昔博客", "url": "http://blog.qqiyu.cn/" },
+  { "name": "字节星球", "url": "https://www.bytecho.net/" },
+  { "name": "Ryan Wang", "url": "https://ryanc.cc/" },
+  { "name": "孙老四", "url": "http://lao.si/" },
+  { "name": "缃念梦幻", "url": "https://xiannian.top/" },
+  { "name": "我道1900的博客", "url": "http://1900.live/" },
+  { "name": "Fatesinger", "url": "https://fatesinger.com/" },
+  { "name": "Mlldxe's Blog - 犬の窝", "url": "https://mlldxe.cn/" },
+  { "name": "贰言", "url": "https://www.lshongg.cn/" },
+  { "name": "两对半", "url": "https://www.liangduiban.com/" },
+  { "name": "林三随笔", "url": "https://linsanhu.com/" },
   {
     "name": "后院笔记",
     "url": "https://lsbackyard.cn/"

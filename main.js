@@ -1,38 +1,16 @@
-function myFunction() {
-  // 声明变量
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById('myInput');
-  filter = input.value.toUpperCase();
-  table = document.getElementById('myTable');
-  tr = table.getElementsByTagName('tr');
-
-  // 循环遍历所有列表项，并隐藏那些与搜索查询不匹配的项
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName('td')[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = '';
-      } else {
-        tr[i].style.display = 'none';
-      }
-    }
-  }
-}
-
 function BlogList(app, data) {
   this.app = app;
   this.data = data;
+  this.table = data;
   this.page = 0;
+  this.search = '';
   const PageSize = 10;
   const PageAround = 3;
 
-  function setOnClick(el, callback) {
+  function setElements(el, callback) {
     try {
       if (!!el) {
-        Array.from(el).map((e) => {
-          e.onclick = callback;
-        });
+        Array.from(el).map(callback);
       } else {
         console.log('error', el);
       }
@@ -40,7 +18,12 @@ function BlogList(app, data) {
       console.error(e);
     }
   }
-  this.renderItem = (item, idx) => {
+
+  function waitDOMRender(callback) {
+    setTimeout(callback, 100);
+  }
+
+  this.generateItem = (item, idx) => {
     return `<tr>
     <td>${item.name}</td>
     <td><a href="${item.url}" hreflang="zh" target="_blank">${item.url}</a></td>
@@ -48,7 +31,7 @@ function BlogList(app, data) {
 </tr>`;
   };
 
-  this.renderPage = (curPage, totalPage) => {
+  this.generatePage = (curPage, totalPage) => {
     var pageList = new Array(PageAround * 2 + 1)
       .fill(0)
       .map((_, idx) => curPage - PageAround + idx)
@@ -100,20 +83,22 @@ function BlogList(app, data) {
   ${content}    
 </div></div>`;
   };
-  this.renderList = (data) => {
-    const total = data.length;
+  this.generateList = () => {
+    const total = this.table.length;
     const totalPage = Math.ceil(total / PageSize);
     if (this.page < 0) this.pge = 0;
     if (this.page >= totalPage) this.pge = totalPage - 1;
     const curPageStart = this.page * PageSize;
 
-    const content = data
+    if (this.table.length === 0) {
+      return '没有对应的博客';
+    }
+
+    const content = this.table
       .slice(curPageStart, curPageStart + PageSize)
-      .map((item, idx) => this.renderItem(item, idx + curPageStart + 1))
+      .map((item, idx) => this.generateItem(item, idx + curPageStart + 1))
       .reduce((pre, cur) => pre + cur);
-    return `<p>您可以在下面的输入框里输入博客名称来搜索博客。</p>
-    <input type="text" id="myInput" onkeyup="myFunction()" value="" />
-    <table id="myTable">
+    return `<table class="table">
     <tr class="header">
         <th>博客名称</th>
         <th>博客地址</th>
@@ -121,34 +106,78 @@ function BlogList(app, data) {
     </tr>
     ${content}
   </table>
-  ${this.renderPage(this.page, totalPage)}`;
-  };
-  this.render = (data) => {
-    this.app.innerHTML = this.renderList(data);
-    setTimeout(() => {
-      // 等待 DOM 刷新
-      setOnClick(this.app.getElementsByClassName('prePage'), (e) => {
-        if (!!e && !!e.target && e.target.className.indexOf('disable') === -1) {
-          this.page--;
-          this.render(data);
-        }
-      });
-      setOnClick(this.app.getElementsByClassName('nextPage'), (e) => {
-        if (!!e && !!e.target && e.target.className.indexOf('disable') === -1) {
-          this.page++;
-          this.render(data);
-        }
-      });
-      setOnClick(this.app.getElementsByClassName('jump'), (e) => {
-        if (!!e && !!e.target) {
-          this.page = parseInt(e.target.innerText) - 1;
-          this.render(data);
-        }
-      });
-    }, 100);
+  ${this.generatePage(this.page, totalPage)}`;
   };
 
-  this.render(data);
+  this.renderTable = () => {
+    setElements(
+      this.app.getElementsByClassName('container_table'),
+      (el) => (el.innerHTML = this.generateList())
+    );
+
+    waitDOMRender(() => {
+      // 等待 DOM 刷新
+      setElements(
+        this.app.getElementsByClassName('prePage'),
+        (el) =>
+          (el.onclick = (e) => {
+            if (!!e && !!e.target && !e.target.disabled) {
+              this.page--;
+              this.renderTable();
+            }
+          })
+      );
+      setElements(
+        this.app.getElementsByClassName('nextPage'),
+        (el) =>
+          (el.onclick = (e) => {
+            if (!!e && !!e.target && !e.target.disabled) {
+              this.page++;
+              this.renderTable();
+            }
+          })
+      );
+      setElements(
+        this.app.getElementsByClassName('jump'),
+        (el) =>
+          (el.onclick = (e) => {
+            if (!!e && !!e.target) {
+              this.page = parseInt(e.target.innerText) - 1;
+              this.renderTable();
+            }
+          })
+      );
+    });
+  };
+
+  this.render = () => {
+    waitDOMRender(() => this.renderTable());
+  };
+
+  this.render();
+
+  waitDOMRender(() => {
+    setElements(
+      this.app.getElementsByClassName('search'),
+      (el) =>
+        (el.onkeyup = (e) => {
+          if (!!e && !!e.target) {
+            const value = e.target.value.trim().toLowerCase();
+            // this.search = value;
+            if (value === '') {
+              this.table = this.data;
+            } else {
+              this.table = this.data.filter(
+                (item) =>
+                  item.name.toLowerCase().indexOf(value) !== -1 ||
+                  item.url.toLowerCase().indexOf(value) !== -1
+              );
+            }
+            this.renderTable();
+          }
+        })
+    );
+  });
 }
 
 function main() {

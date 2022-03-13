@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/main.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="/boot.css" rel="stylesheet" type="text/css" /> -->
+    <title>博客导航 - 随机跳转</title>
+</head>
+
+<body>
+    <div class="container_vertical">
+        <div id="app" class="container_card"></div>
+    </div>
+    <script type="text/javascript">
+        const total = 10;
+        var wait = total;
+        var blog = undefined;
+        const app = document.getElementById("app");
+
+        fetch('/data.json').then(resp => resp.json()).then(data => blog = data[parseInt(Math.random() * data.length)])
+
+        function callback() {
+            console.log(wait, blog);
+            const jumpTo = !blog ? "正在选择博客" : `<div>正在前往 <a href="${blog.url}">${blog.name} (${blog.url})</a></div>`
+
+            if (wait > 0) {
+                app.innerHTML = `${jumpTo}<br/>等待 ${wait} 秒后进行跳转`;
+                wait--;
+                setTimeout(callback, 1000);
+            } else {
+                if (!!blog) {
+                    window.location.href = blog.url;
+                    // 确保插入到 history 中
+                    setTimeout(() => console.log(`自 博客导航 跳转至 ${blog.name} ${blog.url}`), 1000);
+                } else {
+                    app.innerHTML = `有点问题，刷新下？`;
+                }
+            }
+        }
+
+        callback();
+    </script>
+</body>
+
+</html>

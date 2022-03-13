@@ -40,8 +40,32 @@ a {
   gap: 10px;
 }
 
+#app .container_search {
+  display: flex;
+  gap: 10px;
+}
+
+#app .blogJump {
+  max-width: 300px;
+  min-width: 10em;
+}
+
 #app .page {
   display: flex;
   justify-content: end;
   gap: 10px;
+}
+
+.container_vertical {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+.container_vertical #app.container_card {
+  text-align: center;
+  padding: 50px auto;
+  box-shadow: 10px 10px 20px rgb(0 0 0 / 50%);
+  border-radius: 20px;
 }

@@ -26,7 +26,7 @@ function BlogList(app, data) {
   this.generateItem = (item, idx) => {
     return `<tr>
     <td>${item.name}</td>
-    <td><a href="${item.url}" hreflang="zh" target="_blank">${item.url}</a></td>
+    <td><a href="${item.url}" hreflang="zh" target="_blank" type="text/html">${item.url}</a></td>
     <td>${idx}</td>
 </tr>`;
   };

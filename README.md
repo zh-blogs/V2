@@ -1,5 +1,5 @@
 ## 新更新
-各位大佬可以从https://blog-daohang.vercel.app/go.html随机访问博客。
+各位大佬可以从https://blog-daohang.vercel.app/go.html 随机访问博客。    
 # 中文博客导航项目
 我们立志要链接全部的中文独立博客。    
 本项目的在线地址是https://blog-daohang.vercel.app/ ，你可以在网页中点击链接进行串门、交换友链，也可以调查中文独立博客的共性。  

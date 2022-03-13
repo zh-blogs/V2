@@ -91,7 +91,7 @@ function BlogList(app, data) {
     const curPageStart = this.page * PageSize;
 
     if (this.table.length === 0) {
-      return '没有对应的博客';
+      return '没有与搜索条件对应的博客';
     }
 
     const content = this.table
@@ -102,7 +102,7 @@ function BlogList(app, data) {
     <tr class="header">
         <th>博客名称</th>
         <th>博客地址</th>
-        <th>博客序号</th>
+        <th>结果序号</th>
     </tr>
     ${content}
   </table>

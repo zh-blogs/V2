@@ -1,15 +1,6 @@
+@charset "UTF-8";
 a {
   text-decoration: none;
-}
-#myInput {
-  background-image: url('/searchicon.png'); /* 添加搜索按钮 */
-  background-position: 10px 12px; /* 定位搜索按钮 */
-  background-repeat: no-repeat; /* 图片不重复 */
-  width: 100%; /* 全屏幕显示 */
-  font-size: 16px; /* 字体大小 */
-  padding: 12px 20px 12px 40px; /* 设置内边距 */
-  border: 1px solid #ddd; /* 添加灰色边框 */
-  margin-bottom: 12px; /* 添加顶部的外边距 */
 }
 
 /* 宽屏 1000px 以上 */

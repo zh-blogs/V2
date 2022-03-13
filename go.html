@@ -22,7 +22,7 @@
 
         function callback() {
             console.log(wait, blog);
-            const jumpTo = !blog ? "正在选择博客" : `<div>正在前往 <a href="${blog.url}">${blog.name} (${blog.url})</a></div>`
+            const jumpTo = !blog ? "正在选择博客" : `<div>正在前往 <a href="${blog.url}" hreflang="zh" type="text/html">${blog.name} (${blog.url})</a></div>`
 
             if (wait > 0) {
                 app.innerHTML = `${jumpTo}<br/>等待 ${wait} 秒后进行跳转`;

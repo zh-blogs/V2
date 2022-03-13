@@ -1,8 +1,5 @@
 [
-  {
-    "name": "卷土",
-    "url": "https://juantu.cn/"
-  },
+  { "name": "卷土", "url": "https://juantu.cn/" },
   {
     "name": "Alen's Lofter",
     "url": "http://www.fanyanan.cn/"
@@ -294,5 +291,5 @@
   {
     "name": "NiCE",
     "url": "https://www.nice.im/"
-  },
+  }
 ]

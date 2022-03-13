@@ -36,10 +36,6 @@
     "url": "https://ryanc.cc/"
   },
   {
-    "name": "林林杂语",
-    "url": "https://blog.linlinzzo.top/"
-  },
-  {
     "name": "孙老四",
     "url": "http://lao.si/"
   },
@@ -142,5 +138,13 @@
   {
     "name": "杜老师说",
     "url": "https://dusays.com/"
+  },
+  {
+    "name": "爱音乐的白",
+    "url": "https://mubaix.github.io/"
+  },
+  {
+    "name": "EQblog",
+    "url": "https://eqblog.com/"
   }
 ]

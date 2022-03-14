@@ -5,7 +5,7 @@ function BlogList(app, data) {
   this.page = 0;
   this.search = '';
   const PageSize = 20;
-  const PageAround = 2;
+  const PageAround = 1;
 
   function setElements(el, callback) {
     try {

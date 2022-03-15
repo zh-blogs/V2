@@ -24,10 +24,12 @@ function BlogList(app, data) {
   }
 
   this.generateItem = (item, idx) => {
-    return `<tr>
+    return `<tr${!!item.repeat ? ' class="repeat"' : ''}>
     <td>${item.name}</td>
-    <td><a href="${item.url}" hreflang="zh" target="_blank" type="text/html">${item.url}</a></td>
-    <td>${idx}</td>
+    <td><a href="${item.url}" hreflang="zh" target="_blank" type="text/html">${
+      item.url
+    }</a></td>
+    <td>${item.index + 1}</td>
 </tr>`;
   };
 
@@ -173,6 +175,8 @@ function BlogList(app, data) {
                   item.url.toLowerCase().indexOf(value) !== -1
               );
             }
+            // 输入框修改时，回到第一页
+            this.page = 0;
             this.renderTable();
           }
         })
@@ -180,13 +184,36 @@ function BlogList(app, data) {
   });
 }
 
-function main() {
-  fetch('/data.json')
-    .then((resp) => resp.json())
-    .then((data) => {
-      const app = document.getElementById('app');
-      const blog = new BlogList(app, data);
-    });
+async function getBlogList() {
+  const resp = await fetch('/data.json');
+  const data = await resp.json();
+  var set = {};
+
+  const domainExtract = RegExp('https{0,1}://([^s/]*)/{0,1}.*');
+
+  var blogs = [];
+  for (const blog of data) {
+    const domainResult = domainExtract.exec(blog.url);
+    const domain = domainResult.length > 0 ? domainResult[1] : blog.url;
+    if (typeof set[domain] === 'undefined') {
+      // 该域名不存在
+      set[domain] = blogs.length;
+      blogs.push(blog);
+    } else {
+      // 该域名已经存在
+      // 在第一次出现的位置添加重复标记
+      blogs[set[domain]].repeat = true;
+    }
+  }
+
+  console.log(blogs);
+  // 添加序号
+  return blogs.map((blog, index) => ({ ...blog, index }));
 }
 
-main();
+function main() {
+  getBlogList().then((data) => {
+    const app = document.getElementById('app');
+    const blog = new BlogList(app, data);
+  });
+}

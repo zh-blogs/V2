@@ -60,3 +60,7 @@ a {
   box-shadow: 10px 10px 20px rgb(0 0 0 / 50%);
   border-radius: 20px;
 }
+
+#app .repeat {
+  background: rgba(100, 100, 0, 0.2);
+}

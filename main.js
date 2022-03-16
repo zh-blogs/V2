@@ -189,7 +189,7 @@ async function getBlogList() {
   const data = await resp.json();
   var set = {};
 
-  const domainExtract = RegExp('https{0,1}://([^s/]*)/{0,1}.*');
+  const domainExtract = RegExp('https{0,1}://([-a-zA-Z0-9.]+)/{0,1}.*');
 
   var blogs = [];
   for (const blog of data) {
@@ -198,11 +198,12 @@ async function getBlogList() {
     if (typeof set[domain] === 'undefined') {
       // 该域名不存在
       set[domain] = blogs.length;
-      blogs.push(blog);
+      blogs.push({ ...blog, domain });
     } else {
       // 该域名已经存在
       // 在第一次出现的位置添加重复标记
       blogs[set[domain]].repeat = true;
+      blogs.push({ ...blog, repeat: true, domain });
     }
   }
 

@@ -20,27 +20,20 @@
 ### 博客收录争议
 在收录博客网站时，我们会以非专业的角度评定网站是否符合收录标准，不能排除存在缺漏的可能性。      
 任何人可以根据博客收录标准对任一博客的收录资格提出异议。   
-### 博客分类
+### 博客标签
 中文博客网站可粗略标记为：
-- 技术博客（tech）    
+- 技术类博客（tech）    
 - 互联网与计算机编程经验与代码分享类博客（internet）
 - 综合语言实践（mixed-language）
 - PHP语言的编程分享（php-language）
 - ……语言的编程分享（-language）
 - 源码与资源分享（收录资格存在争议，不添加标签，为none）
 - 工程机械类博客（machine）     
-- 不方便分类的纯技术博客（other-tech）     
-- 纯生活博客（life）     
-- 日记生活类博客（log）
-- 日志、周记类博客（daily-weekly）
-- 有感而发类博客（write-by-inspiration）
-- 文学摄影类博客（literature-photograph）
-- 主要为文学创作（literature-mainly）
-- 主要为摄影分享（photograph-mainly）
-- 其它生活博客（other-life）
-- 综合博客（hybrid） 
-- 通过周记等方式将生活与技术结合在一篇文章中（same-hybrid）
-- 生活与技术分散在不同文章中（different-hybrid）
+- 不方便分类的技术博客（other-tech）     
+- 生活博客（life）     
+- 日记生活（log）
+- 文学创作（literature-mainly）
+- 摄影分享（photograph-mainly）
 # ToDo
 - [x] 随机跳转
 - [x] 列表分页

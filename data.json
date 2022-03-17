@@ -6,9 +6,9 @@
   { "name": "雨落凋殇", "url": "https://rainss.cn/", "category": "hybrid,different-hybrid" },
   { "name": "图南山", "url": "https://tunanshan.com/", "category": "hybrid,different-hybrid" },
   { "name": "远昔博客", "url": "http://blog.qqiyu.cn/", "category": "hybrid,different-hybrid" },
-  { "name": "字节星球", "url": "https://www.bytecho.net/" },
-  { "name": "Ryan Wang", "url": "https://ryanc.cc/" },
-  { "name": "孙老四", "url": "http://lao.si/" },
+  { "name": "字节星球", "url": "https://www.bytecho.net/", "category": "hybrid,different-hybrid" },
+  { "name": "Ryan Wang", "url": "https://ryanc.cc/", "category": "hybrid,different-hybrid" },
+  { "name": "孙老四", "url": "http://lao.si/", "category": "hybrid,different-hybrid" },
   { "name": "缃念梦幻", "url": "https://xiannian.top/" },
   { "name": "我道1900的博客", "url": "http://1900.live/" },
   { "name": "Fatesinger", "url": "https://fatesinger.com/" },
@@ -268,6 +268,6 @@
   { "name": "王子亭的博客", "url": "https://jysperm.me/" },
   { "name": "egoist", "url": "https://egoist.sh/" },
   { "name": "扯氮集", "url": "http://weiwuhui.com/" },
-  { "name": "Celia的博客", "url": "https://blog.becomingcelia.com/" },
+  { "name": "Celia的博客", "url": "https://blog.becomingcelia.com/" }
   
 ]

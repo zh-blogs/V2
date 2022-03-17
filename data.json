@@ -7,10 +7,7 @@
   { "name": "图南山", "url": "https://tunanshan.com/" },
   { "name": "远昔博客", "url": "http://blog.qqiyu.cn/", "tag": "PHP" },
   { "name": "字节星球", "url": "https://www.bytecho.net/", "tag": "Java,C++" },
-  
-  
-  
-  { "name": "Ryan Wang", "url": "https://ryanc.cc/", "tag": "Java,C++" },
+  { "name": "Ryan Wang", "url": "https://ryanc.cc/", "tag": "从这里添加标签" },
   { "name": "孙老四", "url": "http://lao.si/", "tag": "Java,C++" },
   { "name": "缃念梦幻", "url": "https://xiannian.top/", "tag": "Java,C++" },
   { "name": "我道1900的博客", "url": "http://1900.live/", "tag": "Java,C++" },

@@ -103,7 +103,7 @@ function BlogList(app, data) {
       .slice(curPageStart, curPageStart + PageSize)
       .map((item, idx) => this.generateItem(item, idx + curPageStart + 1))
       .reduce((pre, cur) => pre + cur);
-    return `<table class="table">
+    return `<table class="table table-bordered table-responsive">
     <tr class="header">
         <th>博客名称</th>
         <th>博客地址</th>

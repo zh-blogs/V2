@@ -63,18 +63,18 @@ function BlogList(app, data) {
     const content = pageList
       .map((item) =>
         item === -3
-          ? `<ul class="pagination"><button type='button' class='btn btn-outline-dark prePage' ${
+          ? `<ul class="pagination"><li class="page-item"><button type="button" class="btn btn-outline-dark prePage" ${
               curPage === 0 ? 'disabled' : ''
-            }>&laquo;</button>`
+            }>&laquo;</button></li>`
           : item === -2
-          ? `<button type='button' class='btn btn-outline-dark nextPage' ${
+          ? `<li class="page-item"><button type='button' class='btn btn-outline-dark nextPage' ${
               curPage === totalPage - 1 ? 'disabled' : ''
-            }>&raquo;</button></ul>`
+            }>&raquo;</button></li></ul>`
           : item === -1
           ? `<div>...</div>`
-          : `<button type='button' class='btn btn-outline-dark jump${
+          : `<li class="page-item"><button type='button' class='btn btn-outline-dark jump${
               item === curPage ? ' active' : ''
-            }'>${item + 1}</button>`
+            }'>${item + 1}</button></li>`
       )
       .reduce((pre, cur) => pre + cur);
     return `<div class="container"><div class="page">

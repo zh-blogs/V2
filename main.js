@@ -93,13 +93,10 @@ function BlogList(app, data) {
     const curPageStart = this.page * PageSize;
 
     if (this.table.length === 0) {
-      return `<div class="toast show">
-  <div class="toast-header">
-    抱歉
-  <button type="button" class="btn-close" data-bs-dismiss="toast"></button></div>
-  <div class="toast-body">
-    我们没有搜索到符合条件的博客网站。你可以尝试<a href="https://github.com/linlinzzo/blog-daohang/issues/new?assignees=linlinzzo&labels=&template=add.md&title=%E7%94%B3%E8%AF%B7%E6%B7%BB%E5%8A%A0%E7%BD%91%E7%AB%99">提交它</a>。
-  </div></div>`;
+      return `<div class="alert alert-success alert-dismissible fade show">
+  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  <strong>抱歉</strong>我们没能搜索到符合条件的博客。你可以尝试<a href="https://github.com/linlinzzo/blog-daohang/issues/new?assignees=linlinzzo&labels=&template=add.md&title=%E7%94%B3%E8%AF%B7%E6%B7%BB%E5%8A%A0%E7%BD%91%E7%AB%99">提交它</a>。
+</div>`;
     }
 
     const content = this.table

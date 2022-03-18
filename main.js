@@ -5,7 +5,7 @@ function BlogList(app, data) {
   this.page = 0;
   this.search = '';
   const PageSize = 20;
-  const PageAround = 3;
+  const PageAround = 2;
 
   function setElements(el, callback) {
     try {
@@ -71,9 +71,9 @@ function BlogList(app, data) {
               curPage === totalPage - 1 ? 'disabled' : ''
             }>&raquo;</button></li></ul>`
           : item === -1
-          ? `<div>...</div>`
+          ? `...`
           : `<li class="page-item"><button type='button' class='btn btn-outline-dark jump${
-              item === curPage ? ' active' : ''
+              item === curPage ? 'active' : ''
             }'>${item + 1}</button></li>`
       )
       .reduce((pre, cur) => pre + cur);

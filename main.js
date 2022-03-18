@@ -93,7 +93,7 @@ function BlogList(app, data) {
     const curPageStart = this.page * PageSize;
 
     if (this.table.length === 0) {
-      return '没有与搜索条件对应的博客';
+      return '<script src="/swa.js"></script><script>swal ( "抱歉" ,  "没有与搜索条件对应的博客" ,  "error" )</script>';
     }
 
     const content = this.table

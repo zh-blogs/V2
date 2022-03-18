@@ -15,8 +15,8 @@ for index in range(len(json_data)):
             json_data[index]["status"] = res.status_code
             print("[", res.status_code,"]")
     except Exception as e:
-        json_data[index]["status"] = str(type(e))
-        print("[", str(type(e)),"]")
+        json_data[index]["status"] = str(type(e)).split("'")[1].split(".")[2]
+        print("[", json_data[index]["status"],"]")
 
 with open('data.json', 'w', encoding='utf8') as json_file:
     json_file.write(json.dumps(json_data, ensure_ascii=False))

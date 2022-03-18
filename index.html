@@ -16,6 +16,25 @@
   <!---<link href="/main.css" rel="stylesheet" type="text/css" />--->
   <link href="/boot.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="/boot.js" async="async" charset="UTF-8"></script>
+  <style>
+    /* 宽屏 1000px 以上 */
+@media screen and (min-width: 1000px) {
+  #app {
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+  }
+}
+
+/* 窄屏 1000px 以下 */
+@media screen and (max-width: 1000px) {
+  #app {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+  }
+}
+  </style>
   
   <!--本网页的标题-->
   <title>中文博客列表导航</title>

@@ -295,5 +295,16 @@
   { "name": "LanYun", "url": "https://lanyundev.vercel.app/", "tag": "Java,C++" },
   { "name": "JanYork", "url": "https://ideaopen.cn/", "tag": "Java,C++" },
   { "name": "罗小黑", "url": "https://www.aiyo99.com/", "tag": "Java,C++" },
-  { "name": "奈良池文阁", "url": "https://www.naraci.top/", "tag": "Java,C++" }
+  { "name": "奈良池文阁", "url": "https://www.naraci.top/", "tag": "Java,C++" },
+  { "name": "Aynxul03 写字的地方", "url": "https://ayx.moefox.tech/", "tag": "Java,C++" },
+  { "name": "icebreaker", "url": "https://www.icebreaker.top/", "tag": "Java,C++" },
+  { "name": "Wiken", "url": "https://www.hehuapei.com/", "tag": "Java,C++" },
+  { "name": "涛哥的博客", "url": "https://jaredtao.github.io/", "tag": "Java,C++" },
+  { "name": "UsubeniFantasy", "url": "https://ssshooter.com/", "tag": "js,vue,生活,杂谈" },
+  { "name": "lucifer的网络博客", "url": "https://lucifer.ren/blog/", "tag": "生活,杂谈" },
+  { "name": "Tianke Youke", "url": "https://jyzhu.top/", "tag": "生活,杂谈" },
+  { "name": "Yanliang", "url": "https://gyl-coder.top/", "tag": "jvm,kafka,sql,原理,互联网" },
+  { "name": "后端进阶", "url": "https://objcoding.com/", "tag": "互联网,redis,多线程,docker,java,kafka" },
+  { "name": "空の領域", "url": "https://xsky.me/", "tag": "生活,杂谈" },
+  { "name": "Claude's Blog", "url": "https://claude-ray.com/", "tag": "npm,verdaccio,js,node.js" }
 ]

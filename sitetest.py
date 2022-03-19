@@ -19,4 +19,10 @@ for index in range(len(json_data)):
         print("[", json_data[index]["status"],"]")
 
 with open('data.json', 'w', encoding='utf8') as json_file:
-    json.dump(json_data, ensure_ascii=False, fp=json_file, indent=4)
+    print("[", file = json_file)
+    for index in range(len(json_data)):
+        if index == len(json_data) - 1:
+            print("  " + json.dumps(json_data[index], ensure_ascii=False), file = json_file)
+        else:
+            print("  " + json.dumps(json_data[index], ensure_ascii=False) + ",", file = json_file)
+    print("]", file = json_file)

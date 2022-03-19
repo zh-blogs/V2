@@ -1,1 +1,1864 @@
-[{"name": "卷土", "url": "https://juantu.cn/", "tag": "Python", "sign": "现只为做成一件事", "status": "OK"}, {"name": "Alen's Lofter", "url": "http://www.fanyanan.cn/", "tag": "生活,杂谈", "sign": "It's best to do one thing really, really well", "status": "OK"}, {"name": "sgfox", "url": "https://www.sgfox.cc/", "tag": "C,生活", "sign": "less is more", "status": "OK"}, {"name": "纬八路生活随笔集", "url": "http://www.weibalu.com/?cat=13", "tag": "生活", "sign": "", "status": "OK"}, {"name": "雨落凋殇", "url": "https://rainss.cn/", "tag": "Linux,PHP,Java,Python,Android", "sign": "聆听雨落的声音,俯看凋零的落叶.伫细雨之中,感雨落之殇", "status": "OK"}, {"name": "图南山", "url": "https://tunanshan.com/", "tag": "生活,杂谈", "sign": "从前有座山，山里有座庙，庙里有个白胡子老道", "status": "OK"}, {"name": "远昔博客", "url": "http://blog.qqiyu.cn/", "sign": "技术与资源分享博客", "tag": "php", "status": "OK"}, {"name": "字节星球", "url": "https://www.bytecho.net/", "tag": "Java,C++", "sign": "丰富想象力，激发创造力。", "status": "OK"}, {"name": "Ryan Wang", "url": "https://ryanc.cc/", "tag": "Halo", "sign": "Hello Halo", "status": "OK"}, {"name": "孙老四", "url": "http://lao.si/", "tag": "生活,杂谈", "sign": "记录琐事和并不多的思考", "status": "OK"}, {"name": "缃念梦幻", "url": "https://xiannian.top/", "tag": "生活,杂谈", "sign": "一小我的记载,一群人的狂欢", "status": "OK"}, {"name": "我道1900的博客", "url": "http://1900.live/", "tag": "生活,节气", "sign": "你好世界，请善待所有内心善良的人", "status": "OK"}, {"name": "Fatesinger", "url": "https://fatesinger.com/", "tag": "生活,杂谈", "sign": "This is my zine. I write about shit I care about.", "status": "OK"}, {"name": "Mlldxe's Blog-犬の窝", "url": "https://mlldxe.cn/", "tag": "WordPress,建站", "sign": "A responsible Blog for WordPress", "status": "OK"}, {"name": "贰言", "url": "https://www.lshongg.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "两对半", "url": "https://www.liangduiban.com/", "tag": "Java,C++", "status": "OK"}, {"name": "林三随笔", "url": "https://linsanhu.com/", "tag": "Java,C++", "status": "OK"}, {"name": "后院笔记", "url": "https://lsbackyard.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "雅余", "url": "https://www.yayu.net/", "tag": "Java,C++", "status": "OK"}, {"name": "Fong Blog", "url": "https://fongsoul.com/", "tag": "Java,C++", "status": "OK"}, {"name": "响石潭", "url": "https://www.xiangshitan.com/", "tag": "Java,C++", "status": "OK"}, {"name": "猫鱼的小窝", "url": "https://2cat.net/", "tag": "Java,C++", "status": "OK"}, {"name": "拾风", "url": "https://www.coolblood.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "品味苏州", "url": "https://pwsz.com/", "tag": "Java,C++", "status": "ConnectionError"}, {"name": "王志勇的Blog", "url": "http://www.auiou.com/", "tag": "Java,C++", "status": "OK"}, {"name": "小众分享", "url": "https://www.smbinn.com/", "tag": "Java,C++", "status": "OK"}, {"name": "迎風别葉", "url": "https://yingfeng.me/", "tag": "Java,C++", "status": "OK"}, {"name": "蓝卡", "url": "https://www.lanka.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "阮一峰的网络日志", "url": "https://www.ruanyifeng.com/blog/", "tag": "Java,C++", "status": 503}, {"name": "OhYee博客", "url": "https://www.ohyee.cc/", "tag": "Java,C++", "status": "OK"}, {"name": "香水的个人主页", "url": "https://xsui.com/", "tag": "Java,C++", "status": "OK"}, {"name": "启福", "url": "https://qifu.me/", "tag": "Java,C++", "status": "OK"}, {"name": "云帆济海", "url": "https://yunfanch.com/", "tag": "Java,C++", "status": "OK"}, {"name": "杜老师说", "url": "https://dusays.com/", "tag": "Java,C++", "status": "OK"}, {"name": "爱音乐的白", "url": "https://mubaix.github.io/", "tag": "Java,C++", "status": "OK"}, {"name": "EQblog", "url": "https://eqblog.com/", "tag": "Java,C++", "status": "OK"}, {"name": "小王子", "url": "https://www.wanghao.me/", "tag": "Java,C++", "status": "OK"}, {"name": "梁龙的博客", "url": "https://www.lianglong.org/", "tag": "Java,C++", "status": "OK"}, {"name": "夜未央", "url": "https://www.savouer.com/", "tag": "Java,C++", "status": "OK"}, {"name": "无色墨水", "url": "https://wuse.ink/", "tag": "Java,C++", "status": "OK"}, {"name": "阿峰的小宇宙", "url": "https://feng.pub/", "tag": "Java,C++", "status": "OK"}, {"name": "三无青年-段先森的个人博客", "url": "https://www.duanxiansen.com/", "tag": "Java,C++", "status": "OK"}, {"name": "Vian", "url": "https://vian.top/", "tag": "Java,C++", "status": "OK"}, {"name": "俍注", "url": "https://oneinf.com/", "tag": "Java,C++", "status": "OK"}, {"name": "森木志", "url": "https://www.imxxz.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "友人C", "url": "https://www.ihewro.com/", "tag": "Java,C++", "status": "OK"}, {"name": "AoTxLand", "url": "https://aotxland.com/", "tag": "Java,C++", "status": "OK"}, {"name": "尚寂新", "url": "https://shangjixin.com/", "tag": "Java,C++", "status": "OK"}, {"name": "心语难诉-周武杰个人博客", "url": "https://xinyu19.com/", "tag": "Java,C++", "status": "OK"}, {"name": "俊杰", "url": "https://cjj.today/", "tag": "Java,C++", "status": "OK"}, {"name": "钧言极客-进钧'Blog", "url": "https://www.jinjun.top/", "tag": "Java,C++", "status": 503}, {"name": "孙文's blog", "url": "https://www.sunjiwen.com/", "tag": "Java,C++", "status": "OK"}, {"name": "小物有理", "url": "https://www.xujilong.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "左岸博客", "url": "https://www.zrahh.com/", "tag": "Java,C++", "status": "OK"}, {"name": "失眠海峡", "url": "https://blog.imalan.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "陶心昊", "url": "https://taoxinhao.cn/", "tag": "Java,C++", "status": "ConnectionError"}, {"name": "Rat's Blog", "url": "https://www.moerats.com/", "tag": "Java,C++", "status": "OK"}, {"name": "小z博客", "url": "https://www.xiaoz.me/", "tag": "Java,C++", "status": "OK"}, {"name": "田珊珊个人博客", "url": "http://www.tianshan277.com/", "tag": "Java,C++", "status": 404}, {"name": "Noxxxx", "url": "https://www.noxxxx.com/", "tag": "Java,C++", "status": "OK"}, {"name": "挖站否", "url": "https://wzfou.com/", "tag": "Java,C++", "status": "OK"}, {"name": "厘米天空", "url": "https://www.cmsky.com/", "tag": "Java,C++", "status": "OK"}, {"name": "张琪灵", "url": "https://zxx.im/", "tag": "Java,C++", "status": "OK"}, {"name": "至道小博", "url": "https://www.zdaoxb.com/", "tag": "Java,C++", "status": "OK"}, {"name": "那次", "url": "https://na.ci/", "tag": "Java,C++", "status": "OK"}, {"name": "立云图志", "url": "http://www.lopwon.com/", "tag": "Java,C++", "status": "OK"}, {"name": "格子老师", "url": "https://manman.qian.lu/", "tag": "Java,C++", "status": "OK"}, {"name": "青萌", "url": "https://zzbapp.com/", "tag": "Java,C++", "status": "OK"}, {"name": "牧羊人", "url": "https://www.shephe.com/", "tag": "Java,C++", "status": "OK"}, {"name": "青山绿水-胡和先的个人博客", "url": "https://www.huhexian.com/", "tag": "Java,C++", "status": "OK"}, {"name": "True's ME-初见", "url": "https://chujian.xyz/", "tag": "Java,C++", "status": "OK"}, {"name": "忆往事", "url": "https://yiws.net/", "tag": "Java,C++", "status": "OK"}, {"name": "NiCE", "url": "https://www.nice.im/", "tag": "Java,C++", "status": "OK"}, {"name": "尺宅杂记", "url": "http://www.qncd.com/", "tag": "Java,C++", "status": "OK"}, {"name": "七星岩博客", "url": "https://qxysc.xyz/", "tag": "Java,C++", "status": "OK"}, {"name": "一介大叔", "url": "http://www.winature.com/", "tag": "Java,C++", "status": "OK"}, {"name": "夜语凭栏", "url": "http://www.yezaifei.com/", "tag": "Java,C++", "status": "OK"}, {"name": "FROYO's Blog", "url": "http://www.izhuyue.com/", "tag": "Java,C++", "status": "OK"}, {"name": "青箬笠", "url": "https://qingruoli.com/", "tag": "Java,C++", "status": "OK"}, {"name": "佐仔志", "url": "https://www.jinbo123.com/", "tag": "Java,C++", "status": "OK"}, {"name": "不曾长大-秦飞的个人空间", "url": "https://qfsyj.com/", "tag": "Java,C++", "status": "OK"}, {"name": "风雨行者-非著名历史学爱好者", "url": "http://stuit.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "守望轩-宁静雅致的小轩馆", "url": "https://www.watch-life.net/", "tag": "Java,C++", "status": "OK"}, {"name": "小陈故事", "url": "https://www.chener.net/", "tag": "Java,C++", "status": "OK"}, {"name": "旅行漫记-Travel Journal", "url": "https://synyan.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "我的天", "url": "http://www.xlanda.net/", "tag": "Java,C++", "status": "OK"}, {"name": "小猪的窝", "url": "https://ezo.biz/", "tag": "Java,C++", "status": "OK"}, {"name": "流浪天下-背包行走，流浪天下", "url": "https://maie.name/", "tag": "Java,C++", "status": "OK"}, {"name": "尚磊的博客", "url": "https://shanglei.net/", "tag": "Java,C++", "status": "OK"}, {"name": "随风沐虐-万里风云三尺剑，一庭花草半床书", "url": "https://www.munue.com/", "tag": "Java,C++", "status": "OK"}, {"name": "非学派——不与偏见和痼习为伍", "url": "https://fxpai.com/", "tag": "Java,C++", "status": "OK"}, {"name": "心灵博客", "url": "http://blog.dngz.net/", "tag": "Java,C++", "status": 504}, {"name": "因为很想念", "url": "https://ltmltm.cn/bk/", "tag": "Java,C++", "status": "OK"}, {"name": "bang's blog", "url": "https://blog.cnbang.net/", "tag": "Java,C++", "status": "OK"}, {"name": "伪医生律师的博客", "url": "https://chidd.net/", "tag": "Java,C++", "status": "OK"}, {"name": "胡涂说", "url": "https://hutusi.com/", "tag": "Java,C++", "status": "OK"}, {"name": "NetCafe", "url": "https://hijoe.net/", "tag": "Java,C++", "status": "OK"}, {"name": "西枫里", "url": "https://www.anji66.net/", "tag": "Java,C++", "status": 502}, {"name": "生活的左上角", "url": "https://bwskyer.com/", "tag": "Java,C++", "status": "SSLError"}, {"name": "木瓜园", "url": "https://muguayuan.com/", "tag": "Java,C++", "status": "ConnectionError"}, {"name": "山野愚人居", "url": "https://www.iyuren.com/", "tag": "Java,C++", "status": "OK"}, {"name": "挨踢路-老狼个人博客", "url": "https://itlu.org/", "tag": "Java,C++", "status": "OK"}, {"name": "酷壳", "url": "https://coolshell.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "Hello Alili-前端大爆炸!", "url": "https://alili.tech/", "tag": "Java,C++", "status": "OK"}, {"name": "winegrower-种葡萄并酿酒的人", "url": "http://www.winegrower.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "颜海镜", "url": "https://yanhaijing.com/", "tag": "Java,C++", "status": "OK"}, {"name": "justjavac(迷渡)", "url": "https://justjavac.com/", "tag": "Java,C++", "status": "OK"}, {"name": "前端小武的博客", "url": "https://xuexb.com/", "tag": "Java,C++", "status": "OK"}, {"name": "JerryQu 的小站", "url": "https://imququ.com/", "tag": "Java,C++", "status": "OK"}, {"name": "蚊子-前端博客", "url": "https://www.xiabingbao.com/", "tag": "Java,C++", "status": "OK"}, {"name": "不亦乐乎", "url": "https://lms.im/", "tag": "Java,C++", "status": "OK"}, {"name": "ZWWoOoOo", "url": "https://zww.me/", "tag": "Java,C++", "status": "OK"}, {"name": "从良未遂", "url": "https://www.ithmz.com/", "tag": "Java,C++", "status": "OK"}, {"name": "Huiris's log", "url": "https://huiris.com/", "tag": "Java,C++", "status": "OK"}, {"name": "两公斤博客", "url": "https://twokg.com/", "tag": "Java,C++", "status": "OK"}, {"name": "小赖子的英国生活和资讯", "url": "https://justyy.com/", "tag": "Java,C++", "status": "OK"}, {"name": "Fooleap's Blog", "url": "https://blog.fooleap.org/", "tag": "Java,C++", "status": "OK"}, {"name": "罗磊的独立博客", "url": "https://luolei.org/", "tag": "Java,C++", "status": "OK"}, {"name": "forecho's Blog", "url": "https://blog.forecho.com/", "tag": "Java,C++", "status": "OK"}, {"name": "SYS 棚户区", "url": "https://www.syshut.com/", "tag": "Java,C++", "status": "OK"}, {"name": "kn007的个人博客", "url": "https://kn007.net/", "tag": "Java,C++", "status": "OK"}, {"name": "半个C++程序员", "url": "http://cppdebug.com/", "tag": "Java,C++", "status": "OK"}, {"name": "果果喵", "url": "http://moe.xin/", "tag": "Java,C++", "status": "OK"}, {"name": "月光酒馆", "url": "https://wanbk.net/", "tag": "Java,C++", "status": "OK"}, {"name": "梦幻辰风", "url": "https://www.mhcf.net/", "tag": "Java,C++", "status": "OK"}, {"name": "潜云小站", "url": "https://1000yun.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "梦回故里", "url": "https://www.80shihua.com/", "tag": "Java,C++", "status": "OK"}, {"name": "林林杂语", "url": "https://www.linlinzzo.top/", "tag": "Java,C++", "status": "OK"}, {"name": "江湖传说", "url": "http://www.zuijh.net/blog/", "tag": "Java,C++", "status": "OK"}, {"name": "梦魇小栈", "url": "https://blog.ihoey.com/", "tag": "Java,C++", "status": "OK"}, {"name": "Mythsman", "url": "https://blog.mythsman.com/", "tag": "Java,C++", "status": "OK"}, {"name": "冰峰博客", "url": "https://www.ad-s.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "李阿斗-李精华", "url": "https://www.lijinghua.club/", "tag": "Java,C++", "status": "OK"}, {"name": "静夜", "url": "https://oohyo.github.io/", "tag": "Java,C++", "status": "OK"}, {"name": "无垠", "url": "https://flyhigher.top/", "tag": "Java,C++", "status": 503}, {"name": "量子广告", "url": "http://blog.ynxiu.com/", "tag": "Java,C++", "status": "OK"}, {"name": "往前", "url": "https://wqian.net/", "tag": "Java,C++", "status": "OK"}, {"name": "CrazyWong", "url": "https://crazywong.com/", "tag": "Java,C++", "status": "OK"}, {"name": "LeoLan's Blog", "url": "https://www.leolan.top/", "tag": "Java,C++", "status": "ConnectionError"}, {"name": "辣椒の酱", "url": "https://removeif.github.io/", "tag": "Java,C++", "status": "OK"}, {"name": "自由灵的梦境", "url": "https://lemonadorable.gitee.io/", "tag": "Java,C++", "status": "OK"}, {"name": "Tokisaki Galaxy", "url": "https://tokisaki.top/", "tag": "Java,C++", "status": "OK"}, {"name": "折影轻梦", "url": "https://nexmoe.com/", "tag": "Java,C++", "status": "OK"}, {"name": "Sonic853", "url": "https://blog.853lab.com/", "tag": "Java,C++", "status": "OK"}, {"name": "泽泽社", "url": "https://blog.zezeshe.com/", "tag": "Java,C++", "status": "OK"}, {"name": "Dreamwings", "url": "https://www.dreamwings.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "Ailoli", "url": "https://www.ailoli.org/", "tag": "Java,C++", "status": "OK"}, {"name": "Troy's Blog-Troy的星球", "url": "https://itroy.cc/", "tag": "Java,C++", "status": "OK"}, {"name": "神楽坂玉兔", "url": "https://www.54yt.net/", "tag": "Java,C++", "status": "OK"}, {"name": "FGHRSH的博客", "url": "https://www.fghrsh.net/", "tag": "Java,C++", "status": "OK"}, {"name": "Hran的博客", "url": "https://get233.com/", "tag": "Java,C++", "status": "OK"}, {"name": "あかねぞら", "url": "https://kotori.love/", "tag": "Java,C++", "status": "OK"}, {"name": "七夏浅笑", "url": "https://www.julydate.com/", "tag": "Java,C++", "status": "OK"}, {"name": "Waxxh's Blog", "url": "https://waxxh.me/", "tag": "Java,C++", "status": "OK"}, {"name": "monsterlin's blog", "url": "https://monsterlin.com/", "tag": "Java,C++", "status": "OK"}, {"name": "暮光博客", "url": "https://muguang.me/", "tag": "Java,C++", "status": "OK"}, {"name": "MoeShin", "url": "https://moeshin.com/", "tag": "Java,C++", "status": "OK"}, {"name": "聆听博客", "url": "https://www.lingtings.com/", "tag": "Java,C++", "status": "SSLError"}, {"name": "蚊BloG", "url": "https://qwq.moe/", "tag": "Java,C++", "status": "OK"}, {"name": "染念的笔记", "url": "https://dyedd.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "w候人兮猗", "url": "https://www.ahwgs.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "SycBlog", "url": "https://www.php.wf/", "tag": "Java,C++", "status": "OK"}, {"name": "Lesun's Blog", "url": "https://xlesun.com/", "tag": "Java,C++", "status": "OK"}, {"name": "叶小明的博客-XIAOMING'S BLOG", "url": "https://vimin.cc/", "tag": "Java,C++", "status": "OK"}, {"name": "登山亦有道", "url": "https://chenyan98.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "青山小站", "url": "https://blog.yanqingshan.com/", "tag": "Java,C++", "status": "OK"}, {"name": "尘心网", "url": "https://cx9.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "阿豪运维笔记", "url": "https://www.ahaoyw.com/", "tag": "Java,C++", "status": "OK"}, {"name": "江寻博客", "url": "https://blog.cseve.com/", "tag": "Java,C++", "status": "OK"}, {"name": "闲趣日评", "url": "https://xqrp.com/", "tag": "Java,C++", "status": "OK"}, {"name": "小杨生活志", "url": "https://www.yanghuaxing.com/", "tag": "Java,C++", "status": "OK"}, {"name": "IT者", "url": "https://www.itze.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "林羽凡网", "url": "https://www.linyufan.com/", "tag": "Java,C++", "status": 403}, {"name": "阿呆博客-90后肥宅生活", "url": "https://bo.ke/", "tag": "Java,C++", "status": "SSLError"}, {"name": "小灰狼", "url": "https://fly2lan.cc/", "tag": "Java,C++", "status": "OK"}, {"name": "迟於", "url": "https://www.weingxing.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "杜郎俊赏", "url": "https://dujun.io/", "tag": "Java,C++", "status": "OK"}, {"name": "白云苍狗", "url": "https://www.imalun.com/", "tag": "Java,C++", "status": "OK"}, {"name": "威言威语", "url": "https://www.weisay.com/blog/", "tag": "Java,C++", "status": "OK"}, {"name": "冯献金个人博客", "url": "https://blog.fengxianjin.com/", "tag": "Java,C++", "status": 406}, {"name": "太傅博客", "url": "https://taifua.com/", "tag": "Java,C++", "status": "OK"}, {"name": "iMyShare-互联网人的博客", "url": "https://imyshare.com/blog/", "tag": "Java,C++", "status": "OK"}, {"name": "辛未羊的网络日志", "url": "https://panqiincs.me/", "tag": "Java,C++", "status": "OK"}, {"name": "Roookie博客", "url": "https://www.wlplove.com/", "tag": "Java,C++", "status": "OK"}, {"name": "唯獨少了個字", "url": "https://kisskisso.com/", "tag": "Java,C++", "status": "OK"}, {"name": "OmegaXYZ-徐奕的专栏", "url": "https://www.omegaxyz.com/", "tag": "Java,C++", "status": "OK"}, {"name": "雷雷的个人博客", "url": "https://ll.sc.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "云游君的小站", "url": "https://www.yunyoujun.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "Sukka's Blog", "url": "https://blog.skk.moe/", "tag": "Java,C++", "status": 403}, {"name": "偕臧的小站", "url": "https://ifmet.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "Hi, I Am I", "url": "https://5ime.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "Gaein nidb的小站", "url": "https://www.gaein.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "小康博客", "url": "https://www.antmoe.com/", "tag": "Java,C++", "status": "OK"}, {"name": "喵二の小博客", "url": "https://www.miaoer.xyz/", "tag": "Java,C++", "status": 466}, {"name": "Mayx的博客", "url": "https://mabbs.github.io/", "tag": "Java,C++", "status": "OK"}, {"name": "約束の明日", "url": "https://asuhe.jp/", "tag": "Java,C++", "status": "OK"}, {"name": "蝉時雨", "url": "https://chanshiyu.com/#/", "tag": "Java,C++", "status": "OK"}, {"name": "胖蒜", "url": "https://pangsuan.com/", "tag": "Java,C++", "status": "OK"}, {"name": "缙哥哥", "url": "https://www.dujin.org/", "tag": "Java,C++", "status": "OK"}, {"name": "不才的博客", "url": "https://www.notbucai.com/", "tag": "Java,C++", "status": "OK"}, {"name": "设若", "url": "https://sheruo.com/", "tag": "Java,C++", "status": "OK"}, {"name": "廉月程博客", "url": "http://www.uy8.top/", "tag": "Java,C++", "status": "OK"}, {"name": "Ceil Profile", "url": "https://ceilwoo.com/", "tag": "Java,C++", "status": "OK"}, {"name": "Harries Blog", "url": "http://www.liuhaihua.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "iEdonの幻想郷", "url": "https://iedon.com/", "tag": "Java,C++", "status": "OK"}, {"name": "FANG", "url": "https://moooc.cc/", "tag": "Java,C++", "status": 403}, {"name": "墙头杏花", "url": "https://www.qiangtou.net/", "tag": "Java,C++", "status": "OK"}, {"name": "千丝海阁", "url": "https://www.tiandiyoyo.com/", "tag": "Java,C++", "status": "OK"}, {"name": "月小升网络笔记", "url": "https://java-er.com/", "tag": "Java,C++", "status": "OK"}, {"name": "和光同尘-南有嘉鱼-markhoo-沉默是金", "url": "http://www.markhoo.com/", "tag": "Java,C++", "status": "OK"}, {"name": "沙聚塔", "url": "http://www.shajuta.com/", "tag": "Java,C++", "status": "OK"}, {"name": "米米的博客", "url": "https://zhangshuqiao.org/", "tag": "Java,C++", "status": "OK"}, {"name": "火丁笔记", "url": "https://blog.huoding.com/", "tag": "Java,C++", "status": "OK"}, {"name": "idea's blog", "url": "https://www.ideawu.net/blog/", "tag": "Java,C++", "status": "OK"}, {"name": "吴师兄学算法", "url": "https://www.cxyxiaowu.com/", "tag": "Java,C++", "status": "OK"}, {"name": "木木木木木", "url": "https://immmmm.com/", "tag": "Java,C++", "status": "OK"}, {"name": "t9t.io", "url": "https://blog.t9t.io/", "tag": "Java,C++", "status": "OK"}, {"name": "萤火之森", "url": "http://frankorz.com/", "tag": "Java,C++", "status": "OK"}, {"name": "CodeSky-代码之空", "url": "https://www.codesky.me/", "tag": "Java,C++", "status": "OK"}, {"name": "张戈博客", "url": "https://zhang.ge/", "tag": "Java,C++", "status": "OK"}, {"name": "当然我在扯淡", "url": "https://www.yinwang.org/", "tag": "Java,C++", "status": "OK"}, {"name": "Chen's Blog", "url": "https://gh0st.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "大伟的博客", "url": "https://easeapi.com/blog/", "tag": "Java,C++", "status": "OK"}, {"name": "张鑫旭的个人主页", "url": "https://www.zhangxinxu.com/", "tag": "Java,C++", "status": "OK"}, {"name": "云风的BLOG", "url": "https://blog.codingnow.com/", "tag": "Java,C++", "status": "OK"}, {"name": "ZDDHUB的博客", "url": "https://zddhub.com/", "tag": "Java,C++", "status": "OK"}, {"name": "追梦人物的博客", "url": "https://www.zmrenwu.com/", "tag": "Java,C++", "status": "OK"}, {"name": "Ric-Blog", "url": "https://www.lichong.work/", "tag": "Java,C++", "status": "OK"}, {"name": "阁子", "url": "https://dfine.tech/", "tag": "Java,C++", "status": "OK"}, {"name": "RidiQulous", "url": "https://ridiqulous.com/", "tag": "Java,C++", "status": "OK"}, {"name": "代码家", "url": "https://daimajia.com/", "tag": "Java,C++", "status": "OK"}, {"name": "技术小黑屋", "url": "https://droidyue.com/", "tag": "Java,C++", "status": "OK"}, {"name": "vzard's blog", "url": "https://blog.vzard.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "后端技术杂谈", "url": "https://www.rowkey.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "Mr Li", "url": "https://blog.lui8.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "Armin's Blog", "url": "https://arminli.com/", "tag": "Java,C++", "status": "OK"}, {"name": "吕大卫的官方网站", "url": "https://lvdawei.com/", "tag": "Java,C++", "status": "OK"}, {"name": "diss带码", "url": "https://dumplingbao.github.io/", "tag": "Java,C++", "status": "OK"}, {"name": "chai2010的博客", "url": "https://chai2010.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "笨方法学写作", "url": "https://www.cnfeat.com/", "tag": "Java,C++", "status": "OK"}, {"name": "手柄君的小阁", "url": "https://www.bysb.net/", "tag": "Java,C++", "status": "OK"}, {"name": "TIMEGG", "url": "https://timegg.top/", "tag": "Java,C++", "status": "OK"}, {"name": "SKNP的小站", "url": "https://sknplz.xyz/", "tag": "Java,C++", "status": "OK"}, {"name": "皮皮凛の小窝", "url": "https://owomoe.net/", "tag": "Java,C++", "status": "OK"}, {"name": "YuZhangWang的领域", "url": "https://www.yuzhang.wang/", "tag": "Java,C++", "status": "OK"}, {"name": "LeiWang1999", "url": "https://leiblog.wang/", "tag": "Java,C++", "status": "OK"}, {"name": "Davinci的红茶馆", "url": "https://davincievans.top/", "tag": "Java,C++", "status": "OK"}, {"name": "饭饭's Blog", "url": "https://ffis.me/", "tag": "Java,C++", "status": "OK"}, {"name": "天空·边界", "url": "https://liyin.date/", "tag": "Java,C++", "status": 503}, {"name": "陈沙克日志", "url": "http://www.chenshake.com/", "tag": "Java,C++", "status": "OK"}, {"name": "透明思考", "url": "http://gigix.thoughtworkers.org/", "tag": "Java,C++", "status": "OK"}, {"name": "記載著-The Will Will Web", "url": "https://blog.miniasp.com/", "tag": "Java,C++", "status": "OK"}, {"name": "程序师", "url": "https://www.techug.com/", "tag": "Java,C++", "status": "OK"}, {"name": "解道jdon", "url": "https://www.jdon.com/", "tag": "Java,C++", "status": "OK"}, {"name": "晚晴幽草轩", "url": "https://www.jeffjade.com/", "tag": "Java,C++", "status": "OK"}, {"name": "the5fire", "url": "https://www.the5fire.com/", "tag": "Java,C++", "status": "OK"}, {"name": "余海峯 David-物理喵 phycat", "url": "https://hfdavidyu.com/", "tag": "Java,C++", "status": "OK"}, {"name": "Mr. PM-下午先生", "url": "http://mrpm.cc/", "tag": "Java,C++", "status": "OK"}, {"name": "人人都是产品经理", "url": "http://iamsujie.com/", "tag": "Java,C++", "status": "OK"}, {"name": "余果的博客", "url": "https://yuguo.us/", "tag": "Java,C++", "status": "OK"}, {"name": "vivaxy's Blog", "url": "https://vivaxyblog.github.io/", "tag": "Java,C++", "status": "OK"}, {"name": "Debug客栈", "url": "https://www.debuginn.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "isaced", "url": "https://www.isaced.com/", "tag": "Java,C++", "status": "OK"}, {"name": "Jason", "url": "https://atjason.com/", "tag": "Java,C++", "status": "OK"}, {"name": "GeekPlux", "url": "https://geekplux.com/", "tag": "Java,C++", "status": "OK"}, {"name": "王子亭的博客", "url": "https://jysperm.me/", "tag": "Java,C++", "status": "OK"}, {"name": "egoist", "url": "https://egoist.sh/", "tag": "Java,C++", "status": "OK"}, {"name": "扯氮集", "url": "http://weiwuhui.com/", "tag": "Java,C++", "status": "OK"}, {"name": "Celia的博客", "url": "https://blog.becomingcelia.com/", "tag": "Java,C++", "status": "OK"}, {"name": "吾依旧博客", "url": "https://www.love-zz.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "小刚的天堂", "url": "https://www.pokemon.vip/", "tag": "Java,C++", "status": "OK"}, {"name": "柚苏爱吹泡泡", "url": "http://sumual.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "NMZA", "url": "https://www.nmza.net/", "tag": "Java,C++", "status": "OK"}, {"name": "Caid Blog-卡伊德的后院", "url": "https://www.caidhome.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "I BCL.", "url": "https://ibcl.us/", "tag": "Java,C++", "status": 503}, {"name": "Kira Blog-逝水 永恒", "url": "https://kira.cool/", "tag": "Java,C++", "status": "OK"}, {"name": "Microanswer", "url": "https://www.microanswer.cn/blogs", "tag": "Java,C++", "status": "OK"}, {"name": "朝圣'Blog-少年游", "url": "https://blog.mcpeach.cc/", "tag": "Java,C++", "status": "OK"}, {"name": "小游网", "url": "https://xiaoyou66.com/", "tag": "Java,C++", "status": "OK"}, {"name": "BangBangCat's Home-梆梆猫的小屋", "url": "https://www.bangbangcat.com/", "tag": "Java,C++", "status": "OK"}, {"name": "奈斯", "url": "https://nai.si/", "tag": "Java,C++", "status": "OK"}, {"name": "零奇部落阁", "url": "http://www.zyskys.com/", "tag": "Java,C++", "status": "OK"}, {"name": "JingFengJi", "url": "https://www.jingfengji.tech/", "tag": "Java,C++", "status": "OK"}, {"name": "栖枝小栈", "url": "https://520526.xyz/", "tag": "Java,C++", "status": "ConnectionError"}, {"name": "BoyInTheSun", "url": "https://boyinthesun.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "小弋の生活馆", "url": "https://lovelijunyi.gitee.io/", "tag": "Java,C++", "status": "OK"}, {"name": "食葫芦的葫芦娃", "url": "https://pengyirui.gitee.io/", "tag": "Java,C++", "status": "OK"}, {"name": "CtrlCV博客", "url": "https://www.hack-er.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "meows", "url": "https://meows.moe/", "tag": "Java,C++", "status": "OK"}, {"name": "itsNeko「生活日志」", "url": "https://dyfa.top/", "tag": "Java,C++", "status": "OK"}, {"name": "张洪Heo", "url": "https://blog.zhheo.com/", "tag": "Java,C++", "status": "OK"}, {"name": "光影N棱镜Blog", "url": "https://shadowprism.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "cx537の空间", "url": "https://cx537.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "LanYun", "url": "https://lanyundev.vercel.app/", "tag": "Java,C++", "status": "OK"}, {"name": "JanYork", "url": "https://ideaopen.cn/", "tag": "Java,C++", "status": "OK"}, {"name": "罗小黑", "url": "https://www.aiyo99.com/", "tag": "Java,C++", "status": "OK"}, {"name": "奈良池文阁", "url": "https://www.naraci.top/", "tag": "Java,C++", "status": "OK"}, {"name": "Aynxul03 写字的地方", "url": "https://ayx.moefox.tech/", "tag": "Java,C++", "status": "OK"}, {"name": "icebreaker", "url": "https://www.icebreaker.top/", "tag": "Java,C++", "status": "OK"}, {"name": "Wiken", "url": "https://www.hehuapei.com/", "tag": "Java,C++", "status": "OK"}, {"name": "涛哥的博客", "url": "https://jaredtao.github.io/", "tag": "Java,C++", "status": "OK"}, {"name": "UsubeniFantasy", "url": "https://ssshooter.com/", "tag": "js,vue,生活,杂谈", "status": "OK"}, {"name": "lucifer的网络博客", "url": "https://lucifer.ren/blog/", "tag": "生活,杂谈", "status": "OK"}, {"name": "Tianke Youke", "url": "https://jyzhu.top/", "tag": "生活,杂谈", "status": "OK"}, {"name": "Yanliang", "url": "https://gyl-coder.top/", "tag": "jvm,kafka,sql,原理,互联网", "status": "OK"}, {"name": "后端进阶", "url": "https://objcoding.com/", "tag": "互联网,redis,多线程,docker,java,kafka", "status": "OK"}, {"name": "空の領域", "url": "https://xsky.me/", "tag": "生活,杂谈", "status": "OK"}, {"name": "Claude's Blog", "url": "https://claude-ray.com/", "tag": "npm,verdaccio,js,node.js", "status": "OK"}]
+[
+    {
+        "name": "卷土",
+        "url": "https://juantu.cn/",
+        "tag": "Python",
+        "sign": "现只为做成一件事",
+        "status": "OK"
+    },
+    {
+        "name": "Alen's Lofter",
+        "url": "http://www.fanyanan.cn/",
+        "tag": "生活,杂谈",
+        "sign": "It's best to do one thing really, really well",
+        "status": "OK"
+    },
+    {
+        "name": "sgfox",
+        "url": "https://www.sgfox.cc/",
+        "tag": "C,生活",
+        "sign": "less is more",
+        "status": "OK"
+    },
+    {
+        "name": "纬八路生活随笔集",
+        "url": "http://www.weibalu.com/?cat=13",
+        "tag": "生活",
+        "sign": "",
+        "status": "OK"
+    },
+    {
+        "name": "雨落凋殇",
+        "url": "https://rainss.cn/",
+        "tag": "Linux,PHP,Java,Python,Android",
+        "sign": "聆听雨落的声音,俯看凋零的落叶.伫细雨之中,感雨落之殇",
+        "status": "OK"
+    },
+    {
+        "name": "图南山",
+        "url": "https://tunanshan.com/",
+        "tag": "生活,杂谈",
+        "sign": "从前有座山，山里有座庙，庙里有个白胡子老道",
+        "status": "OK"
+    },
+    {
+        "name": "远昔博客",
+        "url": "http://blog.qqiyu.cn/",
+        "sign": "技术与资源分享博客",
+        "tag": "php",
+        "status": "OK"
+    },
+    {
+        "name": "字节星球",
+        "url": "https://www.bytecho.net/",
+        "tag": "Java,C++",
+        "sign": "丰富想象力，激发创造力。",
+        "status": "OK"
+    },
+    {
+        "name": "Ryan Wang",
+        "url": "https://ryanc.cc/",
+        "tag": "Halo",
+        "sign": "Hello Halo",
+        "status": "OK"
+    },
+    {
+        "name": "孙老四",
+        "url": "http://lao.si/",
+        "tag": "生活,杂谈",
+        "sign": "记录琐事和并不多的思考",
+        "status": "OK"
+    },
+    {
+        "name": "缃念梦幻",
+        "url": "https://xiannian.top/",
+        "tag": "生活,杂谈",
+        "sign": "一小我的记载,一群人的狂欢",
+        "status": "OK"
+    },
+    {
+        "name": "我道1900的博客",
+        "url": "http://1900.live/",
+        "tag": "生活,节气",
+        "sign": "你好世界，请善待所有内心善良的人",
+        "status": "OK"
+    },
+    {
+        "name": "Fatesinger",
+        "url": "https://fatesinger.com/",
+        "tag": "生活,杂谈",
+        "sign": "This is my zine. I write about shit I care about.",
+        "status": "OK"
+    },
+    {
+        "name": "Mlldxe's Blog-犬の窝",
+        "url": "https://mlldxe.cn/",
+        "tag": "WordPress,建站",
+        "sign": "A responsible Blog for WordPress",
+        "status": "OK"
+    },
+    {
+        "name": "贰言",
+        "url": "https://www.lshongg.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "两对半",
+        "url": "https://www.liangduiban.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "林三随笔",
+        "url": "https://linsanhu.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "后院笔记",
+        "url": "https://lsbackyard.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "雅余",
+        "url": "https://www.yayu.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Fong Blog",
+        "url": "https://fongsoul.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "响石潭",
+        "url": "https://www.xiangshitan.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "猫鱼的小窝",
+        "url": "https://2cat.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "拾风",
+        "url": "https://www.coolblood.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "品味苏州",
+        "url": "https://pwsz.com/",
+        "tag": "Java,C++",
+        "status": "SSLError"
+    },
+    {
+        "name": "王志勇的Blog",
+        "url": "http://www.auiou.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "小众分享",
+        "url": "https://www.smbinn.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "迎風别葉",
+        "url": "https://yingfeng.me/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "蓝卡",
+        "url": "https://www.lanka.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "阮一峰的网络日志",
+        "url": "https://www.ruanyifeng.com/blog/",
+        "tag": "Java,C++",
+        "status": 503
+    },
+    {
+        "name": "OhYee博客",
+        "url": "https://www.ohyee.cc/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "香水的个人主页",
+        "url": "https://xsui.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "启福",
+        "url": "https://qifu.me/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "云帆济海",
+        "url": "https://yunfanch.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "杜老师说",
+        "url": "https://dusays.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "爱音乐的白",
+        "url": "https://mubaix.github.io/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "EQblog",
+        "url": "https://eqblog.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "小王子",
+        "url": "https://www.wanghao.me/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "梁龙的博客",
+        "url": "https://www.lianglong.org/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "夜未央",
+        "url": "https://www.savouer.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "无色墨水",
+        "url": "https://wuse.ink/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "阿峰的小宇宙",
+        "url": "https://feng.pub/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "三无青年-段先森的个人博客",
+        "url": "https://www.duanxiansen.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Vian",
+        "url": "https://vian.top/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "俍注",
+        "url": "https://oneinf.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "森木志",
+        "url": "https://www.imxxz.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "友人C",
+        "url": "https://www.ihewro.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "AoTxLand",
+        "url": "https://aotxland.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "尚寂新",
+        "url": "https://shangjixin.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "心语难诉-周武杰个人博客",
+        "url": "https://xinyu19.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "俊杰",
+        "url": "https://cjj.today/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "钧言极客-进钧'Blog",
+        "url": "https://www.jinjun.top/",
+        "tag": "Java,C++",
+        "status": 503
+    },
+    {
+        "name": "孙文's blog",
+        "url": "https://www.sunjiwen.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "小物有理",
+        "url": "https://www.xujilong.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "左岸博客",
+        "url": "https://www.zrahh.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "失眠海峡",
+        "url": "https://blog.imalan.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "陶心昊",
+        "url": "https://taoxinhao.cn/",
+        "tag": "Java,C++",
+        "status": "ConnectionError"
+    },
+    {
+        "name": "Rat's Blog",
+        "url": "https://www.moerats.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "小z博客",
+        "url": "https://www.xiaoz.me/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "田珊珊个人博客",
+        "url": "http://www.tianshan277.com/",
+        "tag": "Java,C++",
+        "status": 404
+    },
+    {
+        "name": "Noxxxx",
+        "url": "https://www.noxxxx.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "挖站否",
+        "url": "https://wzfou.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "厘米天空",
+        "url": "https://www.cmsky.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "张琪灵",
+        "url": "https://zxx.im/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "至道小博",
+        "url": "https://www.zdaoxb.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "那次",
+        "url": "https://na.ci/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "立云图志",
+        "url": "http://www.lopwon.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "格子老师",
+        "url": "https://manman.qian.lu/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "青萌",
+        "url": "https://zzbapp.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "牧羊人",
+        "url": "https://www.shephe.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "青山绿水-胡和先的个人博客",
+        "url": "https://www.huhexian.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "True's ME-初见",
+        "url": "https://chujian.xyz/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "忆往事",
+        "url": "https://yiws.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "NiCE",
+        "url": "https://www.nice.im/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "尺宅杂记",
+        "url": "http://www.qncd.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "七星岩博客",
+        "url": "https://qxysc.xyz/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "一介大叔",
+        "url": "http://www.winature.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "夜语凭栏",
+        "url": "http://www.yezaifei.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "FROYO's Blog",
+        "url": "http://www.izhuyue.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "青箬笠",
+        "url": "https://qingruoli.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "佐仔志",
+        "url": "https://www.jinbo123.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "不曾长大-秦飞的个人空间",
+        "url": "https://qfsyj.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "风雨行者-非著名历史学爱好者",
+        "url": "http://stuit.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "守望轩-宁静雅致的小轩馆",
+        "url": "https://www.watch-life.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "小陈故事",
+        "url": "https://www.chener.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "旅行漫记-Travel Journal",
+        "url": "https://synyan.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "我的天",
+        "url": "http://www.xlanda.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "小猪的窝",
+        "url": "https://ezo.biz/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "流浪天下-背包行走，流浪天下",
+        "url": "https://maie.name/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "尚磊的博客",
+        "url": "https://shanglei.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "随风沐虐-万里风云三尺剑，一庭花草半床书",
+        "url": "https://www.munue.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "非学派——不与偏见和痼习为伍",
+        "url": "https://fxpai.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "心灵博客",
+        "url": "http://blog.dngz.net/",
+        "tag": "Java,C++",
+        "status": 504
+    },
+    {
+        "name": "因为很想念",
+        "url": "https://ltmltm.cn/bk/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "bang's blog",
+        "url": "https://blog.cnbang.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "伪医生律师的博客",
+        "url": "https://chidd.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "胡涂说",
+        "url": "https://hutusi.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "NetCafe",
+        "url": "https://hijoe.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "西枫里",
+        "url": "https://www.anji66.net/",
+        "tag": "Java,C++",
+        "status": 502
+    },
+    {
+        "name": "生活的左上角",
+        "url": "https://bwskyer.com/",
+        "tag": "Java,C++",
+        "status": "SSLError"
+    },
+    {
+        "name": "木瓜园",
+        "url": "https://muguayuan.com/",
+        "tag": "Java,C++",
+        "status": "ConnectionError"
+    },
+    {
+        "name": "山野愚人居",
+        "url": "https://www.iyuren.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "挨踢路-老狼个人博客",
+        "url": "https://itlu.org/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "酷壳",
+        "url": "https://coolshell.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Hello Alili-前端大爆炸!",
+        "url": "https://alili.tech/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "winegrower-种葡萄并酿酒的人",
+        "url": "http://www.winegrower.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "颜海镜",
+        "url": "https://yanhaijing.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "justjavac(迷渡)",
+        "url": "https://justjavac.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "前端小武的博客",
+        "url": "https://xuexb.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "JerryQu 的小站",
+        "url": "https://imququ.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "蚊子-前端博客",
+        "url": "https://www.xiabingbao.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "不亦乐乎",
+        "url": "https://lms.im/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "ZWWoOoOo",
+        "url": "https://zww.me/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "从良未遂",
+        "url": "https://www.ithmz.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Huiris's log",
+        "url": "https://huiris.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "两公斤博客",
+        "url": "https://twokg.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "小赖子的英国生活和资讯",
+        "url": "https://justyy.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Fooleap's Blog",
+        "url": "https://blog.fooleap.org/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "罗磊的独立博客",
+        "url": "https://luolei.org/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "forecho's Blog",
+        "url": "https://blog.forecho.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "SYS 棚户区",
+        "url": "https://www.syshut.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "kn007的个人博客",
+        "url": "https://kn007.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "半个C++程序员",
+        "url": "http://cppdebug.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "果果喵",
+        "url": "http://moe.xin/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "月光酒馆",
+        "url": "https://wanbk.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "梦幻辰风",
+        "url": "https://www.mhcf.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "潜云小站",
+        "url": "https://1000yun.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "梦回故里",
+        "url": "https://www.80shihua.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "林林杂语",
+        "url": "https://www.linlinzzo.top/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "江湖传说",
+        "url": "http://www.zuijh.net/blog/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "梦魇小栈",
+        "url": "https://blog.ihoey.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Mythsman",
+        "url": "https://blog.mythsman.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "冰峰博客",
+        "url": "https://www.ad-s.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "李阿斗-李精华",
+        "url": "https://www.lijinghua.club/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "静夜",
+        "url": "https://oohyo.github.io/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "无垠",
+        "url": "https://flyhigher.top/",
+        "tag": "Java,C++",
+        "status": 503
+    },
+    {
+        "name": "量子广告",
+        "url": "http://blog.ynxiu.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "往前",
+        "url": "https://wqian.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "CrazyWong",
+        "url": "https://crazywong.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "LeoLan's Blog",
+        "url": "https://www.leolan.top/",
+        "tag": "Java,C++",
+        "status": "ConnectionError"
+    },
+    {
+        "name": "辣椒の酱",
+        "url": "https://removeif.github.io/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "自由灵的梦境",
+        "url": "https://lemonadorable.gitee.io/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Tokisaki Galaxy",
+        "url": "https://tokisaki.top/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "折影轻梦",
+        "url": "https://nexmoe.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Sonic853",
+        "url": "https://blog.853lab.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "泽泽社",
+        "url": "https://blog.zezeshe.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Dreamwings",
+        "url": "https://www.dreamwings.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Ailoli",
+        "url": "https://www.ailoli.org/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Troy's Blog-Troy的星球",
+        "url": "https://itroy.cc/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "神楽坂玉兔",
+        "url": "https://www.54yt.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "FGHRSH的博客",
+        "url": "https://www.fghrsh.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Hran的博客",
+        "url": "https://get233.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "あかねぞら",
+        "url": "https://kotori.love/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "七夏浅笑",
+        "url": "https://www.julydate.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Waxxh's Blog",
+        "url": "https://waxxh.me/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "monsterlin's blog",
+        "url": "https://monsterlin.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "暮光博客",
+        "url": "https://muguang.me/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "MoeShin",
+        "url": "https://moeshin.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "聆听博客",
+        "url": "https://www.lingtings.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "蚊BloG",
+        "url": "https://qwq.moe/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "染念的笔记",
+        "url": "https://dyedd.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "w候人兮猗",
+        "url": "https://www.ahwgs.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "SycBlog",
+        "url": "https://www.php.wf/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Lesun's Blog",
+        "url": "https://xlesun.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "叶小明的博客-XIAOMING'S BLOG",
+        "url": "https://vimin.cc/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "登山亦有道",
+        "url": "https://chenyan98.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "青山小站",
+        "url": "https://blog.yanqingshan.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "尘心网",
+        "url": "https://cx9.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "阿豪运维笔记",
+        "url": "https://www.ahaoyw.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "江寻博客",
+        "url": "https://blog.cseve.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "闲趣日评",
+        "url": "https://xqrp.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "小杨生活志",
+        "url": "https://www.yanghuaxing.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "IT者",
+        "url": "https://www.itze.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "林羽凡网",
+        "url": "https://www.linyufan.com/",
+        "tag": "Java,C++",
+        "status": 403
+    },
+    {
+        "name": "阿呆博客-90后肥宅生活",
+        "url": "https://bo.ke/",
+        "tag": "Java,C++",
+        "status": "SSLError"
+    },
+    {
+        "name": "小灰狼",
+        "url": "https://fly2lan.cc/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "迟於",
+        "url": "https://www.weingxing.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "杜郎俊赏",
+        "url": "https://dujun.io/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "白云苍狗",
+        "url": "https://www.imalun.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "威言威语",
+        "url": "https://www.weisay.com/blog/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "冯献金个人博客",
+        "url": "https://blog.fengxianjin.com/",
+        "tag": "Java,C++",
+        "status": 406
+    },
+    {
+        "name": "太傅博客",
+        "url": "https://taifua.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "iMyShare-互联网人的博客",
+        "url": "https://imyshare.com/blog/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "辛未羊的网络日志",
+        "url": "https://panqiincs.me/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Roookie博客",
+        "url": "https://www.wlplove.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "唯獨少了個字",
+        "url": "https://kisskisso.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "OmegaXYZ-徐奕的专栏",
+        "url": "https://www.omegaxyz.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "雷雷的个人博客",
+        "url": "https://ll.sc.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "云游君的小站",
+        "url": "https://www.yunyoujun.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Sukka's Blog",
+        "url": "https://blog.skk.moe/",
+        "tag": "Java,C++",
+        "status": 403
+    },
+    {
+        "name": "偕臧的小站",
+        "url": "https://ifmet.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Hi, I Am I",
+        "url": "https://5ime.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Gaein nidb的小站",
+        "url": "https://www.gaein.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "小康博客",
+        "url": "https://www.antmoe.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "喵二の小博客",
+        "url": "https://www.miaoer.xyz/",
+        "tag": "Java,C++",
+        "status": 466
+    },
+    {
+        "name": "Mayx的博客",
+        "url": "https://mabbs.github.io/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "約束の明日",
+        "url": "https://asuhe.jp/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "蝉時雨",
+        "url": "https://chanshiyu.com/#/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "胖蒜",
+        "url": "https://pangsuan.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "缙哥哥",
+        "url": "https://www.dujin.org/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "不才的博客",
+        "url": "https://www.notbucai.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "设若",
+        "url": "https://sheruo.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "廉月程博客",
+        "url": "http://www.uy8.top/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Ceil Profile",
+        "url": "https://ceilwoo.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Harries Blog",
+        "url": "http://www.liuhaihua.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "iEdonの幻想郷",
+        "url": "https://iedon.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "FANG",
+        "url": "https://moooc.cc/",
+        "tag": "Java,C++",
+        "status": 403
+    },
+    {
+        "name": "墙头杏花",
+        "url": "https://www.qiangtou.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "千丝海阁",
+        "url": "https://www.tiandiyoyo.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "月小升网络笔记",
+        "url": "https://java-er.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "和光同尘-南有嘉鱼-markhoo-沉默是金",
+        "url": "http://www.markhoo.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "沙聚塔",
+        "url": "http://www.shajuta.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "米米的博客",
+        "url": "https://zhangshuqiao.org/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "火丁笔记",
+        "url": "https://blog.huoding.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "idea's blog",
+        "url": "https://www.ideawu.net/blog/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "吴师兄学算法",
+        "url": "https://www.cxyxiaowu.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "木木木木木",
+        "url": "https://immmmm.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "t9t.io",
+        "url": "https://blog.t9t.io/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "萤火之森",
+        "url": "http://frankorz.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "CodeSky-代码之空",
+        "url": "https://www.codesky.me/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "张戈博客",
+        "url": "https://zhang.ge/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "当然我在扯淡",
+        "url": "https://www.yinwang.org/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Chen's Blog",
+        "url": "https://gh0st.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "大伟的博客",
+        "url": "https://easeapi.com/blog/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "张鑫旭的个人主页",
+        "url": "https://www.zhangxinxu.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "云风的BLOG",
+        "url": "https://blog.codingnow.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "ZDDHUB的博客",
+        "url": "https://zddhub.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "追梦人物的博客",
+        "url": "https://www.zmrenwu.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Ric-Blog",
+        "url": "https://www.lichong.work/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "阁子",
+        "url": "https://dfine.tech/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "RidiQulous",
+        "url": "https://ridiqulous.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "代码家",
+        "url": "https://daimajia.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "技术小黑屋",
+        "url": "https://droidyue.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "vzard's blog",
+        "url": "https://blog.vzard.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "后端技术杂谈",
+        "url": "https://www.rowkey.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Mr Li",
+        "url": "https://blog.lui8.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Armin's Blog",
+        "url": "https://arminli.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "吕大卫的官方网站",
+        "url": "https://lvdawei.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "diss带码",
+        "url": "https://dumplingbao.github.io/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "chai2010的博客",
+        "url": "https://chai2010.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "笨方法学写作",
+        "url": "https://www.cnfeat.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "手柄君的小阁",
+        "url": "https://www.bysb.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "TIMEGG",
+        "url": "https://timegg.top/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "SKNP的小站",
+        "url": "https://sknplz.xyz/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "皮皮凛の小窝",
+        "url": "https://owomoe.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "YuZhangWang的领域",
+        "url": "https://www.yuzhang.wang/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "LeiWang1999",
+        "url": "https://leiblog.wang/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Davinci的红茶馆",
+        "url": "https://davincievans.top/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "饭饭's Blog",
+        "url": "https://ffis.me/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "天空·边界",
+        "url": "https://liyin.date/",
+        "tag": "Java,C++",
+        "status": 503
+    },
+    {
+        "name": "陈沙克日志",
+        "url": "http://www.chenshake.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "透明思考",
+        "url": "http://gigix.thoughtworkers.org/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "記載著-The Will Will Web",
+        "url": "https://blog.miniasp.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "程序师",
+        "url": "https://www.techug.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "解道jdon",
+        "url": "https://www.jdon.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "晚晴幽草轩",
+        "url": "https://www.jeffjade.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "the5fire",
+        "url": "https://www.the5fire.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "余海峯 David-物理喵 phycat",
+        "url": "https://hfdavidyu.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Mr. PM-下午先生",
+        "url": "http://mrpm.cc/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "人人都是产品经理",
+        "url": "http://iamsujie.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "余果的博客",
+        "url": "https://yuguo.us/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "vivaxy's Blog",
+        "url": "https://vivaxyblog.github.io/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Debug客栈",
+        "url": "https://www.debuginn.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "isaced",
+        "url": "https://www.isaced.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Jason",
+        "url": "https://atjason.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "GeekPlux",
+        "url": "https://geekplux.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "王子亭的博客",
+        "url": "https://jysperm.me/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "egoist",
+        "url": "https://egoist.sh/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "扯氮集",
+        "url": "http://weiwuhui.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Celia的博客",
+        "url": "https://blog.becomingcelia.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "吾依旧博客",
+        "url": "https://www.love-zz.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "小刚的天堂",
+        "url": "https://www.pokemon.vip/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "柚苏爱吹泡泡",
+        "url": "http://sumual.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "NMZA",
+        "url": "https://www.nmza.net/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Caid Blog-卡伊德的后院",
+        "url": "https://www.caidhome.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "I BCL.",
+        "url": "https://ibcl.us/",
+        "tag": "Java,C++",
+        "status": 503
+    },
+    {
+        "name": "Kira Blog-逝水 永恒",
+        "url": "https://kira.cool/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Microanswer",
+        "url": "https://www.microanswer.cn/blogs",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "朝圣'Blog-少年游",
+        "url": "https://blog.mcpeach.cc/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "小游网",
+        "url": "https://xiaoyou66.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "BangBangCat's Home-梆梆猫的小屋",
+        "url": "https://www.bangbangcat.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "奈斯",
+        "url": "https://nai.si/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "零奇部落阁",
+        "url": "http://www.zyskys.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "JingFengJi",
+        "url": "https://www.jingfengji.tech/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "栖枝小栈",
+        "url": "https://520526.xyz/",
+        "tag": "Java,C++",
+        "status": "ConnectionError"
+    },
+    {
+        "name": "BoyInTheSun",
+        "url": "https://boyinthesun.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "小弋の生活馆",
+        "url": "https://lovelijunyi.gitee.io/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "食葫芦的葫芦娃",
+        "url": "https://pengyirui.gitee.io/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "CtrlCV博客",
+        "url": "https://www.hack-er.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "meows",
+        "url": "https://meows.moe/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "itsNeko「生活日志」",
+        "url": "https://dyfa.top/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "张洪Heo",
+        "url": "https://blog.zhheo.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "光影N棱镜Blog",
+        "url": "https://shadowprism.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "cx537の空间",
+        "url": "https://cx537.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "LanYun",
+        "url": "https://lanyundev.vercel.app/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "JanYork",
+        "url": "https://ideaopen.cn/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "罗小黑",
+        "url": "https://www.aiyo99.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "奈良池文阁",
+        "url": "https://www.naraci.top/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Aynxul03 写字的地方",
+        "url": "https://ayx.moefox.tech/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "icebreaker",
+        "url": "https://www.icebreaker.top/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "Wiken",
+        "url": "https://www.hehuapei.com/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "涛哥的博客",
+        "url": "https://jaredtao.github.io/",
+        "tag": "Java,C++",
+        "status": "OK"
+    },
+    {
+        "name": "UsubeniFantasy",
+        "url": "https://ssshooter.com/",
+        "tag": "js,vue,生活,杂谈",
+        "status": "OK"
+    },
+    {
+        "name": "lucifer的网络博客",
+        "url": "https://lucifer.ren/blog/",
+        "tag": "生活,杂谈",
+        "status": "OK"
+    },
+    {
+        "name": "Tianke Youke",
+        "url": "https://jyzhu.top/",
+        "tag": "生活,杂谈",
+        "status": "OK"
+    },
+    {
+        "name": "Yanliang",
+        "url": "https://gyl-coder.top/",
+        "tag": "jvm,kafka,sql,原理,互联网",
+        "status": "OK"
+    },
+    {
+        "name": "后端进阶",
+        "url": "https://objcoding.com/",
+        "tag": "互联网,redis,多线程,docker,java,kafka",
+        "status": "OK"
+    },
+    {
+        "name": "空の領域",
+        "url": "https://xsky.me/",
+        "tag": "生活,杂谈",
+        "status": "OK"
+    },
+    {
+        "name": "Claude's Blog",
+        "url": "https://claude-ray.com/",
+        "tag": "npm,verdaccio,js,node.js",
+        "status": "OK"
+    }
+]

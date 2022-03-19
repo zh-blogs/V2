@@ -306,5 +306,9 @@
   {"name": "Yanliang", "url": "https://gyl-coder.top/", "tag": "jvm,kafka,sql,原理,互联网", "status": "OK"},
   {"name": "后端进阶", "url": "https://objcoding.com/", "tag": "互联网,redis,多线程,docker,java,kafka", "status": "OK"},
   {"name": "空の領域", "url": "https://xsky.me/", "tag": "生活,杂谈", "status": "OK"},
-  {"name": "Claude's Blog", "url": "https://claude-ray.com/", "tag": "npm,verdaccio,js,node.js", "status": "OK"}
+  {"name": "Claude's Blog", "url": "https://claude-ray.com/", "tag": "npm,verdaccio,js,node.js", "status": "OK"},
+  {"name": "城南旧事", "url": "https://blog.loli.top/", "tag": "", "sign": "透过文字和影像记忆，我们延长了至少三倍的生命。", "status": ""},
+  {"name": "司马他", "url": "https://claude-ray.com/", "tag": "生活,杂谈", "sign": "Codes Speak Louder than Words.", "status": ""},
+  {"name": "汀彵の汐-AugEnsteRn.", "url": "https://claude-ray.com/", "tag": "", "sign": "愿小仙女能被这世界温柔以待❤", "status": ""},
+  {"name": "臾离博客", "url": "https://blog.xgblack.cn/", "tag": "", "sign": "小光要更努力啊", "status": ""}
 ]

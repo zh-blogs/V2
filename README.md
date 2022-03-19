@@ -6,14 +6,30 @@
 [^1]: 他在我们的项目群中发表了这个建议。建议中travelling原先是travling，被林林擅自修改为travelling。
 
 我们现在正在进行博客标签的制定、博客标签搜索的开发和指定标签随机跳转工作。
-## 原来的说明
+## 说明
 我们立志要链接全部的中文独立博客。    
 本项目的在线地址是https://blog-daohang.vercel.app/ ，你可以在网页中点击链接进行串门、交换友链，也可以调查中文独立博客的共性。  
 各位大佬可以从https://blog-daohang.vercel.app/go.html 随机访问博客。 
 我们会不定期手动将列表中的博客进行存档，存档的详细信息请见 https://github.com/linlinzzo/blog-daohang/discussions 。
 ## 项目如何发现博客
+### 博客的友情链接
 根据超链接，我们可以从种子博客中找到十多个不等的网站地址，这些地址中符合要求的会自动成为新的种子博客。     
-理论上来说，博主不需要提交网址，就能被我们发现。    
+理论上来说，博主不需要提交网址，就能被我们发现。  
+### 上游库
+我们会使用一些上游库。
+| 名称      | 网址 | 是否使用|
+| ----------- | ----------- | -------|
+| timqian/chinese-independent-blogs      | https://github.com/timqian/chinese-independent-blogs       | 没用完|
+| 博客大全   | https://daohang.lusongsong.com/      | 没|
+| 博客志   | http://www.jetli.com.cn/    | 没用完|
+| 中文独立博客导航   | https://www.blogwall.cn/nav/    | 没|
+| 博客联盟   | https://blorg.cn/    | 没|
+| BLOS'空间   | https://c.sady0.com/   | 用完了|
+| BlogFinder   | https://bf.zzxworld.com/  | 没用|
+|TUNA Blogroll   | https://github.com/tuna/blogroll | 没|
+|bloghub   | https://github.com/shidenggui/bloghub/blob/master/backend/assets/blogs-original.csv | 没|
+|十年之约   | https://www.foreverblog.cn/blogs.html | 没用完|
+
 ## 如何支持该项目
 1. 如果网站名称或地址出现更换或博客失效，请提个 issue。        
 2. 可以为本项目做宣传，让更多人知道本项目。         
@@ -33,11 +49,7 @@
 ### 博客标签
 目前先标记技术博客的语言类型，其它标签待定。
 # ToDo
-- [x] 随机跳转
-- [x] 列表分页
-- [x] 高级搜索(博客名称和地址均可搜索)
-- [x] 博客列表自动去重（目前没必要）
-- [x] 博客的序号优化
+（把一些todo删掉了）
 - [ ] 排序方案讨论（随机排序、按序号排序、推荐博客？）
 - [ ] 自动生成列表页面（目前没必要）
 - [ ] 网址搜索词传入（类似于php的get变量，没啥用，先搁着）

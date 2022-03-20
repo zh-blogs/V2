@@ -1,0 +1,48 @@
+/* 宽屏 1000px 以上 */
+@media screen and (min-width: 1000px) {
+  #app {
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+  }
+}
+
+/* 窄屏 1000px 以下 */
+@media screen and (max-width: 1000px) {
+  #app {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+  }
+}
+    .autocomplete {
+  /*容器定位设置为 relative:*/
+  position: relative;
+  display: inline-block;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*设置自动填充项宽度与容器相同*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*鼠标移动到填充项设置的背景颜色*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*使用箭头键浏览填充项时的背景颜色*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}

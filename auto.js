@@ -7,7 +7,6 @@ function autocomplete(inp, arr) {
   inp.addEventListener("input", function(e) {
       var a, b, i, val = this.value;
       /*关闭已打开的自动填充列表*/
-      closeAllLists();
       if (!val) { return false;}
       currentFocus = -1;
       /*创建 DIV 元素用于放置自动填充列表的值*/

@@ -27,7 +27,12 @@
     <p>我们的 Github 仓库地址是 <a href="https://github.com/linlinzzo/blog-daohang">linlinzzo/blog-daohang</a>。如果想为本项目贡献一份力量，可以通过 Github 联系我们。如果想让我们收录你的网站，可以在本项目的 Github 仓库中提交 issue。</p>
     
     <div class="container_search input-group">
-        <input type="text" id="search" class="search form-control autocomplete" placeholder="输入博客名称或博客网址筛选博客网站" autocomplete="off" />
+        <input type="text" id="search" class="search form-control autocomplete" placeholder="输入博客名称或博客网址筛选博客网站" autocomplete="off" list="blogs" />
+        <datalist id="blogs">
+          <option value="雅余" />
+          <option value="阮一峰的网络日志" />
+          <option value="博客推荐功能正在测试" />
+        </datalist>
         <a class="btn btn-primary blogJump" role="button" href="/go.html" target="_blank">博客随机跳转</a>
     </div>
     <br />
@@ -37,7 +42,7 @@
   </div>
   <script type="text/javascript" src="/main.js" charset="UTF-8"></script>
   <script type="text/javascript">main()</script>
-  <script type="text/javascript" src="/auto.js" charset="UTF-8"></script>
+  <!---<script type="text/javascript" src="/auto.js" charset="UTF-8"></script>--->
 </body>
 
 </html>

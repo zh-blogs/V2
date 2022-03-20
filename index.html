@@ -32,6 +32,37 @@
     padding: 10px;
   }
 }
+    .autocomplete {
+  /*容器定位设置为 relative:*/
+  position: relative;
+  display: inline-block;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*设置自动填充项宽度与容器相同*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*鼠标移动到填充项设置的背景颜色*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*使用箭头键浏览填充项时的背景颜色*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
   </style>
   
   <!--本网页的标题-->
@@ -45,7 +76,7 @@
     <p>我们的 Github 仓库地址是 <a href="https://github.com/linlinzzo/blog-daohang">linlinzzo/blog-daohang</a>。如果想为本项目贡献一份力量，可以通过 Github 联系我们。如果想让我们收录你的网站，可以在本项目的 Github 仓库中提交 issue。</p>
     
     <div class="container_search input-group">
-        <input type="text" id="search" class="search form-control" placeholder="输入博客名称或博客网址筛选博客网站" list="webs" autocomplete="off" />
+        <input type="text" id="search" class="search form-control autocomplete" placeholder="输入博客名称或博客网址筛选博客网站" list="webs" autocomplete="off" />
           <datalist id="webs">
             <option value="推荐博客功能目前正在测试，不开放申请推荐博客" disabled="disabled" />
           </datalist>

@@ -134,7 +134,7 @@
   {"name": "李阿斗-李精华", "url": "https://www.lijinghua.club/", "tag": "Java,C++", "status": "OK"},
   {"name": "静夜", "url": "https://oohyo.github.io/", "tag": "Java,C++", "status": "OK"},
   {"name": "无垠", "url": "https://flyhigher.top/", "tag": "Java,C++", "status": 503},
-  {"name": "量子广告", "url": "http://blog.ynxiu.com/", "tag": "Java,C++", "status": "OK"},
+  {"name": "量子广告", "url": "https://blog.ynxiu.com/", "tag": "Java,C++", "status": "OK"},
   {"name": "往前", "url": "https://wqian.net/", "tag": "Java,C++", "status": "OK"},
   {"name": "CrazyWong", "url": "https://crazywong.com/", "tag": "Java,C++", "status": "OK"},
   {"name": "LeoLan's Blog", "url": "https://www.leolan.top/", "tag": "Java,C++", "status": "ConnectionError"},

@@ -20,8 +20,7 @@
 | 名称      | 网址 | 是否使用|
 | ----------- | ----------- | -------|
 | timqian/chinese-independent-blogs      | https://github.com/timqian/chinese-independent-blogs       | 没用完|
-| 博客大全   | https://daohang.lusongsong.com/      | 没|
-| 博客志   | http://www.jetli.com.cn/    | 没用完|
+| 博客志   | http://www.jetli.com.cn/    | 用完了|
 | 中文独立博客导航   | https://www.blogwall.cn/nav/    | 没|
 | 博客联盟   | https://blorg.cn/    | 没|
 | BLOS'空间   | https://c.sady0.com/   | 用完了|

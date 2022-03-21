@@ -10,7 +10,8 @@
 我们立志要链接全部的中文独立博客。    
 本项目的在线地址是https://blog-daohang.vercel.app/ ，你可以在网页中点击链接进行串门、交换友链，也可以调查中文独立博客的共性。  
 各位大佬可以从https://blog-daohang.vercel.app/go.html 随机访问博客。 
-我们会不定期手动将列表中的博客进行存档，存档的详细信息请见 https://github.com/linlinzzo/blog-daohang/discussions 。
+我们会不定期手动将列表中的博客进行存档，存档的详细信息请见 https://github.com/linlinzzo/blog-daohang/discussions 。      
+我们鼓励博客网站使用https，详见[推荐博客站长们为博客使用https](https://hugo-linlinzzo.vercel.app/posts/using-https/)。
 ## 项目如何发现博客
 ### 博客的友情链接
 根据超链接，我们可以从种子博客中找到十多个不等的网站地址，这些地址中符合要求的会自动成为新的种子博客。     

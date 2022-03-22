@@ -4,18 +4,25 @@
 <head>
   <!--声明字符集，防止乱码-->
   <meta charset="utf-8" />
-  
+
   <!--一些杂七杂八的meta标签-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta http-equiv="Cache-Control" content="no-siteapp" />    
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
   <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
-  
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+
   <!--引用一下脚本-->
   <link href="/boot.css" rel="stylesheet" type="text/css" />
   <link href="/homepage.css" rel="stylesheet" type="text/css" />
+
   <script type="text/javascript" src="/boot.js" async="async" charset="UTF-8"></script>
-  
+  <script src="/react.production.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="UTF-8"></script>
+  <script src="/react-dom.production.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"
+    charset="UTF-8"></script>
+  <script src="/babel.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="UTF-8"></script>
+  <script type="text/javascript" src="/main.js" charset="UTF-8"></script>
+
   <!--本网页的标题-->
   <title>中文博客列表导航-尝试链接几乎所有的中文博客</title>
 </head>
@@ -24,44 +31,40 @@
   <div id="app">
     <h1>中文博客列表导航项目 <small>尝试链接几乎所有的中文博客</small></h1>
     <p>我们尝试链接几乎所有的中文博客，并使用这个地址库不定期为中文博客存档。</p>
-    <p>我们的 Github 仓库地址是 <a href="https://github.com/linlinzzo/blog-daohang">linlinzzo/blog-daohang</a>。如果想为本项目贡献一份力量，可以通过 Github 联系我们。如果想让我们收录你的网站，可以在本项目的 Github 仓库中提交 issue。</p>
-    
-    <div class="container_search input-group">
-        <input type="text" id="search" class="search form-control autocomplete" placeholder="输入博客名称或博客网址筛选博客网站" autocomplete="off" list="blogs" />
-        <datalist id="blogs">
-          <option value="博客推荐功能正在测试" />
-        </datalist>
-        <a class="btn btn-primary blogJump" role="button" href="/go.html" target="_blank">博客随机跳转</a>
-    </div>
-    <br />
-    <div class="table-responsive container_table">
-      <noscript><strong>列表功能出现异常！还不是都怪你没开Javascript！</strong><hr /><strong>哼！不理你了！</strong></noscript>
+    <p>我们的 Github 仓库地址是 <a
+        href="https://github.com/linlinzzo/blog-daohang">linlinzzo/blog-daohang</a>。如果想为本项目贡献一份力量，可以通过 Github
+      联系我们。如果想让我们收录你的网站，可以在本项目的 Github 仓库中提交 issue。</p>
+
+    <div id="react" class="container_table">
+      <noscript><strong>列表功能出现异常！还不是都怪你没开Javascript！</strong>
+        <hr /><strong>哼！不理你了！</strong>
+      </noscript>
     </div>
     <br />
     <p>由于我们刚开始博客网站的收集工作，一些博客还未收录，你可以向我们提供未收录的博客地址以便我们改进，也可以去别的导航项目，也许你会发现更多。</p>
     <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <a class="nav-link" href="https://seekbetter.me/">寻我 | 优秀个人独立博客收录</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="https://github.com/timqian/chinese-independent-blogs">中文独立博客列表</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="http://www.jetli.com.cn/">优秀个人独立博客导航</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="https://blorg.cn/">博客联盟</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="https://bf.zzxworld.com/">BlogFinder - 发现优秀的个人博客</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="https://www.foreverblog.cn/">十年之约</a>
-    </li>
-  </ul>
+      <li class="nav-item">
+        <a class="nav-link" href="https://seekbetter.me/">寻我 | 优秀个人独立博客收录</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/timqian/chinese-independent-blogs">中文独立博客列表</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://www.jetli.com.cn/">优秀个人独立博客导航</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://blorg.cn/">博客联盟</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://bf.zzxworld.com/">BlogFinder - 发现优秀的个人博客</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.foreverblog.cn/">十年之约</a>
+      </li>
+    </ul>
   </div>
-  <script type="text/javascript" src="/main.js" charset="UTF-8"></script>
-  <script type="text/javascript">main()</script>
+  <script type="text/babel" src="/main.jsx"></script>
+  </script>
 </body>
 
 </html>

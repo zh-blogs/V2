@@ -73,7 +73,7 @@
   {"name": "忆往事", "url": "https://yiws.net/", "tag": "Java,C++", "status": "OK"},
   {"name": "NiCE", "url": "https://www.nice.im/", "tag": "Java,C++", "status": "OK"},
   {"name": "尺宅杂记", "url": "http://www.qncd.com/", "tag": "Java,C++", "status": "OK"},
-  {"name": "七星岩博客", "url": "https://qxysc.xyz/", "tag": "Java,C++", "status": "OK"},
+  {"name": "一个博客", "url": "https://boke.one/", "tag": "Python,C++,建站", "sign": "我的折腾笔记", "status": "OK"},
   {"name": "一介大叔", "url": "http://www.winature.com/", "tag": "Java,C++", "status": "OK"},
   {"name": "夜语凭栏", "url": "http://www.yezaifei.com/", "tag": "Java,C++", "status": "OK"},
   {"name": "FROYO's Blog", "url": "http://www.izhuyue.com/", "tag": "Java,C++", "status": "OK"},

@@ -1,13 +1,17 @@
 import json
 import requests
 
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36"
+}
+
 with open('data.json', 'r', encoding='utf8') as json_file:
     json_data = json.load(json_file)
     
 for index in range(len(json_data)):
     print("Checking:", json_data[index]["url"], end = " ")
     try:
-        res = requests.get(json_data[index]["url"])
+        res = requests.get(json_data[index]["url"], timeout=2, headers=headers)
         if res.status_code == 200:
             json_data[index]["status"] = "OK"
             print("[ OK ]")

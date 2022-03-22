@@ -319,6 +319,11 @@
       setURLQuery('page', page);
     }, [page]);
 
+    React.useEffect(() => {
+      // 数据更新（筛选时），重置页码
+      setPage(1);
+    }, [blogs]);
+
     const showBlogs = React.useMemo(
       () => blogs.slice((page - 1) * PageSize, page * PageSize),
       [blogs, page]

@@ -11,7 +11,7 @@ with open('data.json', 'r', encoding='utf8') as json_file:
 for index in range(len(json_data)):
     print("Checking:", json_data[index]["url"], end = " ")
     try:
-        res = requests.head(json_data[index]["url"], timeout=5, headers=headers)
+        res = requests.get(json_data[index]["url"], timeout=5, headers=headers)
         if res.status_code == 200:
             json_data[index]["status"] = "OK"
             print("[ OK ]")

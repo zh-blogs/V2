@@ -383,5 +383,6 @@
   {"name": "时光笔记", "url": "https://www.ttext.cn/", "tag": "", "sign": "记录逝去的时光，追忆美好的记忆", "status": "OK"},
   {"name": "我爱吃土豆", "url": "https://itudo.cn/", "tag": "", "sign": "做人，就要像土豆一样", "status": "OK"},
   {"name": "学霸时光机-苏耀峰的Blog", "url": "https://www.syf.ink/", "tag": "", "sign": "以朴素之笔记录生活中的点点滴滴，以简洁的篇章留住感动的美好瞬间，静静追寻远方的梦想和生活的美好。", "status": "OK"},
-  {"name": "乘风", "url": "https://blog.zxliu.cn/", "tag": "", "sign": "", "status": "OK"}
+  {"name": "乘风", "url": "https://blog.zxliu.cn/", "tag": "", "sign": "", "status": "OK"},
+  {"name": "風清", "url": "https://wind.ink/", "tag": "摄影", "sign": "正在創建 Her Blue 她的藍 情緒攝影", "status": "OK"}
 ]

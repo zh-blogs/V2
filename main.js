@@ -24,7 +24,7 @@ async function getBlogList() {
   // 添加序号
   return blogs.map((blog, index) => ({
     ...blog,
-    tags: !!blog.tag ? blog.tag.split(',') : [],
+    tags: !!blog.tag ? blog.tag.split(',').map((tag) => tag.toLowerCase()) : [],
     index,
   }));
 }

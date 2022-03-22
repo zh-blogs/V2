@@ -304,7 +304,7 @@
       } catch (e) {
         page = 1;
       }
-      if (page < 1) page = 1;
+      if (page < 1 || isNaN(page)) page = 1;
       return page;
     }, []);
 

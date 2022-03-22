@@ -548,7 +548,7 @@
               <span class='visually-hidden'>Loading...</span>
             </div>
           </div>
-        ) : !!blogs && blogs.length > 0 ? (
+        ) : !!blogsForShow && blogsForShow.length > 0 ? (
           <BlogTable blogs={blogsForShow} />
         ) : (
           <div className='alert alert-info alert-dismissible fade show'>

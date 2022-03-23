@@ -1,3 +1,9 @@
+/***
+中文博客列表导航 https://zhblogs.ohyee.cc/
+作者：Github @OhYee
+使用 MIT License 进行许可
+2022年3月23日
+***/
 (function () {
   const PageSize = 20;
 

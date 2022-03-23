@@ -28,23 +28,24 @@
 <body>
   <div id="app">
     <h1>中文博客列表导航项目 <small>尝试链接几乎所有的中文博客</small></h1>
-    <!-- Nav tabs -->
+    
+    <!-- 导航栏 -->
 <ul class="nav nav-pills">
   <li class="nav-item">
-    <a class="nav-link active" data-bs-toggle="pill" href="#home">列表</a>
+    <a class="nav-link active" data-bs-toggle="pill" href="#home">博客列表</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" data-bs-toggle="pill" href="#about">关于这个项目</a>
   </li>
 </ul>
     <div class="tab-content">
-  <div class="tab-pane active container" id="home">
-    <div id="react" class="container_table">
+      
+  <div class="tab-pane active container container_table" id="home react">
       <noscript><strong>列表功能出现异常！还不是都怪你没开Javascript！</strong>
         <hr /><strong>哼！不理你了！</strong>
       </noscript>
-    </div>
   </div>
+      
   <div class="tab-pane container" id="about">
     <p>我们尝试链接几乎所有的中文博客，并使用这个地址库不定期为中文博客存档。</p>
        <p>我们的 Github 仓库地址是 <a href="https://github.com/linlinzzo/blog-daohang" type="text/html">linlinzzo/blog-daohang</a>。如果想为本项目贡献一份力量，可以通过 Github 联系我们。如果想让我们收录你的网站，可以在本项目的 Github 仓库中提交 issue。</p>
@@ -69,7 +70,9 @@
         <a class="nav-link" href="https://www.foreverblog.cn/" hreflang="zh" type="text/html">十年之约</a>
       </li>
     </ul>
-    </div>
+    
+  </div>
+      
   </div>
   <script type="text/babel" src="/main.jsx" charset="UTF-8"></script>
 </body>

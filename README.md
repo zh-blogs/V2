@@ -4,7 +4,7 @@
 
 我们日后会根据访客的来源博客为你优先显示与其相关的博客，同时我们正在进行优质博客推荐的相关讨论。     
 
-为了更好地获取来源博客，请各位站长将指向本导航的链接换为`https://blog-daohang.vercel.app/?from=你的博客域名`，例如`https://blog-daohang.vercel.app/?from=www.yayu.net`。     
+为了更好地获取来源博客，请各位站长将指向本导航的链接换为`https://zhblogs.ohyee.cc/?from=你的博客域名`，例如`https://zhblogs.ohyee.cc/?from=www.yayu.net`。     
 我们没有强制站长添加链接，以上是指对站长自愿添加的链接的建议。       
 
 *博客分类*
@@ -16,12 +16,9 @@
 我们现在正在进行博客标签的制定、博客标签搜索的开发和指定标签随机跳转工作。
 ## 说明
 我们立志要链接全部的中文独立博客。    
-本项目的在线地址是https://blog-daohang.vercel.app/ ，你可以在网页中点击链接进行串门、交换友链，也可以调查中文独立博客的共性。        
-各位大佬可以从https://blog-daohang.vercel.app/go.html 随机访问博客。        
+本项目的在线地址是https://zhblogs.ohyee.cc/ ，你可以在网页中点击链接进行串门、交换友链，也可以调查中文独立博客的共性。        
+各位大佬可以从https://zhblogs.ohyee.cc/go.html 随机访问博客。        
 我们会不定期手动将列表中的博客进行存档，存档的详细信息请见 https://github.com/linlinzzo/blog-daohang/discussions 。    
-
-我们鼓励博客网站使用https，详见[推荐博客站长们为博客使用https](https://hugo-linlinzzo.vercel.app/posts/using-https/)。        
-我们添加了新的信息，需要[请博客站长辅助补全信息](https://hugo-linlinzzo.vercel.app/posts/updated-info/)。
 
 ## 项目如何发现博客
 根据超链接，我们可以从种子博客中找到十多个不等的网站地址，这些地址中符合要求的会自动成为新的种子博客。     

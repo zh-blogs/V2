@@ -9,7 +9,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
   <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
   <link rel="canonical" href="https://zhblogs.ohyee.cc/" />
 
   <!--引用一下外部文件-->
@@ -21,11 +22,11 @@
   <script src="/react-dom.production.min.js" charset="UTF-8" type="text/javascript"></script>
   <script src="/babel.min.js" charset="UTF-8" type="text/javascript"></script>
   <script type="text/javascript" src="/main.js" charset="UTF-8"></script>
-  
+
   <script type="text/javascript">
-    if (document.domain !== 'zhblogs.ohyee.cc') {
-    location.href="https://zhblogs.ohyee.cc/";
-}
+    if (document.domain !== 'zhblogs.ohyee.cc' && location.port === '') {
+      location.href = "https://zhblogs.ohyee.cc/";
+    }
   </script>
 
   <!--本网页的标题-->
@@ -35,55 +36,15 @@
 <body>
   <div id="app">
     <h1>中文博客列表导航项目 <small>尝试链接几乎所有的中文博客</small></h1>
-    
-    <!-- 导航栏 -->
-<ul class="nav nav-pills">
-  <li class="nav-item">
-    <a class="nav-link active" data-bs-toggle="pill" href="#home">博客列表</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-bs-toggle="pill" href="#about">关于这个项目</a>
-  </li>
-</ul>
-    <div class="tab-content">
-      
-  <div class="tab-pane active container" id="home">
-    <div class="container_table" id="react">
-      <noscript><strong>列表功能出现异常！还不是都怪你没开Javascript！</strong>
-        <hr /><strong>哼！不理你了！</strong>
+    <div id="react">
+      <noscript>
+        <strong>列表功能出现异常！还不是都怪你没开Javascript！</strong>
+        <hr />
+        <strong>哼！不理你了！</strong>
       </noscript>
     </div>
-  </div>
-      
-  <div class="tab-pane container" id="about">
-    <p>我们尝试链接几乎所有的中文博客，并使用这个地址库不定期为中文博客存档。</p>
-       <p>我们的 Github 仓库地址是 <a href="https://github.com/linlinzzo/blog-daohang" type="text/html">linlinzzo/blog-daohang</a>。如果想为本项目贡献一份力量，可以通过 Github 联系我们。如果想让我们收录你的网站，可以在本项目的 Github 仓库中提交 issue。</p>
-    <p>由于我们刚开始博客网站的收集工作，一些博客还未收录，你可以向我们提供未收录的博客地址以便我们改进，也可以去别的导航项目，也许你会发现更多。</p>
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="https://seekbetter.me/" hreflang="zh" type="text/html">寻我 | 优秀个人独立博客收录</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://github.com/timqian/chinese-independent-blogs" hreflang="zh" type="text/html">中文独立博客列表</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://www.jetli.com.cn/" hreflang="zh" type="text/html">优秀个人独立博客导航</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://blorg.cn/" hreflang="zh" type="text/html">博客联盟</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://bf.zzxworld.com/" hreflang="zh" type="text/html">BlogFinder - 发现优秀的个人博客</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.foreverblog.cn/" hreflang="zh" type="text/html">十年之约</a>
-      </li>
-    </ul>
-    
-  </div>
-      
-  </div>
-  <script type="text/babel" src="/main.jsx" charset="UTF-8"></script>
+    <script type="text/javascript"> getBlogList().then(blogs => window._blogs = blogs); </script>
+    <script type="text/babel" src="/main.jsx" charset="UTF-8"></script>
 </body>
 
 </html>

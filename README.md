@@ -41,6 +41,7 @@
 |TUNA Blogroll   | https://github.com/tuna/blogroll | 没|
 |bloghub   | https://github.com/shidenggui/bloghub/blob/master/backend/assets/blogs-original.csv | 没|
 |十年之约   | https://www.foreverblog.cn/blogs.html | 没用完|
+|  BlogRoll  |https://github.com/NUAA-Open-Source/BlogRoll |没|
 
 ## 如何支持该项目
 1. 如果网站名称或地址出现更换或博客失效，请提个 issue。        

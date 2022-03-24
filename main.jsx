@@ -195,6 +195,19 @@
 
   const Flex = Object.assign(FlexComponent, { Item: FlexItem });
 
+  function Loading(props) {
+    const { loading = true, children } = props;
+    return !!loading ? (
+      <div class='d-flex justify-content-center'>
+        <div class='spinner-border' role='status'>
+          <span class='visually-hidden'>Loading...</span>
+        </div>
+      </div>
+    ) : (
+      children
+    );
+  }
+
   function Pagination(props) {
     const {
       page,
@@ -270,7 +283,7 @@
   }
 
   function BlogItem(props) {
-    const { blog } = props;
+    const { blog, simple } = props;
     return (
       <tr className={!!blog.repeat ? 'repeat' : ''}>
         <td>
@@ -297,12 +310,13 @@
             ))}
           </Flex>
         </td>
-        <td>{blog.index + 1}</td>
+        {!simple && <td>{blog.index + 1}</td>}
       </tr>
     );
   }
 
   function BlogTable(props) {
+    const { simple } = props;
     const defaultPage = React.useMemo(() => {
       var page = 1;
       try {
@@ -336,32 +350,34 @@
     );
 
     return (
-      <div>
+      <div style={{ overflow: 'auto' }}>
         <table className='table table-bordered table-responsive'>
           <thead>
             <tr className='header'>
-              <th>状态</th>
-              <th>博客名称</th>
-              <th>博客描述</th>
-              <th>博客地址</th>
-              <th>标签</th>
-              <th>结果序号</th>
+              <th style={{ minWidth: '5em' }}>状态</th>
+              <th style={{ minWidth: '7em' }}>博客名称</th>
+              <th style={{ minWidth: '7em' }}>博客描述</th>
+              <th style={{ minWidth: '7em' }}>博客地址</th>
+              <th style={{ minWidth: '5em' }}>标签</th>
+              {!simple && <th styles={{ minWidth: '5em' }}>序号</th>}
             </tr>
           </thead>
           <tbody>
             {showBlogs.map((blog) => (
-              <BlogItem key={blog.index} blog={blog} />
+              <BlogItem key={blog.index} blog={blog} simple={simple} />
             ))}
           </tbody>
         </table>
-        <Pagination
-          page={page}
-          totalPage={totalPage}
-          firstPage={() => setPage(1)}
-          prePage={() => setPage(page > 1 ? page - 1 : 1)}
-          nextPage={() => setPage(page < totalPage ? page + 1 : totalPage)}
-          lastPage={() => setPage(totalPage)}
-        />
+        {!simple && (
+          <Pagination
+            page={page}
+            totalPage={totalPage}
+            firstPage={() => setPage(1)}
+            prePage={() => setPage(page > 1 ? page - 1 : 1)}
+            nextPage={() => setPage(page < totalPage ? page + 1 : totalPage)}
+            lastPage={() => setPage(totalPage)}
+          />
+        )}
       </div>
     );
   }
@@ -486,12 +502,119 @@
     );
   }
 
-  function Home() {
+  function RandomBlogTab(props) {
+    const { blogs } = props;
+    const [blogArr, setBlogArr] = React.useState([]);
+
+    const getRandom10 = React.useCallback(() => {
+      var arr = [...blogs];
+      arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
+      setBlogArr(arr.splice(0, 10));
+    }, [blogs, setBlogArr]);
+
+    React.useEffect(() => {
+      getRandom10();
+    }, [getRandom10]);
+
+    return (
+      <Flex fullWidth direction='TB' subAxis='end'>
+        <button class='btn btn-primary' onClick={getRandom10}>
+          再来十个
+        </button>
+        <BlogTable blogs={blogArr} simple />
+      </Flex>
+    );
+  }
+
+  function AboutTab() {
+    return (
+      <div>
+        <p>
+          我们尝试链接几乎所有的中文博客，并使用这个地址库不定期为中文博客存档。
+        </p>
+        <p>
+          我们的 Github 仓库地址是{' '}
+          <a href='https://github.com/linlinzzo/blog-daohang' type='text/html'>
+            linlinzzo/blog-daohang
+          </a>
+          。如果想为本项目贡献一份力量，可以通过 Github
+          联系我们。如果想让我们收录你的网站，可以在本项目的 Github 仓库中提交
+          issue。
+        </p>
+        <p>
+          由于我们刚开始博客网站的收集工作，一些博客还未收录，你可以向我们提供未收录的博客地址以便我们改进，也可以去别的导航项目，也许你会发现更多。
+        </p>
+        <ul class='nav'>
+          <li class='nav-item'>
+            <a
+              class='nav-link'
+              href='https://seekbetter.me/'
+              hreflang='zh'
+              type='text/html'
+            >
+              寻我 | 优秀个人独立博客收录
+            </a>
+          </li>
+          <li class='nav-item'>
+            <a
+              class='nav-link'
+              href='https://github.com/timqian/chinese-independent-blogs'
+              hreflang='zh'
+              type='text/html'
+            >
+              中文独立博客列表
+            </a>
+          </li>
+          <li class='nav-item'>
+            <a
+              class='nav-link'
+              href='http://www.jetli.com.cn/'
+              hreflang='zh'
+              type='text/html'
+            >
+              优秀个人独立博客导航
+            </a>
+          </li>
+          <li class='nav-item'>
+            <a
+              class='nav-link'
+              href='https://blorg.cn/'
+              hreflang='zh'
+              type='text/html'
+            >
+              博客联盟
+            </a>
+          </li>
+          <li class='nav-item'>
+            <a
+              class='nav-link'
+              href='https://bf.zzxworld.com/'
+              hreflang='zh'
+              type='text/html'
+            >
+              BlogFinder - 发现优秀的个人博客
+            </a>
+          </li>
+          <li class='nav-item'>
+            <a
+              class='nav-link'
+              href='https://www.foreverblog.cn/'
+              hreflang='zh'
+              type='text/html'
+            >
+              十年之约
+            </a>
+          </li>
+        </ul>
+      </div>
+    );
+  }
+
+  function BlogsTab(props) {
+    const { blogs } = props;
     const defaultSearch = React.useMemo(() => getURLQuery('search') || '', []);
     const defaultTags = React.useMemo(() => getURLQuery('tags') || '', []);
 
-    const [loading, setLoading] = React.useState(false);
-    const [blogs, setBlogs] = React.useState([]);
     const [search, setSearch] = React.useState(defaultSearch);
     const [selectedTags, setSelectedTags] = React.useState(
       defaultTags === ''
@@ -500,15 +623,6 @@
             .split(',')
             .reduce((pre, cur) => ({ ...pre, [cur]: 1 }), {})
     );
-
-    React.useEffect(() => {
-      setLoading(true);
-      getBlogList()
-        .then((blogs) => setBlogs(blogs))
-        .finally(() => {
-          setLoading(false);
-        });
-    }, [setLoading, setBlogs]);
 
     React.useEffect(() => {
       setURLQuery('search', search);
@@ -553,13 +667,8 @@
             setSelectedTags({ ...selectedTags });
           }}
         />
-        {!!loading ? (
-          <div class='d-flex justify-content-center'>
-            <div class='spinner-border' role='status'>
-              <span class='visually-hidden'>Loading...</span>
-            </div>
-          </div>
-        ) : !!blogsForShow && blogsForShow.length > 0 ? (
+
+        {!!blogsForShow && blogsForShow.length > 0 ? (
           <BlogTable blogs={blogsForShow} />
         ) : (
           <div className='alert alert-info alert-dismissible fade show'>
@@ -571,6 +680,70 @@
           </div>
         )}
       </Flex>
+    );
+  }
+
+  function Home() {
+    const [loading, setLoading] = React.useState(false);
+    const [blogs, setBlogs] = React.useState([]);
+
+    React.useEffect(() => {
+      setLoading(true);
+      if (!!window._blogs) {
+        setBlogs(window._blogs);
+        setLoading(false);
+      } else {
+        getBlogList()
+          .then((blogs) => setBlogs(blogs))
+          .finally(() => {
+            setLoading(false);
+          });
+      }
+    }, [setLoading, setBlogs]);
+
+    return (
+      <div>
+        <ul
+          className='nav nav-pills'
+          style={{
+            paddingBottom: 5,
+            borderBottom: '2px solid #aaa',
+            marginBottom: 15,
+          }}
+        >
+          <li class='nav-item'>
+            <a class='nav-link active' data-bs-toggle='pill' href='#random'>
+              随机博客推荐
+            </a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' data-bs-toggle='pill' href='#home'>
+              博客列表
+            </a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' data-bs-toggle='pill' href='#about'>
+              关于这个项目
+            </a>
+          </li>
+        </ul>
+
+        <div class='tab-content'>
+          <div class='tab-pane active container' id='random'>
+            <Loading loading={loading}>
+              <RandomBlogTab blogs={blogs} />
+            </Loading>
+          </div>
+          <div class='tab-pane container' id='home'>
+            <Loading loading={loading}>
+              <BlogsTab blogs={blogs} />
+            </Loading>
+          </div>
+          <div class='tab-pane container' id='about'>
+            <AboutTab />
+          </div>
+        </div>
+      </div>
     );
   }
 

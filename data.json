@@ -415,5 +415,6 @@
   {"name": "夜半观星", "url": "https://www.ratodo.com/", "tag": "建站", "sign": "听，一颗星星落地作响！你别赤脚在这草地上散步，我的花园到处是星星的碎片。", "status": "OK"},
   {"name": "程序萌部落", "url": "https://www.cxmoe.com/", "tag": "linux,ubuntu,群晖,杂谈", "sign": "", "status": "OK"},
   {"name": "望月空", "url": "https://and.gg/", "tag": "随笔,typecho", "sign": "迷失的人迷失了，相逢的人会再相逢", "status": "OK"},
-  {"name": "Jacky Tong", "url": "https://www.jackytong.com/", "tag": "随笔,生活", "sign": "Great stories can change the world.", "status": "OK"}
+  {"name": "黄衣哥的惊人博客", "url": "https://blog.huangyige.xyz/", "tag": "随笔,生活", "sign": "博主自评最牛博客", "status": "OK"},
+  {"name": "Jacky Tong", "url": "https://www.jackytong.com/", "tag": "c++,生活,软件推荐", "sign": "Great stories can change the world.", "status": "OK"}
 ]

@@ -415,5 +415,6 @@
   {"name": "程序萌部落", "url": "https://www.cxmoe.com/", "tag": "linux,ubuntu,群晖,杂谈", "sign": "", "status": "OK"},
   {"name": "望月空", "url": "https://and.gg/", "tag": "随笔,typecho", "sign": "迷失的人迷失了，相逢的人会再相逢", "status": "OK"},
   {"name": "黄衣哥的惊人博客", "url": "https://blog.huangyige.xyz/", "tag": "随笔,生活", "sign": "博主自评最牛博客", "status": "OK"},
-  {"name": "Jacky Tong", "url": "https://www.jackytong.com/", "tag": "c++,生活,软件推荐", "sign": "Great stories can change the world.", "status": "OK"}
+  {"name": "Jacky Tong", "url": "https://www.jackytong.com/", "tag": "c++,生活,软件推荐", "sign": "Great stories can change the world.", "status": "OK"},
+  {"name": "M-x Chris-An-Emacser", "url": "https://chriszheng.science/", "tag": "随笔,杂谈,Emacs,科学研究", "sign": "一个Emacs爱好者的闲言碎语", "status": "OK"},
 ]

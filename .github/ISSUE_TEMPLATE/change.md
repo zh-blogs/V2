@@ -1,9 +1,9 @@
 ---
 name: 申请修改信息
-about: 申请修改博客导航上的信息
+about: 申请修改博客导航上除标签外的信息
 title: 申请修改信息-[网站序号]
 labels: ''
-assignees: linlinzzo
+assignees: Changrui0101, linlinzzo
 
 ---
 

@@ -417,13 +417,13 @@
   {"name": "黄衣哥的惊人博客", "url": "https://blog.huangyige.xyz/", "tag": "随笔,生活", "sign": "博主自评最牛博客", "status": "OK"},
   {"name": "Jacky Tong", "url": "https://www.jackytong.com/", "tag": "c++,生活,软件推荐", "sign": "Great stories can change the world.", "status": "OK"},
   {"name": "M-x Chris-An-Emacser", "url": "https://chriszheng.science/", "tag": "随笔,杂谈,Emacs,科学研究", "sign": "一个Emacs爱好者的闲言碎语", "status": "OK"},
-  {"name": "0xe799bde88f9c", "url": "https://www.summershrimp.com/", "tag": "", "sign": "一只苦逼的开发狗，理智成为安全工程师。", "feed": "https://www.summershrimp.com/feed/", "status": "OK"},
-  {"name": "三帛的世界", "url": "https://blog.vvzero.com/", "tag": "", "sign": "嵌入式物联网全栈系统工程师", "feed": "https://blog.vvzero.com/atom.xml", "status": "OK"},
-  {"name": "于笙博客", "url": "https://www.iysheng.com/", "tag": "", "sign": "承蒙遇见，三生有幸", "feed": "https://www.iysheng.com/index.php/feed/", "status": "OK"},
-  {"name": "枫叶笔记", "url": "https://www.viernes.cn/", "tag": "", "sign": "极致就是艺术", "feed": "https://www.viernes.cn/feed/", "status": "OK"},
-  {"name": "火喵博客", "url": "https://cat.dorcandy.cn/", "tag": "", "sign": "——放逐茫茫人海里，常常会有这样的陌路擦肩。某一个人走进你的视线里，成了令你心动的风景，而他却不知道这世界上有过一个你。又或许，你落入别人的风景里，却不知道，这世上曾经有过一个他。", "feed": "https://cat.dorcandy.cn/feed/", "status": "OK"},
-  {"name": "MEMORIAL TRASH", "url": "https://wens.news/", "tag": "", "sign": "My memorial trash", "feed": "https://wens.news/feed", "status": "OK"},
-  {"name": "凡梦's blog", "url": "https://www.xiaofm.cn/", "tag": "", "sign": "学文科的艺术生", "feed": "https://www.xiaofm.cn/feed", "status": "OK"},
-  {"name": "HuihuanX", "url": "https://www.huihuanx.cn/", "tag": "", "sign": "天与短因缘，聚散常容易。", "feed": "https://www.huihuanx.cn/?feed=rss2", "status": "OK"},
-  {"name": "三叶の小窝", "url": "https://blog.mitsuha.space/", "tag": "", "sign": "想成为知道自己知道的人", "feed": "https://blog.mitsuha.space/feed/", "status": "SSLError"}
+  {"name": "0xe799bde88f9c", "url": "https://www.summershrimp.com/", "tag": "容器,安全,攻防", "sign": "一只苦逼的开发狗，理智成为安全工程师。", "feed": "https://www.summershrimp.com/feed/", "status": "OK"},
+  {"name": "三帛的世界", "url": "https://blog.vvzero.com/", "tag": "笔记,开发,技术", "sign": "嵌入式物联网全栈系统工程师", "feed": "https://blog.vvzero.com/atom.xml", "status": "OK"},
+  {"name": "于笙博客", "url": "https://www.iysheng.com/", "tag": "笔记,杂谈", "sign": "承蒙遇见，三生有幸", "feed": "https://www.iysheng.com/index.php/feed/", "status": "OK"},
+  {"name": "枫叶笔记", "url": "https://www.viernes.cn/", "tag": "摄影,音乐,记录", "sign": "极致就是艺术", "feed": "https://www.viernes.cn/feed/", "status": "OK"},
+  {"name": "火喵博客", "url": "https://cat.dorcandy.cn/", "tag": "生活,笔记,杂谈", "sign": "——放逐茫茫人海里，常常会有这样的陌路擦肩。某一个人走进你的视线里，成了令你心动的风景，而他却不知道这世界上有过一个你。又或许，你落入别人的风景里，却不知道，这世上曾经有过一个他。", "feed": "https://cat.dorcandy.cn/feed/", "status": "OK"},
+  {"name": "MEMORIAL TRASH", "url": "https://wens.news/", "tag": "图片,分享", "sign": "My memorial trash", "feed": "https://wens.news/feed", "status": "OK"},
+  {"name": "凡梦's blog", "url": "https://www.xiaofm.cn/", "tag": "杂谈,随笔", "sign": "学文科的艺术生", "feed": "https://www.xiaofm.cn/feed", "status": "OK"},
+  {"name": "HuihuanX", "url": "https://www.huihuanx.cn/", "tag": "杂谈,笔记", "sign": "天与短因缘，聚散常容易。", "feed": "https://www.huihuanx.cn/?feed=rss2", "status": "OK"},
+  {"name": "三叶の小窝", "url": "https://blog.mitsuha.space/", "tag": "算法,前端,笔记", "sign": "想成为知道自己知道的人", "feed": "https://blog.mitsuha.space/feed/", "status": "SSLError"}
 ]

@@ -534,8 +534,8 @@
         </p>
         <p>
           我们的 Github 仓库地址是{' '}
-          <a href='https://github.com/linlinzzo/blog-daohang' type='text/html'>
-            linlinzzo/blog-daohang
+          <a href='https://github.com/zh-blogs/blog-daohang' type='text/html'>
+            zh-blogs/blog-daohang
           </a>
           。如果想为本项目贡献一份力量，可以通过 Github
           联系我们。如果想让我们收录你的网站，可以在本项目的 Github 仓库中提交

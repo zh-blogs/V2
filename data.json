@@ -418,5 +418,8 @@
   {"name": "Jacky Tong", "url": "https://www.jackytong.com/", "tag": "c++,生活,软件推荐", "sign": "Great stories can change the world.", "status": "OK"},
   {"name": "M-x Chris-An-Emacser", "url": "https://chriszheng.science/", "tag": "随笔,杂谈,Emacs,科学研究", "sign": "一个Emacs爱好者的闲言碎语", "status": "OK"},
   {"name": "0xe799bde88f9c", "url": "https://www.summershrimp.com/", "tag": "", "sign": "一只苦逼的开发狗，理智成为安全工程师。", "feed": "https://www.summershrimp.com/feed/", "status": "OK"},
-  {"name": "三帛的世界", "url": "https://blog.vvzero.com/", "tag": "", "sign": "嵌入式物联网全栈系统工程师", "feed": "https://blog.vvzero.com/atom.xml", "status": "OK"}
+  {"name": "三帛的世界", "url": "https://blog.vvzero.com/", "tag": "", "sign": "嵌入式物联网全栈系统工程师", "feed": "https://blog.vvzero.com/atom.xml", "status": "OK"},
+  {"name": "于笙博客", "url": "https://www.iysheng.com/", "tag": "", "sign": "承蒙遇见，三生有幸", "feed": "https://www.iysheng.com/index.php/feed/", "status": ""},
+  {"name": "枫叶笔记", "url": "https://www.viernes.cn/", "tag": "", "sign": "极致就是艺术", "feed": "https://www.viernes.cn/feed/", "status": ""},
+  {"name": "火喵博客", "url": "https://cat.dorcandy.cn/", "tag": "", "sign": "——放逐茫茫人海里，常常会有这样的陌路擦肩。某一个人走进你的视线里，成了令你心动的风景，而他却不知道这世界上有过一个你。又或许，你落入别人的风景里，却不知道，这世上曾经有过一个他。", "feed": "https://cat.dorcandy.cn/feed/", "status": ""},
 ]

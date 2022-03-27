@@ -426,5 +426,19 @@
   {"name": "凡梦's blog", "url": "https://www.xiaofm.cn/", "tag": "杂谈,随笔", "sign": "学文科的艺术生", "feed": "https://www.xiaofm.cn/feed", "status": "OK"},
   {"name": "HuihuanX", "url": "https://www.huihuanx.cn/", "tag": "杂谈,笔记", "sign": "天与短因缘，聚散常容易。", "feed": "https://www.huihuanx.cn/?feed=rss2", "status": "OK"},
   {"name": "三叶の小窝", "url": "https://blog.mitsuha.space/", "tag": "算法,前端,笔记", "sign": "想成为知道自己知道的人", "feed": "https://blog.mitsuha.space/feed/", "status": "SSLError"},
-  {"name": "RIVALSA 网络空间", "url": "https://main.rivalsa.net/", "tag": "", "sign": "Rivalsa网络空间，Rivalsa相关网站的首页。", "feed": "", "status": ""}
+  {"name": "RIVALSA 网络空间", "url": "https://main.rivalsa.net/", "tag": "", "sign": "", "feed": "", "status": ""},
+  {"name": "阁主博客", "url": "https://www.mainblog.cn/", "tag": "", "sign": "不止于代码", "feed": "https://www.mainblog.cn/feed.php", "status": ""},
+  {"name": "染念的笔记", "url": "https://dyedd.cn/", "tag": "", "sign": "Writing code, painful and happy", "feed": "https://dyedd.cn/feed/", "status": ""},
+  {"name": "海不眠", "url": "https://wcnmb.cn/", "tag": "", "sign": "至少我们可以看到同一个月亮！", "feed": "https://wcnmb.cn/feed/", "status": ""},
+  {"name": "武志红的杂货铺", "url": "https://www.imwzh.com/", "tag": "", "sign": "不以物喜，不以己悲", "feed": "https://www.imwzh.com/feed/", "status": ""},
+  {"name": "喂马劈柴", "url": "https://blog.shaoxiao.net/", "tag": "", "sign": "一个媒介学习者的个人庭院", "feed": "https://blog.shaoxiao.net/feed/", "status": ""},
+  {"name": "不淡定实验室", "url": "https://xd.sh.cn/", "tag": "", "sign": "传递创造力！", "feed": "https://xd.sh.cn/feed/", "status": ""},
+  {"name": "JcLinTop", "url": "https://blog.jclin.top/", "tag": "", "sign": "积极乐观，生活定能风生水起", "feed": "https://blog.jclin.top/feed/", "status": ""},
+  {"name": "Uncle_drew", "url": "https://cndrew.cn/", "tag": "", "sign": "Hand down,man down", "feed": "https://cndrew.cn/atom.xml", "status": ""},
+  {"name": "走小路的博客", "url": "https://www.zxld.top/", "tag": "", "sign": "路过，即是一种缘分", "feed": "https://www.zxld.top/feed/", "status": ""},
+  {"name": "EASON+", "url": "https://www.easonx.cn/", "tag": "", "sign": "The Freedom Place", "feed": "https://www.easonx.cn/atom.xml", "status": ""},
+  {"name": "青春", "url": "http://qingchun.org/", "tag": "", "sign": "永远年轻，永远热泪盈眶", "feed": "http://qingchun.org/feed", "status": ""},
+  {"name": "念喵笔记博客", "url": "https://myo.ink/", "tag": "", "sign": "记录影视生涯从业中的点点滴滴", "feed": "https://myo.ink/feed", "status": ""},
+  {"name": "江博客-李学江的个人博客", "url": "https://www.lixuejiang.com", "tag": "", "sign": "", "feed": "https://www.lixuejiang.com/feed/", "status": ""},
+  {"name": "猕猴の那年记忆", "url": "https://www.kiwiape.cn/", "tag": "", "sign": "希望你的坚持都是因为热爱，而不是不甘", "feed": "https://www.kiwiape.cn/feed/", "status": ""}
 ]

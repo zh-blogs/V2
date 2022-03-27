@@ -454,5 +454,11 @@
   {"name": "Frank笔记", "url": "https://frank2019.me/", "tag": "", "sign": "记录蜕变后的生活", "feed": "https://frank2019.me/rss.xml", "status": ""},
   {"name": "Justlovesmile's BLOG", "url": "https://blog.justlovesmile.top/", "tag": "", "sign": "Writer(记录) & Maker(创作) & Developer(启发)", "feed": "https://blog.justlovesmile.top/atom.xml", "status": ""},
   {"name": "Aimee resume", "url": "https://blog.mangoya.cn/", "tag": "", "sign": "", "feed": "", "status": ""},
-  {"name": "DataScience", "url": "https://www.a2data.cn/", "tag": "", "sign": "", "feed": "", "status": ""}
+  {"name": "DataScience", "url": "https://www.a2data.cn/", "tag": "", "sign": "", "feed": "", "status": ""},
+  {"name": "霭客溪", "url": "https://www.aikexi.com/", "tag": "", "sign": "行到水穷处，坐看云起时", "feed": "https://www.aikexi.com/feed", "status": ""},
+  {"name": "熊二哈的猫窝", "url": "https://www.wispx.cn/", "tag": "", "sign": "我在纯白的世界里做着有关救赎的梦。", "feed": "https://www.wispx.cn/atom.xml", "status": ""},
+  {"name": "一隅博客", "url": "https://www.arro.cn/", "tag": "", "sign": "", "feed": "", "status": ""},
+  {"name": "北故博客", "url": "https://bestgu.cn/", "tag": "", "sign": "没有技术，不是大佬。", "feed": "https://bestgu.cn/feed/", "status": ""},
+  {"name": "沈唁志", "url": "https://qq52o.me/", "tag": "", "sign": "一个PHPer的成长之路", "feed": "https://qq52o.me/feed", "status": ""},
+  {"name": "一人夕", "url": "https://izpan.com/", "tag": "", "sign": "码农技术成长道路中的学习博客", "feed": "https://izpan.com/feed", "status": ""}
 ]

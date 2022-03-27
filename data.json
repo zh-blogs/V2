@@ -440,5 +440,10 @@
   {"name": "青春", "url": "http://qingchun.org/", "tag": "", "sign": "永远年轻，永远热泪盈眶", "feed": "http://qingchun.org/feed", "status": ""},
   {"name": "念喵笔记博客", "url": "https://myo.ink/", "tag": "", "sign": "记录影视生涯从业中的点点滴滴", "feed": "https://myo.ink/feed", "status": ""},
   {"name": "江博客-李学江的个人博客", "url": "https://www.lixuejiang.com", "tag": "", "sign": "", "feed": "https://www.lixuejiang.com/feed/", "status": ""},
-  {"name": "猕猴の那年记忆", "url": "https://www.kiwiape.cn/", "tag": "", "sign": "希望你的坚持都是因为热爱，而不是不甘", "feed": "https://www.kiwiape.cn/feed/", "status": ""}
+  {"name": "猕猴の那年记忆", "url": "https://www.kiwiape.cn/", "tag": "", "sign": "希望你的坚持都是因为热爱，而不是不甘", "feed": "https://www.kiwiape.cn/feed/", "status": ""},
+  {"name": "一大加贝", "url": "https://www.yidajiabei.xyz/", "tag": "", "sign": "谨以此博客献给未来的自己", "feed": "https://www.yidajiabei.xyz/atom.xml", "status": ""},
+  {"name": "雨落泪尽", "url": "https://couqiao.net/", "tag": "", "sign": "今人不见古时月，今月曾经照古人", "feed": "https://couqiao.net/atom.xml", "status": ""},
+  {"name": "沈大力的窝-沈力的个人网站", "url": "http://www.leeshen.net/", "tag": "", "sign": "Stay hungry, stay foolish.", "feed": "", "status": ""},
+  {"name": "清酒", "url": "https://blog.lkxin.cn/", "tag": "", "sign": "新的生活，新的记录！", "feed": "https://blog.lkxin.cn/feed/", "status": ""},
+  {"name": "Mr.He", "url": "https://www.mrhe.net/", "tag": "", "sign": "分享老何的故事", "feed": "https://www.mrhe.net/feed/", "status": ""}
 ]

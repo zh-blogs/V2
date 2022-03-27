@@ -445,5 +445,14 @@
   {"name": "雨落泪尽", "url": "https://couqiao.net/", "tag": "", "sign": "今人不见古时月，今月曾经照古人", "feed": "https://couqiao.net/atom.xml", "status": ""},
   {"name": "沈大力的窝-沈力的个人网站", "url": "http://www.leeshen.net/", "tag": "", "sign": "Stay hungry, stay foolish.", "feed": "", "status": ""},
   {"name": "清酒", "url": "https://blog.lkxin.cn/", "tag": "", "sign": "新的生活，新的记录！", "feed": "https://blog.lkxin.cn/feed/", "status": ""},
-  {"name": "Mr.He", "url": "https://www.mrhe.net/", "tag": "", "sign": "分享老何的故事", "feed": "https://www.mrhe.net/feed/", "status": ""}
+  {"name": "Mr.He", "url": "https://www.mrhe.net/", "tag": "", "sign": "分享老何的故事", "feed": "https://www.mrhe.net/feed/", "status": ""},
+  {"name": "Mystery博客", "url": "https://blog.say521.cn/", "tag": "", "sign": "一个普通本科生的个人博客，用来记录自己的成长，分享有学习笔记。", "feed": "https://blog.say521.cn/feed/", "status": ""},
+  {"name": "妖业蛋", "url": "https://yaoyedan.net/", "tag": "", "sign": "人生苦短，及时行乐！", "feed": "https://yaoyedan.net/feed", "status": ""},
+  {"name": "陈陈菌博客", "url": "https://blog.glumi.cn/", "tag": "", "sign": "主要以记录个人生活点滴与计算机技术为相关。", "feed": "", "status": ""},
+  {"name": "老余博客", "url": "https://www.xjqyc.cn/", "tag": "", "sign": "", "feed": "", "status": ""},
+  {"name": "白天博客", "url": "https://www.seobti.com/", "tag": "", "sign": "专注网络营销推广、网络运营类知识学习与分享", "feed": "", "status": ""},
+  {"name": "Frank笔记", "url": "https://frank2019.me/", "tag": "", "sign": "记录蜕变后的生活", "feed": "https://frank2019.me/rss.xml", "status": ""},
+  {"name": "Justlovesmile's BLOG", "url": "https://blog.justlovesmile.top/", "tag": "", "sign": "Writer(记录) & Maker(创作) & Developer(启发)", "feed": "https://blog.justlovesmile.top/atom.xml", "status": ""},
+  {"name": "Aimee resume", "url": "https://blog.mangoya.cn/", "tag": "", "sign": "", "feed": "", "status": ""},
+  {"name": "DataScience", "url": "https://www.a2data.cn/", "tag": "", "sign": "", "feed": "", "status": ""}
 ]

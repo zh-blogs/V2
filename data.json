@@ -20,7 +20,7 @@
   {"name": "Fong Blog", "url": "https://fongsoul.com/", "tag": "", "sign": "", "feed": "", "status": "OK"},
   {"name": "响石潭", "url": "https://www.xiangshitan.com/", "tag": "生活", "sign": "记录一名家庭医生的成长历程", "feed": "https://www.xiangshitan.com/feed.php", "status": "OK"},
   {"name": "猫鱼的小窝", "url": "https://2cat.net/", "tag": "生活", "sign": "Welcome to Catfish's website.", "feed": "https://2cat.net/?feed=rss2", "status": "OK"},
-  {"name": "拾风", "url": "https://www.coolblood.cn/", "tag": "生活,回忆", "sign": "人脑太复杂,时间过得久,记下来才是最真实的……", "status": "OK"},
+  {"name": "拾风", "url": "https://www.coolblood.cn/", "tag": "生活,回忆", "sign": "人脑太复杂,时间过得久,记下来才是最真实的……", "feed": "https://www.coolblood.cn/?feed=rss2", "status": "OK"},
   {"name": "品味苏州", "url": "https://pwsz.com/", "tag": "生活,记事", "sign": "", "status": "ConnectionError"},
   {"name": "王志勇的Blog", "url": "http://www.auiou.com/", "tag": "数码,音乐,生活", "sign": "", "status": "OK"},
   {"name": "小众分享", "url": "https://www.smbinn.com/", "tag": "数码", "sign": "", "status": "OK"},
@@ -425,5 +425,6 @@
   {"name": "MEMORIAL TRASH", "url": "https://wens.news/", "tag": "图片,分享", "sign": "My memorial trash", "feed": "https://wens.news/feed", "status": "OK"},
   {"name": "凡梦's blog", "url": "https://www.xiaofm.cn/", "tag": "杂谈,随笔", "sign": "学文科的艺术生", "feed": "https://www.xiaofm.cn/feed", "status": "OK"},
   {"name": "HuihuanX", "url": "https://www.huihuanx.cn/", "tag": "杂谈,笔记", "sign": "天与短因缘，聚散常容易。", "feed": "https://www.huihuanx.cn/?feed=rss2", "status": "OK"},
-  {"name": "三叶の小窝", "url": "https://blog.mitsuha.space/", "tag": "算法,前端,笔记", "sign": "想成为知道自己知道的人", "feed": "https://blog.mitsuha.space/feed/", "status": "SSLError"}
+  {"name": "三叶の小窝", "url": "https://blog.mitsuha.space/", "tag": "算法,前端,笔记", "sign": "想成为知道自己知道的人", "feed": "https://blog.mitsuha.space/feed/", "status": "SSLError"},
+  {"name": "RIVALSA 网络空间", "url": "https://main.rivalsa.net/", "tag": "", "sign": "Rivalsa网络空间，Rivalsa相关网站的首页。", "feed": "", "status": ""}
 ]

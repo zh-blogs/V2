@@ -481,5 +481,22 @@
   {"name": "程序猴", "url": "https://www.chenxuhou.com/", "tag": "", "sign": "", "feed": "", "status": ""},
   {"name": "phpbloger", "url": "https://www.phpbloger.com/", "tag": "", "sign": "一个热爱技术并热爱分享的技术博客", "feed": "https://www.phpbloger.com/feed/", "status": ""},
   {"name": "小周博客", "url": "https://www.css3er.com/", "tag": "", "sign": "", "feed": "", "status": ""},
-  {"name": "风三郎个人博客", "url": "https://www.fengsanlang.cn/", "tag": "", "sign": "一个站在web后端端之路的个人博客网站", "feed": "", "status": ""}
+  {"name": "风三郎个人博客", "url": "https://www.fengsanlang.cn/", "tag": "", "sign": "一个站在web后端端之路的个人博客网站", "feed": "", "status": ""},
+  {"name": "Techeek's Studio.", "url": "https://www.techeek.cn/", "tag": "", "sign": "程序员的杂货铺", "feed": "https://www.techeek.cn/atom.xml", "status": ""},
+  {"name": "Siam博客", "url": "https://blog.siammm.cn/", "tag": "", "sign": "", "feed": "", "status": ""},
+  {"name": "仙士可博客", "url": "https://www.php20.cn/", "tag": "", "sign": "后端工程师的成长之路", "feed": "", "status": ""},
+  {"name": "犯二青年博客", "url": "https://findcat.cn/", "tag": "", "sign": "一个平淡的开发者~", "feed": "", "status": ""},
+  {"name": "五块蛋糕", "url": "https://fivecakes.com/", "tag": "", "sign": "", "feed": "", "status": ""},
+  {"name": "Wineforever's BLOG", "url": "https://www.wineforever.com.cn/", "tag": "", "sign": "", "feed": "", "status": ""},
+  {"name": "一叶三秋", "url": "https://ghser.com/", "tag": "", "sign": "秋风拂来枫叶落", "feed": "https://ghser.com/feed", "status": ""},
+  {"name": "Sankurao-行则将至", "url": "https://sankurao.cn/", "tag": "", "sign": "", "feed": "https://sankurao.cn/feed/", "status": ""},
+  {"name": "黑石博客", "url": "https://www.heson10.com/", "tag": "", "sign": "人生在勤，不索何获", "feed": "https://www.heson10.com/atom.xml", "status": ""},
+  {"name": "WhiteFan", "url": "https://www.baifan97.cn/", "tag": "", "sign": "先让自己喜欢上自己", "feed": "https://www.baifan97.cn/feed/", "status": ""},
+  {"name": "飞翔沫沫情博客", "url": "https://fxkjnj.com/", "tag": "", "sign": "一只运维狗的升级打怪之旅", "feed": "https://fxkjnj.com/feed", "status": ""},
+  {"name": "贺大佬", "url": "https://www.hedalao.com/", "tag": "", "sign": "遗憾千万种 各人皆不同", "feed": "https://www.hedalao.com/feed", "status": ""},
+  {"name": "UTOPIA", "url": "https://ishya.top/", "tag": "", "sign": "", "feed": "", "status": ""},
+  {"name": "7Wate`s Blog", "url": "https://blog.7wate.com/", "tag": "", "sign": "7Wate 的个人生活和工作记录", "feed": "https://blog.7wate.com/feed", "status": ""},
+  {"name": "听得入迷空间", "url": "https://blog.tdrme.cn/", "tag": "", "sign": "", "feed": "", "status": ""},
+  {"name": "傻猫网络日志", "url": "https://www.samool.com/", "tag": "", "sign": "主要用于记录工作、生活、学习相关内容", "feed": "https://www.samool.com/feed/", "status": ""},
+  {"name": "徐泽林的博客", "url": "https://zlinblog.cn/", "tag": "", "sign": "唯书籍不朽", "feed": "", "status": ""}
 ]

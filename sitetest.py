@@ -1,9 +1,18 @@
 import json
 import requests
+import time
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36"
 }
+
+opml_file = open("blogs.opml", "w")
+print("""<opml version="2.0">
+<head>
+<title>中文博客列表导航项目</title>
+<dateCreated>""" + time.asctime(time.localtime(time.time())) + """</dateCreated>
+</head>
+<body>""", file = opml_file)
 
 for data_file in ["data.json", "data-1.json"]:
     with open(data_file, 'r', encoding='utf8') as json_file:
@@ -16,6 +25,12 @@ for data_file in ["data.json", "data-1.json"]:
             if res.status_code == 200:
                 json_data[index]["status"] = "OK"
                 print("[ OK ]")
+                try:
+                    res = requests.get(json_data[index]["feed"], timeout=5, headers=headers)
+                    if res.status_code == 200:
+                        print(f'  <outline text="{json_data[index]["name"]}" type="rss" xmlUrl="{json_data[index]["feed"]}" htmlUrl="{json_data[index]["url"]}" description="{json_data[index]["sign"]}"/>', file = opml_file)
+                except:
+                    pass
             else:
                 json_data[index]["status"] = res.status_code
                 print("[", res.status_code,"]")
@@ -31,3 +46,6 @@ for data_file in ["data.json", "data-1.json"]:
             else:
                 print("  " + json.dumps(json_data[index], ensure_ascii=False) + ",", file = json_file)
         print("]", file = json_file)
+print("""</body>
+</opml>""", file = opml_file)
+opml_file.close()

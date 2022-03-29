@@ -6,15 +6,16 @@ headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36"
 }
 
-opml_file = open("blogs.opml", "w", encoding='utf8')
-print("""<opml version="2.0">
+opml_file = open("blogs.opml.xml", "w", encoding='utf8')
+print("""<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
 <head>
-<title>中文博客列表导航项目</title>
-<dateCreated>""" + time.asctime(time.localtime(time.time())) + """</dateCreated>
+  <title>中文博客列表导航项目</title>
+  <dateCreated>""" + time.asctime(time.localtime(time.time())) + """</dateCreated>
 </head>
 <body>""", file = opml_file)
 
-for data_file in ["data.json", "data-1.json"]:
+for data_file in ["data.json"]:
     with open(data_file, 'r', encoding='utf8') as json_file:
         json_data = json.load(json_file)
 

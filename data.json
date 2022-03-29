@@ -524,4 +524,8 @@
   {"name": "乔克叔叔的床边故事", "url": "https://lifeodyssey.github.io/", "tag": "", "sign": "", "feed": "https://lifeodyssey.github.io/atom.xml", "status": "OK"},
   {"name": "HaoKunT的博客", "url": "https://hkvision.cn/", "tag": "", "sign": "GIS学生党，喜欢学习新技术", "feed": "https://hkvision.cn/index.xml", "status": ""},
   {"name": "音视频开发进阶", "url": "https://glumes.com/", "tag": "", "sign": "", "feed": "https://glumes.com/index.xml", "status": ""},
+  {"name": "阿毛的蛋疼地", "url": "https://xiangwangfeng.com/", "tag": "", "sign": "", "feed": "https://xiangwangfeng.com/atom.xml", "status": ""},
+  {"name": "kok的笔记本", "url": "https://wocai.de/", "tag": "", "sign": "", "feed": "https://wocai.de/index.xml", "status": ""},
+  {"name": "搞搞震", "url": "https://www.wujingquan.com/", "tag": "", "sign": "", "feed": "https://www.wujingquan.com/atom.xml", "status": ""},
+  {"name": "Est's Blog", "url": "https://blog.est.im/", "tag": "", "sign": "", "feed": "https://feeds.feedburner.com/initiative", "status": ""}
 ]

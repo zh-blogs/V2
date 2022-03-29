@@ -25,12 +25,13 @@ for data_file in ["data.json", "data-1.json"]:
             if res.status_code == 200:
                 json_data[index]["status"] = "OK"
                 print("[ OK ]")
-                try:
-                    res = requests.get(json_data[index]["feed"], timeout=5, headers=headers)
-                    if res.status_code == 200:
-                        print(f'  <outline text="{json_data[index]["name"]}" type="rss" xmlUrl="{json_data[index]["feed"]}" htmlUrl="{json_data[index]["url"]}" description="{json_data[index]["sign"]}"/>', file = opml_file)
-                except:
-                    pass
+                if json_data[index]["feed"]:
+                    try:
+                        res = requests.get(json_data[index]["feed"], timeout=5, headers=headers)
+                        if res.status_code == 200:
+                            print(f'  <outline text="{json_data[index]["name"]}" type="rss" xmlUrl="{json_data[index]["feed"]}" htmlUrl="{json_data[index]["url"]}" description="{json_data[index]["sign"]}"/>', file = opml_file)
+                    except:
+                        pass
             else:
                 json_data[index]["status"] = res.status_code
                 print("[", res.status_code,"]")

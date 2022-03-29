@@ -16,5 +16,9 @@
   {"name": "迷途小书童的Note", "url": "https://xugaoxiang.com/", "tag": "", "sign": "编程、技术、分享", "feed": "https://xugaoxiang.com/feed/", "status": ""},
   {"name": "DoctorXu", "url": "https://xuyisheng.top/", "tag": "", "sign": "", "feed": "https://xuyisheng.top/rss/", "status": ""},
   {"name": "TONY'S TOY BLOG", "url": "https://www.tony-bro.com/", "tag": "", "sign": "A boring soul ...", "feed": "https://www.tony-bro.com/atom.xml", "status": ""},
-  {"name": "enoch2090", "url": "https://www.enoch2090.me/", "tag": "", "sign": "Daydreaming the whole day through.", "feed": "", "status": ""}
+  {"name": "enoch2090", "url": "https://www.enoch2090.me/", "tag": "", "sign": "Daydreaming the whole day through.", "feed": "", "status": ""},
+  {"name": "风与牧歌", "url": "https://blog.besscroft.com/", "tag": "", "sign": "", "feed": "https://blog.besscroft.com/rss.xml", "status": ""},
+  {"name": "Godot's Blog", "url": "https://iamgodot.com/", "tag": "", "sign": "", "feed": "https://iamgodot.com/index.xml", "status": ""},
+  {"name": "程序员充电站", "url": "https://itcharge.cn/", "tag": "", "sign": "", "feed": "https://itcharge.cn/feed/", "status": ""},
+  {"name": "ROYWANG", "url": "https://rise.rs/", "tag": "", "sign": "", "feed": "https://rise.rs/feed", "status": ""}
 ]

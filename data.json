@@ -533,5 +533,7 @@
   {"name": "前端桃园", "url": "https://www.taoweng.site/", "tag": "", "sign": "Enjoy when you can, and endure when you must.", "feed": "https://feeds.feedburner.com/initiative", "status": ""},
   {"name": "薛定喵君", "url": "http://xuedingmiao.com/", "tag": "", "sign": "", "feed": "", "status": ""},
   {"name": "Est's Blog", "url": "https://blog.est.im/", "tag": "", "sign": "", "feed": "https://feeds.feedburner.com/initiative", "status": ""},
-  {"name": "夜街尘", "url": "https://aprilforest.cn/index.html", "tag": "", "sign": "眨眼间，已是千年之外", "feed": "", "status": ""}
+  {"name": "夜街尘", "url": "https://aprilforest.cn/index.html", "tag": "", "sign": "眨眼间，已是千年之外", "feed": "", "status": ""},
+  {"name": "若志随笔", "url": "https://www.rz.sb/", "tag": "", "sign": "愿世界安康，愿你我皆好！", "feed": "https://www.rz.sb/feed/", "status": ""},
+  {"name": "岳泽以", "url": "https://www.yuezeyi.com/", "tag": "", "sign": "愿我如星君如月，夜夜流光相皎洁。", "feed": "https://www.yuezeyi.com/feed/", "status": ""}
 ]

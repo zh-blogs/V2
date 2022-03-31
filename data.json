@@ -532,5 +532,6 @@
   {"name": "杂货屋", "url": "https://sword.studio/", "tag": "", "sign": "本站主要用于记录和分享我所折腾过的东西", "feed": "https://sword.studio/feed/", "status": ""},
   {"name": "前端桃园", "url": "https://www.taoweng.site/", "tag": "", "sign": "Enjoy when you can, and endure when you must.", "feed": "https://feeds.feedburner.com/initiative", "status": ""},
   {"name": "薛定喵君", "url": "http://xuedingmiao.com/", "tag": "", "sign": "", "feed": "", "status": ""},
-  {"name": "Est's Blog", "url": "https://blog.est.im/", "tag": "", "sign": "", "feed": "https://feeds.feedburner.com/initiative", "status": ""}
+  {"name": "Est's Blog", "url": "https://blog.est.im/", "tag": "", "sign": "", "feed": "https://feeds.feedburner.com/initiative", "status": ""},
+  {"name": "夜街尘", "url": "https://aprilforest.cn/index.html", "tag": "", "sign": "眨眼间，已是千年之外", "feed": "", "status": ""}
 ]

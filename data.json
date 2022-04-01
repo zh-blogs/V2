@@ -547,7 +547,7 @@
   {"name": "陈阿叔", "url": "https://www.rickychen.top/", "tag": "", "sign": "生活喜欢勇敢的人！", "feed": "https://www.rickychen.top/feed", "status": ""},
   {"name": "白菜日记", "url": "https://thecat.top/", "tag": "", "sign": "喜欢就争取，得到就珍惜，错过就忘记。", "feed": "https://thecat.top/index.php/feed/", "status": ""},
   {"name": "纸盒博客", "url": "https://zhebk.cn/", "tag": "", "sign": "我们渺小到不可一世。", "feed": "https://zhebk.cn/feed/", "status": ""},
-  {"name": "风记星辰", "url": "https://www.thyuu.com/", "tag": "", "sign": "一名来自盛京的90后！ 切身投入到振兴中国东北老工业城市事业中。感谢你给我一个机会让我向你告白我的故事。", "feed": "https://www.thyuu.com/feed", "status": ""},
+  {"name": "风记星辰", "url": "https://www.thyuu.com/", "tag": "", "sign": "分享生活·留下感动", "feed": "https://www.thyuu.com/feed", "status": ""},
   {"name": "A博客", "url": "https://aboke.net/", "tag": "", "sign": "一位草根站长创建的笔记博客站点", "feed": "https://aboke.net/feed/", "status": ""},
   {"name": "RawChen Blog", "url": "https://rawchen.com/", "tag": "", "sign": "大道至简 大简至极", "feed": "https://rawchen.com/feed/", "status": ""},
   {"name": "陆之岇", "url": "https://twitter.krait.cn/", "tag": "", "sign": "创造一切未来", "feed": "https://twitter.krait.cn/feed/", "status": ""},
@@ -570,5 +570,6 @@
   {"name": "吾柯", "url": "https://blog.keepke.com/", "tag": "", "sign": "保持思考与理性", "feed": "https://blog.keepke.com/feed", "status": ""},
   {"name": "悠悠吧", "url": "https://www.usuuu.com/", "tag": "", "sign": "记录一个文艺女青年的IT之路", "feed": "", "status": ""},
   {"name": "孤影墨香-小絮个人博客", "url": "https://www.gymxbl.com/", "tag": "", "sign": "海内存知己，天涯若比邻", "feed": "https://www.gymxbl.com/feed/", "status": ""},
-  {"name": "PEACHRL的小站-万亿及秭", "url": "https://wanyijizi.com/", "tag": "", "sign": "PEACHRL就是个普通的网名，博主我就是个普通的桃子，粉嫩嫩毛绒绒那种。", "feed": "https://blog.wanyijizi.com/feed/", "status": ""}
+  {"name": "PEACHRL的小站-万亿及秭", "url": "https://wanyijizi.com/", "tag": "", "sign": "PEACHRL就是个普通的网名，博主我就是个普通的桃子，粉嫩嫩毛绒绒那种。", "feed": "https://blog.wanyijizi.com/feed/", "status": ""},
+  {"name": "关关和六六 ' blog", "url": "https://www.gmcllp.cn/", "tag": "", "sign": "向世界分享我们的故事", "feed": "https://www.gmcllp.cn/feed/", "status": ""}
 ]

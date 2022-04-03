@@ -572,7 +572,7 @@
   {"name": "孤影墨香-小絮个人博客", "url": "https://www.gymxbl.com/", "tag": "", "sign": "海内存知己，天涯若比邻", "feed": "https://www.gymxbl.com/feed/", "status": ""},
   {"name": "PEACHRL的小站-万亿及秭", "url": "https://wanyijizi.com/", "tag": "", "sign": "PEACHRL就是个普通的网名，博主我就是个普通的桃子，粉嫩嫩毛绒绒那种。", "feed": "https://blog.wanyijizi.com/feed/", "status": ""},
   {"name": "关关和六六 ' blog", "url": "https://www.gmcllp.cn/", "tag": "", "sign": "向世界分享我们的故事", "feed": "https://www.gmcllp.cn/feed/", "status": ""},
-  {"name": "梓宸的小屋", "url": "https://zichen.zone/", "tag": "", "sign": "一个不太开心的创作者的小博客", "feed": "https://zichen.zone/feed/", "status": ""},
+  {"name": "梓宸的小屋", "url": "https://zichen.zone/", "tag": "动漫,api,typecho", "sign": "一个不太开心的创作者的小博客", "feed": "https://zichen.zone/feed/", "status": ""},
   {"name": "夜将夜", "url": "https://yejiangye.com/", "tag": "生活,记事,记录", "sign": "一丝曙光划破这将夜的夜", "feed": "https://yejiangye.com/feed/", "status": ""},
-  {"name": "小俊博客", "url": "https://www.xjisme.com/", "tag": "腾讯云,wordpress,cloudflare,教程,主机测评,typecho,服务器,vps", "sign": "一个从小对网络感兴趣的男孩子", "feed": "https://www.xjisme.com/feed/", "status": ""},
+  {"name": "小俊博客", "url": "https://www.xjisme.com/", "tag": "腾讯云,wordpress,cloudflare,教程,主机测评,typecho,服务器,vps", "sign": "一个从小对网络感兴趣的男孩子", "feed": "https://www.xjisme.com/feed/", "status": ""}
 ]

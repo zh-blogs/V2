@@ -106,10 +106,10 @@
   {"name": "颜海镜", "url": "https://yanhaijing.com/", "tag": "react,css,git,node.js,html5,html", "sign": "专注Web前端", "feed": "https://yanhaijing.com/rss.xml", "status": "OK"},
   {"name": "justjavac-迷渡", "url": "https://justjavac.com/", "tag": "react,http,js,杂谈,git", "sign": "专注最时髦的web开发技术", "feed": "https://justjavac.com/atom.xml", "status": "OK"},
   {"name": "前端小武的博客", "url": "https://xuexb.com/", "tag": "架构,js,前端,技术", "sign": "", "feed": "https://xuexb.com/rss.html", "status": "OK"},
-  {"name": "JerryQu 的小站", "url": "https://imququ.com/", "tag": "", "sign": "专注WEB端开发", "status": "OK"},
-  {"name": "蚊子-前端博客", "url": "https://www.xiabingbao.com/", "tag": "", "sign": "蚊子在前端开发工作中的总结", "status": "OK"},
-  {"name": "不亦乐乎", "url": "https://lms.im/", "tag": "", "sign": "自娱自乐，不亦乐乎!", "status": "OK"},
-  {"name": "ZWWoOoOo", "url": "https://zww.me/", "tag": "", "sign": "因为喜欢所以折腾...无折腾不铁血！", "status": "OK"},
+  {"name": "JerryQu 的小站", "url": "https://imququ.com/", "tag": "杂谈,js,技术", "sign": "专注WEB端开发", "feed": "https://imququ.com/rss.html", "status": "OK"},
+  {"name": "蚊子-前端博客", "url": "https://www.xiabingbao.com/", "tag": "js,node.js,react,axios,vue.js,技术", "sign": "蚊子在前端开发工作中的总结", "feed": "https://www.xiabingbao.com/atom.xml", "status": "OK"},
+  {"name": "不亦乐乎", "url": "https://lms.im/", "tag": "", "sign": "自娱自乐，不亦乐乎!", "feed": "", "status": "OK"},
+  {"name": "ZWWoOoOo", "url": "https://zww.me/", "tag": "生活,杂谈,记事,记录,数码", "sign": "因为喜欢所以折腾...无折腾不铁血！", "feed": "https://zww.me/feed", "status": "OK"},
   {"name": "从良未遂", "url": "https://www.ithmz.com/", "tag": "", "sign": "有事就做事，没事叼根烟", "status": "OK"},
   {"name": "Huiris's log", "url": "https://huiris.com/", "tag": "", "sign": "", "status": "OK"},
   {"name": "两公斤博客", "url": "https://twokg.com/", "tag": "", "sign": "坚持有态度的个人博客。", "status": "OK"},
@@ -572,5 +572,7 @@
   {"name": "孤影墨香-小絮个人博客", "url": "https://www.gymxbl.com/", "tag": "", "sign": "海内存知己，天涯若比邻", "feed": "https://www.gymxbl.com/feed/", "status": ""},
   {"name": "PEACHRL的小站-万亿及秭", "url": "https://wanyijizi.com/", "tag": "", "sign": "PEACHRL就是个普通的网名，博主我就是个普通的桃子，粉嫩嫩毛绒绒那种。", "feed": "https://blog.wanyijizi.com/feed/", "status": ""},
   {"name": "关关和六六 ' blog", "url": "https://www.gmcllp.cn/", "tag": "", "sign": "向世界分享我们的故事", "feed": "https://www.gmcllp.cn/feed/", "status": ""},
-  {"name": "梓宸的小屋", "url": "https://zichen.zone/", "tag": "", "sign": "一个不太开心的创作者的小博客", "feed": "https://zichen.zone/feed/", "status": ""}
+  {"name": "梓宸的小屋", "url": "https://zichen.zone/", "tag": "", "sign": "一个不太开心的创作者的小博客", "feed": "https://zichen.zone/feed/", "status": ""},
+  {"name": "夜将夜", "url": "https://yejiangye.com/", "tag": "生活,记事,记录", "sign": "一丝曙光划破这将夜的夜", "feed": "https://yejiangye.com/feed/", "status": ""},
+  {"name": "小俊博客", "url": "https://www.xjisme.com/", "tag": "腾讯云,wordpress,cloudflare,教程,主机测评,typecho,服务器,vps", "sign": "一个从小对网络感兴趣的男孩子", "feed": "https://www.xjisme.com/feed/", "status": ""},
 ]

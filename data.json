@@ -574,5 +574,9 @@
   {"name": "关关和六六 ' blog", "url": "https://www.gmcllp.cn/", "tag": "", "sign": "向世界分享我们的故事", "feed": "https://www.gmcllp.cn/feed/", "status": ""},
   {"name": "梓宸的小屋", "url": "https://zichen.zone/", "tag": "动漫,api,typecho", "sign": "一个不太开心的创作者的小博客", "feed": "https://zichen.zone/feed/", "status": ""},
   {"name": "夜将夜", "url": "https://yejiangye.com/", "tag": "生活,记事,记录", "sign": "一丝曙光划破这将夜的夜", "feed": "https://yejiangye.com/feed/", "status": ""},
-  {"name": "小俊博客", "url": "https://www.xjisme.com/", "tag": "腾讯云,wordpress,cloudflare,教程,主机测评,typecho,服务器,vps", "sign": "一个从小对网络感兴趣的男孩子", "feed": "https://www.xjisme.com/feed/", "status": ""}
+  {"name": "小俊博客", "url": "https://www.xjisme.com/", "tag": "腾讯云,wordpress,cloudflare,教程,主机测评,typecho,服务器,vps", "sign": "一个从小对网络感兴趣的男孩子", "feed": "https://www.xjisme.com/feed/", "status": ""},
+  {"name": "小屁的博客", "url": "https://web.xpblog.cn/", "tag": "typecho,php,技术,生活,记事", "sign": "记录代码世界美好点滴", "feed": "https://web.xpblog.cn/feed/", "status": ""},
+  {"name": "不如吃茶去-子舒", "url": "https://imhan.cn/", "tag": "nuxt.js,js,typecho,php,react,vue.js,生活,记事,记录", "sign": "使用 vue + nuxt.js 技术栈构建而成的博客，记录我的文章。", "feed": "https://imhan.cn/feed.xml", "status": ""},
+  {"name": "被门夹过的核桃还补脑吗-I am XJJ", "url": "https://xjj.pub/", "tag": "记事,生活,分享,go,c,技术", "sign": "A tech lover from Earth", "feed": "https://xjj.pub/index.xml", "status": ""},
+  {"name": "Pan Yixiao’s Website", "url": "https://www.panyixiao.com/", "tag": "php,c,杂记,wordpress,技术", "sign": "技术成就梦想，代码改变世界", "feed": "https://www.panyixiao.com/feed/", "status": ""}
 ]

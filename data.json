@@ -500,7 +500,7 @@
   {"name": "雨落泪尽", "url": "https://couqiao.net/", "tag": "", "sign": "今人不见古时月，今月曾经照古人", "feed": "https://couqiao.net/atom.xml", "status": "OK"},
   {"name": "人淡如菊", "url": "https://www.panaihua.com/", "tag": "", "sign": "不断总结，只有成长生命才有意义", "feed": "", "status": "OK"},
   {"name": "煮饭", "url": "https://zhufan.net/", "tag": "", "sign": "请相信你的指尖拥有改变世界的力量", "feed": "https://zhufan.net/index.xml", "status": "OK"},
-  {"name": "滑天下之大稽", "url": "https://www.logicjake.xyz/", "tag": "", "sign": "无问西东", "feed": "https://www.logicjake.xyz/atom.xml", "status": "OK"},
+  {"name": "滑天下之大稽", "url": "https://www.logicjake.xyz/", "tag": "算法,竞赛,数据挖掘,机器学习", "sign": "无问西东", "feed": "https://www.logicjake.xyz/atom.xml", "status": "OK"},
   {"name": "Stdio's Blog", "url": "https://www.logicjake.xyz/", "tag": "", "sign": "", "feed": "https://blog.stdioa.com/atom.xml", "status": "OK"},
   {"name": "DoubleMice", "url": "https://doublemice.github.io/", "tag": "", "sign": "我以晦朔春秋为聘，不知你愿否共我度完蜉蝣小年。", "feed": "https://doublemice.github.io/feed.xml", "status": "OK"},
   {"name": "CosmosNing 的个人博客", "url": "https://cosmosning.github.io/", "tag": "", "sign": "探索・好奇", "feed": "https://cosmosning.github.io/atom.xml", "status": "OK"},

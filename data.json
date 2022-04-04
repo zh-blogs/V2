@@ -44,7 +44,7 @@
   {"name": "俍注", "url": "https://oneinf.com/", "tag": "生活,摄影,金融", "sign": "一个金融行业互联网人的记录与分享", "feed": "https://oneinf.com/feed", "status": "OK"},
   {"name": "森木志", "url": "https://www.imxxz.cn/", "tag": "生活", "sign": "等风来，希望雨别下", "feed": "https://www.imxxz.cn/feed/", "status": "OK"},
   {"name": "友人C", "url": "https://www.ihewro.com/", "tag": "生活,杂谈,js,php,c++", "sign": "相逢的人会再相逢", "feed": "https://www.ihewro.com/feed/", "status": "OK"},
-  {"name": "AoTxLand", "url": "https://aotxland.com/", "tag": "", "sign": "傲天翔地，记录行走和折腾之路", "feed": "https://aotxland.com/feed", "status": "ReadTimeout"},
+  {"name": "AoTxLand", "url": "https://aotxland.com/", "tag": "生活,杂谈,技术", "sign": "傲天翔地，记录行走和折腾之路", "feed": "https://aotxland.com/feed", "status": "ReadTimeout"},
   {"name": "尚寂新", "url": "https://shangjixin.com/", "tag": "前端,生活,Vue.js", "sign": "不为建站,只为折腾", "feed": "https://shangjixin.com/feed/", "status": "OK"},
   {"name": "心语难诉-周武杰个人博客", "url": "https://xinyu19.com/", "tag": "生活,php,杂谈", "sign": "原谅我凌乱的文字和那破碎的时光", "feed": "https://xinyu19.com/feed/", "status": "OK"},
   {"name": "俊杰", "url": "https://cjj.today/", "tag": "", "sign": "迷失在狂风暴雨后", "feed": "https://cjj.today/feed/", "status": "OK"},

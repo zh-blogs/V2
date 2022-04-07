@@ -108,7 +108,7 @@
     { "name": "前端小武的博客", "url": "https://xuexb.com/", "tag": "架构,js,前端,技术", "sign": "", "feed": "https://xuexb.com/rss.html", "status": "OK" },
     { "name": "JerryQu 的小站", "url": "https://imququ.com/", "tag": "杂谈,js,技术", "sign": "专注WEB端开发", "feed": "https://imququ.com/rss.html", "status": "OK" },
     { "name": "蚊子-前端博客", "url": "https://www.xiabingbao.com/", "tag": "js,node.js,react,axios,vue.js,技术", "sign": "蚊子在前端开发工作中的总结", "feed": "https://www.xiabingbao.com/atom.xml", "status": "OK" },
-    { "name": "不亦乐乎", "url": "https://lms.im/", "tag": "Wordpress,Linux,电视剧,Excel,", "sign": "自娱自乐，不亦乐乎!", "feed": "", "status": "OK" },
+    { "name": "不亦乐乎", "url": "https://lms.im/", "tag": "Wordpress,Linux,电视剧,Excel", "sign": "自娱自乐，不亦乐乎!", "feed": "", "status": "OK" },
     { "name": "ZWWoOoOo", "url": "https://zww.me/", "tag": "生活,杂谈,记事,记录,数码", "sign": "因为喜欢所以折腾...无折腾不铁血！", "feed": "https://zww.me/feed", "status": "OK" },
     { "name": "从良未遂", "url": "https://www.ithmz.com/", "tag": "生活,记事,记录", "sign": "有事就做事，没事叼根烟", "feed": "https://www.ithmz.com/feed", "status": "OK" },
     { "name": "Huiris's log", "url": "https://huiris.com/", "tag": "文学,阅读,生活,杂谈", "sign": "", "feed": "https://huiris.com/feed/", "status": "OK" },

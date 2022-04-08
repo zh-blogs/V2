@@ -3,8 +3,12 @@ name: 申请添加网站
 about: 申请添加博客到博客导航
 title: 申请添加网站
 labels: ''
-assignees: linlinzzo
+assignees: MYXXTS
 
 ---
 
-网站网址（多个请换行）：
+站点名称：
+站点链接：
+站点描述（选填，没填我们会自己找）：
+订阅链接（选填，没填我们会自己找）：
+请按照tag文档给自己博客添加几个tag（选填）：

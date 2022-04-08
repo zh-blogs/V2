@@ -657,5 +657,6 @@
     { "name": "抛瓦尔", "url": "https://blog.phpf5.com/", "tag": "", "sign": "新生代农民工的搬砖场小角落", "feed": "https://blog.phpf5.com/feed/", "status": "" },
     { "name": "张浩在路上", "url": "https://imzhanghao.com/", "tag": "", "sign": "", "feed": "https://imzhanghao.com/atom.xml", "status": "" },
     { "name": "羽衣尘的个人技术博客", "url": "https://yuyichen.space/", "tag": "", "sign": "", "feed": "https://yuyichen.space/rss", "status": "" },
-    { "name": "May be", "url": "https://www.mabby.cn/", "tag": "", "sign": "从前车马很慢，书信很远，一生只够爱一个人", "feed": "https://www.mabby.cn/feed/", "status": "" }
+    { "name": "May be", "url": "https://www.mabby.cn/", "tag": "", "sign": "从前车马很慢，书信很远，一生只够爱一个人", "feed": "https://www.mabby.cn/feed/", "status": "" },
+    { "name": "Jun", "url": "https://blog.junrz.cn/", "tag": "", "sign": "繁华已尽，空散云烟", "feed": "https://blog.junrz.cn/feed", "status": "" }
 ]

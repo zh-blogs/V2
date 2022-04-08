@@ -631,5 +631,8 @@
     { "name": "魚丸包粗麵", "url": "https://naeeo.com/", "tag": "", "sign": "", "feed": "https://naeeo.com/feed", "status": "" },
     { "name": "墨宵のBlog", "url": "http://www.moxiaocc.cn/", "tag": "", "sign": "恶魔的欢语，我只相信一点，命运赠予的一切欢愉背后早已准备好了相应的痛苦", "feed": "https://www.moxiaocc.cn/feed", "status": "" },
     { "name": "一个简单的博客", "url": "https://www.haowenbo.com/", "tag": "", "sign": "向着更高处前进", "feed": "https://www.haowenbo.com/rss.xml", "status": "" },
-    { "name": "Redish101博客", "url": "https://blog.redish101.tk/", "tag": "", "sign": "Redish101的个人博客", "feed": "https://blog.redish101.tk/feed/", "status": "" }
+    { "name": "Redish101博客", "url": "https://blog.redish101.tk/", "tag": "", "sign": "Redish101的个人博客", "feed": "https://blog.redish101.tk/feed/", "status": "" },
+    { "name": "Razeen`s Blog", "url": "https://razeencheng.com/", "tag": "", "sign": "Stay hungry, Stay foolish.", "feed": "https://razeen.me/posts/index.xml", "status": "" },
+    { "name": "Deepzz", "url": "https://deepzz.com/", "tag": "", "sign": "唯爱与美食不可辜负也 :-D", "feed": "https://deepzz.com/rss.html", "status": "" }
+    
 ]

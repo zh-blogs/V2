@@ -18,7 +18,7 @@ body:
     validations:
       required: true
   - type: input
-      id: url
+      id: urle
       attributes:
         label: 网站地址
         description: 我们会把网站地址显示在导航中，并作为博客搜索的依据。

@@ -172,7 +172,7 @@
     { "name": "林羽凡网", "url": "https://www.linyufan.com/", "tag": "生活,记事,小程序", "sign": "勤勤恳恳写日记的普通人", "feed": "https://www.linyufan.com/rss.xml", "status": "ReadTimeout" },
     { "name": "阿呆博客-90后肥宅生活", "url": "https://bo.ke/", "tag": "数码,生活,记事", "sign": "90后肥宅生活", "feed": "https://bo.ke/feed/", "status": "SSLError" },
     { "name": "小灰狼", "url": "https://fly2lan.cc/", "tag": "音乐,Vlog,分享,生活,记事", "sign": "零零碎碎，记录喜怒哀乐", "feed": "https://fly2lan.cc/feed/", "status": "OK" },
-    { "name": "迟於", "url": "https://www.weingxing.cn/", "tag": "深度学习,算法,", "sign": "栖迟於一丘", "feed": "https://www.weingxing.cn/feed/", "status": "OK" },
+    { "name": "迟於", "url": "https://www.weingxing.cn/", "tag": "深度学习,算法", "sign": "栖迟於一丘", "feed": "https://www.weingxing.cn/feed/", "status": "OK" },
     { "name": "杜郎俊赏", "url": "https://dujun.io/", "tag": "生活,记事,理财", "sign": "", "feed": "https://dujun.io/feed/", "status": "OK" },
     { "name": "白云苍狗", "url": "https://www.imalun.com/", "tag": "Vue,文学,VS Code插件,数据库", "sign": "好好生活，好好工作，好好记录。每天多一点思考，每天就会多一点成长。", "status": "OK" },
     { "name": "威言威语", "url": "https://www.weisay.com/blog/", "tag": "分享,数码,生活", "sign": "我愿像茶一样，把苦涩留在心里，敬发出来的都是清香！", "status": "OK" },

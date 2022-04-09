@@ -1,7 +1,6 @@
 name: 申请添加网站
 description: 申请添加博客到中文博客列表导航
 title: "申请收录："
-labels: 
 assignees:
   - MYXXTS
 body:

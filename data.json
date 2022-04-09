@@ -658,5 +658,13 @@
     { "name": "张浩在路上", "url": "https://imzhanghao.com/", "tag": "", "sign": "", "feed": "https://imzhanghao.com/atom.xml", "status": "" },
     { "name": "羽衣尘的个人技术博客", "url": "https://yuyichen.space/", "tag": "", "sign": "", "feed": "https://yuyichen.space/rss", "status": "" },
     { "name": "May be", "url": "https://www.mabby.cn/", "tag": "", "sign": "从前车马很慢，书信很远，一生只够爱一个人", "feed": "https://www.mabby.cn/feed/", "status": "" },
-    { "name": "Jun", "url": "https://blog.junrz.cn/", "tag": "", "sign": "繁华已尽，空散云烟", "feed": "https://blog.junrz.cn/feed", "status": "" }
+    { "name": "ChongYaaa's Notes-充鸭的手札", "url": "https://blog.varsion.cn/", "tag": "", "sign": "", "feed": "", "status": "" },
+    { "name": "苏打博客-SodaYang的个人主页", "url": "https://blog.sodayang.com/", "tag": "", "sign": "", "feed": "https://blog.sodayang.com/feed/", "status": "" },
+    { "name": "李彬豪的个人博客", "url": "http://libinhao.cn/", "tag": "", "sign": "萌娃成长中，奶爸进行时。", "feed": "http://libinhao.cn/feed/", "status": "" },
+    { "name": "彭鸿的博客", "url": "https://penghong.org.cn/", "tag": "", "sign": "IT数码折腾者，智能硬件爱好者，个人博客坚持者。", "feed": "https://penghong.org.cn/feed/", "status": "" },
+    { "name": "浙鲤拾味", "url": "http://www.ebain.cn/", "tag": "", "sign": "浙鲤拾味分享高端民宿地道美食和旅途等风景茶道等.", "feed": "http://www.ebain.cn/feed", "status": "" },
+    { "name": "DESIGN小院", "url": "https://blog.md123.top/", "tag": "", "sign": "", "feed": "https://blog.md123.top/feed/", "status": "" },
+    { "name": "心月云", "url": "https://wch666.com/", "tag": "", "sign": "心月云是温朝海创建的一个博客网站,里面可以分享有趣的生活,以及实用的技术。", "feed": "https://blog.md123.top/feed/", "status": "" },
+    { "name": "千书计划", "url": "https://1000books.club/", "tag": "", "sign": "", "feed": "", "status": "" },
+    { "name": "日记铺子", "url": "https://www.rjpz.net/", "tag": "", "sign": "我担心，未经记载的生活是空虚的、无价值的生活。", "feed": "https://www.rjpz.net/feed", "status": "" }
 ]

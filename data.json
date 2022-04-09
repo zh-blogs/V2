@@ -666,5 +666,6 @@
   {"name": "DESIGN小院", "url": "https://blog.md123.top/", "tag": "", "sign": "", "feed": "https://blog.md123.top/feed/", "status": "OK"},
   {"name": "心月云", "url": "https://wch666.com/", "tag": "", "sign": "心月云是温朝海创建的一个博客网站,里面可以分享有趣的生活,以及实用的技术。", "feed": "https://blog.md123.top/feed/", "status": "OK"},
   {"name": "千书计划", "url": "https://1000books.club/", "tag": "", "sign": "", "feed": "", "status": "OK"},
-  {"name": "日记铺子", "url": "https://www.rjpz.net/", "tag": "", "sign": "我担心，未经记载的生活是空虚的、无价值的生活。", "feed": "https://www.rjpz.net/feed", "status": "OK"}
+  {"name": "日记铺子", "url": "https://www.rjpz.net/", "tag": "", "sign": "我担心，未经记载的生活是空虚的、无价值的生活。", "feed": "https://www.rjpz.net/feed", "status": "OK"},
+  {"name": "曹晨博客", "url": "https://www.caochen.net/", "tag": "", "sign": "IT运维技术及互联网资源分享", "feed": "https://www.caochen.net/feed", "status": "OK"}
 ]

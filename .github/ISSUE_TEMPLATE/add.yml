@@ -17,7 +17,7 @@ body:
       placeholder: ex. 阮一峰的博客
     validations:
       required: true
-      - type: input
+   - type: input
     id: url
     attributes:
       label: 网站地址
@@ -25,15 +25,15 @@ body:
       placeholder: ex. https://juantu.cn/
     validations:
       required: true
-      - type: input
+   - type: input
     id: feed
     attributes:
       label: 网站订阅地址
       description: 我们不会把网站订阅地址显示在导航中，不会将其作为博客搜索的依据。
       placeholder: ex. https://juantu.cn/feed/
     validations:
-      required: true
-      - type: textarea
+      required: false
+   - type: textarea
     id: sign
     attributes:
       label: 网站一句话介绍

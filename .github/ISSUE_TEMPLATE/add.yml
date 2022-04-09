@@ -32,6 +32,14 @@ body:
       placeholder: ex. https://juantu.cn/feed/
     validations:
       required: false
+  - type: input
+    id: tag
+    attributes:
+      label: "网站标签"
+      description: 我们会把网站标签显示在导航中，会将其作为博客标签搜索、既定标签随机跳转的依据。请根据[《博客标签规范（第二版草稿）》](https://github.com/zh-blogs/zh-blogs-documentation/blob/main/document/Tag.md)进行填写。
+      placeholder: ex. 技术类,php,c,java
+    validations:
+      required: false
   - type: textarea
     id: sign
     attributes:

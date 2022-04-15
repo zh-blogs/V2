@@ -1,7 +1,8 @@
 # 中文博客列表导航项目 v1.0.4 向后端进发！☺
 
-## 1.0.4设计功能：站长平台、管理后台和博客统计
-（占位符：功能正在开发）
+## 1.0.4新功能：博客在线提交
+最近，技术组开发出了博客在线提交功能。各位站长可以在 https://zhblogs.ohyee.cc/manager/join/ 直接提交自己的博客网站。       
+其它功能还在开发中。
 
 ## 有关中文博客相关规范和tag文档请移步此仓库
 
@@ -18,20 +19,8 @@
 
 ## 项目如何发现博客？
 1. 根据超链接，我们可以从种子博客中找到十多个不等的网站地址，这些地址中符合要求的会自动成为新的种子博客。理论上来说，博主不需要提交网址，就能被我们发现。  
-2. 我们同时也会使用一些上游库（本上游库名单随机排序，排序不带有任何含义）。
+2. 我们同时也会使用一些上游库。
 
-| 名称      | 网址 | 是否使用|
-| ----------- | ----------- | -------|
-| timqian/chinese-independent-blogs      | https://github.com/timqian/chinese-independent-blogs    | 没用完|
-| 博客志   | http://www.jetli.com.cn/    | 用完了|
-| 中文独立博客导航   | https://www.blogwall.cn/nav/    | 没|
-| 博客联盟   | https://blorg.cn/    | 没|
-| BLOS'空间   | https://c.sady0.com/   | 用完了|
-| BlogFinder   | https://bf.zzxworld.com/  | 没用|
-|TUNA Blogroll   | https://github.com/tuna/blogroll | 没|
-|bloghub   | https://github.com/shidenggui/bloghub/blob/master/backend/assets/blogs-original.csv | 没|
-|十年之约   | https://www.foreverblog.cn/blogs.html | 没用完|
-|  BlogRoll  |https://github.com/NUAA-Open-Source/BlogRoll |没|
 
 ## 如何支持该项目？
 1. 如果网站名称或地址出现更换或博客失效，请提个 issue。        
@@ -61,16 +50,3 @@
 
 ## 我能怎么使用本项目的数据？
 （目前代码正发生较大的变动，后续有调用方法会及时更新在这里）
-data.json中关于数据的说明:
-
-1. `name`指博客网站的名称（字符串，一些较长的备用名会放在一句话介绍）
-2. `url`指博客网站的网址（网址，不一定是首页）
-3. `tag`指博客网站的标签（字符串，多个标签用半角逗号分隔）
-4. `sign`指博客网站的一句话介绍(字符串，有一些没找到，会放空）
-5. `status`指博客的状态（不推荐调用，可能不准）
-6. `feed`指博客的订阅地址（网址，多个地址会填feed 2.0）
-7. `gen`指博客使用的程序（字符串，还没在列表中添加）
-8. `indextime`指博客被本项目一开始收录的时间
-9. `deathtime`指博客被本项目标记异常的时间（还没在列表中添加，8、9号变量有待讨论）
-
-建议调用本仓库中的data.json，因为这个文件一直在更新。

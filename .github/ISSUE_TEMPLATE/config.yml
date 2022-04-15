@@ -3,6 +3,6 @@ contact_links:
   - name: 中文博客列表导航文档
     url: https://github.com/zh-blogs/zh-blogs-documentation
     about: 您可以在这里找到这个项目的一些文档。
-  - name: 中文博客列表导航网页
-    url: https://zhblogs.ohyee.cc/
-    about: 您可以在这里查看已被我们收录的中文博客网站。
+  - name: 向中文博客列表导航提交网站
+    url: https://zhblogs.ohyee.cc/manager/join
+    about: 您可以在这里向我们提交网站。

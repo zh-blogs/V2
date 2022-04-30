@@ -1,12 +1,10 @@
 # 中文博客列表导航项目 v1.0.4 向后端进发！☺
 
+![forks](https://img.shields.io/github/forks/zh-blogs/blog-daohang) ![starts](https://img.shields.io/github/stars/zh-blogs/blog-daohang) ![license](https://img.shields.io/github/license/zh-blogs/blog-daohang)
 ## 1.0.4新功能：博客在线提交
 最近，技术组开发出了博客在线提交功能。各位站长可以在 https://zhblogs.ohyee.cc/manager/join/ 直接提交自己的博客网站。       
 其它功能还在开发中。
 
-## 有关中文博客相关规范和tag文档请移步此仓库
-
-[规范文档](https://github.com/zh-blogs/zh-blogs-documentation)
 
 ## 这个项目是什么？
 我们这个项目立志要链接全部的中文独立博客。    
@@ -48,5 +46,10 @@
 [^2]: 根据浙江大学李恒的硕士学位论文《博客写作行为影响因素研究》，博客是个人新型的网络出版和交流工具。它是一个个人网站，不同的博客站点可通过链接建立联系．博客的内容由众多个性化表达的帖子组成，不同的帖子按照时间先后倒序排列，帖子的形式可以是文字、影音、图片或链接，或多种形式的结合。对于组织(群体)博客(如情侣博客、团体博客和企业博客)，本项目也会将其送至项目组讨论。
 [^3]: 因为一些原因，一些博客需要经过项目组讨论，例如 https://github.com/zh-blogs/blog-daohang/issues/9 。  
 
-## 我能怎么使用本项目的数据？
-（目前代码正发生较大的变动，后续有调用方法会及时更新在这里）
+## 有关中文博客相关规范和tag文档请移步此仓库
+
+[规范文档](https://github.com/zh-blogs/zh-blogs-documentation)
+
+## 开发、部署
+
+见 [开发文档](doc/develop.md)

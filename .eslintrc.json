@@ -1,0 +1,45 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "@next/next/no-img-element": "off",
+    "semi": 1, // 必须添加分号
+    "arrow-parens": 1, // 箭头函数使用括号
+    "arrow-spacing": 1, // 箭头函数使用空格
+    "constructor-super": 1, // 构造函数必须有 super()
+    "no-confusing-arrow": 0, // 在容易混淆的地方禁止使用箭头函数
+    "no-const-assign": 1, // 禁止修改常量
+    "class-methods-use-this": 1, // 类中强制使用 this
+    "curly": 1, // 所有控制语句使用一致的括号风格
+    "dot-notation": 1, // 可以的话，尽可能使用点号
+    "eqeqeq": 1, // 必须使用全等
+    "no-else-return": 1, // return 后不需要 else
+    "no-multi-spaces": 1, // 不要有多余空格
+    "no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ], // 变量必须使用
+    "no-use-before-define": 0, // 先声明再使用
+    "array-bracket-spacing": 1, // 方括号空格控制
+    "array-element-newline": 0, // 强制数组换行
+    "brace-style": 1, // 大括号风格
+    "eol-last": 0, // 文件尾空行
+    "indent": [
+      "warn",
+      2
+    ], // 强制缩进一致
+    "line-comment-position": 0, // 注释位置控制
+    "jsx-quotes": [
+      "warn",
+      "prefer-double"
+    ], // 强制 jsx 双引号
+    "newline-before-return": 1, // return 前面空一行
+    "comma-spacing": 1, // 逗号空格
+    "comma-style": 1, // 逗号风格
+    "object-curly-spacing": [
+      "warn",
+      "always"
+    ] //大括号两侧添加空格
+  }
+}

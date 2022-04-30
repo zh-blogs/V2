@@ -2,7 +2,7 @@
 
 BaseImage=node:16-alpine
 ZhBlogsImage=ohyee/zhblogs
-DockerImage=gchr.io/zh-blogs/zhblogs
+DockerImage=ghcr.io/zh-blogs/zhblogs
 
 function func_run_docker() {
     docker run \

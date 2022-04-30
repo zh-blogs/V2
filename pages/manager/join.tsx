@@ -3,7 +3,7 @@ import { Card, Alert, Typography, notification } from 'antd';
 import { Form, FormItemProps } from '@/components/antd';
 import { Flex } from '@/components/flex';
 import { getBlogs, getTags, addBlog } from '@/utils/api';
-import { Blog, getDomain } from '@/utils';
+import { getDomain } from '@/utils';
 import router from 'next/router';
 
 import { v4 as uuid } from 'uuid';
@@ -26,27 +26,6 @@ export default function AddBlog() {
           label: '博客首页',
           required: true,
           placeholder: '贵博客的域名',
-          rules: [
-            {
-              validator: async (_, value) => {
-                // 判断博客重复
-                const resp = await getBlogs({ search: getDomain(value), status: 0 });
-                if (!!resp.success && !!resp.data) {
-                  const blogs = resp.data.blogs;
-                  const matchBlogs = blogs.filter(
-                    (blog) => getDomain(blog.url) === getDomain(value)
-                  );
-                  if (matchBlogs.length > 0) {
-                    return Promise.reject(
-                      `该博客已存在, 请勿重复添加。已找到的匹配博客: ${matchBlogs
-                        .map((blog) => `${blog.name}(${blog.url})`)
-                        .join(',')}`
-                    );
-                  }
-                }
-              },
-            },
-          ],
         },
         {
           key: 'name',
@@ -130,7 +109,21 @@ export default function AddBlog() {
           title="博客登记"
           forms={forms}
           onFinish={async (values) => {
-            console.log(values);
+            const resps = await getBlogs({ search: getDomain(values.url), status: 0 });
+            if (!!resps.success && !!resps.data) {
+              const blogs = resps.data.blogs;
+              const matchBlogs = blogs.filter(
+                (blog) => getDomain(blog.url) === getDomain(values.url)
+              );
+              if (matchBlogs.length > 0) {
+                return notification.error({
+                  message: "提交失败", description: `该博客已存在, 请勿重复添加。已找到的匹配博客: ${matchBlogs
+                    .map((blog) => `${blog.name}(${blog.url})`)
+                    .join(',')}`
+                });
+              }
+            }
+
             const resp = await addBlog({
               blog: {
                 id: uuid(),
@@ -149,7 +142,7 @@ export default function AddBlog() {
               notification.success({ message: "提交成功", description: "请等待管理员审核" });
               router.push("/");
             } else {
-              notification.error({ message:"提交失败", description: resp.message });
+              notification.error({ message: "提交失败", description: resp.message });
             }
           }}
         />

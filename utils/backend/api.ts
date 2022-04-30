@@ -18,7 +18,7 @@ export default function wrapper<T extends (...args: any) => any>(
     } else {
       args = JSON.parse(req.body);
     }
-    var result = await callback(args, req, res);
+    const result = await callback(args, req, res);
     res.status(200).json(result);
   };
 }

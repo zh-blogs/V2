@@ -47,7 +47,7 @@ export function makeQuery(query: { [key: string]: number | string | string[]|und
     const value = query[key];
     if (typeof value === "undefined") {
       return "";
-    };
+    }
     const v = encodeURIComponent(Array.isArray(value) ? value.join(",") : value);
     
     return `${k}=${v}`;
@@ -97,6 +97,14 @@ export async function sendRequest<T extends JSONObject, U>(method: "get" | "post
  */
 export async function getTags(params: {}): Promise<Result<string[]>> {
   return await sendRequest("get", "/tags", params);
+}
+
+/**
+ * 获取博客标签（包括数量）
+ * @returns 标签列表
+ */
+export async function getTagsWithCount(params: {}): Promise<Result<{tag:string, count:number}[]>> {
+  return await sendRequest("get", "/tags/count", params);
 }
 
 
@@ -164,6 +172,30 @@ export async function getRandomBlogs(params: { search?: string, tags?: string[],
  */
 export async function getUserInfo(params: { token?: string }): Promise<Result<UserInfo>> {
   return sendRequest("get", "/token", params); 
+}
+
+
+/**
+ * 修改标签
+ * @param tag 标签
+ * @param newTag 新标签
+ * @returns 测试返回
+ */
+export async function renameTag(params: { tag: string, newTag: string }): Promise<Result<null>> {
+  const token = Cookie.get("token");
+  
+  return sendRequest("post", "/tag", { token, ...params }); 
+}
+
+/**
+ * 删除标签
+ * @param tag 标签
+ * @returns 测试返回
+ */
+export async function deleteTag(params: { tag: string }): Promise<Result<null>> {
+  const token = Cookie.get("token");
+  
+  return sendRequest("delete", "/tag", { token, ...params }); 
 }
 
 /**

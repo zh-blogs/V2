@@ -159,7 +159,7 @@ export declare type FlexItemProps = ComponentProps<{}>;
 const FlexItem: React.FC<FlexItemProps> = (props) => {
   var { style = {}, className = "", children, ...restProps } = props;
   var child: any = children;
-  if (!!!child) {
+  if (!child) {
     return null;
   }
   const key = child.key;

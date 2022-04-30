@@ -1,79 +1,23 @@
 import React from 'react';
 import { Table, Input, Collapse, TableColumnsType, notification, Radio } from 'antd';
-import Link from 'next/link';
-import { CheckOutlined, CloseOutlined, GithubOutlined } from '@ant-design/icons';
-import { Card, Loading, Form, FormItemProps, Switch, Button } from '@/components/antd';
-import { getUserInfo, getTags, getBlogs, updateBlog, deleteBlog } from '@/utils/api';
+import { CheckOutlined, CloseOutlined, } from '@ant-design/icons';
+import { Form, FormItemProps, Switch, Button } from '@/components/antd';
+import { getTags, getBlogs, updateBlog, deleteBlog } from '@/utils/api';
 import { UserInfo, Blog, showNotification, shouldString, shouldNumber, getDomain, Combine } from '@/utils';
 import { Tag }from'@/components/tag';
 import { Flex } from '@/components/flex';
 import styles from './index.module.scss';
-import Cookie from 'js-cookie';
+import { UserInfoContext } from '@/components/login';
+import { AdminLayout } from '@/components/layout';
 
 export default function Manager() {
-  const [token, setToken] = React.useState("");
-  const [info, setInfo] = React.useState<UserInfo>();
-  const [loading, setLoading] = React.useState(false);
-    
-  React.useEffect(() => {
-    setLoading(true);
-    const token = Cookie.get("token");
-    if (!!token) {
-      getUserInfo({ token: token }).then((resp) => { 
-        if (!!resp.success && !!resp.data) {
-          setToken(token);
-          setInfo(resp.data);
-        } else {
-          setToken("");
-        }
-      });
-    } else {
-      setToken("");
-    }
-    
-    setLoading(false);
-  }, [setToken]);
-  
-  return <Card shadow>
-    <Loading loading={loading}>
-      {!!token && !!info ?
-        !!info.admin ?
-          <Admin info={info} />
-          : <Flex direction="TB">
-            <p>Hi, {info.name}({info.id})。你不是项目组成员，请联系管理员添加权限。</p>
-            <Flex direction="TB">
-              <span>为管理员提供如下信息</span>
-              <span>name: {info.name}</span>
-              <span>id: {info.id}</span>
-              <span>email: {info.email}
-              </span>
-            </Flex>
-          </Flex>
-        :<Login/>
-      }
-    </Loading>
-  </Card>;
+  return <AdminLayout>
+    <UserInfoContext.Consumer>
+      {(info) => !!info && <AdminManager info={info}/>}
+    </UserInfoContext.Consumer>
+  </AdminLayout>;
 }
-
-
-function Login() {
-  return <Link href="/api/user/github_connect?from=/manager" passHref><Button icon={<GithubOutlined/>}>登录</Button></Link>;
-  // return <Form
-  //   forms={[
-  //     { key: "token", label: "Token" },
-  //   ]}
-  //   onFinish={(values) => { 
-  //     const token = values.token;
-  //     Cookie.set("token", token);
-     
-  //     location.reload();
-  //   }}
-  // />;
-}
-
-
-
-function Admin(props:{info:UserInfo}) {
+function AdminManager(props:{info:UserInfo}) {
   const { info } = props;
     
   const cacheRef = React.useRef<{ [key: string]: Blog[] }>({});

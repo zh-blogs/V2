@@ -1,7 +1,7 @@
 import { notification } from "antd";
 import { Result } from "./types";
 
-export function showNotification(result: Result<any>, showSuccess: boolean = false): boolean {
+export function showNotification(result: Result<any>, showSuccess = false): boolean {
   if (!result.success) {
     notification.error({
       message: result.success,

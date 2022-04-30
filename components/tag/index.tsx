@@ -1,10 +1,11 @@
-import { Tag as AntdTag } from "antd";
+import { Tag as AntdTag, TagProps as AntdTagProps } from "antd";
+import { Combine } from '@/utils/types';
 
-export declare type TagProps = {
+export declare type TagProps =Combine< {
   tag: string;
   onClick?: (tag: string) => void;
   onClose?: (tag: string) => void;
-};
+}, AntdTagProps>;
 
 const colorArrs = [
   "magenta",
@@ -31,7 +32,7 @@ export function getColor(id: string) {
 }
 
 export function Tag(props: TagProps) {
-  const { tag, onClick, onClose } = props;
+  const { tag, onClick, onClose, style, ...restProps } = props;
 
   return (
     <AntdTag
@@ -47,7 +48,8 @@ export function Tag(props: TagProps) {
         }
       }}
       closable={!!onClose}
-      style={{ cursor: !!onClick ? "pointer" : "unset" }}
+      style={{ cursor: !!onClick ? "pointer" : "unset", ...style } }
+      { ...restProps}
     >
       {tag}
     </AntdTag>

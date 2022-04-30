@@ -5,7 +5,7 @@ import wrapper from "@/utils/backend/api";
 import DB from "@/utils/backend/db";
 
 export default wrapper<typeof getRandomBlogs>(
-  async (args, req, res) => {
+  async (args, req) => {
     if (req.method === "GET") {
       const result = await DB.getBlogs({
         search: shouldString(args.search, ""),

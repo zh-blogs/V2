@@ -111,4 +111,4 @@ export default async function github_login(
   }
     
   return;
-};
+}

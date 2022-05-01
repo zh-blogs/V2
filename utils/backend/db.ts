@@ -185,6 +185,9 @@ async function updateBlog(params: { id: string, blog: Blog }): Promise<Result> {
  * @returns 返回插入结果
  */
 async function addBlog(params: { blog: Blog }): Promise<Result<Blog>> {
+  if (DB.blogs.find((blog) => blog.id === blog.id)) {
+    return { success: false, message: "博客已存在" };
+  }
   DB.blogs.push(params.blog);
   await DB.write();
   

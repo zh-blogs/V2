@@ -3,7 +3,7 @@ import fs from "fs";
 import { Blog, getDomain, shouldString } from "@/utils";
 
 export class Database {
-  path: string = "";
+  path = "";
   blogs: Blog[] = [];
   tags: string[] = [];
 
@@ -29,7 +29,7 @@ export class Database {
           idx:idx++,
           name: blog.name,
           url: blog.url,
-          tags: !!blog.tags? blog.tags:!!blog.tag ? blog.tag.toLowerCase().split(",") : [],
+          tags: !!blog.tags? blog.tags:blog.tag ? blog.tag.toLowerCase().split(",") : [],
           sign: shouldString(blog.sign, ""),
           feed: shouldString(blog.feed, ""),
           status: `${blog.status}`,
@@ -75,6 +75,6 @@ export class Database {
       throw (error);
     }
   }
-};
+}
 
 

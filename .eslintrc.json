@@ -1,5 +1,11 @@
 {
-  "extends": "next/core-web-vitals",
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "next/core-web-vitals"
+  ],
   "rules": {
     "@next/next/no-img-element": "off",
     "semi": 1, // 必须添加分号
@@ -14,7 +20,8 @@
     "eqeqeq": 1, // 必须使用全等
     "no-else-return": 1, // return 后不需要 else
     "no-multi-spaces": 1, // 不要有多余空格
-    "no-unused-vars": [
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
       "warn",
       {
         "argsIgnorePattern": "^_"

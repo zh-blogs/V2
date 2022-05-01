@@ -1,9 +1,8 @@
 import { Blog, Combine, Result, UnwrapPromise, ComponentProps, APIRequest, UserInfo, ContextType } from "./types";
 import { showNotification } from "./notification";
 import React from "react";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { makeQuery } from "./api";
-import { isServer } from "./env";
 import { defaultContext, Context } from './context';
 
 
@@ -17,7 +16,7 @@ export { showNotification, defaultContext, Context };
  */
 export function ObjectFilter<T>(obj: T, callback: (key: keyof T, value: T[keyof T]) => boolean) {
   var ret: Partial<T> = {};
-  for (var key in obj) {
+  for (const key in obj) {
     const value = obj[key];
     if (callback(key, value)) {
       ret[key] = value;
@@ -70,7 +69,7 @@ export function shouldArray<T>(value: T[] | T): T[] {
  * 转换 @value 为数组（使用 @sep 分割
  * @param value 值
  */
-export function shouldArraySplit(value: string | string[] | undefined, sep: string = ","): string[] {
+export function shouldArraySplit(value: string | string[] | undefined, sep = ","): string[] {
   if (!value) {
     return [];
   }
@@ -90,7 +89,7 @@ export function shouldArraySplit(value: string | string[] | undefined, sep: stri
  * @param value 值
  * @param defaultValue 默认值
  */
-export function shouldNumber(value: any, defaultValue: number = 0): number {
+export function shouldNumber(value: any, defaultValue = 0): number {
   try {
     value = UnwrapArray(value, defaultValue);
     const v = parseInt(value);
@@ -109,7 +108,7 @@ export function shouldNumber(value: any, defaultValue: number = 0): number {
  * @param value 值
  * @param defaultValue 默认值
  */
-export function shouldString(value: any, defaultValue: string = ""): string {
+export function shouldString(value: any, defaultValue = ""): string {
   try {
     value = UnwrapArray(value, defaultValue);
     
@@ -189,7 +188,7 @@ export function useQuery(defaultState?: TypeQuery) {
   const setQueryCallbackRef = React.useRef<setQueryCallback>();
   React.useEffect(() => {
     setQueryCallbackRef.current = (newQuery: TypeQuery, callback?: SetStateCallbackAction<TypeQuery>) => {
-      var url = new URL(window.location.href);
+      const url = new URL(window.location.href);
 
       var hrefQuery: { [key: string]: string } = {};
       url.searchParams.forEach((value, key) => {
@@ -241,7 +240,7 @@ declare type setQueryCallback = (_: TypeQuery, __?: SetStateCallbackAction<TypeQ
  */
 function getHrefQuery() {
   if (typeof window !== 'undefined') {
-    var url = new URL(window.location.href);
+    const url = new URL(window.location.href);
 
     var hrefQuery: { [key: string]: string } = {};
     url.searchParams.forEach((value, key) => {
@@ -277,7 +276,7 @@ export function isEqual(a: any, b: any) {
     if (Object.keys(a).length !== Object.keys(b).length) {
       return false;
     }
-    for (var key in a) {
+    for (const key in a) {
       if (!isEqual(a[key], b[key])) {
         return false;
       }

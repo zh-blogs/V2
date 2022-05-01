@@ -38,7 +38,7 @@ async function getUser(params: { token: string }): Promise<Result<UserInfo>> {
 }
 
 function setUser(params: { token: string, info: UserInfo }) {
-  var { token, info } = params;
+  const { token, info } = params;
 
   if (!info.admin) {
     info.admin = adminID.indexOf(info.id) !== -1;
@@ -66,12 +66,47 @@ function setUser(params: { token: string, info: UserInfo }) {
  * 获取标签列表
  * @returns 标签列表
  */
-async function getTags(params: {}): Promise<Result<string[]>> {
+async function getTags(_: {}): Promise<Result<string[]>> {
   return new Promise(async (resolve) => {
 
     resolve({
       success: true,
       data: DB.tags,
+    });
+  });
+}
+
+/**
+ * 获取标签列表（包括博客数目）
+ * @returns 标签列表
+ */
+async function getTagsWithCount(_: {}): Promise<Result<{tag:string, count: number} []>> {
+  return new Promise(async (resolve) => {
+
+    const resp = await getBlogs({ size: -1, status: 0 });
+    if (!resp.success) {
+      return resolve({ success: false, message: resp.message });
+    }
+
+    if (!resp.data) {
+      return resolve({ success: false, message: "no data" });
+    }
+ 
+    const blogs = resp.data.blogs;
+    const dict:{[tag:string]: number} = {};
+    for (const blog of blogs) {
+      for (const tag of blog.tags) {
+        if (!dict[tag]) {
+          dict[tag] = 0;
+        }
+        dict[tag]++;
+      }
+    }
+    
+    const tags = Object.keys(dict).map((tag) => ({ tag, count: dict[tag] }));
+    resolve({
+      success: true,
+      data: tags,
     });
   });
 }
@@ -110,7 +145,7 @@ async function getBlogs(params: { search?: string, tags?: string[], offset?: num
 
     if (typeof offset === "number") {
       ret = ret.slice(offset);
-    };
+    }
     if (typeof size === "number" && size > 0) {
       ret = ret.slice(0, size);
     }
@@ -168,6 +203,44 @@ async function deleteBlog(params: { id: string }): Promise<Result<Blog>> {
   return { success: true, message: "删除成功", };
 }
 
+/**
+ * 重命名 @tag 标签为 @newTag
+ * @param tag 标签名称
+ * @param newTag 新标签名称
+ * @returns 返回删除结果
+ */
+async function renameTag(params: { tag: string, newTag: string}): Promise<Result<null>> {
+  DB.blogs = DB.blogs.map((blog) => {
+    var tagsSet = new Set(blog.tags);
+    if (tagsSet.has(params.tag)) { 
+      tagsSet.delete(params.tag);
+      tagsSet.add(params.newTag);
+      blog.tags = Array.from(tagsSet);
+    }
+    
+    return blog;
+  });
+  await DB.write();
+
+  return { success: true, message: "重命名成功", };
+}
+
+/**
+ * 删除 @tag 标签
+ * @param tag 标签名称
+ * @returns 返回删除结果
+ */
+async function deleteTag(params: { tag: string }): Promise<Result<null>> {
+  DB.blogs = DB.blogs.map((blog) => {
+    blog.tags = blog.tags.filter((tag) => tag !== params.tag);
+    
+    return blog;
+  });
+  await DB.write();
+
+  return { success: true, message: "删除成功", };
+}
+
 export default exports = {
   // db,
   // getBlogCount,
@@ -176,6 +249,10 @@ export default exports = {
   addBlog,
   deleteBlog,
   getTags,
+  getTagsWithCount,
+  renameTag,
+  deleteTag,
+
   getUser,
 
   setUser,

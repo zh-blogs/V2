@@ -47,7 +47,7 @@ export default function Go() {
     return () => {
       if (!!timeoutIdRef.current) {
         clearTimeout(timeoutIdRef.current);
-      };
+      }
     };
   }, [minute1s]);
 

@@ -6,6 +6,9 @@ import { Flex } from "@/components/flex";
 import { Card } from '@/components/antd';
 import Link from "next/link";
 
+import { AdminLayout } from './admin';
+export { AdminLayout };
+  
 export type LayoutProps = ComponentProps<{}>;
 
 export default function Layout(props: LayoutProps) {

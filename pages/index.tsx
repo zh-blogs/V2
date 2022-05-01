@@ -25,14 +25,14 @@ const Home: NextPage<{
         {
           key: "random",
           tab: "随机博客推荐",
-          render: (_, blogs) => <RandomBlogs />,
+          render: () => <RandomBlogs />,
         },
         {
           key: "blog_list",
           tab: "博客列表",
-          render: (_, blogs) => <Blogs />,
+          render: () => <Blogs />,
         },
-        { key: "about", tab: "关于", render: (_, blogs) => <AboutTab /> },
+        { key: "about", tab: "关于", render: () => <AboutTab /> },
       ] as Tab[],
     []
   );

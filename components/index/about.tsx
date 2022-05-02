@@ -5,6 +5,13 @@ export function AboutTab() {
         我们尝试链接几乎所有的中文博客，并使用这个地址库不定期为中文博客存档。
       </p>
       <p>
+        您可以在 {" "}
+        <a href="https://github.com/zh-blogs/zh-blog-database/tree/main/database" type="text/html">
+          zh-blogs/zh-blog-database
+        </a>
+        {" "} 中找到本项目中的所有博客信息, 数据每日更新。
+      </p>
+      <p>
         我们的 Github 仓库地址是{" "}
         <a href="https://github.com/zh-blogs/blog-daohang" type="text/html">
           zh-blogs/blog-daohang

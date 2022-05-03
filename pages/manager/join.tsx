@@ -70,6 +70,16 @@ export default function AddBlog() {
           placeholder: '如果可以的话，为我们提供一个 RSS 订阅链接',
         },
         {
+          key: 'sitemap',
+          label: '网站地图',
+          placeholder: '如果可以的话，为我们提供一个网站地图',
+        },
+        {
+          key: 'arch',
+          label: '站点架构',
+          placeholder: '贵网站的架构程序，如 Hexo、Wordpress 等',
+        },
+        {
           key: 'tags',
           label: '分类',
           select: tags,
@@ -143,6 +153,8 @@ export default function AddBlog() {
                 tags: values.tags,
                 repeat: false,
                 enabled: false,
+                sitemap: values.sitemap,
+                arch: values.arch,
               }
             });
             if (!!resp && !!resp.success) {

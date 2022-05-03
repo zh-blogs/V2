@@ -1,5 +1,7 @@
 import React from 'react';
-import { Table, Input, Collapse, TableColumnsType, notification, Radio } from 'antd';
+import moment from 'moment';
+
+import { Table, Input, Collapse, TableColumnsType, notification, Radio, } from 'antd';
 import { CheckOutlined, CloseOutlined, } from '@ant-design/icons';
 import { Form, FormItemProps, Switch, Button } from '@/components/antd';
 import { getTags, getBlogs, updateBlog, deleteBlog } from '@/utils/api';
@@ -153,12 +155,34 @@ function AdminManager(props:{info:UserInfo}) {
       label: '博客描述',
     },
     {
+      key: "join_time",
+      label: "加入时间",
+      readonly: true,
+      datePicker: true,
+      showTime: { defaultValue: moment('00:00:00', 'HH:mm:ss') },
+    },
+    {
+      key: "update_time",
+      label: "更新时间",
+      readonly: true,
+      datePicker: true,
+      showTime: { defaultValue: moment('00:00:00', 'HH:mm:ss') },
+    },
+    {
       key: 'logo',
       label: '博客头像',
     },
     {
       key: 'feed',
       label: 'RSS 订阅地址',
+    },
+    {
+      key: 'sitemap',
+      label: '网站地图',
+    },
+    {
+      key: 'arch',
+      label: '网站架构(使用的程序)'
     },
     {
       key: 'tags',
@@ -241,6 +265,10 @@ function AdminManager(props:{info:UserInfo}) {
               status: record.status,
               repeat: record.repeat,
               enabled: record.enabled,
+              sitemap: record.sitemap,
+              arch: record.arch,
+              join_time: moment(record.join_time),
+              update_time: moment(record.update_time),
             });
           }}
           type="primary" text="修改"/>

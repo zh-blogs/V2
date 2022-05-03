@@ -5,15 +5,20 @@ export declare type APIRequest<T> = { [P in keyof T]?: T[P] | string | undefined
 
 export declare type Blog = {
     id?: string, // 数据库 ID
+	idx?: number, // 序号
     name: string, // 标题
     url: string, // 链接
     tags: string[], // 标签
     sign?: string, // 描述
     feed?: string, // RSS Feed
     status?: string, // 状态
-    logo?:string,
+    logo?:string, // 头像
     repeat?: boolean, // 是否重复
     enabled?: boolean, // 是否展示
+	sitemap?: string, // 网站地图
+	arch?: string, // 站点程序
+	join_time?: number, // 加入时间
+	update_time?: number, // 修改时间 
 }
 
 export declare type Result<T = undefined> = {

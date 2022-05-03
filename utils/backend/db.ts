@@ -16,7 +16,7 @@ var adminID:number[] = [];
   const { token, admin } = JSON.parse((await fs.readFileSync(
     path.join(path.resolve("."), "db", "setting.json")
   )).toString("utf8"));
-  userMap[token] = { name: "admin" } as UserInfo; 
+  userMap[token] = { name: "admin", admin: true } as UserInfo; 
   adminID = admin;
 })();
 
@@ -166,13 +166,16 @@ async function getBlogs(params: { search?: string, tags?: string[], offset?: num
  * @returns 返回修改结果
  */
 async function updateBlog(params: { id: string, blog: Blog }): Promise<Result> {
+  const now = (new Date()).getTime();
   DB.blogs = DB.blogs.map((oldBlog) =>
     oldBlog.id === params.id ?
       {
         ...oldBlog,
         ...params.blog,
+        join_time: oldBlog.join_time,
+        update_time: now,
       } : {
-        ...oldBlog
+        ...oldBlog,
       });
   await DB.write();
 
@@ -185,10 +188,16 @@ async function updateBlog(params: { id: string, blog: Blog }): Promise<Result> {
  * @returns 返回插入结果
  */
 async function addBlog(params: { blog: Blog }): Promise<Result<Blog>> {
-  if (DB.blogs.find((blog) => blog.id === blog.id)) {
+  if (DB.blogs.find((blog) => blog.id === params.blog.id)) {
     return { success: false, message: "博客已存在" };
   }
-  DB.blogs.push(params.blog);
+
+  const now = (new Date()).getTime();
+  DB.blogs.push({
+    ...params.blog,
+    join_time: now,
+    update_time: now,
+  });
   await DB.write();
   
   return { success: true, message: "添加成功", };

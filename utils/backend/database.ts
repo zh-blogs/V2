@@ -1,6 +1,6 @@
 import fs from "fs";
 
-import { Blog, getDomain, shouldString } from "@/utils";
+import { Blog, getDomain, shouldString, shouldNumber } from "@/utils";
 
 export class Database {
   path = "";
@@ -24,17 +24,22 @@ export class Database {
       var blogs: Blog[] = [];
       for (const blog of _blogs) {
         const domain = getDomain(blog.url);
-        const curBlog = {
+        const curBlog: Blog = {
           id: shouldString(blog.id, ""),
-          idx:idx++,
+          idx: idx++,
           name: blog.name,
           url: blog.url,
           tags: !!blog.tags? blog.tags:blog.tag ? blog.tag.toLowerCase().split(",") : [],
+          logo: shouldString(blog.logo, ""),
           sign: shouldString(blog.sign, ""),
           feed: shouldString(blog.feed, ""),
           status: `${blog.status}`,
           repeat: false,
-          enabled: !!blog.enabled
+          enabled: !!blog.enabled,
+          sitemap: shouldString(blog.sitemap, ""),
+          arch: shouldString(blog.arch, ""), 
+          join_time:  shouldNumber(blog.join_time, 0), 
+          update_time:  shouldNumber(blog.update_time, 0), 
         };
 
         for (const tag of curBlog.tags) {

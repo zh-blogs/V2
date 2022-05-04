@@ -32,6 +32,7 @@ export class Database {
           tags: !!blog.tags? blog.tags:blog.tag ? blog.tag.toLowerCase().split(",") : [],
           logo: shouldString(blog.logo, ""),
           sign: shouldString(blog.sign, ""),
+          email: shouldString(blog.email, ""),
           feed: shouldString(blog.feed, ""),
           status: `${blog.status}`,
           repeat: false,

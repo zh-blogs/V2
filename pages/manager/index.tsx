@@ -173,6 +173,10 @@ function AdminManager(props:{info:UserInfo}) {
       label: '博客头像',
     },
     {
+      key: 'email',
+      label: '联系邮箱'
+    },
+    {
       key: 'feed',
       label: 'RSS 订阅地址',
     },
@@ -259,6 +263,7 @@ function AdminManager(props:{info:UserInfo}) {
               url: record.url,
               name: record.name,
               sign: record.sign,
+              email: record.email,
               logo: record.logo,
               feed: record.feed,
               tags: record.tags,

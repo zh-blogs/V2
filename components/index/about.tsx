@@ -12,6 +12,10 @@ export function AboutTab() {
         {" "} 中找到本项目中的所有博客信息, 数据每日更新。
       </p>
       <p>
+        我们的项目博客在{" "}
+        <a href="https://blog.zhblogs.ohyee.cc" type="text/html">中文博客列表导航项目博客</a>
+      </p>
+      <p>
         我们的 Github 仓库地址是{" "}
         <a href="https://github.com/zh-blogs/blog-daohang" type="text/html">
           zh-blogs/blog-daohang

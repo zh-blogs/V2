@@ -66,8 +66,7 @@ function NoPermission() {
       <span>为管理员提供如下信息</span>
       <span>name: {info.name}</span>
       <span>id: {info.id}</span>
-      <span>email: {info.email}
-      </span>
+      <span>email: {info.email}</span>
       <Button text="退出登录" onClick={() => {
         Cookie.remove("token");
         window.location.reload();

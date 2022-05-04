@@ -70,6 +70,11 @@ export default function AddBlog() {
           placeholder: '如果可以的话，为我们提供一个 RSS 订阅链接',
         },
         {
+          key: 'email',
+          label: '联系邮箱',
+          placeholder: '您的联系邮箱，我们可能会使用此邮箱联系您'
+        },
+        {
           key: 'sitemap',
           label: '网站地图',
           placeholder: '如果可以的话，为我们提供一个网站地图',
@@ -147,6 +152,7 @@ export default function AddBlog() {
                 name: values.name,
                 url: values.url,
                 sign: values.sign,
+                email: values.email,
                 logo: values.logo,
                 feed: values.feed,
                 status: "unknown",

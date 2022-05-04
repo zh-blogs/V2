@@ -152,7 +152,7 @@ export default function AddBlog() {
                 name: values.name,
                 url: values.url,
                 sign: values.sign,
-                blog: values.email,
+                email: values.email,
                 logo: values.logo,
                 feed: values.feed,
                 status: "unknown",

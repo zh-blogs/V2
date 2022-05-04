@@ -1,5 +1,5 @@
 import React from 'react';
-import { GithubOutlined, HomeFilled, PlusCircleFilled, RocketFilled, SettingFilled } from "@ant-design/icons";
+import { GithubOutlined, HomeFilled, PlusCircleFilled, RocketFilled, SettingFilled, ContainerFilled } from "@ant-design/icons";
 import { classConcat, ComponentProps, Context } from "@/utils";
 import styles from "./layout.module.scss";
 import { Flex } from "@/components/flex";
@@ -40,6 +40,7 @@ function Footer() {
     { name: "首页", icon: <HomeFilled />, path: "/" },
     { name: "博客登记", icon: <PlusCircleFilled />, path: "/manager/join" },
     { name: "随机跳转", icon: <RocketFilled />, path: "/go" },
+    { name: "项目博客", icon: <ContainerFilled />, path: "https://blog.zhblogs.ohyee.cc"},
     { name: "后台管理", icon:<SettingFilled />, path:"/manager" },
   ];
   

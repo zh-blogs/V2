@@ -8,6 +8,7 @@ export declare type Blog = {
 	idx?: number, // 序号
     name: string, // 标题
     url: string, // 链接
+	email?: string, //邮箱
     tags: string[], // 标签
     sign?: string, // 描述
     feed?: string, // RSS Feed

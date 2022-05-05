@@ -152,15 +152,12 @@ export default function AddBlog() {
                 name: values.name,
                 url: values.url,
                 sign: values.sign,
-                email: values.email,
-                logo: values.logo,
                 feed: values.feed,
                 status: "unknown",
                 tags: values.tags,
                 repeat: false,
                 enabled: false,
                 sitemap: values.sitemap,
-                arch: values.arch,
               }
             });
             if (!!resp && !!resp.success) {

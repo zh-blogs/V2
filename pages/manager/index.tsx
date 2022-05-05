@@ -169,24 +169,12 @@ function AdminManager(props:{info:UserInfo}) {
       showTime: { defaultValue: moment('00:00:00', 'HH:mm:ss') },
     },
     {
-      key: 'logo',
-      label: '博客头像',
-    },
-    {
-      key: 'email',
-      label: '联系邮箱'
-    },
-    {
       key: 'feed',
       label: 'RSS 订阅地址',
     },
     {
       key: 'sitemap',
       label: '网站地图',
-    },
-    {
-      key: 'arch',
-      label: '网站架构(使用的程序)'
     },
     {
       key: 'tags',
@@ -263,15 +251,12 @@ function AdminManager(props:{info:UserInfo}) {
               url: record.url,
               name: record.name,
               sign: record.sign,
-              email: record.email,
-              logo: record.logo,
               feed: record.feed,
               tags: record.tags,
               status: record.status,
               repeat: record.repeat,
               enabled: record.enabled,
               sitemap: record.sitemap,
-              arch: record.arch,
               join_time: moment(record.join_time),
               update_time: moment(record.update_time),
             });
@@ -303,9 +288,9 @@ function AdminManager(props:{info:UserInfo}) {
         }}
         value={params.status}
       >
-        <Radio.Button value={0}>查看全部</Radio.Button>
-        <Radio.Button value={1}>展示</Radio.Button>
-        <Radio.Button value={-1}>隐藏</Radio.Button>
+        <Radio.Button value={0}>全部</Radio.Button>
+        <Radio.Button value={1}>审核通过</Radio.Button>
+        <Radio.Button value={-1}>未审核</Radio.Button>
       </Radio.Group>
       <Input
         placeholder="输入名称或网址筛选博客"

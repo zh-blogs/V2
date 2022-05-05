@@ -8,16 +8,13 @@ export declare type Blog = {
 	idx?: number, // 序号
     name: string, // 标题
     url: string, // 链接
-	email?: string, //邮箱
     tags: string[], // 标签
     sign?: string, // 描述
     feed?: string, // RSS Feed
     status?: string, // 状态
-    logo?:string, // 头像
     repeat?: boolean, // 是否重复
     enabled?: boolean, // 是否展示
 	sitemap?: string, // 网站地图
-	arch?: string, // 站点程序
 	join_time?: number, // 加入时间
 	update_time?: number, // 修改时间 
 }

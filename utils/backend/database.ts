@@ -31,6 +31,7 @@ export class Database {
           url: blog.url,
           tags: !!blog.tags? blog.tags:blog.tag ? blog.tag.toLowerCase().split(",") : [],
           sign: shouldString(blog.sign, ""),
+          email: shouldString(blog.email, ""),
           feed: shouldString(blog.feed, ""),
           status: `${blog.status}`,
           repeat: false,

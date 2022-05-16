@@ -158,6 +158,7 @@ export default function AddBlog() {
                 repeat: false,
                 enabled: false,
                 sitemap: values.sitemap,
+                arch: values.arch
               }
             });
             if (!!resp && !!resp.success) {

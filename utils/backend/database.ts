@@ -37,6 +37,7 @@ export class Database {
           repeat: false,
           enabled: !!blog.enabled,
           sitemap: shouldString(blog.sitemap, ""),
+          arch: shouldString(blog.string, ""),
           join_time:  shouldNumber(blog.join_time, 0), 
           update_time:  shouldNumber(blog.update_time, 0), 
         };

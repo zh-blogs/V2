@@ -16,6 +16,7 @@ export declare type Blog = {
     repeat?: boolean, // 是否重复
     enabled?: boolean, // 是否展示
 	sitemap?: string, // 网站地图
+	arch?: string, //网站架构
 	join_time?: number, // 加入时间
 	update_time?: number, // 修改时间 
 }

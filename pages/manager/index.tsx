@@ -183,6 +183,10 @@ function AdminManager(props:{info:UserInfo}) {
       mode: 'tags',
     },
     {
+      key: 'arch',
+      label: '网站架构(使用的程序)'
+    },
+    {
       key: 'enabled',
       label: '展示',
       render: () => <Switch/>
@@ -257,6 +261,7 @@ function AdminManager(props:{info:UserInfo}) {
               repeat: record.repeat,
               enabled: record.enabled,
               sitemap: record.sitemap,
+              arch: record.arch,
               join_time: moment(record.join_time),
               update_time: moment(record.update_time),
             });

@@ -29,7 +29,7 @@ export class Database {
           idx: idx++,
           name: blog.name,
           url: blog.url,
-          tags: !!blog.tags? blog.tags:blog.tag ? blog.tag.toLowerCase().split(",") : [],
+          tags: !!blog.tags ? blog.tags : blog.tag ? blog.tag.toLowerCase().split(",") : [],
           sign: shouldString(blog.sign, ""),
           email: shouldString(blog.email, ""),
           feed: shouldString(blog.feed, ""),
@@ -37,9 +37,9 @@ export class Database {
           repeat: false,
           enabled: !!blog.enabled,
           sitemap: shouldString(blog.sitemap, ""),
-          arch: shouldString(blog.string, ""),
-          join_time:  shouldNumber(blog.join_time, 0), 
-          update_time:  shouldNumber(blog.update_time, 0), 
+          arch: shouldString(blog.arch, ""),
+          join_time: shouldNumber(blog.join_time, 0),
+          update_time: shouldNumber(blog.update_time, 0),
         };
 
         for (const tag of curBlog.tags) {

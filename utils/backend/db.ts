@@ -7,7 +7,7 @@ import path from "path";
 import { Blog, Result, UserInfo } from "../types";
 import { newLokiCached } from "./database";
 import { Log } from '@/utils/log';
-import { shouldString } from "@/utils";
+import { shouldNumber, shouldString } from "@/utils";
 
 const log = new Log("数据驱动");
 
@@ -162,11 +162,31 @@ async function getBlogs(params: { search?: string, tags?: string[], offset?: num
 
   log.log(`匹配 ${total} 篇博客`);
 
+  // 格式标准化
+  const blogs = chain.data().map((blog) => (
+    {
+      id: shouldString(blog.id, ""),
+      idx: blog.idx,
+      name: blog.name,
+      url: blog.url,
+      tags: !!blog.tags? blog.tags:[],
+      sign: shouldString(blog.sign, ""),
+      feed: shouldString(blog.feed, ""),
+      status: `${blog.status}`,
+      repeat: false,
+      enabled: !!blog.enabled,
+      sitemap: shouldString(blog.sitemap, ""),
+      arch: shouldString(blog.arch, ""), 
+      join_time:  shouldNumber(blog.join_time, 0), 
+      update_time:  shouldNumber(blog.update_time, 0), 
+    }
+  ));
+
   return{
     success: true,
     data: {
       total,
-      blogs: chain.data(),
+      blogs,
     }
   };
 

@@ -3,27 +3,21 @@
  */
 
 import path from "path";
-import fs from 'fs';
 
 import { Blog, Result, UserInfo } from "../types";
-import { Database } from "./database";
+import { newLokiCached } from "./database";
+import { Log } from '@/utils/log';
+import { shouldString } from "@/utils";
 
-const DB = new Database(path.join(path.resolve("."), "db", "data.json"));
+const log = new Log("数据驱动");
 
-var userMap: {[token:string]: UserInfo} = {};
-var adminID:number[] = [];
-(async () => {
-  const { token, admin } = JSON.parse((await fs.readFileSync(
-    path.join(path.resolve("."), "db", "setting.json")
-  )).toString("utf8"));
-  userMap[token] = { name: "admin", admin: true } as UserInfo; 
-  adminID = admin;
-})();
+const DB = newLokiCached(path.join(path.resolve("."), "db", "loki.json"));
 
 
 async function getUser(params: { token: string }): Promise<Result<UserInfo>> {
-  var info = userMap[params.token];
-  console.log(Object.keys(userMap).map((token) => `${userMap[token].name}|${token}|${userMap[token].admin}`).join(", "));
+  const c = DB.getUsersCollection();
+
+  var info = c.findOne({ "token": { "$eq": params.token } });
   if (!!info) {
     return Promise.resolve({
       success: true,
@@ -38,77 +32,81 @@ async function getUser(params: { token: string }): Promise<Result<UserInfo>> {
 }
 
 function setUser(params: { token: string, info: UserInfo }) {
-  const { token, info } = params;
+  const c = DB.getUsersCollection();
+  const cSetting = DB.getSettingsCollection();
 
+  const adminObj = cSetting.findOne({ "key": { "$eq": "admin" } });
+  const adminArr = !!adminObj?shouldString(adminObj.value).split(","):[];
+
+  const { token, info } = params;
   if (!info.admin) {
-    info.admin = adminID.indexOf(info.id) !== -1;
+    info.admin = adminArr.indexOf(info.id.toString()) !== -1;
   }
   
-  console.log(`set token ${token} for ${info.name}, admin ${info.admin}`);
-  userMap[params.token] = params.info;
-}
+  log.log(`set token ${token} for ${info.name}, admin ${info.admin}`);
 
-// /**
-//  * 获取博客总数
-//  * @returns 博客总数
-//  */
-// async function getBlogCount(params: { search?: string, tags?: string[], all?:boolean }): Promise<Result<number>> {
-//   return new Promise(async (resolve) => {
-//     const result = await getBlogs(params);
-//     resolve({
-//       success: true,
-//       data: result.data?.length,
-//     });
-//   });
-// }
+  // remove deprecated token and insert new info
+  c.chain().find({ "id": { "$eq": info.id } }).remove();
+  c.insertOne({ ...info, token });
+}
 
 /**
  * 获取标签列表
  * @returns 标签列表
  */
 async function getTags(_: {}): Promise<Result<string[]>> {
-  return new Promise(async (resolve) => {
+  const tags = new Set<string>();
 
-    resolve({
-      success: true,
-      data: DB.tags,
-    });
-  });
+  const c = DB.getBlogsCollection();
+  const blogs = await c.find({});
+  for (const blog of blogs) {
+    if (!!blog.tags) {
+      for (const tag of blog.tags) {
+        tags.add(tag);
+      }
+    }
+  }
+
+  log.log(`${blogs.length} 篇博客, ${tags.size} 个标签`);
+
+  return {
+    success: true,
+    data: Array.from(tags),
+  };
 }
 
 /**
  * 获取标签列表（包括博客数目）
  * @returns 标签列表
  */
-async function getTagsWithCount(_: {}): Promise<Result<{tag:string, count: number} []>> {
-  return new Promise(async (resolve) => {
+async function getTagsWithCount(_: {}): Promise<Result<{ tag: string, count: number }[]>> {
+  const resp = await getBlogs({ size: -1, status: 0 });
 
-    const resp = await getBlogs({ size: -1, status: 0 });
-    if (!resp.success) {
-      return resolve({ success: false, message: resp.message });
-    }
+  if (!resp.success) {
+    return { success: false, message: resp.message };
+  }
 
-    if (!resp.data) {
-      return resolve({ success: false, message: "no data" });
-    }
+  if (!resp.data) {
+    return { success: false, message: "no data" };
+  }
  
-    const blogs = resp.data.blogs;
-    const dict:{[tag:string]: number} = {};
-    for (const blog of blogs) {
-      for (const tag of blog.tags) {
-        if (!dict[tag]) {
-          dict[tag] = 0;
-        }
-        dict[tag]++;
+  const blogs = resp.data.blogs;
+  const dict:{[tag:string]: number} = {};
+  for (const blog of blogs) {
+    for (const tag of blog.tags) {
+      if (!dict[tag]) {
+        dict[tag] = 0;
       }
+      dict[tag]++;
     }
+  }
     
-    const tags = Object.keys(dict).map((tag) => ({ tag, count: dict[tag] }));
-    resolve({
-      success: true,
-      data: tags,
-    });
-  });
+  const tags = Object.keys(dict).map((tag) => ({ tag, count: dict[tag] }));
+
+  return {
+    success: true,
+    data: tags,
+  };
 }
 
 
@@ -121,42 +119,57 @@ async function getTagsWithCount(_: {}): Promise<Result<{tag:string, count: numbe
  * @returns 博客数据
  */
 async function getBlogs(params: { search?: string, tags?: string[], offset?: number, size?: number, status?: 0 | 1 | -1 }): Promise<Result<{ total: number, blogs: Blog[] }>> {
-  return new Promise((resolve) => {
-    var { search, tags, offset, size, status=1 } = params;
-    if (!!search) {
-      search = search.toLowerCase();
-    }
+  const c = DB.getBlogsCollection();
+
+  var chain = c.chain();
+ 
+  var { search, tags, offset, size, status=1 } = params;
+  if (!!search) {
+    search = search.toLowerCase();
+  }
     
-    var ret = [...DB.blogs];
-    if (status===1) {
-      ret=ret.filter((blog) => blog.enabled);
-    } else if (status === -1) {
-      ret=ret.filter((blog) => !blog.enabled);
-    }
-    if (!!search) {
-      ret = ret.filter((blog) => blog.name.toLowerCase().indexOf(search as string) !== -1 || blog.url.toLowerCase().indexOf(search as string) !== -1);
-    }
-    if (!!tags && tags.length > 0) {
-      ret = ret.filter((blog) => tags?.filter((tag) => blog.tags.indexOf(tag) !== -1).length === tags?.length);
-    }
+  if (status === 1) {
+    chain = chain.find({ "enabled": { "$eq": true } });
+  } else if (status === -1) {
+    chain = chain.find({ "enabled": { "$eq": false } });
+  }
 
-    // 符合的数目
-    const total = ret.length;
+  
+  if (!!search) {
+    chain = chain.where((blog) => 
+      blog.name.toLowerCase().indexOf(search as string) !== -1 ||
+      blog.url.toLowerCase().indexOf(search as string) !== -1
+    );
+  
+  }
+  if (!!tags && tags.length > 0) {
+    chain = chain.where((blog) =>
+      tags?.filter((tag) => !!blog.tags &&
+        blog.tags.indexOf(tag) !== -1).length === tags?.length
+    );
+  }
 
-    if (typeof offset === "number") {
-      ret = ret.slice(offset);
+  // 符合的数目
+  const total = chain.count();
+
+  chain.simplesort("idx");
+  if (typeof offset === "number") {
+    chain = chain.offset(offset); 
+  }
+  if (typeof size === "number" && size > 0) {
+    chain = chain.limit(size);
+  }
+
+  log.log(`匹配 ${total} 篇博客`);
+
+  return{
+    success: true,
+    data: {
+      total,
+      blogs: chain.data(),
     }
-    if (typeof size === "number" && size > 0) {
-      ret = ret.slice(0, size);
-    }
-    resolve({
-      success: true,
-      data: {
-        total,
-        blogs: ret,
-      }
-    });
-  });
+  };
+
 }
 
 /**
@@ -166,18 +179,22 @@ async function getBlogs(params: { search?: string, tags?: string[], offset?: num
  * @returns 返回修改结果
  */
 async function updateBlog(params: { id: string, blog: Blog }): Promise<Result> {
+  const c = DB.getBlogsCollection();
   const now = (new Date()).getTime();
-  DB.blogs = DB.blogs.map((oldBlog) =>
-    oldBlog.id === params.id ?
-      {
-        ...oldBlog,
+
+  c.findAndUpdate(
+    { id: { "$eq": params.id } },
+    (oldBlog:Blog) => {
+      const obj:Blog = {
         ...params.blog,
         join_time: oldBlog.join_time,
         update_time: now,
-      } : {
-        ...oldBlog,
-      });
-  await DB.write();
+      };
+      for (const key of Object.keys(obj) as (keyof Blog)[]) {
+        oldBlog[key] = params.blog[key] as never;
+      }
+    }
+  );
 
   return { success: true, message: "修改成功", };
 }
@@ -188,18 +205,21 @@ async function updateBlog(params: { id: string, blog: Blog }): Promise<Result> {
  * @returns 返回插入结果
  */
 async function addBlog(params: { blog: Blog }): Promise<Result<Blog>> {
-  if (DB.blogs.find((blog) => blog.id === params.blog.id)) {
+  const c = DB.getBlogsCollection();
+
+  if (c.find({ "id": { "$eq": params.blog.id } }).length >0) {
     return { success: false, message: "博客已存在" };
   }
 
   const now = (new Date()).getTime();
-  DB.blogs.push({
+
+  c.insertOne({
     ...params.blog,
+    idx: c.max("idx") + 1,
     join_time: now,
     update_time: now,
   });
-  await DB.write();
-  
+ 
   return { success: true, message: "添加成功", };
 }
 
@@ -209,8 +229,8 @@ async function addBlog(params: { blog: Blog }): Promise<Result<Blog>> {
  * @returns 返回删除结果
  */
 async function deleteBlog(params: { id: string }): Promise<Result<Blog>> {
-  DB.blogs = DB.blogs.filter((blog) => blog.id !== params.id);
-  await DB.write();
+  const c = DB.getBlogsCollection();
+  c.chain().find({ "id": { "$eq": params.id } }).remove();
   
   return { success: true, message: "删除成功", };
 }
@@ -221,18 +241,12 @@ async function deleteBlog(params: { id: string }): Promise<Result<Blog>> {
  * @param newTag 新标签名称
  * @returns 返回删除结果
  */
-async function renameTag(params: { tag: string, newTag: string}): Promise<Result<null>> {
-  DB.blogs = DB.blogs.map((blog) => {
-    var tagsSet = new Set(blog.tags);
-    if (tagsSet.has(params.tag)) { 
-      tagsSet.delete(params.tag);
-      tagsSet.add(params.newTag);
-      blog.tags = Array.from(tagsSet);
-    }
-    
-    return blog;
+async function renameTag(params: { tag: string, newTag: string }): Promise<Result<null>> {
+  const c = DB.getBlogsCollection();
+
+  c.chain().find({ "tags": { "$contains": params.tag } }).update((blog) => { 
+    blog.tags[blog.tags.indexOf(params.tag)] = params.newTag;
   });
-  await DB.write();
 
   return { success: true, message: "重命名成功", };
 }
@@ -243,15 +257,58 @@ async function renameTag(params: { tag: string, newTag: string}): Promise<Result
  * @returns 返回删除结果
  */
 async function deleteTag(params: { tag: string }): Promise<Result<null>> {
-  DB.blogs = DB.blogs.map((blog) => {
+  const c = DB.getBlogsCollection();
+
+  c.chain().find({ "tags": { "$contains": params.tag } }).update((blog) => { 
     blog.tags = blog.tags.filter((tag) => tag !== params.tag);
-    
-    return blog;
   });
-  await DB.write();
 
   return { success: true, message: "删除成功", };
 }
+
+/**
+ * 获取配置项
+ * @param key 配置名称
+ * @returns 配置项内容
+ */
+async function getSetting(params: { key: string }): Promise<Result<{ key: string, value: any }>> {
+  const c = DB.getSettingsCollection();
+  const setting = c.findOne({ key: { "$eq": params.key } });
+  
+  return !!setting?{ success: true, data: setting }: { success:false, message:`不存在 key ${params.key}` };
+}
+
+
+/**
+ * 设置配置项
+ * @param key 配置名称
+ * @param value 配置项内容
+ */
+async function setSetting(params: { key: string, value:any }): Promise<Result<null>> {
+  const c = DB.getSettingsCollection();
+
+  const obj = c.findOne({ key: { "$eq": params.key } });
+  if (!!obj) {
+    obj.value = params.value;
+    c.update(obj);
+  } else {
+    c.insertOne(params);
+  }
+  
+  return { success:true, message:"设置成功" };
+}
+
+/**
+ * 清楚 Token
+ */
+async function clearToken(): Promise<Result<null>> {
+  const c = DB.getUsersCollection();
+
+  c.chain().find().remove();
+  
+  return { success:true, message:"清理成功" };
+}
+
 
 export default exports = {
   // db,
@@ -266,6 +323,9 @@ export default exports = {
   deleteTag,
 
   getUser,
-
   setUser,
+  clearToken,
+
+  getSetting,
+  setSetting,
 };

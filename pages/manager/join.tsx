@@ -154,7 +154,7 @@ export default function AddBlog() {
                 sign: values.sign,
                 feed: values.feed,
                 status: "unknown",
-                tags: values.tags,
+                tags: values.tags || [],
                 repeat: false,
                 enabled: false,
                 sitemap: values.sitemap,

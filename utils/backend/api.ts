@@ -18,7 +18,15 @@ export default function wrapper<T extends (...args: any) => any>(
     } else {
       args = JSON.parse(req.body);
     }
-    const result = await callback(args, req, res);
-    res.status(200).json(result);
+    try {
+      const result = await callback(args, req, res);
+      res.status(200).json(result);
+    } catch (e: any) {
+      if (!!e && !!e.message) {
+        res.status(500).json({ "success": false, "message": e.message } as any);
+      } else {
+        res.status(500).json({ "success": false, "message": "未知错误" } as any);
+      }
+    }
   };
 }

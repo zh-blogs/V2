@@ -60,12 +60,10 @@ export async function sendRequest<T extends JSONObject, U>(method: "get" | "post
     [cur]: !!params[cur] && Array.isArray(params[cur]) ? (params[cur] as string[]).map((item: string) => shouldString(item)).join(",") : params[cur]
   }), {});
   ({ path, params } = replaceParams(path, params));
-  console.log(params);
   if (method === "get") {
     path = `${path}?${makeQuery(params as unknown as { [key: string]: number | string })}`;
   }
   try {
-    console.log(`${apiPath.replace(/\/*$/g, "")}/${path.replace(/^\/*/g, "")}`);
     const resp = await fetch(`${apiPath.replace(/\/*$/g, "")}/${path.replace(/^\/*/g, "")}`, {
       method,
       body: method !== "get" ? JSON.stringify(params) : undefined,
@@ -198,6 +196,39 @@ export async function deleteTag(params: { tag: string }): Promise<Result<null>> 
   return sendRequest("delete", "/tag", { token, ...params }); 
 }
 
+  
+/**
+ * 获取配置项
+ * @param key 配置名称
+ * @returns 配置项内容
+ */
+export async function getSetting(params: { key: string }): Promise<Result<{ key: string, value: any }>> {
+  const token = Cookie.get("token");
+  
+  return sendRequest("get", "/setting", { token, ...params }); 
+}
+
+/**
+ * 设置配置项
+ * @param key 配置名称
+ * @param value 配置项内容
+ */
+export async function setSetting(params: { key: string, value: any }): Promise<Result<null>> {
+  const token = Cookie.get("token");
+  
+  return sendRequest("post", "/setting", { token, ...params }); 
+}
+
+
+/**
+ * 清除登录状态
+ */
+export async function clearToken(): Promise<Result<null>> {
+  const token = Cookie.get("token");
+  
+  return sendRequest("get", "/user/clear", { token }); 
+}
+
 /**
  * 测试接口
  * @param name 名称
@@ -206,5 +237,3 @@ export async function deleteTag(params: { tag: string }): Promise<Result<null>> 
 export async function testApi(params: { name?: string }): Promise<Result<{ name: string }>> {
   return sendRequest("get", "/hello", params); 
 }
-
-

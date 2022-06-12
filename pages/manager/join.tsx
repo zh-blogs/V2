@@ -160,6 +160,7 @@ export default function AddBlog() {
                 sitemap: values.sitemap,
                 arch: values.arch,
                 saveweb_id: "",
+                recommend: false,
               }
             });
             if (!!resp && !!resp.success) {

@@ -19,7 +19,8 @@ export declare type Blog = {
 	arch?: string, //网站架构
 	join_time?: number, // 加入时间
 	update_time?: number, // 修改时间 
-	saveweb_id?:string, // https://github.com/zh-blogs/blog-daohang/issues/72
+	saveweb_id?: string, // https://github.com/zh-blogs/blog-daohang/issues/72
+	recommend?: boolean, // https://github.com/zh-blogs/blog-daohang/issues/71
 }
 
 export declare type Result<T = undefined> = {

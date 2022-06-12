@@ -178,8 +178,9 @@ async function getBlogs(params: { search?: string, tags?: string[], offset?: num
       sitemap: shouldString(blog.sitemap, ""),
       arch: shouldString(blog.arch, ""), 
       join_time:  shouldNumber(blog.join_time, 0), 
-      update_time:  shouldNumber(blog.update_time, 0), 
-    }
+      update_time: shouldNumber(blog.update_time, 0), 
+      saveweb_id: shouldString(blog.saveweb_id),
+    } as Blog
   ));
 
   return{

@@ -9,7 +9,7 @@ export class Log {
     
   logColor(c: string, ...msg: any) {
     const stack = getCallStacks();
-    const [func, file] = stack[3];
+    const [func, file] = !!stack && stack.length > 3 ? stack[3] : ["??", "??"];
     console.log(`${color(`[${this.name}]`, `${c};1`)} ${color(func, c)} ${color(file, `${c};2`)}`, ...msg);  
   } 
     
@@ -31,7 +31,7 @@ function color(str:string, ansi:string) {
 function getCallStacks() {
   const stack = String(new Error().stack);
   
-  var res =[];
+  var res = [];
   while (true){
     var result = StackFileRegExp.exec(stack);
     if (!!result) {

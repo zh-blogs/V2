@@ -187,6 +187,10 @@ function AdminManager(props:{info:UserInfo}) {
       label: '网站架构(使用的程序)'
     },
     {
+      key: 'saveweb_id',
+      label: 'saveweb_id',
+    },
+    {
       key: 'enabled',
       label: '展示',
       render: () => <Switch/>
@@ -208,7 +212,7 @@ function AdminManager(props:{info:UserInfo}) {
       title: "链接",
       dataIndex: "url",
       key: "url",
-      render: (url) => (
+      render: (url:string) => (
         <a
           href={url}
           hrefLang="zh"
@@ -240,13 +244,13 @@ function AdminManager(props:{info:UserInfo}) {
       title: "展示",
       dataIndex: "enabled",
       key: "enabled",
-      render: (enabled) => !!enabled ? <CheckOutlined style={{ color: "green" }}/>:<CloseOutlined style={{ color: "red" }}/>
+      render: (enabled:boolean) => !!enabled ? <CheckOutlined style={{ color: "green" }}/>:<CloseOutlined style={{ color: "red" }}/>
     },
     {
       title: "操作",
       dataIndex: "op",
       key: "op",
-      render: (_, record) => (
+      render: (_:any, record:Blog) => (
         <Flex direction="LR" mainSize="small" subSize="small">
           <Button onClick={() => {
             setEdit(record);
@@ -264,6 +268,7 @@ function AdminManager(props:{info:UserInfo}) {
               arch: record.arch,
               join_time: moment(record.join_time),
               update_time: moment(record.update_time),
+              saveweb_id: record.saveweb_id,
             });
           }}
           type="primary" text="修改"/>

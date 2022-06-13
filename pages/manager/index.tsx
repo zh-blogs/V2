@@ -195,6 +195,11 @@ function AdminManager(props:{info:UserInfo}) {
       label: '展示',
       render: () => <Switch/>
     },
+    {
+      key: 'recommend',
+      label: '推荐',
+      render: () => <Switch/>
+    },
   ] as FormItemProps[], [allTags, edit]);
     
   const cols: TableColumnsType<Blog> = React.useMemo(() => [
@@ -269,6 +274,7 @@ function AdminManager(props:{info:UserInfo}) {
               join_time: moment(record.join_time),
               update_time: moment(record.update_time),
               saveweb_id: record.saveweb_id,
+              recommend: record.recommend,
             });
           }}
           type="primary" text="修改"/>
@@ -301,6 +307,7 @@ function AdminManager(props:{info:UserInfo}) {
         <Radio.Button value={0}>全部</Radio.Button>
         <Radio.Button value={1}>审核通过</Radio.Button>
         <Radio.Button value={-1}>未审核</Radio.Button>
+        <Radio.Button value={2}>推荐博客</Radio.Button>
       </Radio.Group>
       <Input
         placeholder="输入名称或网址筛选博客"

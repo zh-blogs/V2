@@ -118,7 +118,7 @@ async function getTagsWithCount(_: {}): Promise<Result<{ tag: string, count: num
  * @param size 返回数目（-1 全量返回）
  * @returns 博客数据
  */
-async function getBlogs(params: { search?: string, tags?: string[], offset?: number, size?: number, status?: 0 | 1 | -1 }): Promise<Result<{ total: number, blogs: Blog[] }>> {
+async function getBlogs(params: { search?: string, tags?: string[], offset?: number, size?: number, status?: 0 | 1 | -1 | 2 }): Promise<Result<{ total: number, blogs: Blog[] }>> {
   const c = DB.getBlogsCollection();
 
   var chain = c.chain();
@@ -132,6 +132,8 @@ async function getBlogs(params: { search?: string, tags?: string[], offset?: num
     chain = chain.find({ "enabled": { "$eq": true } });
   } else if (status === -1) {
     chain = chain.find({ "enabled": { "$eq": false } });
+  } else if (status === 2) {
+    chain = chain.find({ "recommend": { "$eq": true } });
   }
 
   
@@ -180,6 +182,7 @@ async function getBlogs(params: { search?: string, tags?: string[], offset?: num
       join_time:  shouldNumber(blog.join_time, 0), 
       update_time: shouldNumber(blog.update_time, 0), 
       saveweb_id: shouldString(blog.saveweb_id),
+      recommend: !!blog.recommend,
     } as Blog
   ));
 

@@ -112,10 +112,10 @@ export async function getTagsWithCount(params: {}): Promise<Result<{tag:string, 
  * @param tags 筛选标签
  * @param offset 偏移量
  * @param size 返回数目（-1 全量返回）
- * @param status (0 全部 1 展示 -1 不展示)
+ * @param status (0 全部，1 展示，-1 不展示，2 推荐)
  * @returns 博客数据
  */
-export async function getBlogs(params: { search?: string, tags?: string[], offset?: number, size?: number, status?: 0 | 1 | -1 }): Promise<Result<{ total: number, blogs: Blog[] }>> {
+export async function getBlogs(params: { search?: string, tags?: string[], offset?: number, size?: number, status?: 0 | 1 | -1 | 2 }): Promise<Result<{ total: number, blogs: Blog[] }>> {
   return await sendRequest("get", "/blogs", params);
 }
 

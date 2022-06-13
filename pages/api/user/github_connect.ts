@@ -68,7 +68,7 @@ async function getInfo(token :string): Promise<UserInfo> {
   });
   
   const info = await resp.json(); 
-  const resp2 = await fetch(`https://proxy.ohyee.cc/https://api.github.com/orgs/zh-blogs/members/${info.name}`);  
+  const resp2 = await fetch(`https://proxy.ohyee.cc/https://api.github.com/orgs/zh-blogs/members/${info.login}`);  
     
   return { ...info, admin: resp2.status !== 404 };
 }

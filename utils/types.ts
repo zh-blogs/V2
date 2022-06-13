@@ -47,6 +47,7 @@ export declare type JSONObject = { [key: string]: string | number | boolean | JS
 
 // UserInfo get_user_info api response
 export declare type UserInfo = {
+	token: string; // login token for blog-daohang
 	login: string;
 	id: number;
 	"node_id": string;

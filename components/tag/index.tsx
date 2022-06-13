@@ -23,7 +23,7 @@ const colorArrs = [
 
 export function getColor(id: string) {
   return colorArrs[
-    (Array.from(id)
+    (Array.from(String(id))
       .map((c) => c.charCodeAt(0))
       .reduce((a, b) => (a * 7 + b * 13) % colorArrs.length) +
       17) %

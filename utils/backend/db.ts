@@ -215,7 +215,7 @@ async function updateBlog(params: { id: string, blog: Blog }): Promise<Result> {
         update_time: now,
       };
       for (const key of Object.keys(obj) as (keyof Blog)[]) {
-        oldBlog[key] = params.blog[key] as never;
+        oldBlog[key] = obj[key] as never;
       }
     }
   );

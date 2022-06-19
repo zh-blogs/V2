@@ -25,7 +25,7 @@ export default function AddBlog() {
           key: 'url',
           label: '博客首页',
           required: true,
-          placeholder: '贵博客的域名',
+          placeholder: '贵博客的域名（带http(s)://）',
           rules: [
             {
               validator: async (_, value) => {
@@ -60,19 +60,9 @@ export default function AddBlog() {
           placeholder: '贵博客的一句话描述',
         },
         {
-          key: 'logo',
-          label: '博客头像',
-          placeholder: '如果可以的话，为我们提供一个 logo 文件',
-        },
-        {
           key: 'feed',
           label: 'RSS 订阅地址',
           placeholder: '如果可以的话，为我们提供一个 RSS 订阅链接',
-        },
-        {
-          key: 'email',
-          label: '联系邮箱',
-          placeholder: '您的联系邮箱，我们可能会使用此邮箱联系您'
         },
         {
           key: 'sitemap',

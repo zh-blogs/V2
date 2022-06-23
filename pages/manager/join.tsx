@@ -148,13 +148,9 @@ export default function AddBlog() {
                 repeat: false,
                 enabled: false,
                 sitemap: values.sitemap,
-<<<<<<< HEAD
-                arch: values.arch
-=======
                 arch: values.arch,
                 saveweb_id: "",
                 recommend: false,
->>>>>>> 7bc5545d98735056fee412ab182dacf02dafe99d
               }
             });
             if (!!resp && !!resp.success) {

@@ -1,26 +1,39 @@
-import fs from "fs";
+import LokiJS from 'lokijs';
+import { Blog, UserInfo } from "@/utils";
+import { Log } from '@/utils/log';
 
-import { Blog, getDomain, shouldString, shouldNumber } from "@/utils";
+const log = new Log("数据库", "34");
 
-export class Database {
-  path = "";
-  blogs: Blog[] = [];
-  tags: string[] = [];
+const autoSaveIntervalInMs = 5 * 60 * 1000; // 5 minutes
 
-  constructor(path: string) {
-    console.log("初始化数据库");
-    this.path = path;
-    this.read();
+export class DatabaseLoki {
+  loki?: LokiJS = undefined;
+  blogs?: Collection<Blog> = undefined;
+  users?: Collection<{} > =undefined;
+  intervel:NodeJS.Timeout;
+
+  constructor(path:string) {
+    log.log("载入 lokijs 数据库");
+
+    this.loki = new LokiJS(path);
+    this.loadDatabaseSync();
+
+    // auto save function
+    this.intervel = setInterval(() => {
+      this.autoSave();
+    }, autoSaveIntervalInMs);
   }
 
-  async read() {
-    try {
-      console.log("[数据库] 开始读入");
-      const _blogs = JSON.parse((await fs.readFileSync(this.path)).toString("utf8"));
-      var set: { [key: string]: number | undefined } = {};
-      var tagSet = new Set<string>();
-      var idx = 1;
+  destroy() { 
+    log.log("销毁 lokijs 数据库");
+    
+    clearInterval(this.intervel);
+    if (!!this.loki) {
+      this.loki?.close();
+    }
+  }
 
+<<<<<<< HEAD
       var blogs: Blog[] = [];
       for (const blog of _blogs) {
         const domain = getDomain(blog.url);
@@ -41,45 +54,71 @@ export class Database {
           join_time:  shouldNumber(blog.join_time, 0), 
           update_time:  shouldNumber(blog.update_time, 0), 
         };
+=======
+  autoSave() {
+    log.log("=== 自动保存 开始 ===");
+>>>>>>> 7bc5545d98735056fee412ab182dacf02dafe99d
 
-        for (const tag of curBlog.tags) {
-          tagSet.add(tag);
-        }
-
-        if (typeof set[domain] === "undefined") {
-          // 该域名不存在
-          set[domain] = _blogs.length;
-          blogs.push(curBlog);
-        } else {
-          // 该域名已经存在
-          // 在第一次出现的位置添加重复标记
-          blogs.push({
-            ...curBlog,
-            repeat: true,
-          });
-        }
+    new Promise((resolve, reject) => { 
+      if (!!this.loki) { 
+        this.loki?.saveDatabase((err) => {
+          if (!!err) {
+            reject(err);
+          } else {
+            resolve(null);
+          }
+        });
       }
-
-      this.blogs = blogs;
-      this.tags = Array.from(tagSet);
-
-      console.log(`[数据库] 读入 ${this.blogs.length} 篇文章, ${this.tags.length} 个标签`);
-    } catch (error) {
-      console.error(error);
-      throw (error);
-    }
+    }).then(() => {
+      log.log("=== 自动保存 完成 ===");
+    }).catch((err) => {
+      log.error("=== 自动保存 失败 ===");
+      console.error(err);
+    }).finally(() => {
+      log.log("=== 自动保存 结束 ===");
+    });
   }
 
-  async write() {
-    try {
-      await fs.writeFileSync(this.path, JSON.stringify(this.blogs, undefined, 2));
-      console.log("[数据库] 写出至文件");
-      await this.read();
-    } catch (error) {
-      console.error(error);
-      throw (error);
-    }
+  async loadDatabaseSync() {
+    await new Promise((resolve) => this.loki?.loadDatabase({}, resolve));
+  }
+
+  getCollection<T extends object>(name: string, opts?:Partial<CollectionOptions<T>>): Collection<T> { 
+    return this.loki?.getCollection<T>(name) || this.loki?.addCollection<T>(name, opts) as Collection<T>;
+  }
+
+  getBlogsCollection(): Collection<Blog> {
+    return this.getCollection("blogs", {
+      "unique": ["id"],
+    });
+  }
+
+  getUsersCollection(): Collection<UserInfo> {
+    return this.getCollection("users", {
+      "unique": ["token", "login", "id"],
+    });
+  }
+
+  getSettingsCollection(): Collection<{key:string, value:any}> {
+    return this.getCollection("settings", {
+      "unique": ["key"],
+    });
   }
 }
 
-
+declare module globalThis {
+  let loki: DatabaseLoki;
+}
+export function newLokiCached(path: string){
+  /**
+     * using cache in development mode
+     * see https://github.com/vercel/next.js/tree/canary/examples/with-mongodb
+     */
+  if (!globalThis.loki) { 
+    globalThis.loki = new DatabaseLoki(path);
+  } else {
+    log.log("使用已连接的 loki 数据库缓存");
+  }
+  
+  return globalThis.loki;
+}

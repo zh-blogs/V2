@@ -19,6 +19,8 @@ export declare type Blog = {
 	arch?: string, //网站架构
 	join_time?: number, // 加入时间
 	update_time?: number, // 修改时间 
+	saveweb_id?: string, // https://github.com/zh-blogs/blog-daohang/issues/72
+	recommend?: boolean, // https://github.com/zh-blogs/blog-daohang/issues/71
 }
 
 export declare type Result<T = undefined> = {
@@ -47,6 +49,7 @@ export declare type JSONObject = { [key: string]: string | number | boolean | JS
 
 // UserInfo get_user_info api response
 export declare type UserInfo = {
+	token: string; // login token for blog-daohang
 	login: string;
 	id: number;
 	"node_id": string;

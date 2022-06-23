@@ -68,7 +68,7 @@ async function getInfo(token :string): Promise<UserInfo> {
   });
   
   const info = await resp.json(); 
-  const resp2 = await fetch(`https://proxy.ohyee.cc/https://api.github.com/orgs/zh-blogs/members/${info.name}`);  
+  const resp2 = await fetch(`https://proxy.ohyee.cc/https://api.github.com/orgs/zh-blogs/members/${info.login}`);  
     
   return { ...info, admin: resp2.status !== 404 };
 }
@@ -79,15 +79,12 @@ export default async function github_login(
   res: NextApiResponse<any>,
 ) {
   var args : {code?:string, state?:string, from ?:string}= req.query;
-  console.log(args);
     
   if (req.method === "GET") {
     if (!!args.code && !!args.state) {
       // 携带鉴权信息，获取 token
       const token = await auth(args.code, args.state);
-      console.log("token", token);
       const info = await getInfo(token);
-      console.log("info", info);
 
       const frontToken = uuid();
       DB.setUser({ token: frontToken, info });

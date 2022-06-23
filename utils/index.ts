@@ -1,7 +1,7 @@
 import { Blog, Combine, Result, UnwrapPromise, ComponentProps, APIRequest, UserInfo, ContextType } from "./types";
 import { showNotification } from "./notification";
 import React from "react";
-import { useRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 import { makeQuery } from "./api";
 import { defaultContext, Context } from './context';
 
@@ -203,7 +203,7 @@ export function useQuery(defaultState?: TypeQuery) {
       if (!isEqual(query, afterUpdate)) {
         setQuery(afterUpdate);
         url.search = makeQuery(afterUpdate);
-        history.replaceState("", "", url.toString());
+        Router.push(url.href);
       }
 
       if (!!callback) {

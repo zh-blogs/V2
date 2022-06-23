@@ -60,12 +60,10 @@ export async function sendRequest<T extends JSONObject, U>(method: "get" | "post
     [cur]: !!params[cur] && Array.isArray(params[cur]) ? (params[cur] as string[]).map((item: string) => shouldString(item)).join(",") : params[cur]
   }), {});
   ({ path, params } = replaceParams(path, params));
-  console.log(params);
   if (method === "get") {
     path = `${path}?${makeQuery(params as unknown as { [key: string]: number | string })}`;
   }
   try {
-    console.log(`${apiPath.replace(/\/*$/g, "")}/${path.replace(/^\/*/g, "")}`);
     const resp = await fetch(`${apiPath.replace(/\/*$/g, "")}/${path.replace(/^\/*/g, "")}`, {
       method,
       body: method !== "get" ? JSON.stringify(params) : undefined,
@@ -114,10 +112,10 @@ export async function getTagsWithCount(params: {}): Promise<Result<{tag:string, 
  * @param tags 筛选标签
  * @param offset 偏移量
  * @param size 返回数目（-1 全量返回）
- * @param status (0 全部 1 展示 -1 不展示)
+ * @param status (0 全部，1 展示，-1 不展示，2 推荐)
  * @returns 博客数据
  */
-export async function getBlogs(params: { search?: string, tags?: string[], offset?: number, size?: number, status?: 0 | 1 | -1 }): Promise<Result<{ total: number, blogs: Blog[] }>> {
+export async function getBlogs(params: { search?: string, tags?: string[], offset?: number, size?: number, status?: 0 | 1 | -1 | 2 }): Promise<Result<{ total: number, blogs: Blog[] }>> {
   return await sendRequest("get", "/blogs", params);
 }
 
@@ -198,6 +196,39 @@ export async function deleteTag(params: { tag: string }): Promise<Result<null>> 
   return sendRequest("delete", "/tag", { token, ...params }); 
 }
 
+  
+/**
+ * 获取配置项
+ * @param key 配置名称
+ * @returns 配置项内容
+ */
+export async function getSetting(params: { key: string }): Promise<Result<{ key: string, value: any }>> {
+  const token = Cookie.get("token");
+  
+  return sendRequest("get", "/setting", { token, ...params }); 
+}
+
+/**
+ * 设置配置项
+ * @param key 配置名称
+ * @param value 配置项内容
+ */
+export async function setSetting(params: { key: string, value: any }): Promise<Result<null>> {
+  const token = Cookie.get("token");
+  
+  return sendRequest("post", "/setting", { token, ...params }); 
+}
+
+
+/**
+ * 清除登录状态
+ */
+export async function clearToken(): Promise<Result<null>> {
+  const token = Cookie.get("token");
+  
+  return sendRequest("get", "/user/clear", { token }); 
+}
+
 /**
  * 测试接口
  * @param name 名称
@@ -206,5 +237,3 @@ export async function deleteTag(params: { tag: string }): Promise<Result<null>> 
 export async function testApi(params: { name?: string }): Promise<Result<{ name: string }>> {
   return sendRequest("get", "/hello", params); 
 }
-
-

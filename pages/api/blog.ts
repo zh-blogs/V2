@@ -7,9 +7,16 @@ import { checkPermission } from "@/utils/backend/permission";
 export default wrapper<((_:{token?:string, id?:string, blog?: Blog})=>Promise<Result<any>>)>(
   async (args, req) => {
     if (req.method === "PUT" && !!args.blog) {
-      return await DB.addBlog({
-        blog: args.blog as Blog 
+      let blogData = args.blog as Blog;
+      let admin = await checkPermission(shouldString(args.token));
+      let response = await DB.addBlog({
+        blog: { ...blogData, enabled: admin },
       });
+      if (response.success) {
+        response.message = admin ? "添加成功" : "添加成功, 等待管理员审核";
+      } 
+      
+      return response;
     } else if (req.method === 'POST' && !!args.id && !!args.blog) {
       if (!await checkPermission(shouldString(args.token))) { 
         return { "success": false, "message": "You do not has permission" };

@@ -187,8 +187,20 @@ function AdminManager(props:{info:UserInfo}) {
       label: '网站架构(使用的程序)'
     },
     {
+<<<<<<< HEAD
+=======
+      key: 'saveweb_id',
+      label: 'saveweb_id',
+    },
+    {
+>>>>>>> 7bc5545d98735056fee412ab182dacf02dafe99d
       key: 'enabled',
       label: '展示',
+      render: () => <Switch/>
+    },
+    {
+      key: 'recommend',
+      label: '推荐',
       render: () => <Switch/>
     },
   ] as FormItemProps[], [allTags, edit]);
@@ -208,7 +220,7 @@ function AdminManager(props:{info:UserInfo}) {
       title: "链接",
       dataIndex: "url",
       key: "url",
-      render: (url) => (
+      render: (url:string) => (
         <a
           href={url}
           hrefLang="zh"
@@ -240,13 +252,13 @@ function AdminManager(props:{info:UserInfo}) {
       title: "展示",
       dataIndex: "enabled",
       key: "enabled",
-      render: (enabled) => !!enabled ? <CheckOutlined style={{ color: "green" }}/>:<CloseOutlined style={{ color: "red" }}/>
+      render: (enabled:boolean) => !!enabled ? <CheckOutlined style={{ color: "green" }}/>:<CloseOutlined style={{ color: "red" }}/>
     },
     {
       title: "操作",
       dataIndex: "op",
       key: "op",
-      render: (_, record) => (
+      render: (_:any, record:Blog) => (
         <Flex direction="LR" mainSize="small" subSize="small">
           <Button onClick={() => {
             setEdit(record);
@@ -264,6 +276,8 @@ function AdminManager(props:{info:UserInfo}) {
               arch: record.arch,
               join_time: moment(record.join_time),
               update_time: moment(record.update_time),
+              saveweb_id: record.saveweb_id,
+              recommend: record.recommend,
             });
           }}
           type="primary" text="修改"/>
@@ -296,6 +310,10 @@ function AdminManager(props:{info:UserInfo}) {
         <Radio.Button value={0}>全部</Radio.Button>
         <Radio.Button value={1}>审核通过</Radio.Button>
         <Radio.Button value={-1}>未审核</Radio.Button>
+<<<<<<< HEAD
+=======
+        <Radio.Button value={2}>推荐博客</Radio.Button>
+>>>>>>> 7bc5545d98735056fee412ab182dacf02dafe99d
       </Radio.Group>
       <Input
         placeholder="输入名称或网址筛选博客"

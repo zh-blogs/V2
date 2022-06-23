@@ -65,7 +65,6 @@ export function Blogs() {
   }, [allTags, selectedTags]);
   React.useEffect(() => {
     // 同步标签到 query
-    console.log("tags");
     setQuery({ tags: selectedTags.join(","), page:"1" });
   }, [selectedTags, setQuery]);
 

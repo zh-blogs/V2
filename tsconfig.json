@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2015",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "commonjs",
     "allowJs": true,
     "skipLibCheck": true,
@@ -20,9 +16,7 @@
     "incremental": true,
     "baseUrl": ".", // 设定根目录，允许使用@引入
     "paths": {
-      "@/*": [
-        "*"
-      ]
+      "@/*": ["*"]
     }
   },
   "include": [
@@ -30,9 +24,8 @@
     "**/*.ts",
     "**/*.tsx",
     "tools/transfer.mts",
-    "transfer.js"
+    "transfer.js",
+    "pages/api/setting"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

@@ -9,6 +9,7 @@ import styles from './admin.module.scss';
 const menus = [
   { name:"博客管理", path:"/manager" },
   { name:"标签管理", path:"/manager/tags" },
+  { name:"设置管理", path:"/manager/settings" },
 ];
 
 export function AdminLayout(props: { children: React.ReactNode }) {

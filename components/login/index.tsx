@@ -52,8 +52,13 @@ function Login() {
   const router = useRouter();
   
   return <Button icon={<GithubOutlined />} onClick={() => router.push(
+<<<<<<< HEAD
       `/api/user/github_connect?from=${router.asPath}`,
     )}>使用Github登录</Button>;
+=======
+    `/api/user/github_connect?from=${router.asPath}`,
+  )}>使用Github登录</Button>;
+>>>>>>> 7bc5545d98735056fee412ab182dacf02dafe99d
     
 }
 

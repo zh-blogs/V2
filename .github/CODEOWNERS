@@ -1,0 +1,13 @@
+# Engineering
+doc/* @OhYee
+pages/* @OhYee @xcsoft
+public/* @OhYee @xcsoft
+tools/* @OhYee @xcsoft
+utils/* @OhYee @xcsoft
+styles/* @OhYee
+*.ts @OhYee @xcsoft
+/.github/workflows/ @Mayx
+
+# Content
+/README.md @linlinzzo
+/.github/ISSUE_TEMPLATE/ @linlinzzo

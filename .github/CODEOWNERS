@@ -1,13 +1,12 @@
 # Engineering
 doc/* @OhYee
-pages/* @OhYee @xcsoft
-public/* @OhYee @xcsoft
-tools/* @OhYee @xcsoft
-utils/* @OhYee @xcsoft
+pages/* @OhYee @soxft
+public/* @OhYee @soxft
+tools/* @OhYee @soxft
+utils/* @OhYee @soxft
 styles/* @OhYee
-*.ts @OhYee @xcsoft
-/.github/workflows/ @Mayx
-
+*.ts @OhYee @soxft
+/.github/workflows/ @Mabbs
 # Content
 /README.md @linlinzzo
 /.github/ISSUE_TEMPLATE/ @linlinzzo

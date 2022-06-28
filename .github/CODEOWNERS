@@ -1,11 +1,11 @@
 # Engineering
-doc/* @OhYee
-pages/* @OhYee @soxft
-public/* @OhYee @soxft
-tools/* @OhYee @soxft
-utils/* @OhYee @soxft
-components/* @OhYee @soxft
-styles/* @OhYee
+/doc/ @OhYee
+/pages/ @OhYee @soxft
+/public/ @OhYee @soxft
+/tools/ @OhYee @soxft
+/utils/ @OhYee @soxft
+/components/ @OhYee @soxft
+/styles/ @OhYee
 *.ts @OhYee @soxft
 *.js @OhYee @soxft
 *.json @OhYee @soxft

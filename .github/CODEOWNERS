@@ -4,8 +4,13 @@ pages/* @OhYee @soxft
 public/* @OhYee @soxft
 tools/* @OhYee @soxft
 utils/* @OhYee @soxft
+components/* @OhYee @soxft
 styles/* @OhYee
 *.ts @OhYee @soxft
+*.js @OhYee @soxft
+*.json @OhYee @soxft
+/dev.bash @OhYee @soxft
+/yarn.lock @OhYee
 /.github/workflows/ @Mabbs
 # Content
 /README.md @linlinzzo

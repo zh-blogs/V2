@@ -1,6 +1,7 @@
 export function AboutTab() {
   return (
     <div>
+      <h2>介绍</h2>
       <p>
         我们尝试链接几乎所有的中文博客，并使用这个地址库不定期为中文博客存档。
       </p>
@@ -10,10 +11,6 @@ export function AboutTab() {
           zh-blogs/zh-blog-database
         </a>
         {" "} 中找到本项目中的所有博客信息, 数据每日更新。
-      </p>
-      <p>
-        我们的项目博客在{" "}
-        <a href="https://blog.zhblogs.ohyee.cc" type="text/html">中文博客列表导航项目博客</a>
       </p>
       <p>
         我们的 Github 仓库地址是{" "}
@@ -89,6 +86,8 @@ export function AboutTab() {
           </a>
         </li>
       </ul>
+      <h2>合法声明</h2>
+      <p>根据《中华人民共和国网络安全法》，本项目给出如下声明：<br />我们在发现其网络服务存在安全缺陷、漏洞等风险时，会立即采取补救措施。您可以在<a href="https://github.com/zh-blogs/blog-daohang/issues/new?assignees=Mabbs%2C+OhYee%2C+soxft&labels=&template=bug.md&title=Bug%E5%8F%8D%E9%A6%88-%5B%E6%8F%8F%E8%BF%B0%E6%BC%8F%E6%B4%9E%5D">我们的 github 仓库</a></p>
     </div>
   );
 }

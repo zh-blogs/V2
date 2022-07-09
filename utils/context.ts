@@ -6,6 +6,7 @@ export const defaultContext: ContextType = {
     
   layoutClassName: "",
   layoutStyle: {},
+  width: 0,
 };
 
 export const Context = React.createContext(defaultContext);

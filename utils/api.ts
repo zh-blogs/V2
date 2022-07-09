@@ -159,7 +159,7 @@ export async function deleteBlog(params: { id: string }): Promise<Result<Blog>> 
  * @param tags 筛选标签
  * @returns 博客数据
  */
-export async function getRandomBlogs(params: { search?: string, tags?: string[], n?: number }): Promise<Result<Blog[]>> {
+export async function getRandomBlogs(params: { search?: string, tags?: string[], n?: number, status?:-1|0|1|2}): Promise<Result<Blog[]>> {
   return await sendRequest("get", "/blogs/random", params);
 }
 
@@ -228,6 +228,31 @@ export async function clearToken(): Promise<Result<null>> {
   
   return sendRequest("get", "/user/clear", { token }); 
 }
+
+
+/**
+ * 获取架构信息
+ */
+export async function getArchCharts(params: { search?: string, tags?: string[], status?:-1|0|1|2}): Promise<Result<{
+  name: string,
+  count: number,
+  description?: string,
+  url?: string,
+}[]>> {
+  return sendRequest("get", "/charts/arch", params); 
+}
+
+
+/**
+ * 获取域名信息
+ */
+export async function getDomainCharts(params: {search?: string, tags?: string[], status?:-1|0|1|2}): Promise<Result<{
+  name: string,
+  count: number,
+}[]>> {
+  return sendRequest("get", "/charts/domain", params); 
+}
+
 
 /**
  * 测试接口

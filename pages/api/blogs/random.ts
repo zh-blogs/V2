@@ -10,6 +10,7 @@ export default wrapper<typeof getRandomBlogs>(
       const result = await DB.getBlogs({
         search: shouldString(args.search, ""),
         tags: shouldArraySplit(args.tags),
+        status: shouldNumber(args.status, 1) as 0|1|-1|2,
       });
       if (!!result.success && !!result.data) {
         var arr = result.data.blogs;

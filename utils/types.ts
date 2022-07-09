@@ -90,4 +90,5 @@ export declare type ContextType = {
 	
 	layoutClassName: string
 	layoutStyle: CSSProperties,
+	width: number,
 }

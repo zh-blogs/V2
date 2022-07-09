@@ -20,6 +20,23 @@ function MyApp({ Component, pageProps }: AppProps) {
       }
     })); 
   }, [setCtx]);
+
+  React.useEffect(() => {
+    const onResize = function() {
+      setCtx((ctx) => ({
+        ...ctx,
+        width: window.innerWidth,
+      }));
+    };
+    
+    onResize(); // fix when onload is not triggered
+    window.addEventListener("load", onResize);
+    window.addEventListener("resize", onResize);
+    
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
   
   return (
     <div className="root">

@@ -7,31 +7,31 @@ import { Card } from '@/components/antd';
 import Link from "next/link";
 
 import { AdminLayout } from './admin';
-export { AdminLayout };
+import { Side } from './side';
+export { AdminLayout, Side };
   
 export type LayoutProps = ComponentProps<{}>;
 
 export default function Layout(props: LayoutProps) {
   const { children } = props;
+
   const ctx = React.useContext(Context);
   
   return (
-    <>
-      <Flex
-        className={classConcat(
-          styles.layout,
-          ctx.layoutClassName,
-        )}
-        style={ctx.layoutStyle}
-        fullWidth
-        mainSize={0}
-        subSize="large"
-        subAxis="center"
-      >
-        {children}
-        <Footer />
-      </Flex>
-    </>
+    <Flex
+      className={classConcat(
+        styles.layout,
+        ctx.layoutClassName,
+      )}
+      style={ctx.layoutStyle}
+      fullWidth
+      mainSize={0}
+      subSize="large"
+      subAxis="center"
+    >
+      {children}
+      <Footer />
+    </Flex>
   );
 }
 

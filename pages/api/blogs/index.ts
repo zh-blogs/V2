@@ -12,7 +12,7 @@ export default wrapper<typeof getBlogs>(
         tags: shouldArraySplit(args.tags),
         offset: shouldNumber(args.offset, 0),
         size: shouldNumber(args.size, -1),
-        status: shouldNumber(args.status, 1) as 0|1|-1,
+        status: shouldNumber(args.status, 1) as 0|1|-1|2,
       });
     } 
     

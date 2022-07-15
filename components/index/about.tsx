@@ -27,17 +27,13 @@ export function AboutTab() {
         中找到本项目中的所有博客信息, 数据每日更新。
       </Paragraph>
       <Paragraph>
-        我们的项目博客在
-        <Link href="https://blog.zhblogs.ohyee.cc" style={linkStyle}>中文博客列表导航项目博客</Link>
-      </Paragraph>
-      <Paragraph>
         我们的 Github 仓库地址是
         <Link href="https://github.com/zh-blogs/blog-daohang" style={linkStyle}>
           zh-blogs/blog-daohang
         </Link>
         。如果想为本项目贡献一份力量，可以通过 Github
-        联系我们。如果想让我们收录你的网站，可以在本项目的 Github 仓库中提交
-        issue。
+        联系我们。如果想让我们收录你的网站，可以在页面的底部中找到提交页面
+        。
       </Paragraph>
       <Paragraph>
         由于我们刚开始博客网站的收集工作，一些博客还未收录，你可以向我们提供未收录的博客地址以便我们改进，也可以去别的导航项目，也许你会发现更多。

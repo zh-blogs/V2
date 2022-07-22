@@ -1,4 +1,4 @@
-# 开发、文档文档
+# 开发文档
 
 ## 开发
 
@@ -25,7 +25,7 @@ dev.bash zhblogs 开发环境
 - `pages`: 页面前端
 - `pages/api`: 后端接口，实际操作位于 `utils/backend`
 - `utils/backend`: 后端操作，封装了对于内存中存储的 `data.json` 的操作
-- `utils/api.ts`: 前端支持的 api 列表
+- `utils/api.ts`: 前端支持的 api 列表（详见下文）
  
 
 
@@ -79,3 +79,14 @@ docker run \
     --name=zhblogs \
     ghcr.io/zh-blogs/zhblogs:latests
 ```
+
+## 应用程序接口列表
+
+| 接口名称 | 接口地址 | 返回值 | 备注 |
+|---|---|---|---|
+| 获取博客标签 | `https://zhblogs.ohyee.cc/api/tags` | 返回标签列表 |
+| 获取博客标签（包括数量） | `https://zhblogs.ohyee.cc/api/tags/count` | 返回标签列表及各标签的博客数量 |
+| 获取博客数据 | `https://zhblogs.ohyee.cc/api/blogs` | 返回博客数据 | [传入值的详细信息](https://github.com/zh-blogs/blog-daohang/blob/main/utils/api.ts#L109-L117) |
+| 获取随机的博客数据 | `https://zhblogs.ohyee.cc/api/blogs/random` | 返回随机的博客数据 | [传入值的详细信息](https://github.com/zh-blogs/blog-daohang/blob/main/utils/api.ts#L156-L161) |
+| 获取架构数据 | `https://zhblogs.ohyee.cc/api/charts/arch` | 返回架构统计数据 |
+| 获取域名数据 | `https://zhblogs.ohyee.cc/api/charts/domain` | 返回域名统计数据 |

@@ -64,3 +64,23 @@ https://github.com/zh-blogs/blog-daohang/commit/bde53f7d5d1a2e9928ee6773d9c4ddb1
 https://github.com/zh-blogs/blog-daohang/commit/53c3003bdc13ceaee566c04b0ec11f8d02ca5fe3     
 https://github.com/zh-blogs/blog-daohang/commit/45d876aa53ba1e9d6bf38eec320b8eaab76d123c      
 https://github.com/zh-blogs/blog-daohang/commit/188349a609d53a1b16652f3bfabd8157dcbdaabb      
+
+## 开往下一个博客网站
+<details><summary>HTML+JavaScript 代码示例</summary>
+
+```html
+<script>
+function go(id) {
+  fetch('https://zhblogs.ohyee.cc/api/blogs/random?n=1')
+    .then((resp) => resp.json())
+    .then((data) => {
+      const html = `<a href= "${data.data[0].url}>前往下一个博客网站：${data.data[0].name}</a>`;
+      document.getElementById(id).innerHTML = html;
+    });
+}
+go(demo);
+</script>
+<p id="demo">JavaScript 会重写这段文字</p>
+```
+你也可以自定义随机的博客类型，比如你可以将 fetch 的地址改成`https://zhblogs.ohyee.cc/api/blogs/random?n=1&tags=生活`来实现访客一定会被指向到一个生活类博客。当然，你也可以修改函数中的 html 值，来实现与网站主题相搭配的样式。
+</details>

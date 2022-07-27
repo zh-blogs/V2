@@ -85,7 +85,7 @@ go(demo);
 你也可以自定义随机的博客类型，比如你可以将 fetch 的地址改成`https://zhblogs.ohyee.cc/api/blogs/random?n=1&tags=生活`来实现访客一定会被指向到一个生活类博客。当然，你也可以修改函数中的 html 值，来实现与网站主题相搭配的样式。
 </details>
 
-<detail><summary>PHP 代码示例</summary>
+<details><summary>PHP 代码示例</summary>
 
 ```php
 <?php

@@ -84,3 +84,16 @@ go(demo);
 ```
 你也可以自定义随机的博客类型，比如你可以将 fetch 的地址改成`https://zhblogs.ohyee.cc/api/blogs/random?n=1&tags=生活`来实现访客一定会被指向到一个生活类博客。当然，你也可以修改函数中的 html 值，来实现与网站主题相搭配的样式。
 </details>
+
+<detail><summary>PHP 代码示例</summary>
+
+```php
+<?php
+$url = "https://zhblogs.ohyee.cc/api/blogs/random?n=1";
+$json = file_get_contents($url);
+$data = json_decode($json,true);
+$goname = $data["data"][0]["name"];
+$gourl = $data["data"][0]["url"];
+?>
+```
+这里已经将网站名称和网站链接存成`$goname`和`$gourl`变量了，等会再用`<?php echo $goname; ?>`之类的嵌套在自己喜欢的 HTML 代码里面。这段代码的`$url`也可以自定义，详见【HTML+JavaScript 代码示例】。

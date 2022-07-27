@@ -97,4 +97,4 @@ $gourl = $data["data"][0]["url"];
 ?>
 ```
 这里已经将网站名称和网站链接存成`$goname`和`$gourl`变量了，等会再用`<?php echo $goname; ?>`之类的嵌套在自己喜欢的 HTML 代码里面。这段代码的`$url`也可以自定义，详见【HTML+JavaScript 代码示例】。
-</detail>
+</details>

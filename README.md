@@ -75,25 +75,6 @@ https://github.com/zh-blogs/blog-daohang/commit/188349a609d53a1b16652f3bfabd8157
 此处的`href`值可以根据站长的需要修改，例如改成`https://zhblogs.ohyee.cc/go?tag=生活`即可指定跳转到生活博客，改成`https://zhblogs.ohyee.cc/go?search=林林杂语`即可指定跳转的博客。
 </details>
 
-<details><summary>HTML+JavaScript 代码示例</summary>
-
-```html
-<script>
-function go(id) {
-  fetch('https://zhblogs.ohyee.cc/api/blogs/random?n=1')
-    .then((resp) => resp.json())
-    .then((data) => {
-      const html = `<a href= "${data.data[0].url}>前往下一个博客网站：${data.data[0].name}</a>`;
-      document.getElementById(id).innerHTML = html;
-    });
-}
-go(demo);
-</script>
-<p id="demo">JavaScript 会重写这段文字</p>
-```
-你也可以自定义随机的博客类型，比如你可以将 fetch 的地址改成`https://zhblogs.ohyee.cc/api/blogs/random?n=1&tags=生活`来实现访客一定会被指向到一个生活类博客。当然，你也可以修改函数中的 html 值，来实现与网站主题相搭配的样式。
-</details>
-
 <details><summary>PHP 代码示例</summary>
 
 ```php

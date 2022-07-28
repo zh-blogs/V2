@@ -66,6 +66,15 @@ https://github.com/zh-blogs/blog-daohang/commit/45d876aa53ba1e9d6bf38eec320b8eaa
 https://github.com/zh-blogs/blog-daohang/commit/188349a609d53a1b16652f3bfabd8157dcbdaabb      
 
 ## 开往下一个博客网站
+<details><summary>链接示例</summary>
+
+```html
+<a href="https://zhblogs.ohyee.cc/go/">前往下一个博客</a>
+```
+
+此处的`href`值可以根据站长的需要修改，例如改成`https://zhblogs.ohyee.cc/go?tag=生活`即可指定跳转到生活博客，改成`https://zhblogs.ohyee.cc/go?search=林林杂语`即可指定跳转的博客。
+</details>
+
 <details><summary>HTML+JavaScript 代码示例</summary>
 
 ```html

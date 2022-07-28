@@ -1,4 +1,4 @@
-# 开发、文档文档
+# 开发文档
 
 ## 开发
 
@@ -25,7 +25,7 @@ dev.bash zhblogs 开发环境
 - `pages`: 页面前端
 - `pages/api`: 后端接口，实际操作位于 `utils/backend`
 - `utils/backend`: 后端操作，封装了对于内存中存储的 `data.json` 的操作
-- `utils/api.ts`: 前端支持的 api 列表
+- `utils/api.ts`: 前端支持的 api 列表（详见下文）
  
 
 
@@ -79,3 +79,7 @@ docker run \
     --name=zhblogs \
     ghcr.io/zh-blogs/zhblogs:latests
 ```
+
+## 应用程序接口列表
+
+参见[中文博客列表导航项目应用程序接口](https://www.apifox.cn/apidoc/project-1355504/doc-1144392)。

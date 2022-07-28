@@ -82,11 +82,4 @@ docker run \
 
 ## 应用程序接口列表
 
-| 接口名称 | 接口地址 | 返回值 | 备注 |
-|---|---|---|---|
-| 获取博客标签 | `https://zhblogs.ohyee.cc/api/tags` | 返回标签列表 |
-| 获取博客标签（包括数量） | `https://zhblogs.ohyee.cc/api/tags/count` | 返回标签列表及各标签的博客数量 |
-| 获取博客数据 | `https://zhblogs.ohyee.cc/api/blogs` | 返回博客数据 | [传入值的详细信息](https://github.com/zh-blogs/blog-daohang/blob/main/utils/api.ts#L109-L117) |
-| 获取随机的博客数据 | `https://zhblogs.ohyee.cc/api/blogs/random` | 返回随机的博客数据 | [传入值的详细信息](https://github.com/zh-blogs/blog-daohang/blob/main/utils/api.ts#L156-L161) |
-| 获取架构数据 | `https://zhblogs.ohyee.cc/api/charts/arch` | 返回架构统计数据 |
-| 获取域名数据 | `https://zhblogs.ohyee.cc/api/charts/domain` | 返回域名统计数据 |
+参见[中文博客列表导航项目应用程序接口](https://www.apifox.cn/apidoc/project-1355504/doc-1144392)。

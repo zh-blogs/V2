@@ -64,3 +64,27 @@ https://github.com/zh-blogs/blog-daohang/commit/bde53f7d5d1a2e9928ee6773d9c4ddb1
 https://github.com/zh-blogs/blog-daohang/commit/53c3003bdc13ceaee566c04b0ec11f8d02ca5fe3     
 https://github.com/zh-blogs/blog-daohang/commit/45d876aa53ba1e9d6bf38eec320b8eaab76d123c      
 https://github.com/zh-blogs/blog-daohang/commit/188349a609d53a1b16652f3bfabd8157dcbdaabb      
+
+## 开往下一个博客网站
+<details><summary>链接示例</summary>
+
+```html
+<a href="https://zhblogs.ohyee.cc/go/">前往下一个博客</a>
+```
+
+此处的`href`值可以根据站长的需要修改，例如改成`https://zhblogs.ohyee.cc/go?tag=生活`即可指定跳转到生活博客，改成`https://zhblogs.ohyee.cc/go?search=林林杂语`即可指定跳转的博客。
+</details>
+
+<details><summary>PHP 代码示例</summary>
+
+```php
+<?php
+$url = "https://zhblogs.ohyee.cc/api/blogs/random?n=1";
+$json = file_get_contents($url);
+$data = json_decode($json,true);
+$goname = $data["data"][0]["name"];
+$gourl = $data["data"][0]["url"];
+?>
+```
+这里已经将网站名称和网站链接存成`$goname`和`$gourl`变量了，等会再用`<?php echo $goname; ?>`之类的嵌套在自己喜欢的 HTML 代码里面。这段代码的`$url`也可以自定义，比如你可以将地址改成`https://zhblogs.ohyee.cc/api/blogs/random?n=1&tags=生活`来实现访客一定会被指向到一个生活类博客。
+</details>

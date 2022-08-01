@@ -1,16 +1,17 @@
-import { UnwrapPromise, APIRequest } from "@/utils";
 import type { NextApiRequest, NextApiResponse } from "next";
+
+import { UnwrapPromise, APIRequest } from "@/utils";
 
 export default function wrapper<T extends (...args: any) => any>(
   callback: (
-        args: APIRequest<Parameters<T>[0]>,
-        req: NextApiRequest,
-        res: NextApiResponse<UnwrapPromise<ReturnType<T>>>
-    ) => Promise<UnwrapPromise<ReturnType<T>>>
+    args: APIRequest<Parameters<T>[0]>,
+    req: NextApiRequest,
+    res: NextApiResponse<UnwrapPromise<ReturnType<T>>>,
+  ) => Promise<UnwrapPromise<ReturnType<T>>>,
 ) {
   return async function (
     req: NextApiRequest,
-    res: NextApiResponse<UnwrapPromise<ReturnType<T>>>
+    res: NextApiResponse<UnwrapPromise<ReturnType<T>>>,
   ) {
     var args = {};
     if (req.method === "GET") {
@@ -23,9 +24,9 @@ export default function wrapper<T extends (...args: any) => any>(
       res.status(200).json(result);
     } catch (e: any) {
       if (!!e && !!e.message) {
-        res.status(500).json({ "success": false, "message": e.message } as any);
+        res.status(500).json({ success: false, message: e.message } as any);
       } else {
-        res.status(500).json({ "success": false, "message": "未知错误" } as any);
+        res.status(500).json({ success: false, message: "未知错误" } as any);
       }
     }
   };

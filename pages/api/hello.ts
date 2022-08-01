@@ -6,11 +6,12 @@ import wrapper from "@/utils/backend/api";
 export default wrapper<typeof testApi>(
   promiselized((args, req) => {
     if (req.method === "GET") {
-      return { "success": true, data: { name: shouldString(args.name, "World") } };
-    } 
-    
-    return { "success": false, "message": "Method not allowed" };
-    
-  })
-);
+      return {
+        success: true,
+        data: { name: shouldString(args.name, "World") },
+      };
+    }
 
+    return { success: false, message: "Method not allowed" };
+  }),
+);

@@ -1,10 +1,10 @@
-import { Loading, LoadingProps } from "./loading";
-import { Tabs, Tab, TabsProps } from "./tabs";
+import { Button, ButtonProps, ModalInfo, ModalProps } from "./button";
 import { Card, CardProps } from "./card";
-import { Select, SelectProps, SelectOption } from "./select";
 import { Form, FormProps, FormItemProps } from "./form";
-import { Switch, SwitchProps } from './switch';
-import { Button, ButtonProps, ModalInfo, ModalProps } from './button';
+import { Loading, LoadingProps } from "./loading";
+import { Select, SelectProps, SelectOption } from "./select";
+import { Switch, SwitchProps } from "./switch";
+import { Tabs, Tab, TabsProps } from "./tabs";
 
 export type {
   LoadingProps,
@@ -17,6 +17,6 @@ export type {
   FormItemProps,
   SwitchProps,
   ButtonProps,
-  ModalProps
+  ModalProps,
 };
 export { Loading, Tabs, Card, Select, Form, Switch, Button, ModalInfo };

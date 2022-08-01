@@ -1,6 +1,7 @@
-import LokiJS from 'lokijs';
+import LokiJS from "lokijs";
+
 import { Blog, UserInfo } from "@/utils";
-import { Log } from '@/utils/log';
+import { Log } from "@/utils/log";
 
 const log = new Log("数据库", "34");
 
@@ -9,10 +10,10 @@ const autoSaveIntervalInMs = 5 * 60 * 1000; // 5 minutes
 export class DatabaseLoki {
   loki?: LokiJS = undefined;
   blogs?: Collection<Blog> = undefined;
-  users?: Collection<{} > =undefined;
-  intervel:NodeJS.Timeout;
+  users?: Collection<{}> = undefined;
+  intervel: NodeJS.Timeout;
 
-  constructor(path:string) {
+  constructor(path: string) {
     log.log("载入 lokijs 数据库");
 
     this.loki = new LokiJS(path);
@@ -24,9 +25,9 @@ export class DatabaseLoki {
     }, autoSaveIntervalInMs);
   }
 
-  destroy() { 
+  destroy() {
     log.log("销毁 lokijs 数据库");
-    
+
     clearInterval(this.intervel);
     if (!!this.loki) {
       this.loki?.close();
@@ -36,8 +37,8 @@ export class DatabaseLoki {
   autoSave() {
     log.log("=== 自动保存 开始 ===");
 
-    new Promise((resolve, reject) => { 
-      if (!!this.loki) { 
+    new Promise((resolve, reject) => {
+      if (!!this.loki) {
         this.loki?.saveDatabase((err) => {
           if (!!err) {
             reject(err);
@@ -46,39 +47,48 @@ export class DatabaseLoki {
           }
         });
       }
-    }).then(() => {
-      log.log("=== 自动保存 完成 ===");
-    }).catch((err) => {
-      log.error("=== 自动保存 失败 ===");
-      console.error(err);
-    }).finally(() => {
-      log.log("=== 自动保存 结束 ===");
-    });
+    })
+      .then(() => {
+        log.log("=== 自动保存 完成 ===");
+      })
+      .catch((err) => {
+        log.error("=== 自动保存 失败 ===");
+        console.error(err);
+      })
+      .finally(() => {
+        log.log("=== 自动保存 结束 ===");
+      });
   }
 
   async loadDatabaseSync() {
     await new Promise((resolve) => this.loki?.loadDatabase({}, resolve));
   }
 
-  getCollection<T extends object>(name: string, opts?:Partial<CollectionOptions<T>>): Collection<T> { 
-    return this.loki?.getCollection<T>(name) || this.loki?.addCollection<T>(name, opts) as Collection<T>;
+  getCollection<T extends object>(
+    name: string,
+    opts?: Partial<CollectionOptions<T>>,
+  ): Collection<T> {
+    return (
+      this.loki?.getCollection<T>(name) ||
+      (this.loki?.addCollection<T>(name, opts) as Collection<T>)
+    );
   }
 
   getBlogsCollection(): Collection<Blog> {
     return this.getCollection("blogs", {
-      "unique": ["id"],
+      unique: ["id"],
     });
   }
 
   getUsersCollection(): Collection<UserInfo> {
     return this.getCollection("users", {
-      "unique": ["token", "login", "id"],
+      unique: ["token", "login", "id"],
     });
   }
 
-  getSettingsCollection(): Collection<{key:string, value:any}> {
+  getSettingsCollection(): Collection<{ key: string; value: any }> {
     return this.getCollection("settings", {
-      "unique": ["key"],
+      unique: ["key"],
     });
   }
 }
@@ -86,16 +96,16 @@ export class DatabaseLoki {
 declare module globalThis {
   let loki: DatabaseLoki;
 }
-export function newLokiCached(path: string){
+export function newLokiCached(path: string) {
   /**
-     * using cache in development mode
-     * see https://github.com/vercel/next.js/tree/canary/examples/with-mongodb
-     */
-  if (!globalThis.loki) { 
+   * using cache in development mode
+   * see https://github.com/vercel/next.js/tree/canary/examples/with-mongodb
+   */
+  if (!globalThis.loki) {
     globalThis.loki = new DatabaseLoki(path);
   } else {
     log.log("使用已连接的 loki 数据库缓存");
   }
-  
+
   return globalThis.loki;
 }

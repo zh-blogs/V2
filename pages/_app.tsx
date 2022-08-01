@@ -1,10 +1,12 @@
-import "@/styles/globals.css";
-
-import React from 'react';
 import type { AppProps } from "next/app";
-import "antd/dist/antd.css";
 import Head from "next/head";
+import React from "react";
+
+import "@/styles/globals.css";
+import "antd/dist/antd.css";
+
 import Layout from "@/components/layout";
+
 import { Context, defaultContext } from "@/utils";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -17,27 +19,27 @@ function MyApp({ Component, pageProps }: AppProps) {
           ...oldCtx,
           ...newCtx,
         }));
-      }
-    })); 
+      },
+    }));
   }, [setCtx]);
 
   React.useEffect(() => {
-    const onResize = function() {
+    const onResize = function () {
       setCtx((ctx) => ({
         ...ctx,
         width: window.innerWidth,
       }));
     };
-    
+
     onResize(); // fix when onload is not triggered
     window.addEventListener("load", onResize);
     window.addEventListener("resize", onResize);
-    
+
     return () => {
       window.removeEventListener("resize", onResize);
     };
   }, []);
-  
+
   return (
     <div className="root">
       <Context.Provider value={ctx}>

@@ -1,12 +1,14 @@
-import React from 'react';
-import { Card, Alert, Typography, notification } from 'antd';
-import { Form, FormItemProps } from '@/components/antd';
-import { Flex } from '@/components/flex';
-import { getBlogs, getTags, addBlog } from '@/utils/api';
-import { getDomain } from '@/utils';
-import router from 'next/router';
+import router from "next/router";
+import React from "react";
 
-import { v4 as uuid } from 'uuid';
+import { Card, Alert, Typography, notification } from "antd";
+import { v4 as uuid } from "uuid";
+
+import { Form, FormItemProps } from "@/components/antd";
+import { Flex } from "@/components/flex";
+
+import { getDomain } from "@/utils";
+import { getBlogs, getTags, addBlog } from "@/utils/api";
 
 export default function AddBlog() {
   const [tags, setTags] = React.useState<string[]>([]);
@@ -22,25 +24,28 @@ export default function AddBlog() {
     () =>
       [
         {
-          key: 'url',
-          label: '博客首页',
+          key: "url",
+          label: "博客首页",
           required: true,
-          placeholder: '贵博客的域名（带http(s)://）',
+          placeholder: "贵博客的域名（带http(s)://）",
           rules: [
             {
               validator: async (_, value) => {
                 // 判断博客重复
-                const resp = await getBlogs({ search: getDomain(value), status: 0 });
+                const resp = await getBlogs({
+                  search: getDomain(value),
+                  status: 0,
+                });
                 if (!!resp.success && !!resp.data) {
                   const blogs = resp.data.blogs;
                   const matchBlogs = blogs.filter(
-                    (blog) => getDomain(blog.url) === getDomain(value)
+                    (blog) => getDomain(blog.url) === getDomain(value),
                   );
                   if (matchBlogs.length > 0) {
                     return Promise.reject(
                       `该博客已存在, 请勿重复添加。已找到的匹配博客: ${matchBlogs
                         .map((blog) => `${blog.name}(${blog.url})`)
-                        .join(',')}`
+                        .join(",")}`,
                     );
                   }
                 }
@@ -49,40 +54,40 @@ export default function AddBlog() {
           ],
         },
         {
-          key: 'name',
-          label: '博客名称',
+          key: "name",
+          label: "博客名称",
           required: true,
-          placeholder: '贵博客的名称',
+          placeholder: "贵博客的名称",
         },
         {
-          key: 'sign',
-          label: '博客描述',
-          placeholder: '贵博客的一句话描述',
+          key: "sign",
+          label: "博客描述",
+          placeholder: "贵博客的一句话描述",
         },
         {
-          key: 'feed',
-          label: 'RSS 订阅地址',
-          placeholder: '如果可以的话，为我们提供一个 RSS 订阅链接',
+          key: "feed",
+          label: "RSS 订阅地址",
+          placeholder: "如果可以的话，为我们提供一个 RSS 订阅链接",
         },
         {
-          key: 'sitemap',
-          label: '网站地图',
-          placeholder: '如果可以的话，为我们提供一个网站地图',
+          key: "sitemap",
+          label: "网站地图",
+          placeholder: "如果可以的话，为我们提供一个网站地图",
         },
         {
-          key: 'arch',
-          label: '站点架构',
-          placeholder: '贵网站的架构程序，如 Hexo、Wordpress 等',
+          key: "arch",
+          label: "站点架构",
+          placeholder: "贵网站的架构程序，如 Hexo、Wordpress 等",
         },
         {
-          key: 'tags',
-          label: '分类',
+          key: "tags",
+          label: "分类",
           select: tags,
-          mode: 'multiple',
-          placeholder: '您选择的内容，将作为管理员的分类参考',
+          mode: "multiple",
+          placeholder: "您选择的内容，将作为管理员的分类参考",
         },
       ] as FormItemProps[],
-    [tags]
+    [tags],
   );
 
   return (
@@ -151,13 +156,19 @@ export default function AddBlog() {
                 arch: values.arch,
                 saveweb_id: "",
                 recommend: false,
-              }
+              },
             });
             if (!!resp && !!resp.success) {
-              notification.success({ message: "提交成功", description: "请等待管理员审核" });
+              notification.success({
+                message: "提交成功",
+                description: "请等待管理员审核",
+              });
               router.push("/");
             } else {
-              notification.error({ message: "提交失败", description: resp.message });
+              notification.error({
+                message: "提交失败",
+                description: resp.message,
+              });
             }
           }}
         />

@@ -1,5 +1,5 @@
-import { GithubOutlined } from "@ant-design/icons";
 import styles from "./index.module.scss";
+import { GithubOutlined } from "@ant-design/icons";
 
 export function Cornor() {
   return (

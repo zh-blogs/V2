@@ -1,9 +1,11 @@
 import React from "react";
-import { Table, TableColumnsType, Button } from "antd";
+
 import { TeamOutlined } from "@ant-design/icons";
+import { Table, TableColumnsType, Button } from "antd";
+
+import { Flex } from "@/components/flex";
 
 import { Blog, showNotification } from "@/utils";
-import { Flex } from "@/components/flex";
 import { getRandomBlogs } from "@/utils/api";
 
 const cols: TableColumnsType<Blog> = [

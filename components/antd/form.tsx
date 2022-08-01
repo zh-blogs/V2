@@ -1,4 +1,7 @@
 import React from "react";
+
+import { Loading } from "./loading";
+import { Select, SelectProps, SelectOption } from "./select";
 import {
   Typography,
   Form as AntdForm,
@@ -9,12 +12,10 @@ import {
   DatePickerProps,
   Button,
 } from "antd";
+import { RangePickerProps } from "antd/lib/date-picker";
 import { Rule } from "antd/lib/form";
 import { TextAreaProps } from "antd/lib/input";
-import { RangePickerProps } from "antd/lib/date-picker";
 
-import { Select, SelectProps, SelectOption } from "./select";
-import { Loading } from "./loading";
 import { Combine } from "@/utils";
 
 export declare type FormProps<T = any> = Combine<
@@ -70,9 +71,9 @@ function FormComponent<T = any>(props: FormProps<T>) {
                 ? cur.default(cur, record)
                 : cur.default,
           }),
-          {}
+          {},
         ),
-    [forms, record]
+    [forms, record],
   );
 
   return (
@@ -113,7 +114,7 @@ function FormComponent<T = any>(props: FormProps<T>) {
             if (!!require) {
               rules.push({ required: true, message: `${label}不能为空` });
             }
-            
+
             return (
               <AntdForm.Item key={key} name={key} label={label} rules={rules}>
                 {!!render ? (

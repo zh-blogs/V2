@@ -1,29 +1,24 @@
 import { shouldString, shouldArraySplit, shouldNumber } from "@/utils";
 import { getRandomBlogs } from "@/utils/api";
 import wrapper from "@/utils/backend/api";
-
 import DB from "@/utils/backend/db";
 
-export default wrapper<typeof getRandomBlogs>(
-  async (args, req) => {
-    if (req.method === "GET") {
-      const result = await DB.getBlogs({
-        search: shouldString(args.search, ""),
-        tags: shouldArraySplit(args.tags),
-        status: shouldNumber(args.status, 1) as 0|1|-1|2,
-      });
-      if (!!result.success && !!result.data) {
-        var arr = result.data.blogs;
-        arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
-        
-        return { success: true, data: arr.slice(0, shouldNumber(args.n, 10)) };
-      }
-      
-      return { success:result.success, message:result.message };
-    } 
-    
-    return { "success": false, "message": "Method not allowed" };
-        
-  }
-);
+export default wrapper<typeof getRandomBlogs>(async (args, req) => {
+  if (req.method === "GET") {
+    const result = await DB.getBlogs({
+      search: shouldString(args.search, ""),
+      tags: shouldArraySplit(args.tags),
+      status: shouldNumber(args.status, 1) as 0 | 1 | -1 | 2,
+    });
+    if (!!result.success && !!result.data) {
+      var arr = result.data.blogs;
+      arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
 
+      return { success: true, data: arr.slice(0, shouldNumber(args.n, 10)) };
+    }
+
+    return { success: result.success, message: result.message };
+  }
+
+  return { success: false, message: "Method not allowed" };
+});

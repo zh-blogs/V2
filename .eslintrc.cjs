@@ -6,7 +6,7 @@ module.exports = {
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: ['tsconfig.json'],
+    project: ['tsconfig.json', 'tsconfig.node.json'],
   },
   plugins: ['@typescript-eslint'],
   extends: [
@@ -18,7 +18,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  ignorePatterns: ['.eslintrc.cjs', 'dist/*'],
+  ignorePatterns: ['*.cjs', 'dist/*'],
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',

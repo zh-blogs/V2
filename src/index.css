@@ -10,3 +10,8 @@
 * {
   font-family: 'Alibaba-PuHuiTi';
 }
+
+.i-icon > svg {
+  display: inline;
+  margin-right: 2px;
+}

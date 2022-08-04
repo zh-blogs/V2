@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.6.6",
+    "@icon-park/react": "^1.4.2",
+    "clsx": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

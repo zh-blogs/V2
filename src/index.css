@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Alibaba-PuHuiTi';
+  src: url('/Alibaba-PuHuiTi-Regular.ttf');
+}
+
+* {
+  font-family: 'Alibaba-PuHuiTi';
+}

@@ -94,7 +94,7 @@
 
 ### 获取随机博客数据
 
-> `GET` /blogs/random
+> `GET` /random-blogs
 
 #### 请求
 
@@ -144,7 +144,7 @@
 
 ### 获取架构统计信息
 
-> `GET` /arch
+> `GET` /archs
 
 #### 返回
 

@@ -180,26 +180,29 @@
 ]
 ```
 
-## 后台登录
-
-### GitHub 登录
-
-> `POST` /admin/login/github
-
-WIP
-
 ## 后台
 
 > **Note**  
-> 以下请求中 Header 中需包含 authorization 字段 (值为 token) 以鉴权
+> 以下请求中 Cookies 需携带 GitHub OAuth 的 token
 
 ### 鉴权
 
-> `GET` /admin/auth
+> `GET` /admin/whoami
 
 #### 请求
 
-无请求主体，仅验证 Header 中 token 是否合法
+无请求主体，仅验证 Cookies 中 token 是否合法
+
+#### 返回
+
+```json
+{
+  "username": "jsun969",
+  "fullName": "Justin Sun",
+  "email": "i@jsun969.cn",
+  "permission": "owner/member/collaborator"
+}
+```
 
 ### 新增博客
 
@@ -257,3 +260,15 @@ WIP
 | 键  |   描述   | 是否必填 |  类型  |     备注     |
 | :-: | :------: | :------: | :----: | :----------: |
 | tag | 目标标签 |    是    | string | 例如`Python` |
+
+### [仅 Owner] 添加管理员 (Collaborator) GitHub 用户名
+
+> `PUT` /admin/github-username
+
+#### 请求
+
+```json
+{
+  "username": "jsun969"
+}
+```

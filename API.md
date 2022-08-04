@@ -197,7 +197,7 @@
 
 #### 返回
 
-```json
+```
 {
   // JWT
   "token": "xxxxx"

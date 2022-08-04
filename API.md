@@ -198,8 +198,6 @@
 ```json
 {
   "username": "jsun969",
-  "fullName": "Justin Sun",
-  "email": "i@jsun969.cn",
   "permission": "owner/member/collaborator"
 }
 ```

@@ -184,7 +184,7 @@
 
 ### 登录
 
-> `POST` /login
+> `POST` /admin/login
 
 #### 请求
 
@@ -211,7 +211,7 @@
 
 ### 鉴权
 
-> `GET` /auth
+> `GET` /admin/auth
 
 #### 请求
 
@@ -219,7 +219,7 @@
 
 ### 新增博客
 
-> `POST` /blog
+> `POST` /admin/blog
 
 #### 请求
 
@@ -244,7 +244,7 @@
 
 ### 修改博客信息
 
-> `PATCH` /blog
+> `PATCH` /admin/blog
 
 #### 请求
 
@@ -256,7 +256,7 @@
 
 ### 删除博客信息
 
-> `DELETE` /blog
+> `DELETE` /admin/blog
 
 #### 请求
 
@@ -266,7 +266,7 @@
 
 ### 删除标签
 
-> `DELETE` /tag
+> `DELETE` /admin/tag
 
 #### 请求
 
@@ -276,7 +276,7 @@
 
 ### 获取后台配置信息
 
-> `GET` /settings
+> `GET` /admin/settings
 
 #### 返回
 
@@ -289,7 +289,7 @@
 
 ### 修改后台配置信息
 
-> `PUT` /setting
+> `PUT` /admin/setting
 
 #### 请求
 

@@ -182,32 +182,16 @@
 
 ## 后台登录
 
-### 登录
+### GitHub 登录
 
-> `POST` /admin/login
+> `POST` /admin/login/github
 
-#### 请求
-
-```json
-{
-  "username": "jsun969",
-  "password": "xxx"
-}
-```
-
-#### 返回
-
-```json
-{
-  // JWT
-  "token": "xxxxx"
-}
-```
+WIP
 
 ## 后台
 
 > **Note**  
-> 以下请求中 Header 中需包含 authorization 字段 (值为 jwt) 以鉴权
+> 以下请求中 Header 中需包含 authorization 字段 (值为 token) 以鉴权
 
 ### 鉴权
 

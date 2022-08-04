@@ -80,11 +80,11 @@
       // 博客网站的架构
       "arch": "WordPress",
       // 博客网站加入的时间戳
-      "join_time": 1651600790154,
+      "joinTime": 1651600790154,
       // 博客网站修改的时间戳
-      "update_time": 1656416524808,
+      "updateTime": 1656416524808,
       // 用于与 saveweb 互联
-      "saveweb_id": "896",
+      "savewebId": "896",
       // 指示博客网站是否为推荐博客的布尔值
       "recommend": false
     }
@@ -131,11 +131,11 @@
     // 博客网站的架构
     "arch": "WordPress",
     // 博客网站加入的时间戳
-    "join_time": 1651600790154,
+    "joinTime": 1651600790154,
     // 博客网站修改的时间戳
-    "update_time": 1656416524808,
+    "updateTime": 1656416524808,
     // 用于与 saveweb 互联
-    "saveweb_id": "896",
+    "savewebId": "896",
     // 指示博客网站是否为推荐博客的布尔值
     "recommend": false
   }

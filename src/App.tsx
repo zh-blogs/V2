@@ -1,12 +1,12 @@
-import MainLayout from './components/layout/MainLayout';
+import IndexLayout from './components/layout/IndexLayout';
 import IconProvider from './providers/icon';
 
 const App = () => {
   return (
     <IconProvider>
-      <MainLayout>
+      <IndexLayout>
         <div className="text-3xl font-bold underline">Hello world!</div>
-      </MainLayout>
+      </IndexLayout>
     </IconProvider>
   );
 };

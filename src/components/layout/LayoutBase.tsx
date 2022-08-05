@@ -30,7 +30,7 @@ const Header = () => {
 const Footer = () => {
   return (
     <footer className="mb-4 w-full mx-auto text-center text-[#9E9E9E]">
-      <div>© 中文博客导航 2022 - 2022</div>
+      <div>© 中文博客导航 2022 - {new Date().getFullYear()}</div>
       <div>
         <a href="https://beian.miit.gov.cn/" target="_blank">
           豫ICP备17000379号-2

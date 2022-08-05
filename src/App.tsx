@@ -1,12 +1,13 @@
-import IndexLayout from './components/layout/IndexLayout';
 import IconProvider from './providers/icon';
+import AppRouter from './routes';
+import { BrowserRouter as RouterProvider } from 'react-router-dom';
 
 const App = () => {
   return (
     <IconProvider>
-      <IndexLayout>
-        <div className="text-3xl font-bold underline">Hello world!</div>
-      </IndexLayout>
+      <RouterProvider>
+        <AppRouter />
+      </RouterProvider>
     </IconProvider>
   );
 };

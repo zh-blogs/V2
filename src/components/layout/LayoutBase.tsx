@@ -29,7 +29,7 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <footer className="absolute bottom-6 w-full mx-auto text-center text-[#9E9E9E]">
+    <footer className="mb-4 w-full mx-auto text-center text-[#9E9E9E]">
       <div>© 中文博客导航 2022 - 2022</div>
       <div>
         <a href="https://beian.miit.gov.cn/" target="_blank">
@@ -53,13 +53,13 @@ interface LayoutBaseProps {
 const LayoutBase = ({ children }: LayoutBaseProps) => {
   return (
     <>
-      <div className="h-[785px] max-w-[1100px] mx-auto mt-14 flex flex-col justify-between">
+      <div className="max-w-[1100px] mx-auto mt-[60px] flex flex-col gap-4">
         <Box className="h-[200px]">
           <Header />
         </Box>
         {children}
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };

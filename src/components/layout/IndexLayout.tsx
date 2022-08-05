@@ -24,7 +24,7 @@ const IndexLayout = () => {
           ))}
         </nav>
       </Box>
-      <Box className="h-[498px]">
+      <Box className="min-h-[498px]">
         <main>
           <Outlet />
         </main>

@@ -1,5 +1,6 @@
 import Box from '../elements/Box';
 import Button from '../elements/Button';
+import TabItem from '../elements/TabItem';
 import { Aiming, Edit, Plus, Shuffle } from '@icon-park/react';
 
 interface MainLayoutProps {
@@ -29,7 +30,12 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           </div>
         </div>
       </Box>
-      <Box className="h-[59px]"></Box>
+      <Box className="h-[59px] flex gap-10 justify-center">
+        <TabItem selected>精选博客</TabItem>
+        <TabItem>随机博客</TabItem>
+        <TabItem>博客一览</TabItem>
+        <TabItem>关于我们</TabItem>
+      </Box>
       <Box className="h-[498px]">{children}</Box>
     </main>
   );

@@ -1,6 +1,7 @@
+import { Aiming, Edit, Github, Plus, Shuffle } from '@icon-park/react';
+
 import Box from '../elements/Box';
 import Button from '../elements/Button';
-import { Aiming, Edit, Github, Plus, Shuffle } from '@icon-park/react';
 
 const Header = () => {
   return (

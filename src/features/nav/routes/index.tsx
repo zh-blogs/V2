@@ -1,8 +1,9 @@
+import { useRoutes } from 'react-router-dom';
+
 import AboutPage from './About';
 import AllPage from './All';
 import FeaturedPage from './Featured';
 import RandomPage from './Random';
-import { useRoutes } from 'react-router-dom';
 
 const NavRoutes = () => {
   const element = useRoutes([

@@ -1,7 +1,8 @@
+import { Outlet, useLocation } from 'react-router-dom';
+
 import Box from '../elements/Box';
 import TabItem from '../elements/TabItem';
 import LayoutBase from './LayoutBase';
-import { Outlet, useLocation } from 'react-router-dom';
 
 const tabs = [
   { name: '精选博客', path: '/' },

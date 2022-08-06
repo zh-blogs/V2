@@ -4,7 +4,7 @@ import FeaturedPage from './Featured';
 import RandomPage from './Random';
 import { useRoutes } from 'react-router-dom';
 
-const IndexRoutes = () => {
+const NavRoutes = () => {
   const element = useRoutes([
     { path: '', element: <FeaturedPage /> },
     { path: 'random', element: <RandomPage /> },
@@ -14,4 +14,4 @@ const IndexRoutes = () => {
   return <>{element}</>;
 };
 
-export default IndexRoutes;
+export default NavRoutes;

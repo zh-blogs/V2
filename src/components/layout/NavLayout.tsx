@@ -10,7 +10,7 @@ const tabs = [
   { name: '关于我们', path: '/about' },
 ];
 
-const IndexLayout = () => {
+const NavLayout = () => {
   const { pathname } = useLocation();
 
   return (
@@ -33,4 +33,4 @@ const IndexLayout = () => {
   );
 };
 
-export default IndexLayout;
+export default NavLayout;

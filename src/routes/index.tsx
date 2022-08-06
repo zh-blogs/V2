@@ -1,12 +1,12 @@
-import IndexLayout from '@/components/layout/IndexLayout';
-import IndexRoutes from '@/features/index/routes';
+import NavLayout from '@/components/layout/NavLayout';
+import NavRoutes from '@/features/nav/routes';
 import { useRoutes } from 'react-router-dom';
 
 const AppRouter = () => {
   const element = useRoutes([
     {
-      element: <IndexLayout />,
-      children: [{ path: '/*', element: <IndexRoutes /> }],
+      element: <NavLayout />,
+      children: [{ path: '/*', element: <NavRoutes /> }],
     },
   ]);
   return <>{element}</>;

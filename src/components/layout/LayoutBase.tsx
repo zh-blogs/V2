@@ -6,15 +6,13 @@ const Header = () => {
   return (
     <header className="h-full py-2 pl-11 flex gap-10 items-center">
       <img src="/logo.svg" alt="Logo" />
-      <div className="h-full py-8 flex flex-col justify-between">
-        <div>
-          <h1 className="text-3xl font-bold tracking-wider text-[#1B1B1B]">
+      <div className="h-full py-8 flex flex-col justify-between ">
+        <div className="text-[#1B1B1B]">
+          <h1 className="text-3xl font-bold tracking-wider">
             中文博客列表导航
           </h1>
           <div className="my-1 border-t border-2 border-black w-64" />
-          <h2 className="tracking-wide text-[#1B1B1B]">
-            尝试链接几乎所有的中文博客
-          </h2>
+          <h2 className="tracking-wide ">尝试链接几乎所有的中文博客</h2>
         </div>
         <div className="flex gap-8">
           <Button icon={<Plus />}>申请添加</Button>

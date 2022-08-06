@@ -8,7 +8,7 @@ const iconConfig: typeof DEFAULT_ICON_CONFIGS = {
   size: 16,
   colors: {
     ...DEFAULT_ICON_CONFIGS.colors,
-    outline: { ...DEFAULT_ICON_CONFIGS.colors.outline, fill: '#FFF' },
+    outline: { ...DEFAULT_ICON_CONFIGS.colors.outline, fill: '#F9F9F9' },
   },
 };
 

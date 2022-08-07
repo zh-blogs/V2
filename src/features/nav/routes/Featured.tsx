@@ -4,6 +4,7 @@ import Button from '@/components/elements/Button';
 import MainLayout from '@/components/layout/MainLayout';
 
 import { getFeaturedBlogs } from '../api';
+import BlogCards from '../components/BlogCards';
 
 const Actions = () => {
   return (
@@ -19,8 +20,7 @@ const FeaturedPage = () => {
 
   return (
     <MainLayout description="产有优质内容的原创独立博客" actions={<Actions />}>
-      Featured
-      {JSON.stringify(data)}
+      <BlogCards blogs={data} />
     </MainLayout>
   );
 };

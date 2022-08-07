@@ -8,8 +8,9 @@ import BlogCards from '../components/BlogCards';
 
 const RandomPage = () => {
   const { data, refetch, isRefetching } = useQuery(
-    ['featuredBlogs'],
+    ['randomBlogs'],
     getRandomBlogs,
+    { staleTime: Infinity },
   );
 
   return (

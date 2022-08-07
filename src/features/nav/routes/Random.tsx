@@ -1,5 +1,27 @@
+import { useQuery } from '@tanstack/react-query';
+
+import Button from '@/components/elements/Button';
+import MainLayout from '@/components/layout/MainLayout';
+
+import { getRandomBlogs } from '../api';
+import BlogCards from '../components/BlogCards';
+
 const RandomPage = () => {
-  return <div>Random</div>;
+  const { data, refetch } = useQuery(['featuredBlogs'], getRandomBlogs);
+
+  return (
+    <MainLayout
+      description="随机展示列表中的部分博客"
+      actions={
+        <>
+          <Button>博客错误上报</Button>
+          <Button onClick={() => refetch()}>刷新随机博客</Button>
+        </>
+      }
+    >
+      <BlogCards blogs={data} />
+    </MainLayout>
+  );
 };
 
 export default RandomPage;

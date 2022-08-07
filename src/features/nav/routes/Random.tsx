@@ -7,7 +7,10 @@ import { getRandomBlogs } from '../api';
 import BlogCards from '../components/BlogCards';
 
 const RandomPage = () => {
-  const { data, refetch } = useQuery(['featuredBlogs'], getRandomBlogs);
+  const { data, refetch, isRefetching } = useQuery(
+    ['featuredBlogs'],
+    getRandomBlogs,
+  );
 
   return (
     <MainLayout
@@ -15,7 +18,9 @@ const RandomPage = () => {
       actions={
         <>
           <Button>博客错误上报</Button>
-          <Button onClick={() => refetch()}>刷新随机博客</Button>
+          <Button onClick={() => refetch()} disabled={isRefetching}>
+            刷新随机博客
+          </Button>
         </>
       }
     >

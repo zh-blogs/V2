@@ -14,6 +14,8 @@
   "dependencies": {
     "@headlessui/react": "^1.6.6",
     "@icon-park/react": "^1.4.2",
+    "@tanstack/react-query": "^4.0.10",
+    "axios": "^0.27.2",
     "clsx": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -34,6 +36,7 @@
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "lint-staged": "^13.0.3",
+    "msw": "^0.44.2",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "simple-git-hooks": "^2.8.0",
@@ -48,5 +51,8 @@
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }

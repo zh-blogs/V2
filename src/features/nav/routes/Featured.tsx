@@ -1,5 +1,9 @@
+import { useQuery } from '@tanstack/react-query';
+
 import Button from '@/components/elements/Button';
 import MainLayout from '@/components/layout/MainLayout';
+
+import { getFeaturedBlogs } from '../api';
 
 const Actions = () => {
   return (
@@ -11,9 +15,12 @@ const Actions = () => {
 };
 
 const FeaturedPage = () => {
+  const { data } = useQuery(['featuredBlogs'], getFeaturedBlogs);
+
   return (
     <MainLayout description="产有优质内容的原创独立博客" actions={<Actions />}>
       Featured
+      {JSON.stringify(data)}
     </MainLayout>
   );
 };

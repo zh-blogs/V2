@@ -12,11 +12,7 @@ const iconConfig: typeof DEFAULT_ICON_CONFIGS = {
   },
 };
 
-interface IconProviderProps {
-  children: React.ReactNode;
-}
-
-const IconProvider = ({ children }: IconProviderProps) => {
+const IconProvider = ({ children }: { children: React.ReactNode }) => {
   return <IconParkProvider value={iconConfig}>{children}</IconParkProvider>;
 };
 

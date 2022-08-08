@@ -21,7 +21,7 @@ const Button = ({
       onClick={onClick}
       className={clsx(
         className,
-        'w-[80px] lg:w-[90px] h-[25px] transition-colors bg-[#40A9FF] hover:bg-[#2B699C] active:bg-[#8CCBFF] disabled:bg-[#BFBDB6] text-[#F9F9F9] disabled:text-[#73716D] text-[10px] lg:text-xs font-medium leading-6 shadow-md rounded-[1px]',
+        'w-[80px] lg:w-[90px] h-[25px] transition-colors bg-[#40A9FF] hover:bg-[#2B699C] active:bg-[#8CCBFF] disabled:bg-[#BFBDB6] text-[#F9F9F9] disabled:text-[#73716D] text-[10px] lg:text-xs font-medium shadow-md rounded-[1px]',
       )}
     >
       {icon ?? <span>{icon}</span>}

@@ -16,8 +16,8 @@ const NavLayout = () => {
 
   return (
     <LayoutBase>
-      <Box className="h-[50px] lg:h-[59px]">
-        <nav className="flex gap-4 lg:gap-10 justify-center text-xs lg:text-base">
+      <Box className="h-[40px] lg:h-[60px]">
+        <nav className="h-full flex gap-4 lg:gap-10 justify-center items-center text-xs lg:text-base">
           {tabs.map((tab, index) => (
             <TabItem key={index} to={tab.path} selected={pathname === tab.path}>
               {tab.name}

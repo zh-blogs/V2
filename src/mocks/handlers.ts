@@ -8,6 +8,6 @@ export const handlers = [
     return res(ctx.json(blogs));
   }),
   rest.get('/mock/random-blogs', (_, res, ctx) => {
-    return res(ctx.json(shuffleArray(blogs)));
+    return res(ctx.delay(1000), ctx.json(shuffleArray(blogs)));
   }),
 ];

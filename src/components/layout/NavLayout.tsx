@@ -16,8 +16,8 @@ const NavLayout = () => {
 
   return (
     <LayoutBase>
-      <Box className="h-[59px]">
-        <nav className="flex gap-10 justify-center">
+      <Box className="h-[50px] lg:h-[59px]">
+        <nav className="flex gap-4 lg:gap-10 justify-center text-xs lg:text-base">
           {tabs.map((tab, index) => (
             <TabItem key={index} to={tab.path} selected={pathname === tab.path}>
               {tab.name}
@@ -25,8 +25,8 @@ const NavLayout = () => {
           ))}
         </nav>
       </Box>
-      <Box className="min-h-[498px]">
-        <main className="my-7 mx-16">
+      <Box className="mx-5 lg:mx-0">
+        <main className="mx-[10px] lg:mx-16 mb-8">
           <Outlet />
         </main>
       </Box>

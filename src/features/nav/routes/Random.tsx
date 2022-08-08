@@ -1,30 +1,23 @@
 import { useQuery } from '@tanstack/react-query';
 
-import Button from '@/components/elements/Button';
+import type { Actions } from '@/components/layout/MainLayout';
 import MainLayout from '@/components/layout/MainLayout';
 
 import { getRandomBlogs } from '../api';
 import BlogCards from '../components/BlogCards';
 
 const RandomPage = () => {
-  const { data, refetch, isRefetching } = useQuery(
-    ['randomBlogs'],
-    getRandomBlogs,
-    { staleTime: Infinity },
-  );
+  const { data, refetch } = useQuery(['randomBlogs'], getRandomBlogs, {
+    staleTime: Infinity,
+  });
+
+  const actions: Actions = [
+    { name: '博客错误上报' },
+    { name: '刷新随机博客', action: () => refetch() },
+  ];
 
   return (
-    <MainLayout
-      description="随机展示列表中的部分博客"
-      actions={
-        <>
-          <Button>博客错误上报</Button>
-          <Button onClick={() => refetch()} disabled={isRefetching}>
-            刷新随机博客
-          </Button>
-        </>
-      }
-    >
+    <MainLayout description="随机展示列表中的部分博客" actions={actions}>
       <BlogCards blogs={data} />
     </MainLayout>
   );

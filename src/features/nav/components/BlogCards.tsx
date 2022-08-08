@@ -7,7 +7,7 @@ interface BlogCardsProps {
 
 const BlogCards = ({ blogs = [] }: BlogCardsProps) => {
   return (
-    <div className="mx-14 grid grid-cols-3 gap-x-10 gap-y-6">
+    <div className="mx-10 lg:mx-14 grid grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-6">
       {blogs.map((blog) => (
         <BlogCard key={blog.id} blog={blog} />
       ))}

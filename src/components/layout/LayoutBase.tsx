@@ -16,8 +16,8 @@ const HeaderActions = () => {
 
 const Header = () => {
   return (
-    <header className="h-full py-3 lg:ml-11">
-      <div className="flex items-center gap-1 lg:gap-10 lg:h-full justify-center lg:justify-start">
+    <header className="h-full pt-3 lg:pt-0 lg:ml-11">
+      <div className="flex items-center gap-4 lg:gap-10 lg:h-full justify-center lg:justify-start mb-3 lg:mb-0">
         <img
           src="/logo.svg"
           alt="Logo"
@@ -72,7 +72,7 @@ const LayoutBase = ({ children }: LayoutBaseProps) => {
   return (
     <>
       <div className="max-w-[1100px] mx-auto lg:mt-[60px] flex flex-col gap-[10px] lg:gap-4">
-        <Box className="h-[160px] lg:h-[200px]">
+        <Box className="h-[170px] lg:h-[200px]">
           <Header />
         </Box>
         {children}

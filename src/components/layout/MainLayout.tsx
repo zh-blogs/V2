@@ -56,28 +56,27 @@ interface MainLayoutProps {
 
 const MainLayout = ({ children, description, actions }: MainLayoutProps) => {
   return (
-    <>
-      <div className="w-full mb-5 border-b-[1px] border-black">
-        <div className="mb-[5px] lg:mb-[18px] mt-[14px] lg:mt-[30px] mx-5 lg:mx-9 flex gap-10">
-          <div className="text-[#9E9E9E] font-medium flex-grow text-[8px] lg:text-base leading-7 lg:leading-none">
-            {description}
-          </div>
-          {actions?.map((action, index) => (
-            <Button
-              key={index}
-              onClick={action.action}
-              className="hidden lg:block"
-            >
-              {action.name}
-            </Button>
-          ))}
-          <div className="lg:hidden">
-            <MobileActionsMenu actions={actions} />
-          </div>
+    <main className="mx-[10px] lg:mx-16 flex flex-col gap-2 mt-2 mb-8 lg:gap-6 lg:mt-6 lg:mb-12">
+      <div className="mx-5 lg:mx-9 flex gap-10">
+        <div className="text-[#9E9E9E] font-medium flex-grow text-[8px] lg:text-base leading-7 lg:leading-6">
+          {description}
+        </div>
+        {actions?.map((action, index) => (
+          <Button
+            key={index}
+            onClick={action.action}
+            className="hidden lg:block"
+          >
+            {action.name}
+          </Button>
+        ))}
+        <div className="lg:hidden">
+          <MobileActionsMenu actions={actions} />
         </div>
       </div>
-      {children}
-    </>
+      <div className="border-b-[1px] border-black"></div>
+      <div>{children}</div>
+    </main>
   );
 };
 

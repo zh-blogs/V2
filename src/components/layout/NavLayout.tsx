@@ -26,9 +26,7 @@ const NavLayout = () => {
         </nav>
       </Box>
       <Box className="mx-5 lg:mx-0">
-        <main className="mx-[10px] lg:mx-16 mb-8">
-          <Outlet />
-        </main>
+        <Outlet />
       </Box>
     </LayoutBase>
   );

@@ -1,17 +1,70 @@
 import router from "next/router";
 import React from "react";
 
-import { Card, Alert, Typography, notification } from "antd";
+import {
+  Card,
+  Alert,
+  Typography,
+  notification,
+  Input,
+  InputProps,
+  FormInstance,
+} from "antd";
 import { v4 as uuid } from "uuid";
 
-import { Form, FormItemProps } from "@/components/antd";
+import { Button, Form, FormItemProps } from "@/components/antd";
 import { Flex } from "@/components/flex";
 
-import { getDomain } from "@/utils";
-import { getBlogs, getTags, addBlog } from "@/utils/api";
+import {
+  getDomain,
+  shouldString,
+  showNotification,
+  Blog,
+  Combine,
+} from "@/utils";
+import { getBlogs, getTags, addBlog, blogAnalysis } from "@/utils/api";
+
+function AutoFill(props: Combine<{ form?: FormInstance<Blog> }, InputProps>) {
+  const { value, form, ...restProps } = props;
+  const [loading, setLoading] = React.useState(false);
+
+  return (
+    <Flex direction="LR">
+      <Flex.Item style={{ flex: "auto" }}>
+        <Input {...restProps} value={value} />
+      </Flex.Item>
+      <Button
+        disabled={!value}
+        text="一键填写"
+        loading={loading}
+        onClick={async () => {
+          setLoading(true);
+          const res = await blogAnalysis({ url: shouldString(value) });
+          if (showNotification(res) && !!res.data && !!form) {
+            const blog = res.data;
+            notification.success({
+              message: "获得如下数据",
+              description: (
+                <ul>
+                  {Object.keys(res.data || {}).map((key) => (
+                    <li>{`${key}: ${blog[key as keyof Blog]}`}</li>
+                  ))}
+                </ul>
+              ),
+            });
+            form.setFieldsValue(res.data);
+          }
+          setLoading(false);
+        }}
+      />
+    </Flex>
+  );
+}
 
 export default function AddBlog() {
   const [tags, setTags] = React.useState<string[]>([]);
+  const [form] = Form.useForm<Blog>();
+
   React.useEffect(() => {
     getTags({}).then((resp) => {
       if (!!resp.success && !!resp.data) {
@@ -28,6 +81,7 @@ export default function AddBlog() {
           label: "博客首页",
           required: true,
           placeholder: "贵博客的域名（带http(s)://）",
+          render: () => <AutoFill form={form} />,
           rules: [
             {
               validator: async (_, value) => {
@@ -87,7 +141,7 @@ export default function AddBlog() {
           placeholder: "您选择的内容，将作为管理员的分类参考",
         },
       ] as FormItemProps[],
-    [tags],
+    [tags, form],
   );
 
   return (
@@ -137,6 +191,7 @@ export default function AddBlog() {
           }
         />
         <Form
+          form={form}
           title="博客登记"
           forms={forms}
           validateTrigger="onBlur"

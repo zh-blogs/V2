@@ -320,6 +320,17 @@ export async function getDomainCharts(params: {
 }
 
 /**
+ * 提取博客信息
+ * @param url 博客链接
+ * @returns 提取的信息
+ */
+export async function blogAnalysis(params: {
+  url?: string;
+}): Promise<Result<Blog>> {
+  return sendRequest("get", "/analysis", params);
+}
+
+/**
  * 测试接口
  * @param name 名称
  * @returns 测试返回

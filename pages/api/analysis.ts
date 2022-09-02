@@ -21,8 +21,9 @@ const rssPath = [
   "/feed/atom",
   "/feed/rss",
   "/feed/rss2",
+  "/?feed=rss2"
 ];
-const sitemapPath = ["/sitemap.xml", "/sitemap.txt"];
+const sitemapPath = ["/sitemap.xml", "/wp-sitemap.xml", "/sitemap.txt"];
 
 async function getFirstURL(
   url: string,

@@ -1,5 +1,4 @@
 import React from "react";
-
 import { ObjectFilter, ComponentProps } from "@/utils";
 
 export declare type SizeProp = number | "none" | "small" | "middle" | "large";
@@ -8,12 +7,12 @@ function getSize(size: SizeProp): number {
   return size === "large"
     ? 20
     : size === "middle"
-    ? 10
-    : size === "small"
-    ? 5
-    : size === "none"
-    ? 0
-    : size;
+      ? 10
+      : size === "small"
+        ? 5
+        : size === "none"
+          ? 0
+          : size;
 }
 
 export declare type FlexProps = ComponentProps<{
@@ -50,7 +49,7 @@ const FlexComponent: React.ForwardRefRenderFunction<
     ...restProps
   } = props;
   const list = (Array.isArray(children) ? children : [children]).filter(
-    (s) => !!s,
+    (s) => !!s
   );
   const dir =
     direction === "LR" ? "row" : direction === "TB" ? "column" : direction;
@@ -80,37 +79,37 @@ const FlexComponent: React.ForwardRefRenderFunction<
         ? 0
         : list.length - 1
       : dir === "row" || dir === "column"
-      ? list.length - 1
-      : 0;
+        ? list.length - 1
+        : 0;
   switch (dir) {
-    case "row": {
-      after = "marginRight";
-      before = "marginLeft";
-      subAxis1 = "marginTop";
-      subAxis2 = "marginBottom";
-      break;
-    }
-    case "column": {
-      after = "marginBottom";
-      before = "marginTop";
-      subAxis1 = "marginLeft";
-      subAxis2 = "marginRight";
-      break;
-    }
-    case "row-reverse": {
-      after = "marginLeft";
-      before = "marginRight";
-      subAxis1 = "marginTop";
-      subAxis2 = "marginBottom";
-      break;
-    }
-    case "column-reverse": {
-      after = "marginTop";
-      before = "marginBottom";
-      subAxis1 = "marginLeft";
-      subAxis2 = "marginRight";
-      break;
-    }
+  case "row": {
+    after = "marginRight";
+    before = "marginLeft";
+    subAxis1 = "marginTop";
+    subAxis2 = "marginBottom";
+    break;
+  }
+  case "column": {
+    after = "marginBottom";
+    before = "marginTop";
+    subAxis1 = "marginLeft";
+    subAxis2 = "marginRight";
+    break;
+  }
+  case "row-reverse": {
+    after = "marginLeft";
+    before = "marginRight";
+    subAxis1 = "marginTop";
+    subAxis2 = "marginBottom";
+    break;
+  }
+  case "column-reverse": {
+    after = "marginTop";
+    before = "marginBottom";
+    subAxis1 = "marginLeft";
+    subAxis2 = "marginRight";
+    break;
+  }
   }
 
   if (mainAxis === "space-around") {
@@ -195,5 +194,5 @@ export const Flex = Object.assign(
   React.forwardRef<HTMLDivElement, FlexProps>(FlexComponent),
   {
     Item: FlexItem,
-  },
+  }
 );

@@ -1,27 +1,24 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./tags.module.scss";
-import { RightOutlined } from "@ant-design/icons";
-import { Alert, Input } from "antd";
+import { RightOutlined } from '@ant-design/icons';
+import { Loading, Card, Button } from '@/components/antd';
+import { Tag } from '@/components/tag';
+import { Flex } from '@/components/flex';
 
-import { Loading, Card, Button } from "@/components/antd";
-import { Flex } from "@/components/flex";
-import { AdminLayout } from "@/components/layout";
-import { Tag } from "@/components/tag";
-
-import { showNotification } from "@/utils";
-import { getTagsWithCount, renameTag, deleteTag } from "@/utils/api";
+import { getTagsWithCount, renameTag, deleteTag } from '@/utils/api';
+import { Alert, Input } from 'antd';
+import styles from './tags.module.scss';
+import { showNotification } from '@/utils';
+import { AdminLayout } from '@/components/layout';
 
 export default function TagsManager() {
-  return (
-    <AdminLayout>
-      <AdminTagsManager />
-    </AdminLayout>
-  );
+  return <AdminLayout>
+    <AdminTagsManager />
+  </AdminLayout>;
 }
 
 export function AdminTagsManager() {
-  const [tags, setTags] = React.useState<{ tag: string; count: number }[]>([]);
+  const [tags, setTags] = React.useState<{tag:string, count:number}[]>([]);
   const [loading, setLoading] = React.useState<boolean>(false);
 
   const initial = React.useCallback(() => {
@@ -38,56 +35,42 @@ export function AdminTagsManager() {
     initial();
   }, [initial]);
 
-  const [tag, setTag] = React.useState<string>("");
+  const [tag, setTag] = React.useState<string>('');
   const [count, setCount] = React.useState<number>(0);
-  const [newTag, setNewTag] = React.useState<string>("");
+  const [newTag, setNewTag] = React.useState<string>('');
 
-  const renameTagCallback = React.useCallback(
-    (tag: string, newTag: string) => {
-      setLoading(true);
-      renameTag({ tag, newTag })
-        .then((resp) => {
-          if (showNotification(resp, true)) {
-            initial();
-            setTag("");
-            setNewTag("");
-          }
-        })
-        .finally(() => setLoading(false));
-    },
-    [setLoading, initial],
-  );
+  const renameTagCallback = React.useCallback((tag: string, newTag: string) => {
+    setLoading(true);
+    renameTag({ tag, newTag }).then((resp) => {
+      if (showNotification(resp, true)) {
+        initial();
+        setTag("");
+        setNewTag("");
+      }
+    }).finally(() => setLoading(false));
+  }, [setLoading, initial]);
 
-  const deleteTagCallback = React.useCallback(
-    (tag: string) => {
-      setLoading(true);
-      deleteTag({ tag })
-        .then((resp) => {
-          if (showNotification(resp, true)) {
-            initial();
-            setTag("");
-            setNewTag("");
-          }
-        })
-        .finally(() => setLoading(false));
-    },
-    [setLoading, initial],
-  );
+  const deleteTagCallback = React.useCallback((tag: string) => {
+    setLoading(true);
+    deleteTag({ tag }).then((resp) => {
+      if(showNotification(resp, true)) {
+        initial();
+        setTag("");
+        setNewTag("");
+      }
+    }).finally(() => setLoading(false));
+  }, [setLoading, initial]);
 
   return (
     <Card>
       <Loading loading={loading}>
         <Flex direction="TB" fullWidth>
-          <Alert
-            message="提示"
-            description={
-              <ul>
-                <li>将标签修改为另一个已有标签，将执行合并</li>
-                <li>请在与组内其他人员商讨后再进行修改</li>
-              </ul>
-            }
-            style={{ width: "100%" }}
-          />
+          <Alert message="提示" description={
+            <ul>
+              <li>将标签修改为另一个已有标签，将执行合并</li>
+              <li>请在与组内其他人员商讨后再进行修改</li>
+            </ul>
+          } style={{ width: "100%" }} />
           <Flex direction="LR" mainAxis="center">
             <Input value={tag} disabled />
             <RightOutlined />
@@ -102,7 +85,7 @@ export function AdminTagsManager() {
             <Button
               text="修改"
               type="primary"
-              disabled={tag === "" || newTag === ""}
+              disabled={tag === '' || newTag === ''}
               loading={loading}
               confirm={`${count} 个博客的 ${tag} 标签将变更为 ${newTag} 标签`}
               onClick={() => renameTagCallback(tag, newTag)}
@@ -111,7 +94,7 @@ export function AdminTagsManager() {
               text="删除"
               type="primary"
               danger
-              disabled={tag === ""}
+              disabled={tag === ''}
               loading={loading}
               confirm={`${count} 个博客将失去 ${tag} 标签`}
               onClick={() => deleteTagCallback(tag)}
@@ -131,7 +114,7 @@ export function AdminTagsManager() {
                 onClick={() => {
                   setTag(item.tag);
                   setCount(item.count);
-                  setNewTag("");
+                  setNewTag('');
                 }}
               />
             ))}

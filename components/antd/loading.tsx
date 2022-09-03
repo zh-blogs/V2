@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Spin, SpinProps } from "antd";
 
 import { Combine } from "@/utils";
@@ -18,7 +17,7 @@ export declare type LoadingProps = Combine<
  */
 export function Loading(props: LoadingProps) {
   const { loading = true, style, ...restProps } = props;
-
+  
   return (
     <Spin
       spinning={loading}

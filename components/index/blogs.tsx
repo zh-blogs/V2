@@ -1,10 +1,7 @@
 import React from "react";
 
-import { RocketOutlined } from "@ant-design/icons";
 import { Table, TableColumnsType, Input, Button, Collapse } from "antd";
-
-import { Flex } from "@/components/flex";
-import { Tag } from "@/components/tag";
+import { RocketOutlined } from "@ant-design/icons";
 
 import {
   Blog,
@@ -14,6 +11,8 @@ import {
   shouldNumber,
   shouldArraySplit,
 } from "@/utils";
+import { Tag } from "@/components/tag";
+import { Flex } from "@/components/flex";
 import { getBlogs, getTags } from "@/utils/api";
 
 const pageSize = 10;
@@ -54,33 +53,33 @@ export function Blogs() {
 
   const [allTags, setAllTags] = React.useState<string[]>([]);
   const [selectedTags, setSelectedTags] = React.useState<string[]>(
-    shouldArraySplit(query.selectedTags),
+    shouldArraySplit(query.selectedTags)
   );
   const unselectedTags = React.useMemo(() => {
     var set = new Set(allTags);
     for (const tag of selectedTags) {
       set.delete(tag as never);
     }
-
+    
     return Array.from(set);
   }, [allTags, selectedTags]);
   React.useEffect(() => {
     // 同步标签到 query
-    setQuery({ tags: selectedTags.join(","), page: "1" });
+    setQuery({ tags: selectedTags.join(","), page:"1" });
   }, [selectedTags, setQuery]);
 
   const addTag = React.useCallback(
     (tag: string) => {
       setSelectedTags([...selectedTags, tag]);
     },
-    [selectedTags, setSelectedTags],
+    [selectedTags, setSelectedTags]
   );
 
   const removeTag = React.useCallback(
     (tag: string) => {
       setSelectedTags(selectedTags.filter((t) => t !== tag));
     },
-    [selectedTags, setSelectedTags],
+    [selectedTags, setSelectedTags]
   );
 
   React.useEffect(() => {
@@ -97,7 +96,7 @@ export function Blogs() {
     const page = shouldNumber(query.page, 1);
     const tagsString = shouldString(query.tags);
     const tags = tagsString.split(",");
-
+    
     return {
       search,
       tags,
@@ -107,6 +106,7 @@ export function Blogs() {
   }, [query]);
 
   const [totalBlogs, setTotalBlogs] = React.useState(0);
+
 
   // query 改变时，更新列表
   const getPage = React.useCallback(() => {

@@ -61,14 +61,14 @@ async function auth(code:string, state :string):Promise<string> {
 获取用户信息
 */
 async function getInfo(token :string): Promise<UserInfo> {
-  const resp = await fetch("https://proxy.ohyee.cc/https://api.github.com/user", {
+  const resp = await fetch("http://proxy.ohyee.cc/api.github.com/user", {
     headers: {
       'Authorization':`token ${token}`
     }
   });
   
   const info = await resp.json(); 
-  const resp2 = await fetch(`https://proxy.ohyee.cc/https://api.github.com/orgs/zh-blogs/members/${info.login}`);  
+  const resp2 = await fetch(`http://proxy.ohyee.cc/api.github.com/orgs/zh-blogs/members/${info.login}`);  
     
   return { ...info, admin: resp2.status !== 404 };
 }

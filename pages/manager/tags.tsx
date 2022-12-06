@@ -78,7 +78,7 @@ export function AdminTagsManager() {
               value={newTag}
               onChange={(e) => {
                 if (!!e && !!e.target) {
-                  setNewTag(e.target.value.toLowerCase());
+                  setNewTag(e.target.value);
                 }
               }}
             />

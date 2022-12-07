@@ -1,10 +1,9 @@
-import React from "react";
-
-import { ContextType } from "./types";
+import React from 'react';
+import { ContextType } from './types';
 
 export const defaultContext: ContextType = {
-  setContext: () => {},
-
+  setContext: () => { },
+    
   layoutClassName: "",
   layoutStyle: {},
   width: 0,

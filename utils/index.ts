@@ -1,30 +1,12 @@
-import Router, { useRouter } from "next/router";
-import React from "react";
-
-import { makeQuery } from "./api";
-import { defaultContext, Context } from "./context";
+import { Blog, Combine, Result, UnwrapPromise, ComponentProps, APIRequest, UserInfo, ContextType } from "./types";
 import { showNotification } from "./notification";
-import {
-  Blog,
-  Combine,
-  Result,
-  UnwrapPromise,
-  ComponentProps,
-  APIRequest,
-  UserInfo,
-  ContextType,
-} from "./types";
+import React from "react";
+import Router, { useRouter } from "next/router";
+import { makeQuery } from "./api";
+import { defaultContext, Context } from './context';
 
-export type {
-  Blog,
-  Combine,
-  Result,
-  UnwrapPromise,
-  ComponentProps,
-  APIRequest,
-  UserInfo,
-  ContextType,
-};
+
+export type { Blog, Combine, Result, UnwrapPromise, ComponentProps, APIRequest, UserInfo, ContextType };
 export { showNotification, defaultContext, Context };
 
 /**
@@ -32,10 +14,7 @@ export { showNotification, defaultContext, Context };
  * @param obj 要筛选的对象
  * @param callback 筛选回调
  */
-export function ObjectFilter<T>(
-  obj: T,
-  callback: (key: keyof T, value: T[keyof T]) => boolean,
-) {
+export function ObjectFilter<T>(obj: T, callback: (key: keyof T, value: T[keyof T]) => boolean) {
   var ret: Partial<T> = {};
   for (const key in obj) {
     const value = obj[key];
@@ -43,7 +22,7 @@ export function ObjectFilter<T>(
       ret[key] = value;
     }
   }
-
+  
   return ret;
 }
 
@@ -70,7 +49,7 @@ export function UnwrapArray<T>(arr: T[] | T, defaultValue: T): T {
   if (arr.length === 0) {
     return defaultValue;
   }
-
+  
   return arr[0];
 }
 
@@ -82,7 +61,7 @@ export function shouldArray<T>(value: T[] | T): T[] {
   if (Array.isArray(value)) {
     return value;
   }
-
+  
   return [value];
 }
 
@@ -90,10 +69,7 @@ export function shouldArray<T>(value: T[] | T): T[] {
  * 转换 @value 为数组（使用 @sep 分割
  * @param value 值
  */
-export function shouldArraySplit(
-  value: string | string[] | undefined,
-  sep = ",",
-): string[] {
+export function shouldArraySplit(value: string | string[] | undefined, sep = ","): string[] {
   if (!value) {
     return [];
   }
@@ -104,7 +80,7 @@ export function shouldArraySplit(
   if (!!v) {
     return v.split(sep);
   }
-
+  
   return [];
 }
 
@@ -120,7 +96,7 @@ export function shouldNumber(value: any, defaultValue = 0): number {
     if (isNaN(v)) {
       return defaultValue;
     }
-
+    
     return v;
   } catch (e) {
     return defaultValue;
@@ -135,7 +111,7 @@ export function shouldNumber(value: any, defaultValue = 0): number {
 export function shouldString(value: any, defaultValue = ""): string {
   try {
     value = UnwrapArray(value, defaultValue);
-
+    
     return `${value}`;
   } catch (e) {
     return defaultValue;
@@ -147,14 +123,11 @@ export function shouldString(value: any, defaultValue = ""): string {
  * @param arr 列表
  * @param defaultValue 列表为空时默认值
  */
-export function shouldNotUndefined<T>(
-  value: T | null | undefined,
-  defaultValue: T,
-): T {
+export function shouldNotUndefined<T>(value: T | null | undefined, defaultValue: T): T {
   if (value === undefined || value === null) {
     return defaultValue;
   }
-
+  
   return value;
 }
 
@@ -162,14 +135,12 @@ export function shouldNotUndefined<T>(
  * 将非异步函数异步化
  * @param callback 函数
  */
-export function promiselized<T extends (...arg: any) => any>(
-  callback: T,
-): (...args: any[]) => Promise<ReturnType<T>> {
-  return (...args: any) =>
-    new Promise((resolve) => {
-      resolve(callback(...args));
-    });
+export function promiselized<T extends (...arg: any) => any>(callback: T): (...args: any[]) => Promise<ReturnType<T>> {
+  return (...args: any) => new Promise((resolve) => {
+    resolve(callback(...args)); 
+  });
 }
+
 
 /**
  * React Hook 带回调的 useState
@@ -177,35 +148,30 @@ export function promiselized<T extends (...arg: any) => any>(
  */
 function useStateCallback<T>(defaultState: T) {
   const [state, setState] = React.useState(defaultState);
-  const cbRef = React.useRef<TypeStateCallback<T>>(() => {});
+  const cbRef = React.useRef<TypeStateCallback<T>>(() => { });
 
-  const setStateCallback = React.useCallback(
-    (state: T, callback?: TypeStateCallback<T>) => {
-      if (!!callback) {
-        cbRef.current = callback;
-      } else {
-        cbRef.current = () => {};
-      }
+  const setStateCallback = React.useCallback((state: T, callback?: TypeStateCallback<T>) => {
+    if (!!callback) {
+      cbRef.current = callback;
+    } else {
+      cbRef.current = () => { };
+    }
 
-      setState(state);
-    },
-    [],
-  );
+    setState(state);
+
+  }, []);
 
   React.useEffect(() => {
     if (!!cbRef.current) {
       cbRef.current(state);
-      cbRef.current = () => {};
+      cbRef.current = () => { };
     }
   }, [state]);
 
   return [state, setStateCallback] as [T, SetStateCallbackAction<T>];
 }
-export declare type TypeStateCallback<T> = (state?: T) => void;
-export declare type SetStateCallbackAction<T> = (
-  state: T,
-  callback?: TypeStateCallback<T>,
-) => void;
+export declare type TypeStateCallback<T> = (state?: T) => void
+export declare type SetStateCallbackAction<T> = (state: T, callback?: TypeStateCallback<T>) => void
 
 /**
  * React Hook 绑定路由参数
@@ -217,14 +183,11 @@ export function useQuery(defaultState?: TypeQuery) {
     ...defaultState,
     ...router.query,
   });
-  const callbackRef = React.useRef<SetStateCallbackAction<TypeQuery>>(() => {});
+  const callbackRef = React.useRef<SetStateCallbackAction<TypeQuery>>(() => { });
 
   const setQueryCallbackRef = React.useRef<setQueryCallback>();
   React.useEffect(() => {
-    (setQueryCallbackRef.current = (
-      newQuery: TypeQuery,
-      callback?: SetStateCallbackAction<TypeQuery>,
-    ) => {
+    setQueryCallbackRef.current = (newQuery: TypeQuery, callback?: SetStateCallbackAction<TypeQuery>) => {
       const url = new URL(window.location.href);
 
       var hrefQuery: { [key: string]: string } = {};
@@ -246,54 +209,47 @@ export function useQuery(defaultState?: TypeQuery) {
       if (!!callback) {
         callbackRef.current = callback;
       } else {
-        callbackRef.current = () => {};
+        callbackRef.current = () => { };
       }
-    }),
-      [query, setQuery, callbackRef];
+    }, [query, setQuery, callbackRef];
   }, [query, setQuery]);
 
-  const setQueryCallback = React.useCallback(
-    (newQuery: TypeQuery, callback?: SetStateCallbackAction<TypeQuery>) => {
-      if (!!setQueryCallbackRef.current) {
-        setQueryCallbackRef.current(newQuery, callback);
-      }
-    },
-    [setQueryCallbackRef],
-  );
+  const setQueryCallback = React.useCallback((newQuery: TypeQuery, callback?: SetStateCallbackAction<TypeQuery>) => {
+    if (!!setQueryCallbackRef.current) {
+      setQueryCallbackRef.current(newQuery, callback);
+    }
+  }, [setQueryCallbackRef]);
 
   React.useEffect(() => {
     if (!!callbackRef.current) {
       callbackRef.current(query);
     }
-    callbackRef.current = () => {};
+    callbackRef.current = () => { };
   }, [query]);
 
   return [query, setQueryCallback] as [
-    TypeQuery,
-    SetStateCallbackAction<TypeQuery>,
-  ];
+        TypeQuery,
+        SetStateCallbackAction<TypeQuery>
+    ];
 }
-declare type TypeQuery = { [key: string]: string | string[] | undefined };
-declare type setQueryCallback = (
-  _: TypeQuery,
-  __?: SetStateCallbackAction<TypeQuery>,
-) => void;
+declare type TypeQuery = { [key: string]: string | string[]|undefined };
+declare type setQueryCallback = (_: TypeQuery, __?: SetStateCallbackAction<TypeQuery>) => void
 
 /**
  * 获取地址栏的请求参数
  */
 function getHrefQuery() {
-  if (typeof window !== "undefined") {
+  if (typeof window !== 'undefined') {
     const url = new URL(window.location.href);
 
     var hrefQuery: { [key: string]: string } = {};
     url.searchParams.forEach((value, key) => {
       hrefQuery[key] = value;
     });
-
+  
     return hrefQuery;
   }
-
+  
   return {};
 }
 
@@ -325,12 +281,13 @@ export function isEqual(a: any, b: any) {
         return false;
       }
     }
-
+    
     return true;
   }
-
+  
   return false;
 }
+
 
 /**
  * 防抖，停止调用 ms 毫秒后才执行 callback
@@ -350,6 +307,7 @@ export function waitDone(callback: () => void, ms: number, key: string) {
 }
 const waitMap: { [key: string | number]: number } = {};
 
+
 /**
  * 获取 @url 的 host 部分
  * @param url 域名
@@ -357,7 +315,7 @@ const waitMap: { [key: string | number]: number } = {};
  */
 export function getDomain(url: string): string {
   const result = domainExtract.exec(url);
-
+  
   return !!result && result.length > 0 ? result[1] : url;
 }
 

@@ -1,7 +1,7 @@
 import { shouldString } from ".";
 import { isDevelopment } from "./env";
 import { Result, Blog, JSONObject, UserInfo } from "./types";
-import Cookie from "js-cookie";
+import Cookie from 'js-cookie';
 
 const backendURL = isDevelopment() ? "http://localhost:3000" : "";
 const apiPrefix = "/api/";
@@ -12,10 +12,7 @@ const apiPath = backendURL.replace(/\/*$/g, "") + apiPrefix;
  * 如 使用 `{ "id" : 1, "name": "a" }` 替换 `/api/blog/:id` 将返回 `/api/blog/1` 与 `{ "name": "a" }`
  * @returns 返回替换后的 path 及剩余的参数
  */
-export function replaceParams<T extends { [key: string]: any }>(
-  path: string,
-  params: T,
-): { path: string; params: Partial<T> } {
+export function replaceParams<T extends { [key: string]: any }>(path: string, params: T): { path: string, params: Partial<T> } {
   var finalPath = path;
   var p = { ...params };
 
@@ -32,7 +29,7 @@ export function replaceParams<T extends { [key: string]: any }>(
       }
     });
   }
-
+  
   return {
     path: finalPath,
     params: p,
@@ -44,60 +41,35 @@ export function replaceParams<T extends { [key: string]: any }>(
  * @param params 参数
  * @return 返回生成的 Query 字段
  */
-export function makeQuery(query: {
-  [key: string]: number | string | string[] | undefined;
-}): string {
-  return !!query
-    ? Object.keys(query)
-        .map((key) => {
-          const k = encodeURIComponent(key);
-          const value = query[key];
-          if (typeof value === "undefined") {
-            return "";
-          }
-          const v = encodeURIComponent(
-            Array.isArray(value) ? value.join(",") : value,
-          );
-
-          return `${k}=${v}`;
-        })
-        .join("&")
-    : "";
+export function makeQuery(query: { [key: string]: number | string | string[]|undefined }): string {
+  return !!query ? Object.keys(query).map((key) => {
+    const k = encodeURIComponent(key);
+    const value = query[key];
+    if (typeof value === "undefined") {
+      return "";
+    }
+    const v = encodeURIComponent(Array.isArray(value) ? value.join(",") : value);
+    
+    return `${k}=${v}`;
+  }).join("&") : "";
 }
 
-export async function sendRequest<T extends JSONObject, U>(
-  method: "get" | "post" | "put" | "delete",
-  path: string,
-  params: Partial<T>,
-): Promise<Result<U>> {
-  params = Object.keys(params).reduce(
-    (pre, cur) => ({
-      ...pre,
-      [cur]:
-        !!params[cur] && Array.isArray(params[cur])
-          ? (params[cur] as string[])
-              .map((item: string) => shouldString(item))
-              .join(",")
-          : params[cur],
-    }),
-    {},
-  );
+export async function sendRequest<T extends JSONObject, U>(method: "get" | "post" | "put" | "delete", path: string, params: Partial<T>): Promise<Result<U>> {
+  params = Object.keys(params).reduce((pre, cur) => ({
+    ...pre,
+    [cur]: !!params[cur] && Array.isArray(params[cur]) ? (params[cur] as string[]).map((item: string) => shouldString(item)).join(",") : params[cur]
+  }), {});
   ({ path, params } = replaceParams(path, params));
   if (method === "get") {
-    path = `${path}?${makeQuery(
-      params as unknown as { [key: string]: number | string },
-    )}`;
+    path = `${path}?${makeQuery(params as unknown as { [key: string]: number | string })}`;
   }
   try {
-    const resp = await fetch(
-      `${apiPath.replace(/\/*$/g, "")}/${path.replace(/^\/*/g, "")}`,
-      {
-        method,
-        body: method !== "get" ? JSON.stringify(params) : undefined,
-      },
-    );
+    const resp = await fetch(`${apiPath.replace(/\/*$/g, "")}/${path.replace(/^\/*/g, "")}`, {
+      method,
+      body: method !== "get" ? JSON.stringify(params) : undefined,
+    });
     const result: Result<U> = await resp.json();
-
+    
     return result;
   } catch (err: any) {
     return {
@@ -105,7 +77,9 @@ export async function sendRequest<T extends JSONObject, U>(
       message: err.message,
     };
   }
+
 }
+
 
 // /**
 //  * 获取博客总数
@@ -127,11 +101,10 @@ export async function getTags(params: {}): Promise<Result<string[]>> {
  * 获取博客标签（包括数量）
  * @returns 标签列表
  */
-export async function getTagsWithCount(params: {}): Promise<
-  Result<{ tag: string; count: number }[]>
-> {
+export async function getTagsWithCount(params: {}): Promise<Result<{tag:string, count:number}[]>> {
   return await sendRequest("get", "/tags/count", params);
 }
+
 
 /**
  * 获取博客数据
@@ -142,13 +115,7 @@ export async function getTagsWithCount(params: {}): Promise<
  * @param status (0 全部，1 展示，-1 不展示，2 推荐)
  * @returns 博客数据
  */
-export async function getBlogs(params: {
-  search?: string;
-  tags?: string[];
-  offset?: number;
-  size?: number;
-  status?: 0 | 1 | -1 | 2;
-}): Promise<Result<{ total: number; blogs: Blog[] }>> {
+export async function getBlogs(params: { search?: string, tags?: string[], offset?: number, size?: number, status?: 0 | 1 | -1 | 2 }): Promise<Result<{ total: number, blogs: Blog[] }>> {
   return await sendRequest("get", "/blogs", params);
 }
 
@@ -158,12 +125,9 @@ export async function getBlogs(params: {
  * @param blog 新博客数据
  * @returns 返回修改结果
  */
-export async function updateBlog(params: {
-  id: string;
-  blog: Blog;
-}): Promise<Result<null>> {
+export async function updateBlog(params: { id: string, blog: Blog }): Promise<Result<null>> {
   const token = Cookie.get("token");
-
+  
   return await sendRequest("post", "/blog", { token, ...params });
 }
 
@@ -174,7 +138,7 @@ export async function updateBlog(params: {
  */
 export async function addBlog(params: { blog: Blog }): Promise<Result<Blog>> {
   const token = Cookie.get("token");
-
+  
   return sendRequest("put", "/blog", { token, ...params });
 }
 
@@ -183,9 +147,7 @@ export async function addBlog(params: { blog: Blog }): Promise<Result<Blog>> {
  * @param id 博客 ID
  * @returns 返回删除结果
  */
-export async function deleteBlog(params: {
-  id: string;
-}): Promise<Result<Blog>> {
+export async function deleteBlog(params: { id: string }): Promise<Result<Blog>> {
   const token = Cookie.get("token");
 
   return sendRequest("delete", "/blog", { token, ...params });
@@ -197,12 +159,7 @@ export async function deleteBlog(params: {
  * @param tags 筛选标签
  * @returns 博客数据
  */
-export async function getRandomBlogs(params: {
-  search?: string;
-  tags?: string[];
-  n?: number;
-  status?: -1 | 0 | 1 | 2;
-}): Promise<Result<Blog[]>> {
+export async function getRandomBlogs(params: { search?: string, tags?: string[], n?: number, status?:-1|0|1|2}): Promise<Result<Blog[]>> {
   return await sendRequest("get", "/blogs/random", params);
 }
 
@@ -211,11 +168,10 @@ export async function getRandomBlogs(params: {
  * @param  名称
  * @returns 测试返回
  */
-export async function getUserInfo(params: {
-  token?: string;
-}): Promise<Result<UserInfo>> {
-  return sendRequest("get", "/token", params);
+export async function getUserInfo(params: { token?: string }): Promise<Result<UserInfo>> {
+  return sendRequest("get", "/token", params); 
 }
+
 
 /**
  * 修改标签
@@ -223,13 +179,10 @@ export async function getUserInfo(params: {
  * @param newTag 新标签
  * @returns 测试返回
  */
-export async function renameTag(params: {
-  tag: string;
-  newTag: string;
-}): Promise<Result<null>> {
+export async function renameTag(params: { tag: string, newTag: string }): Promise<Result<null>> {
   const token = Cookie.get("token");
-
-  return sendRequest("post", "/tag", { token, ...params });
+  
+  return sendRequest("post", "/tag", { token, ...params }); 
 }
 
 /**
@@ -237,25 +190,22 @@ export async function renameTag(params: {
  * @param tag 标签
  * @returns 测试返回
  */
-export async function deleteTag(params: {
-  tag: string;
-}): Promise<Result<null>> {
+export async function deleteTag(params: { tag: string }): Promise<Result<null>> {
   const token = Cookie.get("token");
-
-  return sendRequest("delete", "/tag", { token, ...params });
+  
+  return sendRequest("delete", "/tag", { token, ...params }); 
 }
 
+  
 /**
  * 获取配置项
  * @param key 配置名称
  * @returns 配置项内容
  */
-export async function getSetting(params: {
-  key: string;
-}): Promise<Result<{ key: string; value: any }>> {
+export async function getSetting(params: { key: string }): Promise<Result<{ key: string, value: any }>> {
   const token = Cookie.get("token");
-
-  return sendRequest("get", "/setting", { token, ...params });
+  
+  return sendRequest("get", "/setting", { token, ...params }); 
 }
 
 /**
@@ -263,61 +213,46 @@ export async function getSetting(params: {
  * @param key 配置名称
  * @param value 配置项内容
  */
-export async function setSetting(params: {
-  key: string;
-  value: any;
-}): Promise<Result<null>> {
+export async function setSetting(params: { key: string, value: any }): Promise<Result<null>> {
   const token = Cookie.get("token");
-
-  return sendRequest("post", "/setting", { token, ...params });
+  
+  return sendRequest("post", "/setting", { token, ...params }); 
 }
+
 
 /**
  * 清除登录状态
  */
 export async function clearToken(): Promise<Result<null>> {
   const token = Cookie.get("token");
-
-  return sendRequest("get", "/user/clear", { token });
+  
+  return sendRequest("get", "/user/clear", { token }); 
 }
+
 
 /**
  * 获取架构信息
  */
-export async function getArchCharts(params: {
-  search?: string;
-  tags?: string[];
-  status?: -1 | 0 | 1 | 2;
-}): Promise<
-  Result<
-    {
-      name: string;
-      count: number;
-      description?: string;
-      url?: string;
-    }[]
-  >
-> {
-  return sendRequest("get", "/charts/arch", params);
+export async function getArchCharts(params: { search?: string, tags?: string[], status?:-1|0|1|2}): Promise<Result<{
+  name: string,
+  count: number,
+  description?: string,
+  url?: string,
+}[]>> {
+  return sendRequest("get", "/charts/arch", params); 
 }
+
 
 /**
  * 获取域名信息
  */
-export async function getDomainCharts(params: {
-  search?: string;
-  tags?: string[];
-  status?: -1 | 0 | 1 | 2;
-}): Promise<
-  Result<
-    {
-      name: string;
-      count: number;
-    }[]
-  >
-> {
-  return sendRequest("get", "/charts/domain", params);
+export async function getDomainCharts(params: {search?: string, tags?: string[], status?:-1|0|1|2}): Promise<Result<{
+  name: string,
+  count: number,
+}[]>> {
+  return sendRequest("get", "/charts/domain", params); 
 }
+
 
 /**
  * 提取博客信息
@@ -335,8 +270,6 @@ export async function blogAnalysis(params: {
  * @param name 名称
  * @returns 测试返回
  */
-export async function testApi(params: {
-  name?: string;
-}): Promise<Result<{ name: string }>> {
-  return sendRequest("get", "/hello", params);
+export async function testApi(params: { name?: string }): Promise<Result<{ name: string }>> {
+  return sendRequest("get", "/hello", params); 
 }

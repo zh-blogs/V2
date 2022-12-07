@@ -1,14 +1,12 @@
-import React from "react";
+import React from 'react';
+import { Tag, InputNumber, Table } from 'antd';
+import { PlusOutlined, SaveOutlined } from '@ant-design/icons';
+import { Loading, Button } from '@/components/antd';
+import { Flex } from '@/components/flex';
 
-import { PlusOutlined, SaveOutlined } from "@ant-design/icons";
-import { Tag, InputNumber, Table } from "antd";
-
-import { Loading, Button } from "@/components/antd";
-import { Flex } from "@/components/flex";
-import { AdminLayout } from "@/components/layout";
-
-import { shouldNumber, shouldString, showNotification } from "@/utils";
-import { clearToken, getSetting, setSetting } from "@/utils/api";
+import { clearToken, getSetting, setSetting } from '@/utils/api';
+import { shouldNumber, shouldString, showNotification } from '@/utils';
+import { AdminLayout } from '@/components/layout';
 
 export default function SettingsManager() {
   return (
@@ -25,36 +23,30 @@ export function AdminSettingsManager() {
       showHeader={false}
       pagination={false}
       columns={[
-        {
-          title: "name",
-          dataIndex: "name",
-          key: "name",
-          render: (text) => <b>{text}</b>,
-        },
-        { title: "component", dataIndex: "component", key: "component" },
-      ]}
+        { title: 'name', dataIndex: 'name', key: 'name', render: (text) => <b>{text}</b> },
+        { title: 'component', dataIndex: 'component', key: 'component' },
+      ]} 
       dataSource={[
-        { name: "管理员 ID", component: <AdminArray /> },
-        { name: "登录状态管理", component: <ClearToken /> },
-      ]}
-    />
+        { name: '管理员 ID', component: <AdminArray /> },
+        { name: '登录状态管理', component: <ClearToken /> },
+      ]} />
   );
 }
 
 function AdminArray() {
   const [loading, setLoading] = React.useState(false);
   const [admin, setAdmin] = React.useState<number[]>([]);
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState('');
 
   React.useEffect(() => {
     setLoading(true);
-    getSetting({ key: "admin" }).then((res) => {
+    getSetting({ key: 'admin' }).then((res) => {
       if (showNotification(res) && !!res.data) {
         setAdmin(
           shouldString(res.data.value)
             .split(",")
             .map((v) => shouldNumber(v, -1))
-            .filter((v) => v >= 0),
+            .filter((v) => v >= 0)
         );
       }
       setLoading(false);
@@ -62,10 +54,7 @@ function AdminArray() {
   }, []);
 
   const save = React.useCallback(() => {
-    setSetting({
-      key: "admin",
-      value: admin.map((v) => v.toString()).join(","),
-    }).then((res) => {
+    setSetting({ key: 'admin', value: admin.map((v) => v.toString()).join(",") }).then((res) => {
       showNotification(res, true);
     });
   }, [admin]);
@@ -99,7 +88,7 @@ function AdminArray() {
               const set = new Set(admin);
               set.add(parseInt(value));
               setAdmin(Array.from(set));
-              setValue("");
+              setValue('');
             }
           }}
         />
@@ -116,13 +105,11 @@ function AdminArray() {
 }
 
 function ClearToken() {
-  return (
-    <Button
-      text="清理 Token"
-      danger
-      type="primary"
-      confirm="这将导致所有人需要重新登录，确认清理？"
-      onClick={async () => showNotification(await clearToken(), true)}
-    />
-  );
+  return <Button
+    text="清理 Token"
+    danger
+    type="primary"
+    confirm="这将导致所有人需要重新登录，确认清理？"
+    onClick={async () => showNotification(await clearToken(), true)}
+  />;
 }

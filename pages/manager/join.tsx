@@ -47,7 +47,7 @@ function AutoFill(props: Combine<{ form?: FormInstance<Blog> }, InputProps>) {
               description: (
                 <ul>
                   {Object.keys(res.data || {}).map((key) => (
-                    <li>{`${key}: ${blog[key as keyof Blog]}`}</li>
+                    <li key={key}>{`${key}: ${blog[key as keyof Blog]}`}</li>
                   ))}
                 </ul>
               ),

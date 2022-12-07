@@ -1,7 +1,6 @@
-import styles from "./card.module.scss";
 import { Card as AntdCard, CardProps as AntdCardProps } from "antd";
-
 import { Combine } from "@/utils";
+import styles from "./card.module.scss";
 
 export declare type CardProps = Combine<
   {
@@ -12,6 +11,6 @@ export declare type CardProps = Combine<
 
 export function Card(props: CardProps) {
   const { shadow = false, ...restProps } = props;
-
+  
   return <AntdCard className={shadow ? styles.shadow : ""} {...restProps} />;
 }

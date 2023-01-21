@@ -85,7 +85,6 @@ Wibus
 
 - 地址库维护组负责人（博客标签）
 - 邮箱：myxxts@outlook.com
-- QQ：1833788698
 
 yzqzss
 

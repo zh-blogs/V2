@@ -25,7 +25,7 @@ export function getColor(id: string) {
   return colorArrs[
     (Array.from(String(id))
       .map((c) => c.charCodeAt(0))
-      .reduce((a, b) => (a * 7 + b * 13) % colorArrs.length) +
+      .reduce((a, b) => (a * 7 + b * 13) % colorArrs.length, 11) +
       17) %
       colorArrs.length
   ];

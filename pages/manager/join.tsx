@@ -131,12 +131,14 @@ export default function AddBlog() {
         {
           key: "arch",
           label: "站点架构",
-          placeholder: "贵网站的架构程序，如 Hexo、Wordpress 等",
+          required: true,
+          placeholder: "贵网站的架构程序，如 Hexo、WordPress 等",
         },
         {
           key: "tags",
           label: "分类",
           select: tags,
+          required: true,
           mode: "multiple",
           placeholder: "您选择的内容，将作为管理员的分类参考",
         },

@@ -131,7 +131,6 @@ export default function AddBlog() {
         {
           key: "arch",
           label: "站点架构",
-          required: true,
           placeholder: "贵网站的架构程序，如 Hexo、WordPress 等",
         },
         {

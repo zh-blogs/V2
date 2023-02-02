@@ -21,6 +21,8 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
           <link rel="manifest" href="/site.webmanifest"></link>
+
+          <script async defer data-website-id="98945d99-b2fe-474a-a76a-a3f25811edac" src="https://u.xiaozonglin.cn/umami.js"></script>
         </Head>
         <body>
           <Main />

@@ -39,6 +39,15 @@ export function AboutTab() {
         由于我们刚开始博客网站的收集工作，一些博客还未收录，你可以向我们提供未收录的博客地址以便我们改进，也可以去别的导航项目，也许你会发现更多。
       </Paragraph>
       <Paragraph>
+        我们使用 Umami 进行网站访客数据的统计，以便我们在制定规划时参考。您可以在<Link href="https://umami.is/docs/faq" style={linkStyle}>
+          umami - Frequently asked questions
+        </Link>
+        里面找到 Umami 统计的相关信息，您还可以在<Link href="https://u.xiaozonglin.cn/share/eeRbJOsu/%E4%B8%AD%E6%96%87%E5%8D%9A%E5%AE%A2%E5%88%97%E8%A1%A8%E5%AF%BC%E8%88%AA" style={linkStyle}>
+          Umami
+        </Link>
+        中查看中文博客列表导航的统计数据。
+      </Paragraph>
+      <Paragraph>
         <ul>
           {links.map((item) => <li key={item.url}><Link href={item.url}>{item.name}</Link></li>)}
         </ul> 

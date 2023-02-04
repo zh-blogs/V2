@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-import { Table, Input, Collapse, TableColumnsType, notification, Radio, } from 'antd';
+import { Table, Input, Collapse, TableColumnsType, notification, Radio, Drawer, } from 'antd';
 import { CheckOutlined, CloseOutlined, } from '@ant-design/icons';
 import { Form, FormItemProps, Switch, Button } from '@/components/antd';
 import { getTags, getBlogs, updateBlog, deleteBlog } from '@/utils/api';
@@ -359,6 +359,7 @@ function AdminManager(props:{info:UserInfo}) {
         rowClassName={(record) => record.repeat? styles.repeat:"" }
         pagination={{
           showLessItems: true,
+          showQuickJumper: true,
           hideOnSinglePage: true,
           current: shouldNumber(params.page),
           total: totalBlogs,
@@ -370,34 +371,82 @@ function AdminManager(props:{info:UserInfo}) {
           },
         }}
       />
-          
-      {!!edit && <Form form={form} forms={forms} onFinish={async (values) => {
-        const resp = await updateBlog({ id: values.id, blog: values });
-        if (resp.success) {
-          notification.success({ message: "修改成功", description: resp.message });
-          getPage();
-        }else {
-          notification.error({ message:"修改失败", description: resp.message });
-        }
-      }
-      } />}
-      {!!edit && <Flex direction="LR" mainAxis="flex-start" mainSize="middle" subSize="small">
-        <Flex direction="LR" mainAxis="flex-start" mainSize="small" subSize="small">
-          <b>允许运行脚本</b>
-          <span>（部分站点可能需要 JS 渲染页面）</span>
-          <Switch value={allowScripts} onChange={(value) => setAllowScripts(value)} />
+
+      <Drawer
+        title="博客编辑"
+        placement="right"
+        onClose={() => {
+          setEdit(undefined);
+        }}
+        width="80%"
+        visible={!!edit}
+      >
+        <Form
+          form={form}
+          forms={forms}
+          onFinish={async (values) => {
+            const resp = await updateBlog({ id: values.id, blog: values });
+            if (resp.success) {
+              notification.success({
+                message: '修改成功',
+                description: resp.message,
+              });
+              getPage();
+            } else {
+              notification.error({
+                message: '修改失败',
+                description: resp.message,
+              });
+            }
+          }}
+        />
+        <Flex
+          direction="LR"
+          mainAxis="flex-start"
+          mainSize="middle"
+          subSize="small"
+        >
+          <Flex
+            direction="LR"
+            mainAxis="flex-start"
+            mainSize="small"
+            subSize="small"
+          >
+            <b>允许运行脚本</b>
+            <span>（部分站点可能需要 JS 渲染页面）</span>
+            <Switch
+              value={allowScripts}
+              onChange={(value) => setAllowScripts(value)}
+            />
+          </Flex>
+          <Flex
+            direction="LR"
+            mainAxis="flex-start"
+            mainSize="small"
+            subSize="small"
+          >
+            <b>允许同源</b>
+            <span>（部分站点可能需要获取 cookie 信息）</span>
+            <Switch
+              value={allowSameOrigin}
+              onChange={(value) => setAllowSameOrigin(value)}
+            />
+          </Flex>
         </Flex>
-        <Flex direction="LR" mainAxis="flex-start" mainSize="small" subSize="small">
-          <b>允许同源</b>
-          <span>（部分站点可能需要获取 cookie 信息）</span>
-          <Switch value={allowSameOrigin} onChange={(value) => setAllowSameOrigin(value)} />
-        </Flex>
-      </Flex>}
-      {!!edit && <iframe src={edit.url} style={{ width: "100%", height: "50vh" }} sandbox={[
-        allowSameOrigin&&"allow-same-origin",
-        allowScripts&& "allow-scripts",
-      ].filter((item) => !!item).join(" ")}/>}
+
+        {!!edit && (
+          <iframe
+            src={edit?.url}
+            style={{ width: '100%', height: '50vh' }}
+            sandbox={[
+              allowSameOrigin && 'allow-same-origin',
+              allowScripts && 'allow-scripts',
+            ]
+              .filter((item) => !!item)
+              .join(' ')}
+          />
+        )}
+      </Drawer>
     </Flex>
   );
 }
-

@@ -8,6 +8,7 @@ import { Blog, Result, UserInfo } from "../types";
 import { newLokiCached } from "./database";
 import { Log } from '@/utils/log';
 import { shouldNumber, shouldString } from "@/utils";
+import { v4 as uuid } from "uuid";
 
 const log = new Log("数据驱动");
 
@@ -231,8 +232,8 @@ async function updateBlog(params: { id: string, blog: Blog }): Promise<Result> {
 async function addBlog(params: { blog: Blog }): Promise<Result<Blog>> {
   const c = DB.getBlogsCollection();
 
-  if (c.find({ "id": { "$eq": params.blog.id } }).length >0) {
-    return { success: false, message: "博客已存在" };
+  if (!params?.blog?.id) {
+    params.blog.id = uuid();
   }
 
   const now = (new Date()).getTime();

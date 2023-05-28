@@ -10,7 +10,6 @@
     "transfer": "node -r ts-node/register ./tools/transfer"
   },
   "dependencies": {
-    "@types/cheerio": "^0.22.31",
     "antd": "^4.19.3",
     "axios": "^0.27.2",
     "cheerio": "^1.0.0-rc.12",
@@ -24,9 +23,12 @@
     "react-dom": "17.0.2",
     "sass": "^1.50.0",
     "scss": "^0.2.4",
+    "tablestore": "^5.4.1",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@types/cheerio": "^0.22.31",
+    "@types/tablestore": "^5.1.0",
     "@types/js-cookie": "^3.0.1",
     "@types/lokijs": "^1.5.7",
     "@types/nedb": "^1.8.12",

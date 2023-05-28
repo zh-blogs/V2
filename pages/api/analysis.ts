@@ -1,40 +1,41 @@
-import cheerio from "cheerio";
+import cheerio from 'cheerio';
 
-import { Blog } from "@/utils";
-import { blogAnalysis } from "@/utils/api";
-import wrapper from "@/utils/backend/api";
+import { Blog } from '@/utils';
+import { blogAnalysis } from '@/utils/api';
+import wrapper from '@/utils/backend/api';
 
 const rssPath = [
-  "/rss.xml",
-  "/rss2.xml",
-  "/atom.xml",
-  "/feed.xml",
-  "/index.xml",
-  "/feed.php",
-  "/rss.php",
-  "/rss2.php",
-  "/atom.php",
-  "/feed",
-  "/atom",
-  "/rss",
-  "/rss2",
-  "/feed/atom",
-  "/feed/rss",
-  "/feed/rss2",
+  '/rss.xml',
+  '/rss2.xml',
+  '/atom.xml',
+  '/feed.xml',
+  '/index.xml',
+  '/feed.php',
+  '/rss.php',
+  '/rss2.php',
+  '/atom.php',
+  '/feed',
+  '/atom',
+  '/rss',
+  '/rss2',
+  '/feed/atom',
+  '/feed/rss',
+  '/feed/rss2',
 ];
-const sitemapPath = ["/sitemap.xml", "/sitemap.txt"];
+const sitemapPath = ['/sitemap.xml', '/sitemap.txt'];
 
 async function getFirstURL(
   url: string,
-  paths: string[],
+  paths: string[]
 ): Promise<string | undefined> {
   const res = (
     await Promise.all(
       paths.map(async (item) => {
-        const rssURL = `${url.replace(/\/$/, "")}${item}`;
+        const rssURL = `${url.replace(/\/$/, '')}${item}`;
         const rssResp = await fetch(rssURL);
-        return rssResp.status == 200 ? rssURL : "";
-      }),
+
+        return rssResp.status == 200 ? rssURL : '';
+      })
     )
   ).filter((item) => !!item);
 
@@ -43,19 +44,23 @@ async function getFirstURL(
 
 function matchText($: cheerio.Root, regexp: RegExp): string | undefined {
   var res: string[] = [];
-  $("*").map((_, e) => {
+  $('*').map((_, e) => {
     const arr = [...$(e).text().matchAll(regexp)];
-    if (!!arr)
+    if (!!arr) {
       arr.map((item) => {
-        if (item.length > 1) res.push(item[1]);
+        if (item.length > 1) {
+          res.push(item[1]);
+        }
       });
+    }
   });
+
   return res.length > 0 ? res[0] : undefined;
 }
 
 export default wrapper<typeof blogAnalysis>(async (args, req) => {
   const url = args.url;
-  if (req.method === "GET" && !!url) {
+  if (req.method === 'GET' && !!url) {
     const resp: Response = await fetch(url);
     const html = await resp.text();
     const $ = cheerio.load(html);
@@ -63,8 +68,8 @@ export default wrapper<typeof blogAnalysis>(async (args, req) => {
     const blog = {
       success: true,
       data: {
-        name: $("title").text().trim(),
-        sign: $("meta[name=description]").attr("content"),
+        name: $('title').text().trim(),
+        sign: $('meta[name=description]').attr('content'),
         feed: await getFirstURL(url, rssPath),
         sitemap: await getFirstURL(url, sitemapPath),
         arch: matchText($, /powered by ([0-9a-zA-Z\-_=\.]+)/gi),
@@ -75,5 +80,5 @@ export default wrapper<typeof blogAnalysis>(async (args, req) => {
     return blog;
   }
 
-  return { success: false, message: "Method not allowed" };
+  return { success: false, message: 'Method not allowed' };
 });

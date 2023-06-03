@@ -1,29 +1,27 @@
 /**
  * 该文件只允许在服务端引入
  */
-
-import path from 'path';
-
 import { Blog, Result, UserInfo } from '../../types';
-import { Log } from '@/utils/log';
-import { shouldNumber, shouldString } from '@/utils';
-import { v4 as uuid } from 'uuid';
-import TableStore from 'tablestore';
-import fs from 'fs';
 import { newLokiCached, DatabaseLoki } from '../lokijs/wrapper';
 import { OtsClient } from './wrapper';
+import { shouldNumber, shouldString } from '@/utils';
+import { Log } from '@/utils/log';
+import fs from 'fs';
+import path from 'path';
+import TableStore from 'tablestore';
+import { v4 as uuid } from 'uuid';
 
-
-
-const OTS_TABLE_PARAMS_USER = { tableName: 'user', primaryKeys: ["id", "login", "token"] };
-const OTS_TABLE_PARAMS_SETTING = { tableName: 'setting', primaryKeys: ["key"] };
+const OTS_TABLE_PARAMS_USER = {
+  tableName: 'user',
+  primaryKeys: ['id', 'login', 'token'],
+};
+const OTS_TABLE_PARAMS_SETTING = { tableName: 'setting', primaryKeys: ['key'] };
 
 export class OTSDB {
   log!: Log;
   client!: OtsClient;
   DB!: DatabaseLoki;
 
-   
   constructor() {
     this.log = new Log('数据驱动');
 
@@ -38,9 +36,19 @@ export class OTSDB {
       if (!this.isInitializing) {
         this.isInitializing = true;
 
-        const { OTS_ACCESS_KEY_ID, OTS_SECRET_ACCESS_KEY, OTS_ENDPOINT, OTS_INSTANCE_NAME, OTS_STS_TOKEN } = JSON.parse((await fs.readFileSync(
-          path.join(path.resolve("."), "db", "setting.json")
-        )).toString("utf8"));
+        const {
+          OTS_ACCESS_KEY_ID,
+          OTS_SECRET_ACCESS_KEY,
+          OTS_ENDPOINT,
+          OTS_INSTANCE_NAME,
+          OTS_STS_TOKEN,
+        } = JSON.parse(
+          (
+            await fs.readFileSync(
+              path.join(path.resolve('.'), 'db', 'setting.json')
+            )
+          ).toString('utf8')
+        );
 
         this.client = new OtsClient({
           accessKeyId: OTS_ACCESS_KEY_ID,
@@ -54,43 +62,46 @@ export class OTSDB {
           await new Promise((resolve) => setTimeout(resolve, 500));
         }
       }
-
-      
     }
 
     return this.client;
   }
 
   async getUser(params: { token: string }): Promise<Result<UserInfo>> {
-    const client =await this.getClient();
+    const client = await this.getClient();
 
     try {
-      const data = await client.quickQueryRows<{ id: number, login:string, token:string, info: string }>(
-        { ...OTS_TABLE_PARAMS_USER, data: { token: params.token }, }
-      );
-      
-      if (data.length>0) {
+      const data = await client.quickQueryRows<{
+        id: number;
+        login: string;
+        token: string;
+        info: string;
+      }>({ ...OTS_TABLE_PARAMS_USER, data: { token: params.token } });
+
+      if (data.length > 0) {
         const record = data[0];
-        const info = JSON.parse( record?.info?.toString() || '');
+        const info = JSON.parse(record?.info?.toString() || '');
 
         return { success: true, data: info };
       }
-      
-      throw new Error("ots returns no data");
+
+      throw new Error('ots returns no data');
     } catch (err) {
       this.log.error('error:', err);
 
-      return { success: false, message: "请重新登录" };
+      return { success: false, message: '请重新登录' };
     }
-    
   }
 
   async setUser(params: { token: string; info: UserInfo }) {
     const client = await this.getClient();
-    
-    const data = await client.quickQueryRow<{key:string, value: string}>({ ...OTS_TABLE_PARAMS_SETTING, data: { 'key': "admin" } });
+
+    const data = await client.quickQueryRow<{ key: string; value: string }>({
+      ...OTS_TABLE_PARAMS_SETTING,
+      data: { key: 'admin' },
+    });
     const adminArr = data?.value?.toString()?.split(',') || [];
-       
+
     const { token, info } = params;
     if (!info.admin) {
       info.admin = adminArr.indexOf(info.id.toString()) !== -1;
@@ -98,19 +109,30 @@ export class OTSDB {
 
     this.log.log(`set token ${token} for ${info.name}, admin ${info.admin}`);
 
-
-    const idRecords = await client.quickQueryRows<{ id: number, login:string, token:string, info: string }>(
-      { ...OTS_TABLE_PARAMS_USER, data: { id: TableStore.Long.fromNumber(info.id) }, }
-    );
+    const idRecords = await client.quickQueryRows<{
+      id: number;
+      login: string;
+      token: string;
+      info: string;
+    }>({
+      ...OTS_TABLE_PARAMS_USER,
+      data: { id: TableStore.Long.fromNumber(info.id) },
+    });
 
     if (idRecords.length > 0) {
       await client.batchQuickDeleteRows(
-        idRecords.map((row) => ({ ...OTS_TABLE_PARAMS_USER, data: row })));
+        idRecords.map((row) => ({ ...OTS_TABLE_PARAMS_USER, data: row }))
+      );
     }
 
-    await client.quickPutRow( {
+    await client.quickPutRow({
       ...OTS_TABLE_PARAMS_USER,
-      data:{ id: TableStore.Long.fromNumber(info.id), login: info.login, token, info: JSON.stringify(info) },
+      data: {
+        id: TableStore.Long.fromNumber(info.id),
+        login: info.login,
+        token,
+        info: JSON.stringify(info),
+      },
     });
   }
 
@@ -190,38 +212,75 @@ export class OTSDB {
     size?: number;
     status?: 0 | 1 | -1 | 2;
   }): Promise<Result<{ total: number; blogs: Blog[] }>> {
-    const c = this.DB.getBlogsCollection();
-
-    var chain = c.chain();
-
     var { search, tags, offset, size, status = 1 } = params;
+
+    const queries = [];
+    const searchQuery: TableStore.SearchParams['searchQuery'] = {
+      offset: 0,
+      limit: 100,
+      query: { queryType: TableStore.QueryType.BOOL_QUERY, query: {} },
+      getTotalCount: true,
+    };
+
+    if (!!offset) {
+      searchQuery.offset = offset;
+    }
+    if (!!size && size > 0) {
+      searchQuery.limit = size;
+    }
     if (!!search) {
-      search = search.toLowerCase();
+      queries.push({
+        queryType: TableStore.QueryType.BOOL_QUERY,
+        query: {
+          shouldQueries: [
+            {
+              queryType: TableStore.QueryType.WILDCARD_QUERY,
+              query: { fieldName: 'name', text: `%${search.toLowerCase()}%` },
+            },
+            {
+              queryType: TableStore.QueryType.WILDCARD_QUERY,
+              query: { fieldName: 'url', text: `%${search.toLowerCase()}%` },
+            },
+          ],
+        },
+      });
     }
 
     if (status === 1) {
-      chain = chain.find({ enabled: { $eq: true } });
+      queries.push({ query: { fieldName: 'enabled', term: true } });
     } else if (status === -1) {
-      chain = chain.find({ enabled: { $eq: false } });
+      queries.push({ query: { fieldName: 'enabled', term: false } });
     } else if (status === 2) {
-      chain = chain.find({ recommend: { $eq: true } });
+      queries.push({ query: { fieldName: 'recommend', term: true } });
     }
 
-    if (!!search) {
-      chain = chain.where(
-        (blog) =>
-          blog.name.toLowerCase().indexOf(search as string) !== -1 ||
-          blog.url.toLowerCase().indexOf(search as string) !== -1
-      );
-    }
     if (!!tags && tags.length > 0) {
-      chain = chain.where(
-        (blog) =>
-          tags?.filter((tag) => !!blog.tags && blog.tags.indexOf(tag) !== -1)
-            .length === tags?.length
-      );
+      queries.push({
+        queryType: TableStore.QueryType.BOOL_QUERY,
+        query: {
+          shouldQueries: tags.map((tag) => ({
+            queryType: TableStore.QueryType.WILDCARD_QUERY,
+            query: { fieldName: 'name', text: `%${tag}%` },
+          })),
+        },
+      });
     }
 
+   const resp = await this.client.search({
+      tableName: 'blogs',
+      indexName: 'blogs_index',
+      searchQuery: {
+        ...searchQuery,
+        query: {
+          queryType: TableStore.QueryType.BOOL_QUERY,
+          query: { mustQueries: queries },
+        },
+      },
+      columnToGet: { returnType: TableStore.ColumnReturnType.RETURN_ALL },
+    });
+
+   
+  
     // 符合的数目
     const total = chain.count();
 
@@ -407,26 +466,37 @@ export class OTSDB {
    */
   async clearToken(): Promise<Result<null>> {
     const client = await this.getClient();
-    
-    const data = await client.getRange(
-      {
-        tableName: 'user',
-        direction: TableStore.Direction.FORWARD,
-        inclusiveStartPrimaryKey: [{ id: TableStore.INF_MIN }, { login: TableStore.INF_MIN }, { token: TableStore.INF_MIN }],
-        exclusiveEndPrimaryKey: [{ id:  TableStore.INF_MAX }, { login: TableStore.INF_MAX }, { token: TableStore.INF_MAX }],
-        limit: 50,
-      },
-    );
+
+    const data = await client.getRange({
+      tableName: 'user',
+      direction: TableStore.Direction.FORWARD,
+      inclusiveStartPrimaryKey: [
+        { id: TableStore.INF_MIN },
+        { login: TableStore.INF_MIN },
+        { token: TableStore.INF_MIN },
+      ],
+      exclusiveEndPrimaryKey: [
+        { id: TableStore.INF_MAX },
+        { login: TableStore.INF_MAX },
+        { token: TableStore.INF_MAX },
+      ],
+      limit: 50,
+    });
 
     if (data.rows.length > 0) {
       await Promise.all(
-        data.rows.map(async (row) => await client.deleteRow(
-          {
-            tableName: "user",
-            condition: new TableStore.Condition(TableStore.RowExistenceExpectation.IGNORE, null),
-            primaryKey: row.primaryKey?.map((pk) => ({ [pk.name]: pk.value })) || [],
-          }
-        ))
+        data.rows.map(
+          async (row) =>
+            await client.deleteRow({
+              tableName: 'user',
+              condition: new TableStore.Condition(
+                TableStore.RowExistenceExpectation.IGNORE,
+                null
+              ),
+              primaryKey:
+                row.primaryKey?.map((pk) => ({ [pk.name]: pk.value })) || [],
+            })
+        )
       );
     }
 

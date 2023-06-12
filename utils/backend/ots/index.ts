@@ -266,7 +266,7 @@ export class OTSDB {
       });
     }
 
-   const resp = await this.client.search({
+    const resp = await this.client.search({
       tableName: 'blogs',
       indexName: 'blogs_index',
       searchQuery: {
@@ -281,47 +281,12 @@ export class OTSDB {
 
    
   
-    // 符合的数目
-    const total = chain.count();
-
-    chain.simplesort('idx');
-    if (typeof offset === 'number') {
-      chain = chain.offset(offset);
-    }
-    if (typeof size === 'number' && size > 0) {
-      chain = chain.limit(size);
-    }
-
-    this.log.log(`匹配 ${total} 篇博客`);
-
-    // 格式标准化
-    const blogs = chain.data().map(
-      (blog) =>
-        ({
-          id: shouldString(blog.id, ''),
-          idx: blog.idx,
-          name: blog.name,
-          url: blog.url,
-          tags: !!blog.tags ? blog.tags : [],
-          sign: shouldString(blog.sign, ''),
-          feed: shouldString(blog.feed, ''),
-          status: `${blog.status}`,
-          repeat: false,
-          enabled: !!blog.enabled,
-          sitemap: shouldString(blog.sitemap, ''),
-          arch: shouldString(blog.arch, ''),
-          join_time: shouldNumber(blog.join_time, 0),
-          update_time: shouldNumber(blog.update_time, 0),
-          saveweb_id: shouldString(blog.saveweb_id),
-          recommend: !!blog.recommend,
-        } as Blog)
-    );
-
+    
     return {
       success: true,
       data: {
-        total,
-        blogs,
+        total: 0,
+        blogs: [],
       },
     };
   }

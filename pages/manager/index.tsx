@@ -241,10 +241,10 @@ function AdminManager(props: { info: UserInfo }) {
         render: (url: string) => (
           <a
             href={url}
-            hrefLang='zh'
-            target='_blank'
-            type='text/html'
-            rel='noreferrer'
+            hrefLang="zh"
+            target="_blank"
+            type="text/html"
+            rel="noreferrer"
           >
             {url}
           </a>
@@ -266,11 +266,11 @@ function AdminManager(props: { info: UserInfo }) {
         key: 'tags',
         render: (tags: string[]) => (
           <Flex
-            direction='LR'
-            mainSize='small'
-            subSize='small'
-            mainAxis='flex-start'
-            subAxis='flex-start'
+            direction="LR"
+            mainSize="small"
+            subSize="small"
+            mainAxis="flex-start"
+            subAxis="flex-start"
           >
             {tags.map((tag) => (
               <Tag key={tag} tag={tag} />
@@ -294,7 +294,7 @@ function AdminManager(props: { info: UserInfo }) {
         dataIndex: 'op',
         key: 'op',
         render: (_: any, record: Blog) => (
-          <Flex direction='LR' mainSize='small' subSize='small'>
+          <Flex direction="LR" mainSize="small" subSize="small">
             <Button
               onClick={() => {
                 setEdit(record);
@@ -316,8 +316,8 @@ function AdminManager(props: { info: UserInfo }) {
                   recommend: record.recommend,
                 });
               }}
-              type='primary'
-              text='修改'
+              type="primary"
+              text="修改"
             />
             <Button
               onClick={async () => {
@@ -335,10 +335,10 @@ function AdminManager(props: { info: UserInfo }) {
                   });
                 }
               }}
-              type='primary'
+              type="primary"
               danger
-              confirm='确认删除?'
-              text='删除'
+              confirm="确认删除?"
+              text="删除"
             />
           </Flex>
         ),
@@ -348,7 +348,7 @@ function AdminManager(props: { info: UserInfo }) {
   );
 
   return (
-    <Flex fullWidth direction='TB'>
+    <Flex fullWidth direction="TB">
       <p>Hi, {info.name} !</p>
       <Radio.Group
         onChange={(e) => {
@@ -367,7 +367,7 @@ function AdminManager(props: { info: UserInfo }) {
         <Radio.Button value={2}>推荐博客</Radio.Button>
       </Radio.Group>
       <Input
-        placeholder='输入名称或网址筛选博客'
+        placeholder="输入名称或网址筛选博客"
         defaultValue={shouldString(params.search)}
         onBlur={(e) => {
           if (!!e && !!e.target) {
@@ -382,22 +382,22 @@ function AdminManager(props: { info: UserInfo }) {
         }}
       />
       <Flex
-        direction='LR'
-        mainSize='small'
-        subSize='small'
-        mainAxis='flex-start'
+        direction="LR"
+        mainSize="small"
+        subSize="small"
+        mainAxis="flex-start"
       >
         {selectedTags.map((tag) => (
           <Tag key={tag} tag={tag} onClose={() => removeTag(tag)} />
         ))}
       </Flex>
       <Collapse ghost>
-        <Collapse.Panel header='标签选择' key='tags'>
+        <Collapse.Panel header="标签选择" key="tags">
           <Flex
-            direction='LR'
-            mainSize='small'
-            subSize='small'
-            mainAxis='flex-start'
+            direction="LR"
+            mainSize="small"
+            subSize="small"
+            mainAxis="flex-start"
           >
             {unselectedTags.map((tag) => (
               <Tag key={tag} tag={tag} onClick={() => addTag(tag)} />

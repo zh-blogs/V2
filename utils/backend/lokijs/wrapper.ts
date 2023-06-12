@@ -24,43 +24,41 @@ export class DatabaseLoki {
     }, autoSaveIntervalInMs);
   }
 
-  destroy() {
+  async destroy() {
     log.log('销毁 lokijs 数据库');
 
     clearInterval(this.intervel);
     if (!!this.loki) {
-      this.loki?.close();
+      await this.save();
+      await this.loki?.close();
     }
   }
 
   autoSave() {
-    log.log('=== 自动保存 开始 ===');
+    log.log('=== 自动保存 ===');
 
-    new Promise((resolve, reject) => {
-      if (!!this.loki) {
-        this.loki?.saveDatabase((err) => {
-          if (!!err) {
-            reject(err);
-          } else {
-            resolve(null);
-          }
-        });
-      }
-    })
-      .then(() => {
-        log.log('=== 自动保存 完成 ===');
-      })
-      .catch((err) => {
-        log.error('=== 自动保存 失败 ===');
-        console.error(err);
-      })
-      .finally(() => {
-        log.log('=== 自动保存 结束 ===');
-      });
+    this.save();
   }
 
   async loadDatabaseSync() {
     await new Promise((resolve) => this.loki?.loadDatabase({}, resolve));
+  }
+
+  async save() {
+    return new Promise((resolve, reject) => {
+      log.log("=== 保存 开始 ===");
+      this.loki?.saveDatabase((err) => {
+        if (!!err) {
+          log.log("=== 保存 失败 ===");
+          log.error(err);
+          reject(err);
+        } else {
+          log.log("=== 保存 完成 ===");
+          resolve(null);
+        }
+      });
+       
+    }); 
   }
 
   getCollection<T extends object>(

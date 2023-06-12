@@ -1,6 +1,6 @@
-// import { LokiJSDB } from './lokijs';
+import { LokiJSDB } from './lokijs';
 
-// export default new LokiJSDB();
+export default new LokiJSDB();
 
-import { OTSDB } from './ots';
-export default new OTSDB();
+// import { OTSDB } from './ots';
+// export default new OTSDB();

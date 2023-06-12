@@ -1,13 +1,12 @@
 import { shouldString } from "@/utils";
 import { Result } from "@/utils/types";
-import { checkPermission } from '@/utils/backend/permission';
 import wrapper from "@/utils/backend/api";
 
 import DB from "@/utils/backend/db";
 
 export default wrapper<(_:{token: string, key:string, value:any})=>Promise<Result<any>>>(
   async (args, req) => {
-    if (!await checkPermission(shouldString(args.token))) { 
+    if (!await DB.checkPermission(shouldString(args.token))) { 
       return { "success": false, "message": "You do not has permission" };
     }
     

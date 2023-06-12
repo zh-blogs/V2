@@ -1,11 +1,34 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import db from "@/utils/backend/db";
 
+console.log("NEXT_MANUAL_SIG_HANDLE", process.env.NEXT_MANUAL_SIG_HANDLE);
+if (process.env.NEXT_MANUAL_SIG_HANDLE) {
+  console.log("handle SIGTERM and SIGINT");
+  // this should be added in your custom _document
+  process.on('SIGTERM', async () => {
+    console.log('Received SIGTERM: ', 'cleaning up');
+    await db.DB.destroy();
+    // sleep 1s to wait for db connection close
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    process.exit(0);
+  });
+  process.on('SIGINT', async () => {
+    console.log('Received SIGINT: ', 'cleaning up');
+    await db.DB.destroy();
+    // sleep 1s to wait for db connection close
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    process.exit(0);
+  });
+}
+    
 export default class MyDocument extends Document {
   constructor(props:any) {
     super(props);
   }
-  
+
   render() {
+ 
+
     return (
       <Html>
         <Head>

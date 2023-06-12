@@ -9,6 +9,7 @@ function func_run_docker() {
         -p 3000:3000 \
         --rm \
         -it \
+        -e NEXT_MANUAL_SIG_HANDLE=true \
         -v $(pwd):/data \
         --workdir /data \
         ${BaseImage} \
@@ -16,7 +17,7 @@ function func_run_docker() {
 }
 
 function func_build_image() {
-    if [[ "$(git status | grep 'nothing to commit' | wc -l)" -eq "1" ]]; then
+    if [[ "$(LANG=en-US.UTF-8 git status | grep 'nothing to commit' | wc -l)" -eq "1" ]]; then
         Commit=$(git rev-parse --short HEAD)
         echo $Commit
         docker build -t ${ZhBlogsImage}:${Commit} .

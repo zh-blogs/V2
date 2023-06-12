@@ -36,10 +36,10 @@ const cols: TableColumnsType<Blog> = [
     render: (url) => (
       <a
         href={url}
-        hrefLang='zh'
-        target='_blank'
-        type='text/html'
-        rel='noreferrer'
+        hrefLang="zh"
+        target="_blank"
+        type="text/html"
+        rel="noreferrer"
       >
         {url}
       </a>
@@ -137,11 +137,11 @@ export function Blogs() {
   }, [getPage]);
 
   return (
-    <Flex fullWidth direction='TB'>
-      <Flex direction='LR'>
+    <Flex fullWidth direction="TB">
+      <Flex direction="LR">
         <Flex.Item style={{ flex: 'auto' }}>
           <Input
-            placeholder='输入名称或网址筛选博客'
+            placeholder="输入名称或网址筛选博客"
             defaultValue={shouldString(query.search)}
             onBlur={(e) => {
               if (!!e && !!e.target) {
@@ -158,27 +158,27 @@ export function Blogs() {
             }}
           />
         </Flex.Item>
-        <Button type='primary' icon={<RocketOutlined />} href='/go'>
+        <Button type="primary" icon={<RocketOutlined />} href="/go">
           随机博客跳转
         </Button>
       </Flex>
       <Flex
-        direction='LR'
-        mainSize='small'
-        subSize='small'
-        mainAxis='flex-start'
+        direction="LR"
+        mainSize="small"
+        subSize="small"
+        mainAxis="flex-start"
       >
         {selectedTags.map((tag) => (
           <Tag key={tag} tag={tag} onClose={() => removeTag(tag)} />
         ))}
       </Flex>
       <Collapse ghost>
-        <Collapse.Panel header='标签选择' key='tags'>
+        <Collapse.Panel header="标签选择" key="tags">
           <Flex
-            direction='LR'
-            mainSize='small'
-            subSize='small'
-            mainAxis='flex-start'
+            direction="LR"
+            mainSize="small"
+            subSize="small"
+            mainAxis="flex-start"
           >
             {unselectedTags.map((tag) => (
               <Tag key={tag} tag={tag} onClick={() => addTag(tag)} />
@@ -189,7 +189,7 @@ export function Blogs() {
 
       <Table
         loading={loading}
-        rowKey='url'
+        rowKey="url"
         style={{ width: '100%' }}
         columns={cols}
         dataSource={blogs}

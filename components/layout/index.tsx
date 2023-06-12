@@ -47,14 +47,12 @@ function Footer() {
     <Flex className={styles.footer} direction="TB" >
       <Flex direction="LR" className={styles.menus} mainSize={0} subSize={0} mainAxis="space-around">
         {menus.map((menu) => <Link key={menu.path} href={menu.path} passHref>
-          <a>
-            <Card className={styles.menu}>
-              <Flex direction="TB" mainSize="small" >
-                <span className={styles.icon}>{menu.icon}</span>
-                <span className={styles.name}>{menu.name}</span>
-              </Flex>
-            </Card>
-          </a>
+          <Card className={styles.menu}>
+            <Flex direction="TB" mainSize="small" >
+              <span className={styles.icon}>{menu.icon}</span>
+              <span className={styles.name}>{menu.name}</span>
+            </Flex>
+          </Card>
         </Link>)}
       </Flex>
 

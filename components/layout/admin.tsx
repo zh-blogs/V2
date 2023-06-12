@@ -19,9 +19,7 @@ export function AdminLayout(props: { children: React.ReactNode }) {
     <Flex direction="TB" fullWidth subSize={0} mainSize="large">
       <Flex direction="LR" className={styles.menus} mainSize={0} subSize={0} mainAxis="center">
         {menus.map((menu) => <Link key={menu.path} href={menu.path} passHref>
-          <a>
-            <div className={styles.menu}>{menu.name}</div>
-          </a>
+          <div className={styles.menu}>{menu.name}</div>
         </Link>)}
       </Flex>
     

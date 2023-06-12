@@ -45,20 +45,26 @@ export class DatabaseLoki {
   }
 
   async save() {
-    return new Promise((resolve, reject) => {
-      log.log("=== 保存 开始 ===");
-      this.loki?.saveDatabase((err) => {
-        if (!!err) {
-          log.log("=== 保存 失败 ===");
-          log.error(err);
-          reject(err);
-        } else {
-          log.log("=== 保存 完成 ===");
-          resolve(null);
-        }
+    if ((this?.getBlogsCollection()?.count() || 0) > 0) {
+      return new Promise((resolve, reject) => {
+        log.log("=== 保存 开始 ===");
+        this.loki?.saveDatabase((err) => {
+          if (!!err) {
+            log.log("=== 保存 失败 ===");
+            log.error(err);
+            reject(err);
+          } else {
+            log.log("=== 保存 完成 ===");
+            resolve(null);
+          }
+        });
       });
-       
-    }); 
+    } 
+    
+    log.log("=== 保存 跳过 ===");
+    
+    return;
+    
   }
 
   getCollection<T extends object>(

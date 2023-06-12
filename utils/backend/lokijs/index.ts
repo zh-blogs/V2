@@ -231,6 +231,9 @@ export class LokiJSDB {
       }
     });
 
+
+    await this.DB.save();
+
     return { success: true, message: '修改成功' };
   }
 
@@ -255,6 +258,8 @@ export class LokiJSDB {
       update_time: now,
     });
 
+    this.DB.save();
+
     return { success: true, message: '添加成功' };
   }
 
@@ -269,6 +274,8 @@ export class LokiJSDB {
       .find({ id: { $eq: params.id } })
       .remove();
 
+    this.DB.save();
+    
     return { success: true, message: '删除成功' };
   }
 
@@ -290,6 +297,8 @@ export class LokiJSDB {
         blog.tags[blog.tags.indexOf(params.tag)] = params.newTag;
       });
 
+    this.DB.save();
+
     return { success: true, message: '重命名成功' };
   }
 
@@ -306,6 +315,8 @@ export class LokiJSDB {
       .update((blog) => {
         blog.tags = blog.tags.filter((tag) => tag !== params.tag);
       });
+
+    this.DB.save();
 
     return { success: true, message: '删除成功' };
   }
@@ -342,6 +353,9 @@ export class LokiJSDB {
       c.insertOne(params);
     }
 
+
+    this.DB.save();
+    
     return { success: true, message: '设置成功' };
   }
 

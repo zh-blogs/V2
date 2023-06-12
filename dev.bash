@@ -3,6 +3,7 @@
 BaseImage=node:16-alpine
 ZhBlogsImage=ohyee/zhblogs
 DockerImage=ghcr.io/zh-blogs/zhblogs
+AliyunImage=registry.cn-hangzhou.aliyuncs.com/ohyee/zhblogs
 
 function func_run_docker() {
     docker run \
@@ -37,6 +38,11 @@ function func_push_image() {
     docker push ${ZhBlogsImage}:${Commit}
     docker push ${ZhBlogsImage}:latest
 
+    docker tag ${ZhBlogsImage}:${Commit} ${AliyunImage}:${Commit}
+    docker tag ${ZhBlogsImage}:${Commit} ${AliyunImage}:latest
+    docker push ${AliyunImage}:${Commit}
+    docker push ${AliyunImage}:latest
+
     docker tag ${ZhBlogsImage}:${Commit} ${DockerImage}:${Commit}
     docker tag ${ZhBlogsImage}:${Commit} ${DockerImage}:latest
     docker push ${DockerImage}:${Commit}
@@ -59,7 +65,7 @@ if [ $# -eq "0" ]; then
 else
     case $1 in
         "pull")     docker pull ${BaseImage};;
-        "install")  func_run_docker yarn install --frozen-lockfile;;
+        "install")  func_run_docker yarn install --registry registry.npmmirror.com --frozen-lockfile;;
         "dev")      func_run_docker yarn dev;;
         "lint")     func_run_docker yarn lint;;
         "test")     func_run_docker yarn mocha;;

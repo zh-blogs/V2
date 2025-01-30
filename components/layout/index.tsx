@@ -40,8 +40,8 @@ function Footer() {
     { name: "首页", icon: <HomeFilled />, path: "/" },
     { name: "博客登记", icon: <PlusCircleFilled />, path: "/manager/join" },
     { name: "随机跳转", icon: <RocketFilled />, path: "/go" },
-    { name: "后台管理", icon:<SettingFilled />, path:"/manager" },
-    { name: "取消收录", icon: <SettingFilled />, patg:"https://github.com/zh-blogs/blog-daohang/issues/new?template=03-Abnormal+Blog+Report.yml"}
+    { name: "后台管理", icon: <SettingFilled />, path:"/manager" },
+    { name: "取消收录", icon: <EditFilled />, patg:"https://github.com/zh-blogs/blog-daohang/issues/new?template=03-Blog+Information+Report.yml"}
   ];
   
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { GithubOutlined, HomeFilled, PlusCircleFilled, RocketFilled, SettingFilled, ContainerFilled } from "@ant-design/icons";
+import { GithubOutlined, HomeFilled, PlusCircleFilled, RocketFilled, SettingFilled, ContainerFilled, EditFilled } from "@ant-design/icons";
 import { classConcat, ComponentProps, Context } from "@/utils";
 import styles from "./layout.module.scss";
 import { Flex } from "@/components/flex";
@@ -40,7 +40,8 @@ function Footer() {
     { name: "首页", icon: <HomeFilled />, path: "/" },
     { name: "博客登记", icon: <PlusCircleFilled />, path: "/manager/join" },
     { name: "随机跳转", icon: <RocketFilled />, path: "/go" },
-    { name: "后台管理", icon:<SettingFilled />, path:"/manager" },
+    { name: "后台管理", icon: <SettingFilled />, path:"/manager" },
+    { name: "取消收录", icon: <EditFilled />, patg:"https://github.com/zh-blogs/blog-daohang/issues/new?template=03-Blog+Information+Report.yml"}
   ];
   
   return (
